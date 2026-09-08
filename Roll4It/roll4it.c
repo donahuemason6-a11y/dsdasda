@@ -1,80 +1,63 @@
-/*
- * COP 3223 - Introduction to Programming in C
- * Assignment 1 - Roll4It
- *
- * Simulates the opening screens of the game "Roll For It":
- * prints the game logo, a sample row of six dice, and a
- * sample card holding four dice, then waits for the user
- * to press Enter before exiting.
- */
+// COP 3223 Assignment 1 - Roll4It
+// This program prints the game logo, six dice, and a card with 4 dice.
 
-/* Preprocessor commands to include C library header files */
+// include the C libraries
 #include <stdio.h>
 #include <stdlib.h>
 
-/* Function declarations (prototypes) */
-void logo(void);
-void sampleDice(void);
-void sampleCard(void);
+// function prototypes
+void logo();
+void sampleDice();
+void sampleCard();
 
-/* main - program entry point */
-int main(void)
+int main()
 {
-    /* Display the game logo */
+    // call the three functions to print everything
     logo();
-
-    /* Display a sample row of six dice */
     sampleDice();
-
-    /* Display a sample card with four dice */
     sampleCard();
 
-    /* Pause the command prompt until the user presses Enter */
+    // pause so the window doesn't close right away
     printf("Press Enter to continue...");
     getchar();
 
-    /* Return 0 to indicate successful operation of the program */
+    // return 0 means the program worked
     return 0;
 }
 
-/*
- * logo - prints the name of the game in ASCII art
- */
-void logo(void)
+// prints the name of the game in big letters
+void logo()
 {
-    printf(" _____    ____   _       _       _  _    _____  _______ \n");
-    printf("|  __ \\  / __ \\ | |     | |     | || |  |_   _||__   __|\n");
-    printf("| |__) || |  | || |     | |     | || |_   | |     | |   \n");
-    printf("|  _  / | |  | || |     | |     |__   _|  | |     | |   \n");
-    printf("| | \\ \\ | |__| || |____ | |____    | |   _| |_    | |   \n");
-    printf("|_|  \\_\\ \\____/ |______||______|   |_|  |_____|   |_|   \n");
+    printf("RRRR    OOO   L      L      4   4  III  TTTTT\n");
+    printf("R   R  O   O  L      L      4   4   I     T\n");
+    printf("RRRR   O   O  L      L      44444   I     T\n");
+    printf("R  R   O   O  L      L          4   I     T\n");
+    printf("R   R   OOO   LLLLL  LLLLL      4  III    T\n");
     printf("\n");
 }
 
-/*
- * sampleDice - prints a sample row of six dice
- */
-void sampleDice(void)
+// prints six dice numbered 1 to 6
+void sampleDice()
 {
-    printf(" .-----.  .-----.  .-----.  .-----.  .-----.  .-----. \n");
-    printf(" |  1  |  |  2  |  |  3  |  |  4  |  |  5  |  |  6  | \n");
-    printf(" '-----'  '-----'  '-----'  '-----'  '-----'  '-----' \n");
+    printf(" _____   _____   _____   _____   _____   _____\n");
+    printf("|     | |     | |     | |     | |     | |     |\n");
+    printf("|  1  | |  2  | |  3  | |  4  | |  5  | |  6  |\n");
+    printf("|_____| |_____| |_____| |_____| |_____| |_____|\n");
     printf("\n");
 }
 
-/*
- * sampleCard - prints a sample card holding four dice
- */
-void sampleCard(void)
+// prints one card with dice 1 2 3 4 on it
+void sampleCard()
 {
-    printf(" .-----------------------. \n");
-    printf(" |   .-----.   .-----.   | \n");
-    printf(" |   |  1  |   |  2  |   | \n");
-    printf(" |   '-----'   '-----'   | \n");
-    printf(" |                       | \n");
-    printf(" |   .-----.   .-----.   | \n");
-    printf(" |   |  3  |   |  4  |   | \n");
-    printf(" |   '-----'   '-----'   | \n");
-    printf(" '-----------------------' \n");
+    printf(" _____________________\n");
+    printf("|   _____     _____   |\n");
+    printf("|  |     |   |     |  |\n");
+    printf("|  |  1  |   |  2  |  |\n");
+    printf("|  |_____|   |_____|  |\n");
+    printf("|   _____     _____   |\n");
+    printf("|  |     |   |     |  |\n");
+    printf("|  |  3  |   |  4  |  |\n");
+    printf("|  |_____|   |_____|  |\n");
+    printf("|_____________________|\n");
     printf("\n");
 }
