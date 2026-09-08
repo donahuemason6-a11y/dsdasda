@@ -25,14 +25,17 @@ int main()
     return 0;
 }
 
-// prints the name of the game in big letters
+// prints the name of the game with each letter in its own box
 void logo()
 {
-    printf("RRRR    OOO   L      L      4   4  III  TTTTT\n");
-    printf("R   R  O   O  L      L      4   4   I     T\n");
-    printf("RRRR   O   O  L      L      44444   I     T\n");
-    printf("R  R   O   O  L      L          4   I     T\n");
-    printf("R   R   OOO   LLLLL  LLLLL      4  III    T\n");
+    printf(" _______   _______   _______   _______   _______   _______   _______\n");
+    printf("|       | |       | |       | |       | |       | |       | |       |\n");
+    printf("| RRRR  | |  OOO  | | L     | | L     | | 4   4 | | IIIII | | TTTTT |\n");
+    printf("| R   R | | O   O | | L     | | L     | | 4   4 | |   I   | |   T   |\n");
+    printf("| RRRR  | | O   O | | L     | | L     | | 44444 | |   I   | |   T   |\n");
+    printf("| R  R  | | O   O | | L     | | L     | |     4 | |   I   | |   T   |\n");
+    printf("| R   R | |  OOO  | | LLLLL | | LLLLL | |     4 | | IIIII | |   T   |\n");
+    printf("|_______| |_______| |_______| |_______| |_______| |_______| |_______|\n");
     printf("\n");
 }
 
