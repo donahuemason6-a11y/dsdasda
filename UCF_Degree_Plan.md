@@ -42,52 +42,62 @@ Withdrawals (ACG 2021, AST 2002, MCB 1000) earn nothing. **Verify** with the Reg
 
 ---
 
-## 3. Requirements remaining (103 credits)
+## 3. Requirements remaining (103 credits), with the chosen course for every slot
 
 ### Political Science B.A., Prelaw track (27)
 
-| Slot in audit | Pick | Cr |
+| Slot in audit | Course | Cr |
 |---|---|---|
-| POS 3703 Scope and Methods of Political Science | required | 3 |
-| POS 4284 Judicial Process and Politics | required | 3 |
-| INR 4401 or POS 4603 or POS 4604 | POS 4603 American Constitutional Law I | 3 |
-| Area B restricted elective (2) | CPO 3103 Comparative Politics; INR 4401 International Law (confirm it lands in Area B; otherwise any upper-level INR course) | 6 |
-| Area C restricted elective | POT 3302 Political Ideologies or another POT course | 3 |
-| Restricted elective, any area (3) | POS 4614 Civil Liberties; two from legislative process, state and local government, public policy, or POS 4604 | 9 |
-| POS 4961 exit exam | graduating term | 0 |
+| POS 3703 | Scope and Methods of Political Science | 3 |
+| POS 4284 | Judicial Process and Politics | 3 |
+| INR 4401 / POS 4603 / POS 4604 | POS 4603 American Constitutional Law I | 3 |
+| Area B restricted elective | CPO 3103 Comparative Politics | 3 |
+| Area B restricted elective | INR 4401 International Law (confirm it lands in Area B; otherwise any upper-level INR course) | 3 |
+| Area C restricted elective | POT 3204 American Political Thought (fallback: POT 3302 Modern Political Ideologies) | 3 |
+| Restricted elective, any area | POS 3424 Congress and the Legislative Process | 3 |
+| Restricted elective, any area | POS 3182 Florida Politics (alternate: POS 3122 State Government and Public Policy) | 3 |
+| Restricted elective, any area | POS 4604 American Constitutional Law II | 3 |
+| POS 4961 | Political Science Exit Course, graduating term | 0 |
 
 Do not take POS 3703, POS 4284, and constitutional law in the same term.
 
 ### Psychology B.S., Clinical Psychology track (50)
 
-| Slot in audit | Pick | Cr |
+| Slot in audit | Course | Cr |
 |---|---|---|
-| DEP 2004 Developmental Psychology | required (also fills a GEP social science slot) | 3 |
-| PSY 3204C Statistical Methods in Psychology | required | 4 |
-| PSY 3213C Research Methods in Psychology | required | 4 |
-| EXP 3604 Cognitive Psychology | required | 3 |
-| PSB 3002 Physiological Psychology | required | 3 |
-| SOP 3004 Social Psychology | required | 3 |
-| PSY 3024 Career Readiness I | required | 3 |
-| PSY 3074 Career Readiness II | required | 3 |
-| PSY 4604 History and Systems of Psychology | required | 3 |
-| PSY 4049 Psychology Capstone | required, last term | 3 |
-| CLP 3143 Psychopathology | required | 3 |
-| Clinical track elective (4) | CLP 4390 Forensic Psychology, PCO 4203 Interviewing and Counseling, PSY 3302 Psychological Measurement, PPE 3003 Personality Theory and Research | 12 |
-| Upper-level psychology elective | CLP 3302 Clinical Psychology (or SOP 3723, CLP 4314) | 3 |
+| DEP 2004 | Developmental Psychology (audit label: Human Development Across the Lifespan; also fills a GEP social science slot) | 3 |
+| PSY 3204C | Statistical Methods in Psychology | 4 |
+| PSY 3213C | Research Methods in Psychology | 4 |
+| EXP 3604 | Cognitive Psychology | 3 |
+| PSB 3002 | Physiological Psychology | 3 |
+| SOP 3004 | Social Psychology | 3 |
+| PSY 3024 | Psychology: Career Readiness I | 3 |
+| PSY 3074 | Psychology: Career Readiness II | 3 |
+| PSY 4604 | History and Systems of Psychology | 3 |
+| PSY 4049 | Psychology Capstone, last term | 3 |
+| CLP 3143 | Psychopathology | 3 |
+| Clinical track elective | CLP 4390 Forensic Psychology | 3 |
+| Clinical track elective | PCO 4203 Interviewing and Counseling | 3 |
+| Clinical track elective | PSY 3302 Psychological Measurement | 3 |
+| Clinical track elective | PPE 3003 Personality Theory and Research | 3 |
+| Upper-level psychology elective | PSB 3441 Psychobiological Aspects of Drugs (alternate: CLP 3302 Clinical Psychology) | 3 |
 
 ### Legal Studies minor (18)
 
-| Slot in audit | Pick | Cr |
+| Slot in audit | Course | Cr |
 |---|---|---|
-| PLA 3014 Law and the Legal System | required | 3 |
-| Upper-level restricted elective (5) | PLA 3108 Legal Research, PLA 3155 Legal Writing, then three from civil practice and procedure, criminal law and procedure, evidence, PLA 4703 Professional Ethics and Liability | 15 |
+| PLA 3014 | Law and the Legal System | 3 |
+| Upper-level restricted elective | PLA 3108 Legal Research | 3 |
+| Upper-level restricted elective | PLA 3155 Legal Writing | 3 |
+| Upper-level restricted elective | PLA 3306 Criminal Law | 3 |
+| Upper-level restricted elective | PLA 4263 Evidence | 3 |
+| Upper-level restricted elective | PLA 3205 Civil Practice and Procedure (alternates: PLA 3277 The Law of Torts, PLA 4703 Professional Ethics and Liability) | 3 |
 
 C or better in every course, at least 12 hours at UCF, no exam or internship credit.
 
 ### Foreign language (8)
 
-SPN 1120C then SPN 1121C, back to back.
+SPN 1120C Elementary Spanish Language and Civilization I, then SPN 1121C Elementary Spanish Language and Civilization II, back to back.
 
 ---
 
@@ -97,22 +107,24 @@ Loads stay between 12 and 16 in fall and spring through 2029 and 6 to 10 in summ
 
 | Term | Courses | Cr | Outside class |
 |---|---|---|---|
-| Spring 2027 | PSY 3204C (4), EXP 3604, PSY 3024, POS 3703, PLA 3014 | 16 | Join a psychology research lab; apply for a Summer 2027 State Attorney or Public Defender internship |
-| Summer 2027 | PSY 3213C (4), SOP 3004, PSB 3002 | 10 | State Attorney or Public Defender internship, part-time |
-| Fall 2027 | POS 4284, PLA 3108, CLP 3143, SPN 1120C (4) | 13 | Intern in a state legislator's Orlando district office |
-| Spring 2028 | SPN 1121C (4), PLA 3155, PSY 3074, PSY 3302 | 13 | Turn 18: register with Selective Service within 30 days |
-| Summer 2028 | DEP 2004, PPE 3003 | 6 | Main internship: Ninth Circuit court administration or pretrial services, or a state agency; both classes online-friendly |
-| Fall 2028 | POS 4603, CLP 4390, PCO 4203, CPO 3103 | 12 | Decide law school versus master's; start LSAT prep if law |
-| Spring 2029 | INR 4401, PSY 4604, POS 4614, PLA elective | 12 | Apply to the Florida Legislature intern program or the Governor's Fellows for the next year |
-| Summer 2029 | POS any-area elective, PLA elective | 6 | Internship; LSAT if law school |
-| Fall 2029 | POT 3302, POS any-area elective, upper PSY elective | 9 | Graduate applications due December to February; start state and court job applications |
-| Spring 2030 | PSY 4049, PLA elective, POS 4961 exit exam | 6 | Graduate May 2030 |
+| Spring 2027 | PSY 3204C Statistical Methods in Psychology (4); EXP 3604 Cognitive Psychology; PSY 3024 Psychology: Career Readiness I; POS 3703 Scope and Methods of Political Science; PLA 3014 Law and the Legal System | 16 | Join a psychology research lab; apply for a Summer 2027 State Attorney or Public Defender internship |
+| Summer 2027 | PSY 3213C Research Methods in Psychology (4); SOP 3004 Social Psychology; PSB 3002 Physiological Psychology | 10 | State Attorney or Public Defender internship, part-time |
+| Fall 2027 | POS 4284 Judicial Process and Politics; PLA 3108 Legal Research; CLP 3143 Psychopathology; SPN 1120C Elementary Spanish Language and Civilization I (4) | 13 | Intern in a state legislator's Orlando district office |
+| Spring 2028 | SPN 1121C Elementary Spanish Language and Civilization II (4); PLA 3155 Legal Writing; PSY 3074 Psychology: Career Readiness II; PSY 3302 Psychological Measurement | 13 | Turn 18: register with Selective Service within 30 days |
+| Summer 2028 | DEP 2004 Developmental Psychology; PPE 3003 Personality Theory and Research | 6 | Main internship: Ninth Circuit court administration or pretrial services, or a state agency; both classes online-friendly |
+| Fall 2028 | POS 4603 American Constitutional Law I; CLP 4390 Forensic Psychology; PCO 4203 Interviewing and Counseling; CPO 3103 Comparative Politics | 12 | Decide law school versus master's; start LSAT prep if law |
+| Spring 2029 | INR 4401 International Law; PSY 4604 History and Systems of Psychology; POS 3424 Congress and the Legislative Process; PLA 3306 Criminal Law | 12 | Apply to the Florida Legislature intern program or the Governor's Fellows for the next year |
+| Summer 2029 | POS 3182 Florida Politics; PLA 4263 Evidence | 6 | Internship; LSAT if law school |
+| Fall 2029 | POT 3204 American Political Thought; POS 4604 American Constitutional Law II; PSB 3441 Psychobiological Aspects of Drugs | 9 | Graduate applications due December to February; start state and court job applications |
+| Spring 2030 | PSY 4049 Psychology Capstone; PLA 3205 Civil Practice and Procedure; POS 4961 Political Science Exit Course | 6 | Graduate May 2030 |
 
-Prerequisite chains: PSY 3204C before PSY 3213C before PSY 4604 before PSY 4049; PSY 3024 before PSY 3074; CLP 3143 before CLP 4390 and PCO 4203; PSY 3204C before PSY 3302; PLA 3014 before PLA 3108 before PLA 3155; Spanish back to back; POS 3703, POS 4284, POS 4603 in separate terms.
+Prerequisite chains: PSY 3204C before PSY 3213C before PSY 4604 before PSY 4049; PSY 3024 before PSY 3074; CLP 3143 before CLP 4390 and PCO 4203; PSY 3204C before PSY 3302; PLA 3014 before every other PLA course, and PLA 3108 before PLA 3155; Spanish back to back; POS 3703, POS 4284, POS 4603 in separate terms.
 
-**Entering it in Pegasus Path:** set the Summer 2027 target to 10, move each course into the term above, and select the specific course in every "Not Selected" slot from section 3.
+**Swaps:** any POS elective can trade terms with any other POS elective, and any PLA elective with any other PLA elective, if a section is not offered that term.
 
-**December 2029 finish:** move PSY 4049, the last PLA elective, and the exit exam into Fall 2029 (15 credits).
+**Entering it in Pegasus Path:** set the Summer 2027 target to 10, move each course into the term above, and select the named course in every "Not Selected" slot.
+
+**December 2029 finish:** move PSY 4049, PLA 3205, and the exit course into Fall 2029 (15 credits).
 
 ---
 
