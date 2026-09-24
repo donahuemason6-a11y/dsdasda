@@ -15,7 +15,7 @@ Decided 2026-09-24. Built from your transfer record, your Fall 2026 schedule (PS
 | Credits still to take after Fall 2026 | 112 |
 | Paid credits left after Fall 2026 | 105 |
 | Over the paid amount | 7 credits, about $1,500 at in-state rates |
-| Graduation | August 2029 (Summer 2029 term), age 19 |
+| Graduation | May 2030 (Spring 2030), age 20; December 2029 possible with four 15 to 16 credit terms |
 | Dual-degree minimum (150 total) | Met: about 191 total hours at graduation |
 
 **Three ways to erase the 7-credit overage, none of them exams:**
@@ -104,24 +104,28 @@ SPN 1120C and SPN 1121C. Take the placement test first; placing into 1121C remov
 
 ---
 
-## 4. Semester-by-semester schedule (112 credits)
+## 4. Semester-by-semester schedule (112 credits, graduating Spring 2030)
 
-| Term | Courses | Cr | Notes |
+All three programs declared 2026-09-24. Loads stay between 12 and 16 in fall and spring (full-time for aid) and 6 to 10 in summer so internships fit.
+
+| Term | Courses | Cr | Outside class |
 |---|---|---|---|
-| Spring 2027 | PSY 3204C (4), EXP 3604, PSY 3024, POS 3703, PLA 3014 | 16 | PSY 3204C needs PSY 2012 and STA 2023 with a C; it gates the rest of the major |
-| Summer 2027 | PSY 3213C (4), DEP 2004, PSB 3002, SOP 3004 | 13 | PSY 3213C needs PSY 3204C; all four are regularly offered in summer |
-| Fall 2027 | POS 4084, PLA 3108, CLP 3143, PSY 3074, SPN 1120C (4) | 16 | PLA 3108 after PLA 3014; PSY 3074 after PSY 3024 |
-| Spring 2028 | POS 4603, PLA 3155, PSY 3302, CPO 3103, SPN 1121C (4) | 16 | PLA 3155 after PLA 3108; PSY 3302 after PSY 3204C |
-| Summer 2028 | PPE 3003, STA 4163, PLA elective, POS elective | 12 | Internship summer; choose online sections |
-| Fall 2028 | CLP 4390, PCO 4203, PSY 4604, STA 4164, POT 3302 | 15 | CLP 4390 and PCO 4203 after CLP 3143; PSY 4604 after PSY 3213C; STA 4164 after STA 4163 |
-| Spring 2029 | upper-level INR course, two POS electives, PLA elective, upper PSY elective | 15 | |
-| Summer 2029 | PSY 4049, POS elective, PLA elective, POS 4961 exit exam | 9 | Graduate August 2029 |
+| Spring 2027 | PSY 3204C (4), EXP 3604, PSY 3024, POS 3703, PLA 3014 | 16 | Join a psychology research lab; apply for a Summer 2027 State Attorney or Public Defender internship |
+| Summer 2027 | PSY 3213C (4), PSB 3002, SOP 3004 | 10 | State Attorney or Public Defender internship, part-time |
+| Fall 2027 | POS 4084, PLA 3108, CLP 3143, SPN 1120C (4) | 13 | Intern in a state legislator's Orlando district office |
+| Spring 2028 | SPN 1121C (4), PLA 3155, PSY 3074, PSY 3302 | 13 | Turn 18: register with Selective Service within 30 days |
+| Summer 2028 | DEP 2004, PPE 3003 | 6 | Main internship: Ninth Circuit court administration or pretrial services, or a state agency; both classes online-friendly |
+| Fall 2028 | POS 4603, CLP 4390, PCO 4203, STA 4163 | 12 | Decide law school versus master's; start LSAT prep if law |
+| Spring 2029 | CPO 3103, PSY 4604, STA 4164, PLA elective | 12 | Apply to the Florida Legislature intern program or the Governor's Fellows for the next year |
+| Summer 2029 | POS elective, PLA elective | 6 | Internship; LSAT if law school |
+| Fall 2029 | POT 3302, upper-level INR course, POS elective, upper PSY elective | 12 | Graduate applications due December to February; start state and court job applications |
+| Spring 2030 | PSY 4049, two POS electives, PLA elective, POS 4961 exit exam | 12 | Graduate May 2030, age 20 |
 
-**If the exit exam or PSY 4049 is not offered in summer** (**verify**), shift those two to Fall 2029 as a 6-credit final term, or finish in May 2029 by taking 18 credits in Fall 2028 and Spring 2029.
+Prerequisite chains: PSY 3204C before PSY 3213C before PSY 4604 before PSY 4049; PSY 3024 before PSY 3074; CLP 3143 before CLP 4390 and PCO 4203; PLA 3014 before PLA 3108 before PLA 3155; STA 4163 before STA 4164; Spanish courses back to back; POS 3703, POS 4084, and POS 4603 in separate terms.
 
-**If the Spanish placement removes SPN 1120C:** Fall 2027 drops to 12, and the plan is 108 credits.
+**Earlier finish (December 2029):** add PSY 3074 to Fall 2027, DEP 2004 to Spring 2028, CPO 3103 to Fall 2028, and one POS elective to Spring 2029; put PSY 4049 and the exit exam in Fall 2029. Four terms at 15 to 16 credits.
 
-**If the MAC substitution is approved:** STA 4163 and 4164 drop out, Summer 2028 becomes 9 credits, Fall 2028 becomes 12, and the plan is 106 credits (102 with the placement).
+**If the Spanish placement removes SPN 1120C** (108 credits) or **the MAC substitution removes STA 4163 and 4164** (106; 102 with both): fold the freed slots into a lighter Spring 2030.
 
 ---
 
