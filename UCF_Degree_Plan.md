@@ -18,7 +18,7 @@ All three programs declared 2026-09-24. Numbers below are reconciled against you
 | Graduation | May 2030 (Spring 2030), age 20; December 2029 possible with a 15-credit final term |
 | Dual-degree minimum (150 total) | Met: about 182 total hours at graduation |
 
-Optional: the Spanish placement test could remove SPN 1120C and free 4 more credits. Not needed for the plan to fit.
+The Spanish Placement Test is mandatory before enrolling in any Spanish course for students with prior Spanish experience (UCF policy, 2026). Take it before Fall 2027 registration; if it places you past SPN 1120C, the plan drops to 99 credits.
 
 ---
 
@@ -108,10 +108,10 @@ Loads stay between 12 and 16 in fall and spring through 2029 and 6 to 10 in summ
 | Term | Courses | Cr | Outside class |
 |---|---|---|---|
 | Spring 2027 | PSY 3204C Statistical Methods in Psychology (4); EXP 3604 Cognitive Psychology; PSY 3024 Psychology: Career Readiness I; POS 3703 Scope and Methods of Political Science; PLA 3014 Law and the Legal System | 16 | Join a psychology research lab; apply for a Summer 2027 State Attorney or Public Defender internship |
-| Summer 2027 | PSY 3213C Research Methods in Psychology (4); SOP 3004 Social Psychology; PSB 3002 Physiological Psychology | 10 | State Attorney or Public Defender internship, part-time |
+| Summer 2027 | PSY 3213C Research Methods in Psychology (4); DEP 2004 Developmental Psychology; PSB 3002 Physiological Psychology | 10 | State Attorney or Public Defender internship, part-time |
 | Fall 2027 | POS 4284 Judicial Process and Politics; PLA 3108 Legal Research; CLP 3143 Psychopathology; SPN 1120C Elementary Spanish Language and Civilization I (4) | 13 | Intern in a state legislator's Orlando district office |
 | Spring 2028 | SPN 1121C Elementary Spanish Language and Civilization II (4); PLA 3155 Legal Writing; PSY 3074 Psychology: Career Readiness II; PSY 3302 Psychological Measurement | 13 | Turn 18: register with Selective Service within 30 days |
-| Summer 2028 | DEP 2004 Developmental Psychology; PPE 3003 Personality Theory and Research | 6 | Main internship: Ninth Circuit court administration or pretrial services, or a state agency; both classes online-friendly |
+| Summer 2028 | SOP 3004 Social Psychology; PPE 3003 Personality Theory and Research | 6 | Main internship: Ninth Circuit court administration or pretrial services, or a state agency; both classes online-friendly |
 | Fall 2028 | POS 4603 American Constitutional Law I; CLP 4390 Forensic Psychology; PCO 4203 Interviewing and Counseling; CPO 3103 Comparative Politics | 12 | Decide law school versus master's; start LSAT prep if law |
 | Spring 2029 | INR 4401 International Law; PSY 4604 History and Systems of Psychology; POS 3424 Congress and the Legislative Process; PLA 3306 Criminal Law | 12 | Apply to the Florida Legislature intern program or the Governor's Fellows for the next year |
 | Summer 2029 | POS 3182 Florida Politics; PLA 4263 Evidence | 6 | Internship; LSAT if law school |
@@ -141,7 +141,7 @@ Prerequisite chains: PSY 3204C before PSY 3213C before PSY 4604 before PSY 4049;
 
 1. Confirm the audit's Prelaw slots match section 3 and that INR 4401 can fill an Area B slot when POS 4603 fills the core slot.
 2. Pull the Legal Studies minor elective list and confirm PLA 3155 requires PLA 3108.
-3. Take the Spanish placement test; if it places you into SPN 1121C, drop SPN 1120C and pocket the 4 credits.
+3. Take the mandatory Spanish Placement Test before Fall 2027 registration and register for the level it assigns.
 4. Ask whether PSY 4049 and POS 4961 are offered in the terms planned.
 5. Ask whether the Behavioral Forensics certificate overlaps with CLP 4390 and your other clinical courses; if it costs one or two extra classes, the 2 spare credits plus a placement-test saving would cover it.
 6. Ask the Registrar how the Valencia hours were coded for excess-hours purposes.
@@ -178,3 +178,30 @@ Targets: state government, the legislature, and the courts. These hire in 1 to 3
 - No withdrawals.
 - One internship every summer from 2027 on.
 - Keep your record clean: a probation officer, court, or State Attorney job runs a background check even without a federal clearance.
+
+---
+
+## 9. Prerequisite audit (checked 2026-09-24)
+
+| Course | Prerequisite | Satisfied by | Status |
+|---|---|---|---|
+| PSY 3204C | PSY 2012, STA 2023 | Fall 2026 | Confirmed |
+| EXP 3604, PSY 3024, PSB 3002, SOP 3004, CLP 3143, CLP 4390, PCO 4203, PPE 3003, PSB 3441 | PSY 2012 | Fall 2026 | Confirmed |
+| PSY 3213C | PSY 3204C with a C | Spring 2027 | Confirmed |
+| PSY 3302 | PSY 2012, STA 2023 | Fall 2026 | Confirmed |
+| PSY 3074 | PSY 3024 | Spring 2027 | Confirmed |
+| PSY 4604 | Senior standing; taken after PSY 3213C | Summer 2027 | Standard |
+| PSY 4049 | PSY 2012, PSB 3002, PSY 3204C, PSY 3213C, PSY 4604 | All by Spring 2029 | Confirmed |
+| DEP 2004 | None; not required by any planned course | | Confirmed |
+| PLA 3014 | ENC 1101 | Transfer | Confirmed |
+| PLA 3108 | ENC 1102 | Transfer | Confirmed |
+| PLA 3155 | PLA 3108 | Fall 2027 | Confirmed |
+| PLA 3306, PLA 4263, PLA 3205 | PLA 3014 is the usual gate | Spring 2027 | Standard, not confirmed |
+| POS 3703, POS 4603, POS 4604, POS 3424, POS 3182, CPO 3103 | POS 2041 | Transfer | Standard |
+| POS 4284 | ENC 1102, POS 2041 | Transfer | Confirmed |
+| INR 4401 | INR 2002 or standing | Transfer | Standard, not confirmed |
+| POT 3204 | None expected | | Standard |
+| SPN 1120C | Spanish Placement Test result | Before Fall 2027 | Mandatory test |
+| SPN 1121C | SPN 1120C or placement | Fall 2027 | Confirmed |
+
+"Standard" is the usual departmental gate, not confirmed from an official page; none would change the order. If a PLA course wants a prerequisite beyond PLA 3014, trade it with any other PLA elective.
