@@ -554,3 +554,18 @@ With exams: drop DEP 2004 and both language courses (101 credits); fold the Summ
 **Internships for this version:** Florida House or Senate legislative intern program (spring session), State Attorney or Public Defender office, Governor's Fellows Program (final year), Ninth Judicial Circuit court administration or pretrial services. Optional: Behavioral Forensics certificate if it overlaps with the clinical track (ask ASC).
 
 **Spring 2027 change from section 11:** PLA 3014 replaces INR 4360.
+
+---
+
+## 17. The two exams, and the excess-hours note
+
+**"Both exams" = two CLEP tests that replace 11 credits of classes.**
+
+| Exam | Replaces | Passing score | Notes |
+|---|---|---|---|
+| CLEP Spanish Language | SPN 1120C + SPN 1121C (8 cr), satisfies the B.A. language requirement | 50 | Two years of high school Spanish is the intended preparation; review for a few weeks and take it in Spring 2027 while the language is fresh. Retest allowed after three months; fallback is the two classes. |
+| CLEP Human Growth and Development | DEP 2004 (3 cr) | 50 | Confirm on UCF's CLEP equivalency chart first. Study a developmental psychology outline for a few weeks. |
+
+About $95 per exam plus a testing-center fee near $30. Credit only, no grade, no GPA effect. Never in the graduating term.
+
+**Excess-hours update.** Florida excludes credit earned through accelerated mechanisms (dual enrollment in high school, AP, IB, CLEP) from the excess-hours count. If the Valencia courses were dual enrollment, they and their withdrawals do not count toward the 144-hour baseline, leaving the 112-credit plan (15 + 112 = 127 UCF hours) under the line. Ask the Registrar to confirm how the transfer hours were coded.
