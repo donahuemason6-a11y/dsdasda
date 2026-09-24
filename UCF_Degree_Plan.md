@@ -569,3 +569,31 @@ With exams: drop DEP 2004 and both language courses (101 credits); fold the Summ
 About $95 per exam plus a testing-center fee near $30. Credit only, no grade, no GPA effect. Never in the graduating term.
 
 **Excess-hours update.** Florida excludes credit earned through accelerated mechanisms (dual enrollment in high school, AP, IB, CLEP) from the excess-hours count. If the Valencia courses were dual enrollment, they and their withdrawals do not count toward the 144-hour baseline, leaving the 112-credit plan (15 + 112 = 127 UCF hours) under the line. Ask the Registrar to confirm how the transfer hours were coded.
+
+---
+
+## 18. Final credit math: DEP 2004 by CLEP, Spanish on campus
+
+Take UCF's Spanish placement test before registering. Two years of high school Spanish usually places past SPN 1120C into SPN 1121C, which is the course that satisfies the B.A. language requirement.
+
+| Scenario | Credits | Versus 105 |
+|---|---|---|
+| Both Spanish courses | 109 | 4 over, about $850 self-paid |
+| Placed into SPN 1121C only | 105 | Fits exactly |
+| Placed into 1121C, and MAC 2311C + MAC 2312 accepted as the psychology math/science electives (replacing STA 4163 and 4164) | 99 | 6 spare |
+
+**105-credit schedule (Prelaw + Clinical + Legal Studies), graduating May 2029**
+
+| Term | Courses | Cr |
+|---|---|---|
+| Spring 2027 | PSY 3204C (4), EXP 3604, PSY 3024, POS 3703, PLA 3014 | 16 |
+| Summer 2027 | PSY 3213C (4), PSB 3002, SOP 3004, POS elective | 13 |
+| Fall 2027 | POS 4084, PLA 3108, CLP 3143, PSY 3074, SPN 1121C (4) | 16 |
+| Spring 2028 | POS 4603, PLA 3155, PSY 3302, CPO 3103, STA 4163 | 15 |
+| Summer 2028 | PPE 3003, PLA elective, POS elective, STA 4164, POS elective | 15 |
+| Fall 2028 | CLP 4390, PCO 4203, PSY 4604, POS elective, PLA elective | 15 |
+| Spring 2029 | PSY 4049, upper PSY elective, two POS electives, PLA elective | 15 |
+
+To lighten the Summer 2028 internship term to 9 credits, move STA 4164 and one POS elective to Summer 2029 with PSY 4049 and graduate August 2029. If the MAC substitution is approved, STA 4163 and 4164 drop out and the 6 spare credits go to an internship-for-credit course or two more PLA or POS electives.
+
+**To do now:** book CLEP Human Growth and Development; take the Spanish placement test before Spring registration; ask the ASC about the MAC substitution.
