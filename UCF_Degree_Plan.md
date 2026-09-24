@@ -493,10 +493,11 @@ Target: TS/SCI. Secret is the contractor floor.
 
 ---
 
-## 14. Age note (student is 16 in Fall 2026, 18 in 2028)
+## 14. Age note (student is 16 in Fall 2026, already a high school graduate, 18 in 2028)
 
 - **Clearance window.** Investigation coverage is 10 years or back to the 18th birthday, whichever is shorter, minimum 2 years. Sponsored at 18, coverage runs from age 16, which is now. Conduct, friends, addresses, and schools from here forward are in scope. Nobody is contacted until a sponsor submits the SF-86.
-- **Summer 2027.** Apply to SEAP (Navy Science and Engineering Apprenticeship Program, hosted at NAWCTSD Orlando, ages 16+, deadline around November 1) instead of NREIP. NREIP and most federal internships require 18 or full college enrollment.
+- **Summer 2027.** Student already holds a high school diploma, so SEAP does not apply. Apply to NREIP at NAWCTSD Orlando if its age rule allows a 17-year-old undergraduate (check the eligibility page when applications open in August; deadline around November 1). If not eligible, take a UCF human factors lab position for Summer 2027 and move NREIP to Summer 2028.
+- **Coverage by sponsorship age.** Sponsored at 18: coverage from 16. At 19: from 17. At 20: from 18. Investigators contact listed references, address and school verifiers, supervisors, and people those sources name; they do not seek out former classmates on their own.
 - **Summer 2028 onward.** CIA and NSA programs require 18. Pathways starts at 16 on paper but clearance processing waits for 18. First realistic federal internship is Summer 2028 if the 18th birthday precedes it, otherwise Summer 2029.
 - **Selective Service.** Register within 30 days of turning 18 (Florida usually registers through the DMV).
 - **Graduation at 19.** Strengthens the case for the graduate-school path in section 12: a funded master's or Ph.D. from 19 to 22 with a federal internship each summer, entering a cleared job at 22 with a graduate degree and sponsored experience.
