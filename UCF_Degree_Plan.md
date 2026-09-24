@@ -501,3 +501,19 @@ Target: TS/SCI. Secret is the contractor floor.
 - **Summer 2028 onward.** CIA and NSA programs require 18. Pathways starts at 16 on paper but clearance processing waits for 18. First realistic federal internship is Summer 2028 if the 18th birthday precedes it, otherwise Summer 2029.
 - **Selective Service.** Register within 30 days of turning 18 (Florida usually registers through the DMV).
 - **Graduation at 19.** Strengthens the case for the graduate-school path in section 12: a funded master's or Ph.D. from 19 to 22 with a federal internship each summer, entering a cleared job at 22 with a graduate degree and sponsored experience.
+
+---
+
+## 15. State-level and court careers
+
+Highest odds of a job at graduation (75 to 85% within six months), fastest hiring (1 to 3 months), lowest pay ($40k to $60k in Florida), very high security with a pension. Ceiling requires a graduate degree.
+
+**State politics and government:** legislative aide and committee analyst (Florida Legislature, $40k to $60k), OPPAGA policy analyst ($50k to $60k), government and budget analyst in every agency ($42k to $60k; Orange County and City of Orlando pay more), crime intelligence analyst at FDLE, the Florida Fusion Center, and the Central Florida Intelligence Exchange ($45k to $60k; direct fit for INS track plus statistics). Campaign and party staff are the least secure. Degrees: the chosen combination as is. Grad path: MPA or law school.
+
+**Courts:** probation officer (DOC) and juvenile probation (DJJ) ($42k to $50k, always hiring), pretrial services and court program specialist ($42k to $55k), public defender or state attorney investigator and victim advocate ($40k to $50k), paralegal ($45k to $60k, fast hiring everywhere), US Probation or Pretrial Officer in the federal judiciary ($55k to $70k rising past $100k; wants 1 to 2 years experience; insulated from executive-branch hiring swings), prosecutor or public defender after law school ($60k to $70k). Degrees: swap the Statistics minor for a Legal Studies minor if courts are the goal, or Poli Sci + Legal Studies B.S. + Psychology minor (about 92 credits) for paralegal-level hireability on day one. Grad path: law school.
+
+**Psychology in state government:** case manager and child protective investigator ($40k to $50k, plentiful, high burnout), mental health or behavior technician ($35k to $45k), research assistant and program evaluator ($40k to $55k, where statistics pays off). Secure and well-paid versions need graduate degrees: school psychologist (Ed.S., 3 years, nationwide shortage, $55k to $75k with pension), licensed counselor or clinical social worker (master's plus licensure), court psychologist or forensic evaluator (doctorate).
+
+**Internships to add for the state track (no credit cost):** Florida House or Senate legislative intern program for a spring session; a State Attorney or Public Defender office internship; the Florida Governor's Fellows Program in the final year; FDLE internship.
+
+**Relocation note:** state analyst and legislative jobs in Virginia, Maryland, Colorado, and Texas pay 20 to 40% more than Florida for equivalent work; the federal judiciary hires probation and pretrial officers in every district.
