@@ -2,6 +2,8 @@
 
 **Political Science B.A. (Intelligence & National Security track) + Psychology B.S. (Cognition & Human Factors track) + Statistics minor + Technical Communication minor**
 
+**Read section 10 first.** It holds the recommended single-degree combination that fits 105 paid credits. Sections 1 to 9 are the original dual-degree analysis.
+
 Prepared 2026-09-24, based on the 2026–27 requirement text you pasted, your transfer record, and your Fall 2026 schedule (PSY 2012, STA 2023, POS 3273, POS 4407, COP 3223C). UCF's catalog site was blocked from where this was built, so a few items are marked **verify** for your Academic Success Coach (ASC). Nothing below replaces your myKnight Audit.
 
 ---
@@ -328,3 +330,65 @@ If 15 credits in the final summer is too much, move PSY 4049 to Fall 2029 as the
 ### 104-credit schedule (Tech Comm minor cut to two courses, language in class)
 
 Same as above, but remove ENC 4293, ENC 4294, ENC 4280, and ENC 4215/4218, and add Language 1120C (Fall 2028) and 1121C (Spring 2029). Terms come out to 16, 10, 12, 12, 3, 17, 16, 15 = 104 (the 3-credit Summer 2028 is fine; it keeps the internship summer open). Graduate Summer 2029.
+
+---
+
+## 10. Recommended combination within 105 credits (read this first)
+
+**Psychology B.S., Cognition & Human Factors track + Statistics minor + Intelligence & National Security minor**, with ENC 3241 and ENC 4290 as free electives. Drop the Political Science B.A. and the Technical Communication minor.
+
+| Item | Number |
+|---|---|
+| Credits after Fall 2026 | 95 (84 if you CLEP DEP 2004 and test out of the language) |
+| Spare paid credits | 10 (21 with exams) |
+| Graduation | May 2029 |
+| Dual-degree 150-hour rule | Not applicable (single degree, 120-hour minimum) |
+
+### Why this is the job-security pick
+
+- **Federal job series you qualify for** (OPM basic requirements): 0180 Psychology (requires a psychology degree; human-factors jobs at NAWCTSD and PEO STRI post under it), 1515 Operations Research Analyst (24 hours math/statistics including calculus; you will have 26), 1530 Statistician (15 hours statistics; you will have 18), 0132 Intelligence (no education requirement). A second B.A. in Political Science adds no series.
+- **Contractors hire in 1 to 3 months; agencies take 12 to 24.** Team Orlando contractors screen for a B.S. in psychology with human factors, statistics, some programming, and clearance eligibility. This combo is exactly that. The INS minor keeps the agency analyst door open.
+- **POS 4407 already counts toward the INS minor.** UCF's ICCAE program and its internship pipeline are open to any major.
+- **Fewer, lighter terms** protect the 3.0 GPA every federal door requires, and Summer 2028 plus Spring 2029 stay light for internships.
+
+### Credits
+
+| Program | Courses | Cr |
+|---|---|---|
+| Psychology B.S. | DEP 2004; PSY 3204C, PSY 3213C, EXP 3604, PSB 3002, SOP 3004, PSY 3024, PSY 3074, PSY 4604, PSY 4049; EXP 3250, EXP 3204, EXP 4507, PSY 4215C, PSY 3320C; SOP 3723 (upper elective); STA 4163, STA 4164 (math/science electives) | 57 |
+| Statistics minor (beyond the two above) | STA 4102, STA 4364, STA 4241 or STA 4222 | 9 |
+| INS minor (18 total, POS 4407 in progress) | INR 4360, INR 4363, POS 4340, INR 4084, one regional CPO course (verify against the minor's list) | 15 |
+| Foreign language | 1120C + 1121C, or test out | 8 |
+| Electives | ENC 3241, ENC 4290 | 6 |
+| **Total** | | **95** |
+
+### 95-credit schedule (language in class)
+
+| Term | Courses | Cr |
+|---|---|---|
+| Spring 2027 | PSY 3204C (4), EXP 3604, PSY 3024, INR 4360, ENC 3241 | 16 |
+| Summer 2027 | PSY 3213C (4), DEP 2004, PSB 3002, SOP 3004 | 13 |
+| Fall 2027 | STA 4163, INR 4363, PSY 3074, EXP 3250, Language 1120C (4) | 16 |
+| Spring 2028 | STA 4164, PSY 4215C (4), Language 1121C (4), INR 4084, ENC 4290 | 17 |
+| Summer 2028 | EXP 3204, STA 4102 (internship summer) | 6 |
+| Fall 2028 | EXP 4507, PSY 3320C, STA 4364, POS 4340, PSY 4604 | 15 |
+| Spring 2029 | PSY 4049, SOP 3723, STA 4241 or 4222, regional CPO course (graduate May 2029) | 12 |
+
+With exams: Summer 2027 drops to 10, Fall 2027 to 12, Spring 2028 to 13 (84 total). Use the 21 spare credits for an internship-for-credit course if a cleared internship requires enrollment, or add ENC 4293, ENC 4280, ENC 4294, and ENC 4215 to complete the Tech Comm minor (96 total).
+
+### Alternatives, ranked
+
+| Combo | Credits left | Verdict |
+|---|---|---|
+| Psych BS + Stats minor + INS minor (recommended) | 95 / 84 | Best mix of speed, federal eligibility, and contractor demand |
+| Poli Sci INS BA + Psych minor + Stats minor + Tech Comm minor | 83 | Only if intelligence agencies are the sole target; weaker in Orlando, no B.S. |
+| Information Technology BS + INS minor + Stats minor | ~75 to 85 | Highest raw demand (cleared IT/cyber) but a full pivot; only if COP 3223C is going well |
+| Dual degree (sections 1 to 9) | 119 / 108 | Over budget, one semester longer, no added job eligibility |
+
+### Verify with your ASC
+
+1. Exact INS minor requirements (18 credits) and whether POS 4340, INR 4360, INR 4363 all count toward it; whether POS 3273 counts as a minor elective.
+2. STA 4163 and STA 4164 counting for both the Psychology math/science electives and the Statistics minor (fallback: substitute MAC 2311C and MAC 2312 for the psych electives).
+3. CLEP Human Growth and Development for DEP 2004, and CLEP/FLATS for the language.
+4. Excess-hours surcharge: about 176 attempted hours at graduation (165 with exams) against a 144 baseline. Ask the Registrar what that costs and whether any refund applies.
+5. Change of major paperwork: drop the Poli Sci B.A., declare Psychology B.S. with the Cognition & Human Factors track, and add both minors this semester so the audit is right before Spring registration.
