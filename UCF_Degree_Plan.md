@@ -2,7 +2,7 @@
 
 **Political Science B.A. (Intelligence & National Security track) + Psychology B.S. (Cognition & Human Factors track) + Statistics minor + Technical Communication minor**
 
-**Read sections 11 and 12 first.** Section 12 is the decision and the graduate-school path; section 11 ranks the dual-degree + minor combinations and holds the 101-credit schedule. Section 10 is the single-degree alternative; sections 1 to 9 are the original dual-degree analysis.
+**Read section 16 first** (courts and state-government version: Prelaw track + Clinical track + Legal Studies minor, with schedule). Section 15 covers state and court careers; sections 11 and 12 hold the earlier intelligence-oriented combination; section 10 is the single-degree alternative; sections 1 to 9 are the original analysis.
 
 Prepared 2026-09-24, based on the 2026–27 requirement text you pasted, your transfer record, and your Fall 2026 schedule (PSY 2012, STA 2023, POS 3273, POS 4407, COP 3223C). UCF's catalog site was blocked from where this was built, so a few items are marked **verify** for your Academic Success Coach (ASC). Nothing below replaces your myKnight Audit.
 
@@ -517,3 +517,40 @@ Highest odds of a job at graduation (75 to 85% within six months), fastest hirin
 **Internships to add for the state track (no credit cost):** Florida House or Senate legislative intern program for a spring session; a State Attorney or Public Defender office internship; the Florida Governor's Fellows Program in the final year; FDLE internship.
 
 **Relocation note:** state analyst and legislative jobs in Virginia, Maryland, Colorado, and Texas pay 20 to 40% more than Florida for equivalent work; the federal judiciary hires probation and pretrial officers in every district.
+
+---
+
+## 16. Courts and state-government version: tracks, minor, and schedule
+
+Chosen direction (2026-09-24): state politics/government and courts. Tracks change; the dual degree stays.
+
+**Political Science B.A., Prelaw track** (about 30 credits remaining): POS 3703, POS 4084 Judicial Process and Politics, POS 4603 or POS 4604 Constitutional Law, plus area courses and electives aimed at state politics (legislative process, state and local government, public policy, civil liberties, CPO 3103). POS 3273 counts as the American politics course; POS 4407 becomes an elective. POS 4961 exit exam in the graduating term. Verify the exact Prelaw list in myKnight Audit.
+
+**Psychology B.S., Clinical track** (about 56 credits remaining): DEP 2004; core EXP 3604, PSB 3002, SOP 3004, PSY 3024, PSY 3074, PSY 3204C, PSY 3213C, PSY 4604, PSY 4049; track CLP 3143 plus four of CLP 4390 Forensic Psychology, PCO 4203 Interviewing and Counseling, PSY 3302 Psychological Measurement, PPE 3003 Personality, CLP 3302 Clinical Psychology (and others on the list); one upper-level PSY elective; STA 4163 and STA 4164 as math/science electives.
+
+**Legal Studies minor** (18): PLA 3014, PLA 3108, PLA 3155, plus three PLA electives (civil procedure, criminal law and procedure, evidence, professional ethics).
+
+| Combination | Language in class | With both exams | Versus 105 |
+|---|---|---|---|
+| Prelaw + Clinical + Legal Studies | 112 | 101 | Fits with exams |
+| Prelaw + Clinical + Statistics | 103 | 92 | Fits |
+| Prelaw + Clinical + both minors | 121 | 110 | 5 over with exams (about $1,100 self-paid) |
+
+Pick Legal Studies if one minor. STA 4163 and 4164 remain inside the psychology degree, leaving 9 hours of statistics on the transcript. Add the Statistics minor only if both exams pass and the analyst doors (OPPAGA, FDLE) matter enough to self-pay 5 credits.
+
+| Term | Courses | Cr |
+|---|---|---|
+| Spring 2027 | PSY 3204C (4), EXP 3604, PSY 3024, POS 3703, PLA 3014 | 16 |
+| Summer 2027 | PSY 3213C (4), DEP 2004, PSB 3002, SOP 3004 | 13 |
+| Fall 2027 | POS 4084, PLA 3108, CLP 3143, STA 4163, PSY 3074 | 15 |
+| Spring 2028 | POS 4603, PLA 3155, STA 4164, PSY 3302, CPO 3103 | 15 |
+| Summer 2028 | PPE 3003, PLA elective, POS elective (internship summer) | 9 |
+| Fall 2028 | Language 1120C (4), CLP 4390, PCO 4203, POS elective, PLA elective | 16 |
+| Spring 2029 | Language 1121C (4), PSY 4604, two POS electives, PLA elective | 16 |
+| Summer 2029 | PSY 4049, upper PSY elective, two POS electives (graduate Aug 2029) | 12 |
+
+With exams: drop DEP 2004 and both language courses (101 credits); fold the Summer 2029 courses into earlier terms and graduate May 2029.
+
+**Internships for this version:** Florida House or Senate legislative intern program (spring session), State Attorney or Public Defender office, Governor's Fellows Program (final year), Ninth Judicial Circuit court administration or pretrial services. Optional: Behavioral Forensics certificate if it overlaps with the clinical track (ask ASC).
+
+**Spring 2027 change from section 11:** PLA 3014 replaces INR 4360.
