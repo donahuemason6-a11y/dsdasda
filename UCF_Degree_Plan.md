@@ -461,3 +461,32 @@ With exams: Summer 2027 drops to 10, Fall 2028 to 12, Spring 2029 to 12. The 15 
 4. Confirm and book CLEP Human Growth and Development (DEP 2004) and a language exam if eligible.
 5. January: email two human-factors faculty at UCF's Institute for Simulation and Training to volunteer as a research assistant.
 6. GPA floor of 3.5 from here; no withdrawals.
+
+---
+
+## 13. Security clearance: how it works and what to prepare
+
+**You cannot apply on your own.** A clearance is sponsored by an employer or agency for a specific position, and the sponsor pays. Your cost is zero. Student routes to sponsorship: cleared internships (NREIP at NAWCTSD for a Secret; DIA and NGA Pathways for TS/SCI; NSA and CIA programs for TS/SCI with polygraph), a cleared contractor part-time job, or National Guard/Reserve intelligence analyst (TS/SCI within a year, six-year commitment).
+
+| Level | Who requires it | Investigation time |
+|---|---|---|
+| Public Trust | Civilian federal analyst jobs (Census, BLS, many DHS roles) | 1 to 3 months |
+| Secret | Most defense contractors, Team Orlando, Army and Navy civilian roles | Interim in weeks, final 2 to 6 months |
+| Top Secret / SCI | DIA, NGA, FBI, DHS I&A, most IC analyst jobs | 6 to 18 months |
+| TS/SCI with polygraph | NSA, CIA, some DIA and NGA roles | 12 to 24 months |
+
+Target: TS/SCI. Secret is the contractor floor.
+
+**SF-86 preparation checklist (filled out online via eApp)**
+
+- Every address for 10 years, each with a non-relative who knew you there.
+- Every job for 10 years with a supervisor's name and contact; every school for 3 years with a non-relative who knew you there.
+- Full names, dates and places of birth, addresses, citizenship for parents, siblings, stepfamily.
+- Foreign travel for 7 years (dates, purpose); passport number.
+- Drug use (7 years), police contact (ever), debts over 120 days late, counseling bearing on judgment.
+- SSN, birth certificate or passport, driver's license; fingerprints on request.
+- Selective Service registration (males 18 to 25; required for federal employment; check sss.gov).
+
+**References (Section 16):** three people who know you well, not relatives, together covering the last 7 years, and not listed anywhere else on the form. A supervisor listed under employment cannot double as a reference. Expect 6 to 9 distinct named people in total across references, address verifiers, school verifiers, and supervisors. Investigators interview them and develop additional sources from them.
+
+**Adjudication basics:** decisions rest on 13 guidelines (allegiance, foreign influence, foreign preference, sexual behavior, personal conduct, finances, alcohol, drugs, psychological conditions, criminal conduct, handling protected information, outside activities, IT misuse). Opinions are not a guideline; conduct and concealment are. Age at the time and years elapsed are formal mitigating factors. Answer every question truthfully; omissions are the leading cause of denials.
