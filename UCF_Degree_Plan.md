@@ -1,0 +1,285 @@
+# UCF Dual-Degree Plan
+
+**Political Science B.A. (Intelligence & National Security track) + Psychology B.S. (Cognition & Human Factors track) + Statistics minor + Technical Communication minor**
+
+Prepared 2026-09-24, based on the 2026–27 requirement text you pasted, your transfer record, and your Fall 2026 schedule (PSY 2012, STA 2023, POS 3273, POS 4407, COP 3223C). UCF's catalog site was blocked from where this was built, so a few items are marked **verify** for your Academic Success Coach (ASC). Nothing below replaces your myKnight Audit.
+
+---
+
+## 1. Bottom line
+
+| Item | Number |
+|---|---|
+| Credits earned or in progress after Fall 2026 | ~79 (64 transfer that count + 15 this term) |
+| Credits still required for everything | ~119 (38 courses) |
+| Realistic graduation (15–17 cr fall/spring, 6–13 cr summers) | **Fall 2029 (Dec 2029)** |
+| Accelerated (capstone + last POS elective in summer) | Summer 2029 (Aug 2029) |
+| If you drop the Tech Comm minor | Spring 2029 (May 2029) |
+| Total hours at graduation | ~198 (dual-degree minimum is 150, so no problem there) |
+
+Four requirements you may not have on your radar:
+
+1. **DEP 2004 Developmental Psychology** is part of the Psychology "basic core" and you have not taken it.
+2. **CPO 3103 Comparative Politics** is in the INS track's basic core (along with POS 2041 and INR 2002, which you already have).
+3. **Foreign language**: both degrees require proficiency equal to one year of college language. UCF says high school language does **not** satisfy it. That is 8 credits (two 4-credit courses) unless you pass a CLEP or FLATS exam at the University Testing Center.
+4. **POS 4961 / exit exam** in your graduating semester (0 credits) and **PSY 4049 Capstone** must be in your last semester.
+
+---
+
+## 2. Where you stand after Fall 2026
+
+**Transfer credit that counts (64 cr):** AMH 2000, AMH 2020, BSC 1005 + 1005L, BSC 1020, CHM 1025C, CJL 2102, ENC 1101, ENC 1102, ENL 2022, HUM 2020, INR 2002, MAC 1114C, MAC 1140C, MAC 2311C, MAC 2312, POS 2041, POS 2112, REE 1400, SLS 1122, SPC 1608.
+Withdrawals (ACG 2021, AST 2002, MCB 1000) earn nothing but **do count toward the excess-hours surcharge** (see section 6).
+
+**General Education Program:** complete (communication, humanities/history, math with MAC 2311C + STA 2023, social science, science). Civic literacy: POS 2041 covers the course half; **verify** whether you still owe the civic literacy assessment.
+
+**Already satisfied toward the four programs:**
+
+| Course | Counts for |
+|---|---|
+| POS 2041 | Poli Sci core (basic) |
+| INR 2002 | Poli Sci INS core (basic) |
+| POS 4407 (in progress) | INS core, and the gateway to INR 4360 |
+| POS 3273 (in progress) | Likely INS **Area A (American Politics & Policy)** — verify |
+| PSY 2012, STA 2023 (in progress), BSC 1005 | Psychology basic core |
+| STA 2023 (in progress) | Statistics minor required course |
+| COP 3223C (in progress) | Prerequisite for STA 4364; otherwise a free elective |
+| MAC 2311C, MAC 2312 | Backup option for the Psych math/science electives (see section 6) |
+
+---
+
+## 3. What is left, by program
+
+### Political Science B.A., INS track (~27 cr + 0-cr exit course)
+
+| Requirement | Course | Cr |
+|---|---|---|
+| Core (basic) | POS 3703 Scope & Methods of Political Science | 3 |
+| Core (basic) | CPO 3103 Comparative Politics | 3 |
+| Intelligence sequence | POS 4340 Research Methods in Intelligence | 3 |
+| Intelligence sequence | INR 4360 The Intelligence Process | 3 |
+| Intelligence sequence | INR 4363 Intelligence Analysis and Reporting | 3 |
+| Intelligence sequence | INR 4369 Intelligence Studies Capstone | 3 |
+| Area B (IR & Comparative) | one course, e.g. INR 4084 Political Terror | 3 |
+| Area C (Political Theory) | one course, e.g. INR 4603 International Relations Theory | 3 |
+| One more from any area | e.g. a regional CPO course | 3 |
+| Exit | POS 4961 / exit exam, graduating term | 0 |
+
+Area A (American Politics & Policy) should be covered by POS 3273. If your audit says otherwise, add one 3-credit POS course and push graduation by one course.
+
+### Psychology B.S., Cognition & Human Factors track (57 cr)
+
+| Requirement | Course | Cr |
+|---|---|---|
+| Basic core | DEP 2004 Developmental Psychology | 3 |
+| Advanced core | PSY 3204C Statistical Methods in Psychology | 4 |
+| Advanced core | PSY 3213C Research Methods in Psychology | 4 |
+| Advanced core | EXP 3604 Cognitive Psychology | 3 |
+| Advanced core | PSB 3002 Physiological Psychology | 3 |
+| Advanced core | SOP 3004 Social Psychology | 3 |
+| Advanced core | PSY 3024 Career Readiness I | 3 |
+| Advanced core | PSY 3074 Career Readiness II | 3 |
+| Advanced core | PSY 4604 History and Systems | 3 |
+| Capstone | PSY 4049 Psychology Capstone (last semester) | 3 |
+| Track required | EXP 3250 Principles of Human Factors Psychology | 3 |
+| Track (4 of list) | EXP 3204 Sensation and Perception | 3 |
+| Track (4 of list) | EXP 4507 Advanced Human Memory and Cognition | 3 |
+| Track (4 of list) | PSY 4215C Advanced Research Methods in Psychology | 4 |
+| Track (4 of list) | PSY 3320C Survey Methods in Psychology | 3 |
+| Upper-level PSY elective | SOP 3723 Cross-Cultural Psychology (or INP 3004 I/O Psychology) | 3 |
+| Math/Science electives | STA 4163 Statistical Methods II (shared with Stats minor) | 3 |
+| Math/Science electives | STA 4164 Statistical Methods III (shared with Stats minor) | 3 |
+
+### Statistics minor (15 cr left, 9 of them beyond the two above)
+
+| Requirement | Course | Cr |
+|---|---|---|
+| Required | STA 4163, STA 4164 (listed above) | 6 |
+| Upper-division STA elective | STA 4102 Computer Processing of Statistical Data (SAS) | 3 |
+| Upper-division STA elective | STA 4364 Statistical Foundations of Data Science & AI I (Python/R; needs COP 3223C, MAC 2312, STA 2023) | 3 |
+| Upper-division STA elective | one of STA 4241 Statistical Learning, STA 4365 Data Science II, STA 4222 Sample Survey Methods, STA 4502 Nonparametric Methods | 3 |
+
+All 15 remaining hours are UCF hours, which satisfies the "15 hours at UCF" rule.
+
+### Technical Communication minor (18 cr)
+
+| Requirement | Course | Cr |
+|---|---|---|
+| Required | ENC 3241 Writing for the Technical Professional (prereq: ENC 1102 with C) | 3 |
+| Required | ENC 4293 Documentation and Project Management | 3 |
+| Required | ENC 4294 Client-Based Project Management (after ENC 4293) | 3 |
+| Required | ENC 4280 Technical Writing Style | 3 |
+| One of | ENC 4215 Document Design and Publication **or** ENC 4218 Visual Technical Communication | 3 |
+| Restricted elective | ENC 4290 Usability Testing for Technical Communication (best fit with Human Factors) | 3 |
+
+### Foreign language (8 cr, or 0 with an exam)
+
+Two consecutive semesters of one language: XXX 1120C then XXX 1121C (4 cr each). See section 5 for which language.
+
+---
+
+## 4. Semester-by-semester schedule
+
+Loads: 15–17 in fall/spring, 6–13 in summer. Summer 2028 is kept light on purpose so you can take a full-time internship. Courses assumed to be offered in summer (psychology core, ENC 3241, STA, ENC 4xxx) usually are, but **check the class schedule each March and swap within the same year if something is missing**.
+
+### Spring 2027 (16 cr)
+
+| Course | Cr | Why now |
+|---|---|---|
+| PSY 3204C Statistical Methods in Psychology | 4 | Needs PSY 2012 + STA 2023 (C or better). Gates PSY 3213C, which gates half the major. |
+| EXP 3604 Cognitive Psychology | 3 | Core; prerequisite for EXP 4507. |
+| PSY 3024 Career Readiness I | 3 | Core; first of the two-course sequence. |
+| POS 3703 Scope & Methods of Political Science | 3 | Core; take before POS 4340. |
+| INR 4360 The Intelligence Process | 3 | Next step after POS 4407. |
+
+### Summer 2027 (13 cr; drop DEP 2004 to 10 if you land a full-time internship)
+
+| Course | Cr | Why now |
+|---|---|---|
+| PSY 3213C Research Methods in Psychology | 4 | Needs PSY 3204C. Gates PSY 4215C, PSY 4604, PSY 4049. |
+| DEP 2004 Developmental Psychology | 3 | Missing basic-core course; usually online. |
+| ENC 3241 Writing for the Technical Professional | 3 | Gateway to the whole Tech Comm minor; offered every term. |
+| PSB 3002 Physiological Psychology | 3 | Core; needs PSY 2012 + BSC 1005. |
+
+### Fall 2027 (15 cr)
+
+| Course | Cr | Why now |
+|---|---|---|
+| STA 4163 Statistical Methods II | 3 | Needs STA 2023 with C. Gates STA 4164. |
+| INR 4363 Intelligence Analysis and Reporting | 3 | After INR 4360. |
+| POS 4340 Research Methods in Intelligence | 3 | After POS 3703. |
+| PSY 3074 Career Readiness II | 3 | After PSY 3024. |
+| ENC 4293 Documentation and Project Management | 3 | After ENC 3241. Gates ENC 4294. |
+
+### Spring 2028 (15 cr)
+
+| Course | Cr | Why now |
+|---|---|---|
+| STA 4164 Statistical Methods III | 3 | After STA 4163. |
+| EXP 3250 Principles of Human Factors Psychology | 3 | Track-required; take early so you can talk about it in internship interviews. |
+| ENC 4294 Client-Based Project Management | 3 | After ENC 4293. |
+| ENC 4280 Technical Writing Style | 3 | Tech Comm required. |
+| CPO 3103 Comparative Politics | 3 | INS basic core. |
+
+### Summer 2028 (6 cr, internship summer)
+
+| Course | Cr | Why now |
+|---|---|---|
+| SOP 3004 Social Psychology | 3 | Core; commonly online in summer. |
+| ENC 4215 Document Design **or** ENC 4218 Visual Technical Communication | 3 | Tech Comm choice course. |
+
+### Fall 2028 (17 cr)
+
+| Course | Cr | Why now |
+|---|---|---|
+| PSY 4215C Advanced Research Methods in Psychology | 4 | Needs PSY 3213C. Track course. |
+| Language 1120C | 4 | Start the two-semester sequence. |
+| EXP 4507 Advanced Human Memory and Cognition | 3 | After EXP 3604. Track course. |
+| PSY 3320C Survey Methods in Psychology | 3 | Track course; pairs with STA survey/data work. |
+| INS Area B course (e.g. INR 4084 Political Terror) | 3 | Track elective. |
+
+### Spring 2029 (16 cr)
+
+| Course | Cr | Why now |
+|---|---|---|
+| Language 1121C | 4 | Completes the language requirement. |
+| PSY 4604 History and Systems of Psychology | 3 | Core; prerequisite/corequisite for PSY 4049. |
+| STA 4364 Statistical Foundations of Data Science & AI I | 3 | Stats elective; you will have COP 3223C, MAC 2312, STA 2023. |
+| INS Area C course (e.g. INR 4603 IR Theory) | 3 | Track elective. |
+| INR 4369 Intelligence Studies Capstone | 3 | After INR 4363; can move to Fall 2029 if the school prefers it in your last term. |
+
+### Summer 2029 (12 cr)
+
+| Course | Cr | Why now |
+|---|---|---|
+| EXP 3204 Sensation and Perception | 3 | Track course. |
+| SOP 3723 Cross-Cultural Psychology (or INP 3004) | 3 | Upper-level PSY elective. |
+| ENC 4290 Usability Testing for Technical Communication | 3 | Tech Comm elective. |
+| STA elective (STA 4241 / 4365 / 4222 / 4502) | 3 | Third Stats elective. |
+
+### Fall 2029 (9 cr + exit course), graduation
+
+| Course | Cr | Why now |
+|---|---|---|
+| PSY 4049 Psychology Capstone | 3 | Must be your last semester. |
+| INS "any area" course (e.g. CPO 4541 Chinese Politics or CPO 4643 Russian Politics) | 3 | Last track elective. |
+| STA 4102 Computer Processing of Statistical Data | 3 | Last Stats elective; SAS is still standard in federal and health analytics. |
+| POS 4961 / exit exam | 0 | Graduating term. |
+
+A 9-credit last semester is deliberate: it leaves room for a part-time cleared internship or a Pathways internship that converts to a federal job at graduation (section 7).
+
+**Accelerated option (graduate Aug 2029):** move PSY 4049, the "any area" POS course, and STA 4102 into Summer 2029 (that summer becomes 21 cr, which is too much) or spread them across Fall 2028 and Spring 2029 (18–19 cr terms). Only do this if your GPA is holding at 3.3+.
+
+---
+
+## 5. Choices to make (with recommendations)
+
+**Language.** For intelligence careers the payoff languages are Arabic, Chinese, Russian, Persian, and Korean (critical languages; eligible for the Boren Scholarship and language bonus pay later). Two semesters will not make you proficient, but it signals seriousness and unlocks Boren. If you would rather protect your GPA, Spanish is the easiest path and is useful for DHS, SOUTHCOM, and Florida law enforcement. Recommendation: pick Chinese or Russian **only if** you intend to keep studying after graduation; otherwise Spanish. Match your regional INS elective to the language (CPO 4541 Chinese Politics, CPO 4643 Russian Politics, CPO 3403 Middle East).
+
+**INS Area B / Area C / any-area.** Use your myKnight Audit for the exact lists. Courses UCF lists for its INS programs include INR 4084 Political Terror, CPO 3057 Contemporary Revolution and Political Violence, CPO 3034 Politics of Developing Areas, CPO 3403 Politics of the Middle East, CPO 3614 Politics of Eastern Europe, CPO 4303 Comparative Latin American Politics, CPO 4514 Politics of East Asia, CPO 4541 Chinese Politics, CPO 4643 Government and Politics of Russia. Area C (theory) options include INR 4603 International Relations Theory and POT 3302 Political Ideologies. Recommendation: INR 4084 (B), INR 4603 (C), one regional CPO (any area).
+
+**Statistics electives.** STA 4102 (SAS) + STA 4364 (Python/R data science) + STA 4241 (Statistical Learning) is the most employable trio. Swap STA 4241 for STA 4222 Sample Survey Methods if you lean toward survey/UX research.
+
+**Psych track four.** EXP 3204, EXP 4507, PSY 4215C, PSY 3320C are the four that map to human factors and research jobs. PSB 4240 Neuropsychology is interesting but less marketable for you.
+
+**Tech Comm.** ENC 4218 Visual Technical Communication if you want the human-factors/UX angle; ENC 4215 Document Design if you want classic tech-writer jobs. ENC 4290 Usability Testing is the elective regardless.
+
+---
+
+## 6. Verify with your ASC before Spring registration
+
+1. **INS track course list.** Your pasted catalog text did not include the course list. Confirm the audit shows: core POS 2041, INR 2002, POS 3703, CPO 3103; POS 4407, POS 4340, INR 4360, INR 4363, INR 4369; one course each from Areas A, B, C plus one more from any area. Confirm POS 3273 counts as Area A.
+2. **Prerequisite chain for the intelligence courses** (POS 4407 → INR 4360 → INR 4363 → INR 4369, and POS 3703 → POS 4340). The plan takes them one per semester in that order, so it works either way, but ask whether INR 4369 must be in your final term.
+3. **STA 4163 / STA 4164 double-counting** for both the Psychology math/science electives and the Statistics minor. If UCF requires unique hours in the minor, ask to substitute MAC 2311C and MAC 2312 (already done, and harder than the MAC 2233/2253 on the psych list) for the psych math/science electives. Then nothing overlaps.
+4. **Dual degree = 150-hour minimum.** UCF awards a B.A. and a B.S. together only as a dual degree, not a double major. You will be near 198 hours, so this is fine, but declare both programs formally.
+5. **Excess Credit Hour Surcharge.** UCF's baseline for students starting Summer 2019 or later is 120% of 120 = 144 hours. All hours attempted at UCF and at Florida public colleges count, including your three W's; AP hours do not. A dual degree does not raise the baseline, but UCF waives the hours required for the second degree if both degrees are awarded in the same term, and there is a refund process. Your count will be close to or over 144 even after that waiver because of the minors and the language. Ask the Registrar's Office to run your numbers now, and **never withdraw from a course** from here on.
+6. **Foreign language.** Confirm whether you can test out (CLEP or FLATS through the University Testing Center). Passing an exam removes 8 credits and one full course from two semesters.
+7. **Summer requirement.** UCF's 9-hour summer rule is waived for students entering with 60+ transfer hours; you should be exempt. Confirm.
+8. **BSC 1005 (AP) vs BSC 1020 (Valencia).** These are equivalent; UCF may count only one. Does not affect any requirement, only the hour count.
+9. **Financial aid ceilings.** Bright Futures and Pell both cap the number of funded hours/semesters. With a 198-hour plan, ask Financial Aid which of your last terms would be unfunded so you are not surprised in 2029.
+
+---
+
+## 7. Job-stability strategy: what to do each year
+
+**What you are being built for.** Your combination points at three employer groups, all of which prize the same asset: a security clearance.
+
+1. **Federal intelligence analyst** (CIA, DIA, NSA, NGA, FBI, DHS Intelligence & Analysis, State Department INR, Army/Navy/Air Force civilian intelligence). Most stable once you are in; slowest to get into (12–24 months from application to start).
+2. **Cleared defense contractors and Team Orlando.** Orlando is the modeling, simulation, and training capital of the country: NAWCTSD (Navy), PEO STRI (Army), AFAMS (Air Force), the Army's simulation center, and contractors around them (Lockheed Martin, L3Harris, RTX, Leidos, SAIC, Booz Allen, CAE, Cubic, General Dynamics). They hire human factors, training-effectiveness, test-and-evaluation, and technical-writing people straight out of UCF, and many hire students part-time before graduation. You already live in the best city in the country for your major pair. "Willing to move anywhere" widens the federal side (NSA at Fort Meade, Texas, Georgia, Colorado, Hawaii; NGA in St. Louis and DC; DIA in DC; FBI field offices everywhere).
+3. **State and local intelligence/analysis.** Florida Fusion Center (Tallahassee), Central Florida Intelligence Exchange (Orlando), sheriff's-office and police crime/intelligence analysts. Faster hiring (2–6 months), less pay, very stable, and a common on-ramp to federal work.
+
+Private-sector fallbacks the same coursework supports: UX researcher, data analyst, technical writer.
+
+**Rules that decide whether these doors open:**
+
+- **GPA 3.0 is a hard floor** (CIA minimum; federal GS-7 entry via Superior Academic Achievement). 3.5 makes you competitive. Your UCF GPA starts fresh this semester; every C from here is a real cost.
+- **Clearance hygiene starting now:** no drug use (including marijuana, regardless of state law), no missed debt payments, keep records of foreign travel and foreign contacts, and keep social media boring. The SF-86 covers the last 7–10 years.
+- **A Pathways internship that converts** is the single most reliable route to a federal job on graduation day. Pathways interns can be converted to permanent positions without competing again.
+- Federal hiring volume swings with administrations and budgets (2025 had freezes and cuts). That is why the plan keeps the contractor and state/local routes open, not just the agency route.
+
+**Timeline:**
+
+| When | Do |
+|---|---|
+| Now (Fall 2026) | Join UCF's Intelligence Community Center for Academic Excellence (ICCAE) events. Create USAJOBS and intelligencecareers.gov profiles. Apply to the Navy NREIP program for Summer 2027 at NAWCTSD Orlando (deadline is usually early November). |
+| Dec 15, 2026 – Jan 30, 2027 | CIA undergraduate internship application window opens; apply. CIA needs 6–12 months plus a background check, so this is for a 2028 session. |
+| Spring 2027 | Get a research-assistant slot in a UCF Institute for Simulation and Training or psychology human-factors lab. Learn R properly in PSY 3204C; teach yourself SQL on the side. Join the HFES student chapter. |
+| Summer 2027 | Local internship or lab work (NAWCTSD via NREIP, a Team Orlando contractor, CFIX, a sheriff's-office analysis unit). Keep the 10–13 credits online. |
+| Sept–Nov 2027 | Apply for Summer 2028 federal internships: NSA (window typically Sept–Oct), FBI Honors Internship, DIA and NGA Pathways postings on USAJOBS, DHS. If you chose a critical language, apply for Boren (deadline usually late January). |
+| Summer 2028 | The internship summer. Course load is only 6 credits so you can work full time. |
+| Fall 2028 | Apply for full-time federal positions 12–18 months out (CIA, NSA, DIA, NGA, FBI Intelligence Analyst, DHS I&A). Ask your internship supervisor about conversion. Consider the CompTIA Security+ exam; it is the DoD baseline cert that cleared contractors screen for. |
+| Spring–Summer 2029 | Apply to Team Orlando contractors (they hire 3–6 months out) and state/local analyst jobs (2–6 months out) as backups. Build a portfolio: an INR 4363 analytic product, a PSY 4215C study, an ENC 4290 usability report, a STA 4364 data project. |
+| Fall 2029 | Part-time cleared internship or Pathways conversion alongside the 9-credit final term. Graduate December 2029 with offers already in hand. |
+
+---
+
+## 8. If you want to finish sooner
+
+| Change | Credits saved | New graduation |
+|---|---|---|
+| Test out of the language (CLEP/FLATS) | 8 | Summer 2029 with no overloads |
+| Drop the Tech Comm minor but keep ENC 3241 + ENC 4290 as free electives (the two courses employers actually notice) | 12 | Summer 2029 |
+| Drop the Tech Comm minor entirely | 18 | Spring 2029 (May 2029) |
+| Drop the Statistics minor (keep STA 4163/4164 for psych) | 9 | Summer 2029 |
+
+Honest ranking for your stated goal (fastest route to a stable, clearance-track job): the Statistics minor is worth more than the Tech Comm minor, and the internships in section 7 are worth more than either minor. If something has to give, give up the Tech Comm minor before you give up an internship summer.
