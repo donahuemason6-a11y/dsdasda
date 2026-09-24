@@ -2,7 +2,7 @@
 
 **Political Science B.A. (Intelligence & National Security track) + Psychology B.S. (Cognition & Human Factors track) + Statistics minor + Technical Communication minor**
 
-**Read section 10 first.** It holds the recommended single-degree combination that fits 105 paid credits. Sections 1 to 9 are the original dual-degree analysis.
+**Read section 11 first.** It ranks the dual-degree + minor combinations that fit 105 paid credits and holds the recommended 101-credit schedule. Section 10 is the single-degree alternative; sections 1 to 9 are the original dual-degree analysis.
 
 Prepared 2026-09-24, based on the 2026–27 requirement text you pasted, your transfer record, and your Fall 2026 schedule (PSY 2012, STA 2023, POS 3273, POS 4407, COP 3223C). UCF's catalog site was blocked from where this was built, so a few items are marked **verify** for your Academic Success Coach (ASC). Nothing below replaces your myKnight Audit.
 
@@ -392,3 +392,45 @@ With exams: Summer 2027 drops to 10, Fall 2027 to 12, Spring 2028 to 13 (84 tota
 3. CLEP Human Growth and Development for DEP 2004, and CLEP/FLATS for the language.
 4. Excess-hours surcharge: about 176 attempted hours at graduation (165 with exams) against a 144 baseline. Ask the Registrar what that costs and whether any refund applies.
 5. Change of major paperwork: drop the Poli Sci B.A., declare Psychology B.S. with the Cognition & Human Factors track, and add both minors this semester so the audit is right before Spring registration.
+
+---
+
+## 11. Dual degree + minor: the combinations that fit 105 credits, ranked by job odds
+
+Constraint set on 2026-09-24: two degrees, at least one minor, 105 paid credits after Fall 2026, willing to relocate anywhere. Political Science B.A. (INS track) stays in every combination because it is only 27 credits from done and carries the intelligence coursework; the question is which B.S. goes with it and which minor.
+
+Market context (NY Fed, 2026): recent-graduate unemployment about 5.6%, underemployment about 42%. Criminal justice has the highest underemployment of any major (65.8%). Psychology and political science have historically run near 50% early-career underemployment, economics and statistics nearer a third. Internships move your personal odds far more than the choice among these combinations does.
+
+| # | Combination | Credits left (with exams) | Fits 105? | Main jobs at graduation | Typical entry pay | Chance of a major-related job within 6 months (with 2 internships / without) | Job security | GPA risk |
+|---|---|---|---|---|---|---|---|---|
+| 1 | Poli Sci INS B.A. + Psychology B.S. (Human Factors) + Statistics minor | 101 (90) | Yes | Defense-contractor analyst, training/human-factors analyst, test analyst (Orlando, DC, Huntsville, San Diego, Dayton, Tampa); state/local intelligence or crime analyst; UX researcher; data analyst; federal 0180 Psychology, 1515 Operations Research, 1530 Statistician, 0132 Intelligence, 0343 Program Analyst via Pathways | $50k to $70k contractor; $45k to $60k state/local; GS-7 to GS-9 federal | 60 to 70% / 30 to 40% | High once cleared or in government; moderate in private UX | Moderate |
+| 2 | Poli Sci INS B.A. + Statistics B.S. + Psychology minor | ~100 (89) | Yes, verify Stats B.S. list | Data analyst or statistician anywhere (banks, insurers, hospitals, federal 1530/1515, NSA and NGA analytic roles, contractor data roles); intelligence analyst with a quant edge | $60k to $80k | 70 to 80% / 40 to 50%, but only if GPA stays above 3.0 | High | High: needs MAC 2313, MAS 3105, STA 4321 and 4322 (calculus-based probability). A C in Calc I is a warning sign |
+| 3 | Poli Sci INS B.A. + Criminal Justice B.S. + Statistics minor | ~86 (75) | Yes, with room | Crime or intelligence analyst at police, sheriff, state agencies, fusion centers, HIDTA; probation, corrections, investigator trainee; later FBI, DEA, HSI, ATF analyst roles | $42k to $58k | 70 to 80% / 50 to 60% (many openings, lower bar) | Very high (government) | Low |
+| 4 | Poli Sci INS B.A. + Economics B.S. + Statistics minor | ~101 to 107 (90 to 96) | Only with exams | AML, sanctions and financial-crimes analyst at banks and fintechs (large, growing, hires new grads in every metro); Treasury, FinCEN, OFAC, IRS-CI analyst; federal 0110 Economist; IC economic analyst | $48k to $70k | 65 to 75% / 40 to 50% | High (regulatory demand) | Moderate, plus a hurdle: the College of Business primary core (accounting, QMB 3003 and 3200 with a B) before admission |
+| 5 | Poli Sci INS B.A. + Psychology B.S. + Technical Communication minor | 110 (99) | Only with exams | Everything in row 1 minus the quant signal, plus technical writer and proposal writer at cleared contractors | $50k to $70k | 55 to 65% / 30 to 40% | High once cleared | Low |
+
+### Pick: combination 1
+
+Reasons: it fits at 101 with 4 credits to spare (90 with exams), it uses all 15 credits you are taking now, it lines up with Orlando's largest employer cluster for your profile, and it keeps four federal occupational series open. Combination 2 has the higher ceiling; switch to it only if STA 2023 and COP 3223C both come back A or B this December and you are willing to take Calculus III. Combination 3 is the fallback if your GPA slips, because it is the surest route to a government job, just a lower-paid one.
+
+### 101-credit schedule for combination 1 (language in class; 90 with exams)
+
+| Term | Courses | Cr |
+|---|---|---|
+| Spring 2027 | PSY 3204C (4), EXP 3604, PSY 3024, POS 3703, INR 4360 | 16 |
+| Summer 2027 | PSY 3213C (4), DEP 2004, PSB 3002, SOP 3004 | 13 |
+| Fall 2027 | STA 4163, INR 4363, POS 4340, PSY 3074, EXP 3250 | 15 |
+| Spring 2028 | STA 4164, PSY 4215C (4), CPO 3103, INR 4084 (Area B), EXP 3204 | 16 |
+| Summer 2028 | STA 4102, PSY 3320C, SOP 3723 (internship summer, all commonly online) | 9 |
+| Fall 2028 | Language 1120C (4), EXP 4507, STA 4364, PSY 4604, INR 4603 (Area C) | 16 |
+| Spring 2029 | Language 1121C (4), INR 4369, STA elective, any-area CPO course, PSY 4049, POS exit exam (graduate May 2029) | 16 |
+
+With exams: Summer 2027 drops to 10, Fall 2028 to 12, Spring 2029 to 12. The 15 spare credits then cover an internship-for-credit course or the two Tech Comm courses that matter most (ENC 3241, ENC 4290).
+
+### What decides whether you actually get the job
+
+1. Two internships before graduation (Summer 2027 local, Summer 2028 federal or contractor). Section 7 has the deadlines.
+2. GPA at or above 3.0, ideally 3.5. No withdrawals.
+3. Clearance eligibility kept clean from today.
+4. Applying 12 to 18 months early for federal roles and 3 to 6 months early for contractors and state/local roles.
+5. Willingness to relocate, which you have: DC metro, Tampa (SOCOM and CENTCOM at MacDill), San Antonio, Huntsville, Colorado Springs, Fort Meade, St. Louis, and Omaha carry most of the entry-level cleared analyst postings.
