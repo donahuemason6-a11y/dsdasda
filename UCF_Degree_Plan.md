@@ -17,6 +17,8 @@ Prepared 2026-09-24, based on the 2026–27 requirement text you pasted, your tr
 | If you drop the Tech Comm minor | Spring 2029 (May 2029) |
 | Total hours at graduation | ~198 (dual-degree minimum is 150, so no problem there) |
 
+**Funding note:** you have 105 paid credits left, not 119. See section 9 for the trimmed versions that fit.
+
 Four requirements you may not have on your radar:
 
 1. **DEP 2004 Developmental Psychology** is part of the Psychology "basic core" and you have not taken it.
@@ -283,3 +285,46 @@ Private-sector fallbacks the same coursework supports: UX researcher, data analy
 | Drop the Statistics minor (keep STA 4163/4164 for psych) | 9 | Summer 2029 |
 
 Honest ranking for your stated goal (fastest route to a stable, clearance-track job): the Statistics minor is worth more than the Tech Comm minor, and the internships in section 7 are worth more than either minor. If something has to give, give up the Tech Comm minor before you give up an internship summer.
+
+---
+
+## 9. Funding-limited version: 105 paid credits
+
+You have funding for 105 more credits after Fall 2026. The full plan above is 119, so here is how to close the 14-credit gap.
+
+| Path | Credits | Versus 105 |
+|---|---|---|
+| Keep everything, test out of language (CLEP/FLATS), CLEP out of DEP 2004 | 108 | 3 over: one self-paid course (~$650 in-state) |
+| Keep everything, test out of language only | 111 | 6 over |
+| Keep everything as in section 4 | 119 | 14 over (~$3,000 in-state, before any excess-hours surcharge) |
+| Cut Tech Comm to ENC 3241 + ENC 4290 as free electives, CLEP DEP 2004, language in class | 104 | fits |
+| Drop the Tech Comm minor entirely, language in class | 101 | fits |
+
+**Exam credit that makes this work**
+
+- Language: CLEP or FLATS through the University Testing Center satisfies the B.A. language requirement. Under $150 total. Requires some existing knowledge of the language.
+- DEP 2004: UCF awards DEP 2004 credit for the CLEP Human Growth and Development exam. The Psychology basic core allows exam credit; the two minors do not. Confirm on UCF's current CLEP equivalency chart first.
+- Do not try exam credit for anything in the Statistics or Tech Comm minors; both forbid it.
+
+**Recommendation.** If you can pass a language exam, keep everything (108) and self-pay one course. If you cannot, cut the Tech Comm minor to ENC 3241 + ENC 4290 rather than touching the Statistics minor. The quantitative courses matter more to intelligence and human-factors employers, and those two ENC courses carry most of the minor's resume value.
+
+**Funding source questions.** If the money is Bright Futures, ask Financial Aid whether a declared dual degree (150 required hours) extends funded hours beyond 120, and confirm your five-year window (it closes five years after high school graduation). If it is Florida Prepaid, the hour count is fixed.
+
+### 108-credit schedule (everything kept, language + DEP 2004 by exam)
+
+| Term | Courses | Cr |
+|---|---|---|
+| Spring 2027 | PSY 3204C, EXP 3604, PSY 3024, POS 3703, INR 4360 | 16 |
+| Summer 2027 | PSY 3213C, ENC 3241, PSB 3002 (take the CLEP exams this year) | 10 |
+| Fall 2027 | STA 4163, INR 4363, POS 4340, PSY 3074, ENC 4293 | 15 |
+| Spring 2028 | STA 4164, EXP 3250, ENC 4294, ENC 4280, CPO 3103 | 15 |
+| Summer 2028 | SOP 3004, ENC 4215 or 4218 (internship summer) | 6 |
+| Fall 2028 | PSY 4215C, EXP 4507, PSY 3320C, INS Area B, STA 4102 | 16 |
+| Spring 2029 | PSY 4604, STA 4364, INS Area C, INR 4369, INS any-area | 15 |
+| Summer 2029 | EXP 3204, SOP 3723, ENC 4290, STA elective, PSY 4049 (graduate Aug 2029) | 15 |
+
+If 15 credits in the final summer is too much, move PSY 4049 to Fall 2029 as the one self-paid course and pair it with a part-time cleared internship or a Pathways internship.
+
+### 104-credit schedule (Tech Comm minor cut to two courses, language in class)
+
+Same as above, but remove ENC 4293, ENC 4294, ENC 4280, and ENC 4215/4218, and add Language 1120C (Fall 2028) and 1121C (Spring 2029). Terms come out to 16, 10, 12, 12, 3, 17, 16, 15 = 104 (the 3-credit Summer 2028 is fine; it keeps the internship summer open). Graduate Summer 2029.
