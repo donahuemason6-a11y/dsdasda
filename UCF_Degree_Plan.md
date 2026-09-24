@@ -2,7 +2,7 @@
 
 **Political Science B.A. (Intelligence & National Security track) + Psychology B.S. (Cognition & Human Factors track) + Statistics minor + Technical Communication minor**
 
-**Read section 11 first.** It ranks the dual-degree + minor combinations that fit 105 paid credits and holds the recommended 101-credit schedule. Section 10 is the single-degree alternative; sections 1 to 9 are the original dual-degree analysis.
+**Read sections 11 and 12 first.** Section 12 is the decision and the graduate-school path; section 11 ranks the dual-degree + minor combinations and holds the 101-credit schedule. Section 10 is the single-degree alternative; sections 1 to 9 are the original dual-degree analysis.
 
 Prepared 2026-09-24, based on the 2026–27 requirement text you pasted, your transfer record, and your Fall 2026 schedule (PSY 2012, STA 2023, POS 3273, POS 4407, COP 3223C). UCF's catalog site was blocked from where this was built, so a few items are marked **verify** for your Academic Success Coach (ASC). Nothing below replaces your myKnight Audit.
 
@@ -434,3 +434,30 @@ With exams: Summer 2027 drops to 10, Fall 2028 to 12, Spring 2029 to 12. The 15 
 3. Clearance eligibility kept clean from today.
 4. Applying 12 to 18 months early for federal roles and 3 to 6 months early for contractors and state/local roles.
 5. Willingness to relocate, which you have: DC metro, Tampa (SOCOM and CENTCOM at MacDill), San Antonio, Huntsville, Colorado Springs, Fort Meade, St. Louis, and Omaha carry most of the entry-level cleared analyst postings.
+
+---
+
+## 12. Decision (2026-09-24) and graduate-school path
+
+**Chosen:** Political Science B.A. (INS track) + Psychology B.S. (Cognition & Human Factors track) + Statistics minor. 101 credits, graduating May 2029. Schedule is in section 11. Clearance profile confirmed clean (US citizen, no foreign contacts, no record), so the cleared paths in section 7 are fully open.
+
+**Why it wins on both goals**
+
+- Job on day one: cleared contractor and government analyst roles are the fastest-hiring stable jobs for this profile; two internships plus a 3.0+ GPA gives roughly 60 to 70% odds of a related job within six months.
+- Graduate school: UCF's Human Factors and Cognitive Psychology M.S./Ph.D. is a top program on the same campus. The B.S. research sequence (PSY 3213C, PSY 4215C) plus the Statistics minor and lab experience is the standard profile of admitted applicants. Intelligence-side master's programs (Georgetown SSP, George Mason, Johns Hopkins) accept any strong major, and federal employers commonly fund them after hire.
+- The niche to own: analytic quality, cognitive bias, and human-machine teaming in intelligence analysis. Few entrants understand both the intelligence process and the cognitive science of judgment, with statistics to test claims.
+
+**Honors in the Major (recommended if credits allow).** PSY 4903H + PSY 4970H, 6 credits. Requires 3.2 overall and 3.5 psychology GPA. Fits if the language and DEP 2004 are done by exam (90 + 6 = 96 credits). A finished thesis is the strongest graduate-school credential available to an undergraduate and doubles as an analyst writing sample.
+
+**Alternative on a trigger only.** If STA 2023 and COP 3223C both come back A or B in December 2026, consider Statistics B.S. + Psychology minor instead (section 11, row 2): higher ceiling, higher GPA risk.
+
+**Clearance references.** Investigators ask references guideline-specific questions (drugs, alcohol, finances, foreign contacts, honesty, reliability), not opinions. Choose references who know you well; disclose everything on the SF-86, since omissions are the leading cause of denials.
+
+**Next 90 days**
+
+1. ASC appointment: declare the dual degree with the Cognition & Human Factors track and the Statistics minor; drop Tech Comm from the plan.
+2. Register for Spring 2027: PSY 3204C, EXP 3604, PSY 3024, POS 3703, INR 4360.
+3. Apply to Navy NREIP for NAWCTSD Orlando (early November deadline), join ICCAE, create a USAJOBS profile. CIA internship window: December 15 to January 30.
+4. Confirm and book CLEP Human Growth and Development (DEP 2004) and a language exam if eligible.
+5. January: email two human-factors faculty at UCF's Institute for Simulation and Training to volunteer as a research assistant.
+6. GPA floor of 3.5 from here; no withdrawals.
