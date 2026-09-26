@@ -1,8 +1,8 @@
 # Video Discussion Script: The Stanford Prison Experiment
 
-**Target length:** 7 to 8 minutes spoken at a normal conversational pace (roughly 1,150 words).
+**Target length:** about 8 minutes spoken at a normal conversational pace (roughly 1,400 words).
 The requirement is 5 to 10 minutes, so this leaves room on both sides. If you talk fast,
-slow down on the quotes and pause between sections. If you run long, cut Section 5.
+slow down on the quotes and pause between sections. If you run long, trim Section 7 or shorten the Milgram comparison in Section 3.
 
 **Delivery tips:**
 - Don't read word for word. Glance at each paragraph, look up, and say it in your own voice.
@@ -11,138 +11,158 @@ slow down on the quotes and pause between sections. If you run long, cut Section
 
 ---
 
-## Section 1: Opening (about 0:00 to 0:45)
+## Section 1: Opening (about 0:00 to 0:40)
 
-Hi everyone. For this discussion I want to talk about the documentary on the Stanford
+Hi everyone. For this discussion I'm going to talk about the documentary on the Stanford
 Prison Experiment, which Philip Zimbardo ran in the basement of the Stanford psychology
 department in the summer of 1971.
 
-The basic setup was simple. He took college students who had passed screening for
-psychological problems, paid them fifteen dollars a day, and flipped a coin to decide who
-would be a guard and who would be a prisoner. The study was supposed to last two weeks.
-It was shut down after six days.
-
-The question Zimbardo said he wanted to answer was: what happens when you put good people
-in an evil place? Does the situation win, or does the person's character win? I want to
-talk about what the film showed, how it connects to what we've covered in class, and where
-I think the film, and Zimbardo himself, deserve some pushback.
+Quick recap for anyone who needs it. He took college students who had passed screening
+for psychological problems, paid them fifteen dollars a day, and randomly assigned them
+to be guards or prisoners. The study was supposed to run two weeks. It was shut down
+after six days. I'm going to go through the prompt questions roughly in order, and I'll
+be honest that a couple of my answers surprised me once I actually thought them through.
 
 [pause]
 
-## Section 2: What actually happened (about 0:45 to 2:30)
+## Section 2: What surprised me most (about 0:40 to 2:00)
 
-The first thing that struck me is how fast everything moved. On day one, both the guards
-and the prisoners described it as boring, almost like summer camp. One guard said he
-thought it might be a very long, very boring experiment.
+The thing that surprised me most wasn't the cruelty of the guards. I kind of expected
+that going in, because that's the famous part. What surprised me was how fast the
+prisoners stopped acting like volunteers.
 
-Then on the second morning, the prisoners barricaded themselves in with their beds. The
-guards responded by escalating. They woke prisoners in the middle of the night for counts,
-made them do push-ups, made them clean toilets with their bare hands. One guard admitted
-on camera that he was the instigator of the whole harassment schedule.
+Prisoner 8612 led a rebellion on the second morning. When he asked to leave, Zimbardo
+didn't respond as a researcher. He responded as a prison superintendent and offered him a
+deal: I'll get the guards off your back if you feed me information about the other
+prisoners. Basically, be a snitch. 8612 went back to his cell confused and told everyone
+that nobody was allowed to leave. That was never actually true. But from that moment,
+in the prisoners' minds, it was a real prison. He had a breakdown within hours.
 
-Prisoner 8612, who led the rebellion, asked to leave. And this is the moment I keep
-coming back to. Zimbardo, instead of acting like a researcher, acted like a prison
-superintendent. He offered the guy a deal: I'll get the guards off your back if you feed
-me information about the other prisoners. Basically, become a snitch.
+And then prisoner 819. Zimbardo told him he was free to go, and he heard the others
+chanting that 819 was a bad prisoner. He started crying and said he couldn't leave. He
+wanted to go back to prove he wasn't a bad prisoner. Zimbardo had to say, you're not a
+prisoner, this isn't a prison. After about three days, a college student had forgotten
+he could walk out. That's the part I keep thinking about.
 
-8612 went back to his cell confused and told everyone that nobody was allowed to leave.
-That was never actually true. But from that moment on, in the prisoners' minds, it was a
-real prison. Within hours 8612 had a breakdown, screaming that he was burning up inside,
-and they had to release him.
+The other surprise was the prisoners themselves. When the guards gave them a choice,
+give up your blanket or 416 stays in solitary another night, most of them kept the
+blanket. There was almost no solidarity. That's what Zimbardo connects to why people in
+abusive situations don't just say stop, and I think that's a real insight.
 
-[pause]
+## Section 3: Was it ethical, and how it compares to Milgram (about 2:00 to 4:00)
 
-Then there's prisoner 819. When Zimbardo told him he could go, 819 heard the other
-prisoners chanting that he was a bad prisoner, and he started crying and said he couldn't
-leave. He wanted to go back to prove he wasn't a bad prisoner. Zimbardo had to tell him,
-you are not a prisoner, this is not a prison, and 819 described it like a cloud lifting.
-That's a college student, after about three days, forgetting he was a volunteer.
-
-## Section 3: Connecting this to class concepts (about 2:30 to 4:45)
-
-So let me tie this to a few things we've discussed.
-
-**First, situational versus dispositional explanations.** The whole point of the study
-was to argue for the power of the situation. None of these students were screened as
-sadistic. The guard nicknamed John Wayne, Dave Eshelman, said he modeled his character on
-the prison warden from a movie he'd just seen. He put on a role, and the role took over.
-That's basically the fundamental attribution error in reverse. We look at abusive guards
-in real prisons and assume they're bad people, when the situation may be doing a lot of
-the work.
-
-**Second, deindividuation.** Zimbardo deliberately gave the guards mirrored sunglasses so
-nobody could see their eyes, and he gave the prisoners numbers instead of names. In the
-film, prisoner 416 says he stopped feeling like himself and started feeling like he
-literally was the number 416. When you strip away identity on both sides, it becomes
-easier to hurt someone and easier to accept being hurt.
-
-**Third, obedience to authority.** The documentary spends a lot of time on Milgram's
-shock experiment from the previous decade, where about two thirds of participants were
-willing to deliver what they thought was a dangerous shock because a man in a lab coat
-told them to continue. I think the parallel the film is drawing is that the guards had
-their own man in a lab coat: Zimbardo. He briefed them to create fear and to make the
-prisoners feel their lives were totally controlled. So when people say the guards just
-became cruel on their own, I'm not sure that's the full story. They were told what kind
-of guards to be.
-
-**Fourth, the bystander problem.** For me this was the most uncomfortable part. Eshelman
-said what shocked him most was that nobody stopped him. Not the other guards, not the
-staff. There were guards who hated watching the prisoners suffer and never did anything
-demeaning themselves, but none of them ever intervened. One of them literally became the
-gopher, going out to get food so he wouldn't have to watch. That's diffusion of
-responsibility and conformity happening in real time, and it's the same dynamic we see
-in real institutions.
+So, was it ethical? No. I don't think that's a hard call. There was no real informed
+consent about what the guards would be allowed to do. Participants came to believe they
+couldn't withdraw, which is the opposite of voluntary participation. And there was nobody
+independent with the power to stop it. The film shows a colleague, Christina Maslach,
+walking in, seeing prisoners chained and hooded with bags on their heads, and telling
+Zimbardo these are young boys suffering and you are responsible. The experiment didn't
+end because of the data. It ended because someone with fresh eyes was disgusted.
 
 [pause]
 
-## Section 4: My critique of the study (about 4:45 to 6:30)
+Now the comparison to Milgram. The documentary spends a lot of time on the shock study,
+where about two thirds of participants went all the way to what they believed was a
+dangerous voltage because a man in a lab coat said the experiment requires you to
+continue. Both studies deceived people and both caused real distress.
 
-Now here's where I want to push back, because I don't think the film is as critical as
-it should be.
+For me, Stanford was more problematic, and here's why. Milgram's harm was real but it
+was contained. Each session was under an hour, the learner was an actor, and everyone
+was debriefed and shown the man was fine. The distress was learning something about
+yourself. Stanford had no fixed limit on the harm. It ran around the clock for six days,
+the suffering was genuine, and the person who should have pulled the plug was the same
+person running the prison. Milgram was a deceptive experiment. Stanford, by day three,
+had stopped being an experiment at all. Zimbardo admits this himself when he says he'd
+lost the scientist identity entirely.
 
-Eshelman says on camera that he figured out the experiment was meant to prove prisons
-are cruel, so he decided to help the results come along. He calls it his own little
-experiment. That's a huge problem. In research methods terms, that's demand
-characteristics. He guessed the hypothesis and performed it. So when Zimbardo says the
-evil place won over the good people, at least one of the main sources of evil in that
-place was a guy who was consciously acting.
+## Section 4: How I would have reacted as a prisoner (about 4:00 to 5:00)
 
-Second, Zimbardo was both the principal investigator and the prison superintendent. He
-admits in the film this was a big mistake. When a colleague asked him what his
-independent variable was, he got furious, because in his head there was a riot coming.
-He'd lost the scientist identity entirely. It took an outside psychologist, Christina
-Maslach, walking in, seeing prisoners chained and hooded with bags on their heads, and
-telling him these are young boys suffering and you are responsible, before he ended it.
-The experiment didn't end because of the data. It ended because someone with fresh eyes
-was disgusted.
+Honestly, I'd love to say I would have been 416, the guy who went on a hunger strike
+and refused to eat until he was out. But when I really think about it, I'm not sure.
 
-So I'd argue the study tells us less about human nature than Zimbardo claims and more
-about what happens when the person running a study becomes a participant in it.
+416 came in late as a replacement, so he hadn't been worn down yet. The prisoners who'd
+been there from day one had been woken up every few hours, had no daylight, no idea what
+time it was, and had watched two people break down and disappear. One guard said in the
+film that the harassment schedule was designed so prisoners never knew what would happen
+next. Under that kind of sleep deprivation and uncertainty, I think I would have done
+what most of them did, which is keep my head down and keep my blanket. I don't like
+that answer, but I think it's the honest one, and I think that's kind of the point.
 
-## Section 5: The ethics question (about 6:30 to 7:15)
+## Section 5: How I would have reacted as a guard (about 5:00 to 6:00)
 
-On ethics, the film is right that this study and Milgram's changed the rules. Today an
-institutional review board would never approve this. There was no real informed consent
-about what the guards would be allowed to do, participants believed they couldn't
-withdraw, and there was no independent person with the power to stop it.
+The guard question is harder for me, because there were really three kinds of guards in
+the film.
 
-But I do think there's a tension worth admitting. We learned something from this that we
-probably couldn't learn ethically today. The prisoners voting to keep their blankets
-rather than let 416 out of the hole is a genuinely disturbing demonstration of how abused
-people fail to support each other. Zimbardo connects it to why people in abusive
-relationships don't just say stop. That's a real insight. It just came at a cost nobody
-had the right to charge.
+There was the one nicknamed John Wayne, Dave Eshelman, who says he modeled himself on a
+movie prison warden and decided to be as cold and cruel as possible. There were guards who
+did the job but didn't invent new humiliations. And there were guards who hated what they
+saw and never did anything demeaning themselves, but also never said a word to stop it.
+One of them literally became the errand runner, going out to get the food so he wouldn't
+have to watch.
 
-## Section 6: Closing (about 7:15 to 7:45)
+I don't think I'd have been Eshelman. But I think I'd have been that third guard. And
+what really got me was Eshelman saying what shocked him most was that nobody ever
+questioned his authority. Not once. That's diffusion of responsibility in real time.
+Everybody assumes someone else, or the psychologists upstairs, will step in. So I'd like
+to think I'd speak up, and the film is basically a warning that most people in that
+position don't.
 
-So where I land is this. I believe the situation is powerful. I believe most of us would
-behave worse than we think in that basement. But I also think the film lets Zimbardo off
-easy, because the situation he created was designed to produce exactly what it produced,
-and one of his guards knew the script.
+[pause]
 
-The question I'd put to the rest of you is: if you had been one of the quiet guards, the
-ones who didn't like what they saw, do you honestly think you would have said something?
-Because I'd like to say yes, and I'm not sure I believe myself.
+## Section 6: What Zimbardo should have done, and how much guilt (about 6:00 to 7:15)
+
+What should he have done differently? Three things.
+
+First, he should not have been the prison superintendent. He says this himself in the
+film. He should have been the principal investigator with someone else running the
+prison, or the other way around, with a colleague who had the authority to stop it at
+any point. When another psychologist asked him what his independent variable was, he
+got furious, because in his head there was a riot coming. That's a researcher who has
+become a participant.
+
+Second, he should not have briefed the guards to create fear and make prisoners feel
+their lives were totally controlled. That's a huge problem for the study, because he was
+telling them what kind of guards to be and then reporting their behavior as if it emerged
+naturally. Eshelman even says he figured out the study was meant to prove prisons are
+cruel, so he decided to help the results along. He calls it his own little experiment.
+In methods terms, that's demand characteristics, and it undermines the main conclusion.
+
+Third, there should have been clear, enforced withdrawal rules. The second 8612 said he
+wanted out, he should have been out. No deal, no snitch offer.
+
+As for guilt, I think he should carry a fair amount. Not for having the idea. The idea
+was a legitimate question and the ethics rules of 1971 were very different. But for the
+choices during the study, yes. He was the one adult in the building whose job was to
+protect those students, and he needed an outsider to tell him they were suffering. The
+fact that he's spent decades talking openly about his mistakes counts for something. It
+doesn't erase them.
+
+## Section 7: If it were run today (about 7:15 to 8:00)
+
+If you ran this today, first of all you couldn't. No review board would approve it. But
+suppose you could. I think the results would be less extreme, for a few reasons.
+
+Participants today would be far more aware they were being recorded and that the
+footage might end up public. Most students have heard of this study, so they'd know the
+script. And I think the guards would be more hesitant, because the cultural attitude
+toward that kind of abuse has shifted. The film actually mentions a British version being
+run for the BBC, and from what we've discussed in class, when the guards weren't briefed
+to be oppressive, they mostly weren't.
+
+That said, I don't think the core finding would disappear. Give people anonymity,
+uniforms, sleep deprivation, and an authority figure telling them it's fine, and you'd
+still see some people go further than they thought they would, and a lot of people stay
+silent. The setting would look different. The human part probably wouldn't.
+
+## Section 8: Closing (about 8:00 to 8:20)
+
+So where I land is this. The situation is powerful, and I believe most of us would
+behave worse in that basement than we'd like to admit. But I also think the study says
+less about human nature than Zimbardo claimed, and more about what happens when the
+person running an experiment becomes part of it.
+
+The question I'd put to the rest of you is the one I couldn't answer cleanly: if you'd
+been one of the quiet guards, do you honestly think you would have said something?
 
 Thanks for listening.
 
@@ -162,7 +182,7 @@ spoken.
 >
 > I hadn't thought about it that way, and it actually connects to something I noticed in
 > the film. [Pick one: the snitch offer to 8612 / 819 crying that he couldn't leave /
-> the blanket vote / the good guards never intervening.] To me that supports what you
+> the blanket vote / the good guards never intervening / 416's hunger strike.] To me that supports what you
 > said because [one or two sentences].
 >
 > One thing I'd add is [a class concept they didn't mention: deindividuation, demand
