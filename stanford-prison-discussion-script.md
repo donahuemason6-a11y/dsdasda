@@ -168,45 +168,50 @@ Thank you.
 ---
 ---
 
-# Peer Reply Templates (each at least 1 minute, roughly 150 to 180 words)
+# Peer Replies
 
-You can't write these until you've watched your classmates' videos, but here's the shape
-for each one so you can fill in the blanks quickly. Each takes about 70 to 80 seconds
-spoken.
+Each reply is about 210 words, which runs roughly 80 to 90 seconds spoken. The minimum is
+one minute, so keep a normal pace and do not rush. Replace [Name] with the classmate's name.
 
-## Reply 1: Agree and extend
+## Reply 1: To the classmate who said they would have treated prisoners with respect as a guard
 
-> Hi [name]. I really liked your point about [their main point, one sentence in your
-> words].
->
-> I hadn't thought about it that way, and it actually connects to something else from
-> the study. [Pick one: the snitch offer to 8612 / 819 crying that he couldn't leave /
-> the blanket vote / the good guards never intervening / 416's hunger strike.] To me that supports what you
-> said because [one or two sentences].
->
-> One thing I'd add is [a detail from the study they didn't mention: the mirrored
-> sunglasses, the informer offer, the dual role problem, or the guards who never
-> intervened]. I think that explains part of why [their point] happened.
->
-> The question I'd throw back to you is [one honest question, for example: do you think
-> the results would have been the same if Zimbardo had not briefed the guards to create
-> fear?]. Great video.
+Hi [Name]. I agreed with a lot of what you said, especially your point about how quickly
+the power dynamic was established. That surprised me as well. The example that stood out to
+me was prisoner 819, who was told he could leave and refused because he did not want the
+other prisoners to think he was a bad prisoner. That happened after about three days, which
+shows how fast the roles took hold.
 
-## Reply 2: Respectfully disagree
+The one place I would push back a little is on the guard question. You said you would have
+treated the prisoners with respect, and I believe you. But there were guards in the study
+who felt exactly that way. They never degraded anyone themselves. The problem is that none
+of them ever spoke up or intervened while the harsher guards escalated. So I think the
+harder question is not whether we would have been respectful, but whether we would have
+actually said something to the other guards.
 
-> Hi [name]. Thanks for your video. I want to push back a little on one thing, and I
-> mean this respectfully.
->
-> You said [their claim in one sentence]. I see where you're coming from, but I see it
-> differently. [Use the strongest counterpoint: Eshelman admitted he was acting to
-> help the results / Zimbardo told the guards to make prisoners feel powerless / the
-> study was ended by an outsider, not by the data.]
->
-> So I'd argue [your position in one sentence]. That doesn't mean the situation didn't
-> matter. It clearly did. I just think [nuance].
->
-> That said, you changed my mind on [something small they said that you did like].
-> I'm curious whether you think [a question]. Thanks again.
+I also agree with you that there should have been clearer rules and someone with the
+authority to stop the study. I would add one specific rule: the right to leave should have
+been absolute. When 8612 asked to go, Zimbardo offered him a deal instead of releasing him,
+and I think that was the turning point. Thanks for your response.
+
+## Reply 2: To the classmate who discussed groupthink and said the results would be the same today
+
+Hi [Name]. I thought your point about groupthink and group cohesion was a strong one, and I
+agree with your conclusion that Milgram's study was more ethical than Stanford. My reasoning
+was similar to yours. Milgram had far more control over the setting, each session was
+short, and the person being shocked was never actually harmed, while the Stanford study ran
+for six days with real suffering and no one independent to stop it.
+
+One thing I would add to your groupthink point is that at least one guard, Dave Eshelman,
+said he deliberately decided to be as cruel as possible and even described it as his own
+experiment. So the abuse was not entirely the group drifting together. One person pushed it,
+and the rest of the group went along with him. To me that supports your point about
+cohesion even more, because nobody questioned him.
+
+Where I see it a bit differently is your view that the results would be pretty much the
+same today. I think the core behavior would still appear, but I believe it would be less
+extreme, partly for the reasons you mentioned: full disclosure, more oversight, and
+participants knowing what the study is designed to show. So I think we agree that it would
+never reach the point the original did. Thanks for your response.
 
 ---
 
