@@ -1,8 +1,8 @@
 # Discussion Script: The Stanford Prison Experiment
 
-**Target length:** about 8 to 9 minutes spoken at a normal conversational pace (roughly 1,500 words).
+**Target length:** about 7 to 8 minutes spoken at a normal pace (roughly 1,250 words).
 The requirement is 5 to 10 minutes, so this leaves room on both sides. If you talk fast,
-slow down on the quotes and pause between sections. If you run long, trim Section 7 or shorten the Milgram comparison in Section 3.
+slow down and pause between sections. If you run long, trim Section 7.
 
 **Delivery tips:**
 - Don't read word for word. Glance at each paragraph, look up, and say it in your own voice.
@@ -11,157 +11,134 @@ slow down on the quotes and pause between sections. If you run long, trim Sectio
 
 ---
 
-## Section 1: Opening (about 0:00 to 0:25)
+## Section 1: Opening (about 0:00 to 0:20)
 
-Hello everyone. For this discussion I will be addressing the Stanford Prison Experiment. I
-am going to respond to the questions in order: what surprised me most, whether the study
-was ethical, how I would have reacted as a prisoner and as a guard, how it compares to
-Milgram's study, what Zimbardo should have done differently, and what would happen if the
-study were conducted today.
+Hi everyone. Today I am going to talk about the Stanford Prison Experiment. I will go
+through the questions one at a time.
 
 [pause]
 
-## Section 2: What surprised me most (about 0:25 to 1:50)
+## Section 2: What surprised me most (about 0:20 to 1:40)
 
-What surprised me most was not the behavior of the guards. It is well known that the guards
-became abusive, so that was expected. What surprised me was how quickly the prisoners
-stopped seeing themselves as volunteers in a study.
+The thing that surprised me most was not the guards. I already knew the guards were going
+to be cruel. What surprised me was how fast the prisoners started to believe they were real
+prisoners.
 
-The clearest example is prisoner 8612. He led the rebellion on the second morning and then
-asked to leave. Rather than releasing him, Zimbardo offered him an arrangement: the guards
-would stop harassing him if he provided information about the other prisoners. In other
-words, he was asked to become an informer. 8612 returned to his cell confused and told the
-other prisoners that no one was allowed to leave. That was never true, but they believed
-it. In my view, that is the moment the study became a prison for the participants. Within
-hours, 8612 broke down and had to be released.
+Prisoner 8612 is a good example. He started a rebellion on the second day. Then he asked to
+leave. Instead of letting him go, Zimbardo made him a deal. He said the guards would leave
+him alone if he gave them information about the other prisoners. 8612 went back to his cell
+and told everyone that nobody could leave. That was not true, but everyone believed him. A
+few hours later he broke down and had to be let go.
 
-The second example is prisoner 819. Zimbardo told him he was free to go. When 819 heard the
-other prisoners chanting that he was a bad prisoner, he began crying and said he could not
-leave. He wanted to return to prove he was not a bad prisoner. Zimbardo had to remind him
-that he was not a prisoner and that this was not a prison. This happened after roughly
-three days. In three days, a college student had lost sight of the fact that he could
-simply walk out.
+Prisoner 819 surprised me even more. Zimbardo told him he could leave. But the other
+prisoners were chanting that 819 was a bad prisoner. He started crying and said he could not
+leave. He wanted to go back and prove he was a good prisoner. Zimbardo had to tell him,
+you are not a prisoner, this is not a prison. That was only three days in.
 
-The third example is the blanket vote. The guards offered the prisoners a choice: give up
-their blankets and 416 would be released from solitary confinement, or keep their blankets
-and he would remain there another night. Most of them kept their blankets. There was
-essentially no solidarity among the prisoners.
+The last thing was the blanket vote. The guards told the prisoners they could give up their
+blankets to get 416 out of solitary, or keep the blankets and leave him in there. Most of
+them kept their blankets. The prisoners did not stick together at all.
 
-## Section 3: Was the study ethical, and how it compares to Milgram (about 1:50 to 3:50)
+## Section 3: Was it ethical, and how it compares to Milgram (about 1:40 to 3:30)
 
-In my view, the study was not ethical. There are three main reasons. First, the
-participants could not give meaningful informed consent, because no one knew in advance
-what the guards would be permitted to do. Second, the prisoners came to believe they could
-not withdraw, and the right to withdraw is a basic requirement of any study. Third, there
-was no independent person with the authority to stop the experiment. The study ended only
-when a colleague came in, saw the prisoners chained together with bags over their heads
-being marched to the toilet, and confronted Zimbardo. She told him these were young men
-suffering and that he was responsible. He agreed and ended the study the next day. The
-study did not end because of the data. It ended because an outside observer was horrified.
+No, I do not think the study was ethical. There are three reasons. First, the participants
+did not really know what they were agreeing to, because nobody knew how far the guards
+would go. Second, the prisoners believed they could not quit. Being able to quit is a basic
+rule of any study. Third, there was nobody outside the study who had the power to stop it.
+It only ended when a colleague came in, saw the prisoners chained together with bags on
+their heads, and told Zimbardo that these were young men suffering and he was responsible.
+He agreed and ended it the next day. So the study did not end because of the results. It
+ended because someone else was upset by what they saw.
 
 [pause]
 
-Comparing this to Milgram's study, both involved deception and both caused real distress.
-In Milgram's experiment, two thirds of participants delivered what they believed was the
-maximum shock because an authority figure told them to continue.
+Now the Milgram study. In that one, two out of three people gave what they thought was the
+strongest shock, just because a man in a lab coat told them to keep going. Both studies
+lied to people. Both studies caused stress.
 
-However, I consider the Stanford study more problematic, for one central reason. The harm
-in Milgram's study had a limit. Each session lasted about an hour, the person being shocked
-was an actor, and participants were shown afterward that he was unharmed. The harm was
-psychological and came from learning something uncomfortable about oneself. The Stanford
-study had no such limit. It ran continuously for six days, the suffering was real, and the
-person responsible for stopping it was also the person running the prison. Milgram
-conducted a deceptive experiment. By the third day, Stanford had stopped functioning as an
-experiment at all. Zimbardo acknowledges this himself, saying he had lost his identity as a
-scientist and psychologist.
+But I think the Stanford study was worse. In Milgram's study, the harm had a limit. It
+lasted about an hour, the person being shocked was an actor, and afterward people were
+shown that he was fine. In the Stanford study there was no limit. It went on all day and
+all night for six days. The suffering was real. And the person who should have stopped it
+was the same person running the prison. Zimbardo even says he forgot he was a scientist.
 
-## Section 4: How I would have reacted as a prisoner (about 3:50 to 4:50)
+## Section 4: How I would have reacted as a prisoner (about 3:30 to 4:25)
 
-If I had been a prisoner, I would like to say I would have reacted like 416, the
-replacement who went on a hunger strike and refused to give in. Realistically, I am not
-confident that I would have.
+If I was a prisoner, I would like to say I would have been like 416. He came in late, went
+on a hunger strike, and never gave up. That is who I would want to be.
 
-416 entered the study fresh and had not been worn down. The prisoners who had been there
-from the beginning were woken every few hours for counts, had no access to daylight, and
-had already seen two participants break down and be removed. One of the guards stated that
-the goal was to ensure prisoners never knew what would happen next. Under those conditions,
-I think I would most likely have done what the majority did: comply, avoid attention, and
-keep my blanket. That is not a comfortable conclusion, but I believe it is the honest one,
-and it reflects the central finding of the study.
+But I am not sure I would have been. 416 came in fresh. The other prisoners were worn out.
+They were woken up every few hours. They could not see daylight, so they did not know what
+time it was. They had already watched two people break down. One of the guards said the
+goal was to make sure the prisoners never knew what was coming next. Under those conditions,
+I think I would have done what most of them did. Keep quiet and keep my blanket. I do not
+like that answer, but I think it is the honest one.
 
-## Section 5: How I would have reacted as a guard (about 4:50 to 5:50)
+## Section 5: How I would have reacted as a guard (about 4:25 to 5:20)
 
-The guard question is more complicated, because there were effectively three types of
-guards.
+The guard question is harder. I think there were three kinds of guards.
 
-The first type is represented by Dave Eshelman, nicknamed John Wayne, who deliberately chose
-to be as intimidating and cruel as possible and modeled himself on a prison warden from a
-film he had recently seen. The second type carried out their duties without inventing new
-forms of humiliation. The third type disliked what was happening and never degraded the
-prisoners themselves, but also never intervened. One of these guards effectively removed
-himself by taking on errands such as collecting food.
+The first kind was Dave Eshelman, who they called John Wayne. He decided on purpose to be
+as mean as possible. He copied a prison warden from a movie he had just seen. The second
+kind just did the job. They were not nice, but they did not make up new ways to humiliate
+people. The third kind did not like what was happening. They never hurt the prisoners
+themselves, but they never spoke up either. One of them started going out to get the food
+so he would not have to be there.
 
-I do not believe I would have behaved like Eshelman. I think I would most likely have been
-in the third group. What stands out to me is Eshelman's own statement that the most shocking
-part of the experience was that no one ever questioned his authority. Everyone appeared to
-assume that someone else would intervene, or that the psychologists supervising the study
-approved. I would like to think I would have spoken up. The study suggests that most people
-in that position do not.
+I do not think I would have been like Eshelman. But I think I would have been in the third
+group. What stuck with me was Eshelman saying the most shocking part for him was that
+nobody ever told him to stop. Not one person. Everyone figured someone else would do it. I
+would like to think I would have said something. But this study shows that most people in
+that spot do not.
 
 [pause]
 
-## Section 6: What Zimbardo should have done, and how much guilt (about 5:50 to 7:10)
+## Section 6: What Zimbardo should have done, and how much guilt (about 5:20 to 6:35)
 
-There are three things Zimbardo should have done differently.
+I think Zimbardo should have done three things differently.
 
-First, he should not have served as both principal investigator and prison superintendent.
-He acknowledges this himself. There should have been a separate person with the authority
-to end the study at any point. When a colleague asked him what his independent variable
-was, he became angry, because at that moment he was thinking about a possible prison break
-rather than the research. That is the response of a warden, not a researcher.
+First, he should not have played the prison superintendent. He admits this himself. He
+should have run the research and let someone else run the prison, or the other way around.
+There should have been one person whose only job was to stop the study if it went too far.
+At one point another psychologist asked him about his research, and he got angry, because
+he was too busy worrying about a prison break. That is not how a scientist thinks. That is
+how a warden thinks.
 
-Second, he should not have briefed the guards the way he did. He instructed them to create
-fear and to make the prisoners feel their lives were completely controlled. He then
-presented the guards' behavior as if it had emerged on its own. Eshelman has said he
-concluded the study was meant to demonstrate that prisons are cruel and decided to help
-produce that result, describing it as his own experiment. This significantly weakens the
-study's conclusion, because at least one of the most abusive guards was consciously
-performing a role.
+Second, he should not have told the guards how to act. He told them to create fear and to
+make the prisoners feel like they had no control. Then he acted like the guards came up
+with it on their own. Eshelman even said he figured out what the study was trying to prove
+and decided to help it along. So at least one of the worst guards was acting on purpose.
 
-Third, the right to withdraw should have been absolute. When 8612 asked to leave, he should
-have been released immediately, with no conditions attached.
+Third, if someone asked to leave, they should have been let out right away. No deals.
 
-As for guilt, I believe Zimbardo should carry a significant amount, though not for the
-research question itself. The question was legitimate, and ethical standards in 1971 were
-different. The responsibility lies in the decisions he made during those six days. He was
-the person in charge of protecting the participants, and he required an outside observer to
-recognize that they were suffering. He has spent decades discussing these mistakes openly,
-which is to his credit, but it does not remove the responsibility.
+How much guilt should he have? I think a lot. Not for the idea. The idea was a fair
+question, and the rules were different in 1971. But he should feel guilty for the choices
+he made during those six days. It was his job to protect those students, and he needed
+someone else to walk in and tell him they were suffering. He has talked openly about his
+mistakes for years, and I give him credit for that. But it does not undo what happened.
 
-## Section 7: If the study were conducted today (about 7:10 to 7:55)
+## Section 7: If the study were done today (about 6:35 to 7:15)
 
-If this study were proposed today, it would not be approved by any review board. If it
-somehow were conducted, I believe the results would be less extreme, for several reasons.
-Participants would know they were being recorded and that the recordings could become
-public. Most students are already familiar with this study and would know what it was
-designed to show. And attitudes toward this kind of abuse have changed considerably since
-1971, so guards would likely be more hesitant.
+If this study were done today, it would not be allowed. No review board would approve it.
+But if it somehow happened, I think the results would be less extreme. People would know
+they were being recorded. Most students already know about this study and how it turned
+out. And people today are less willing to accept that kind of abuse, so the guards would
+probably hold back more.
 
-That said, I do not think the core finding would disappear. Given uniforms, anonymity,
-sleep deprivation, and an authority figure signaling that the behavior is acceptable, I
-believe some participants would still go further than they expected, and most would remain
-silent. The details would look different. The underlying behavior probably would not.
+But I do not think the main result would go away. If you give people uniforms, take away
+their names, keep them from sleeping, and have someone in charge say it is okay, I think
+some people would still go too far. And most people would still stay quiet. It would look
+different, but the behavior would probably be the same.
 
-## Section 8: Closing (about 7:55 to 8:15)
+## Section 8: Closing (about 7:15 to 7:35)
 
-To summarize, I believe the situation was powerful, and most people would behave worse in
-that environment than they expect. At the same time, I think the study says less about
-human nature than Zimbardo claimed, and more about what happens when the person running an
-experiment becomes a participant in it.
+So overall, I think the situation was very powerful. Most of us would act worse in that
+basement than we like to think. But I also think the study says less about human nature
+than Zimbardo claimed, and more about what happens when the person in charge of a study
+becomes part of it.
 
-The question I would leave with the rest of you is the one I found hardest to answer. If you
-had been one of the guards who disagreed with what was happening, do you believe you would
-have said something?
+I will end with the question I found hardest to answer. If you were one of the guards who
+did not like what was happening, do you honestly think you would have said something?
 
 Thank you.
 
