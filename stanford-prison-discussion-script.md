@@ -13,15 +13,11 @@ slow down on the quotes and pause between sections. If you run long, trim Sectio
 
 ## Section 1: Opening (about 0:00 to 0:35)
 
-Hey everyone. So for this one I'm talking about the Stanford Prison Experiment
-documentary, the Zimbardo study from 1971, where they built a fake prison in the basement
-of the psychology building at Stanford.
-
-Real quick if you haven't watched it yet. College students, screened to make sure they
-were psychologically normal, fifteen bucks a day, coin flip decides if you're a guard or a
-prisoner. Supposed to last two weeks. They shut it down on day six. I'm going to go through
-the questions more or less in order, and honestly a couple of my answers changed while I
-was thinking about them, so bear with me.
+Hey everyone. So, the Stanford Prison Experiment. I've got to be honest, I thought I knew
+this study before watching the documentary, and hearing the actual guys talk about it thirty
+years later hit a lot different than reading about it in a textbook. I'm going to go through
+the questions more or less in order, and a couple of my answers actually changed while I was
+thinking them through, so bear with me.
 
 [pause]
 
@@ -31,43 +27,36 @@ Okay, so what surprised me the most. It actually wasn't the guards. I went in ex
 guards to be cruel, that's the famous part, everybody knows that part. What got me was how
 fast the prisoners stopped acting like they were volunteers.
 
-So there's this prisoner, 8612, and he leads a little rebellion on the second morning. Then
-he asks to leave. And Zimbardo, instead of going, okay, you're done, thanks, he basically
-offers him a deal. Like, I'll keep the guards off you if you tell me what the other
-prisoners are up to. He asks him to be a snitch. And 8612 goes back to his cell all confused
-and tells everyone, they won't let us leave. Which was never true. But now everyone believes
-it. And that's the exact moment it stopped being a study for them. He has a breakdown a few
-hours later, screaming that he's burning up inside, and they have to let him out.
-
-And then there's 819. Zimbardo literally tells him, you can go. And he hears the other
-prisoners out in the hall chanting that 819 is a bad prisoner, and he starts crying and
-says he can't leave. He wants to go back in to prove he's not a bad prisoner. Zimbardo has
-to say to him, you're not a prisoner, this isn't a prison. Three days. Three days and a
-college kid forgot he could just walk out the door. That's the part I can't stop thinking
-about.
-
-Oh, and the blanket thing. The guards tell the prisoners, give up your blankets and 416
-gets out of solitary, or keep them and he stays in another night. And most of them kept the
-blanket. Nobody had each other's backs at all. That one was kind of hard to watch.
+Think about 8612. He leads the rebellion, then he asks to leave, and Zimbardo, instead of
+going, okay, you're done, thanks, offers him a deal. Keep the guards off you if you snitch
+on the other prisoners. And 8612 goes back to his cell all confused and tells everyone, they
+won't let us leave. Which was never true. But now everyone believes it. To me that's the
+exact moment it stopped being a study for them. A few hours later he's screaming that he's
+burning up inside and they have to let him out. And then 819. That one got me even more.
+Zimbardo literally tells him, you can go. And he hears the others out in the hall chanting
+that 819 is a bad prisoner, and he starts crying and says he can't leave. He wants to go
+back in to prove he's not a bad prisoner. Zimbardo has to say to him, you're not a prisoner,
+this isn't a prison. Three days. Three days and a college kid forgot he could just walk out
+the door. I can't stop thinking about that. Oh, and the blanket vote. Give up your blanket
+and 416 gets out of the hole, or keep it and he stays another night. And most of them kept
+the blanket. Nobody had each other's backs at all. That was kind of hard to watch.
 
 ## Section 3: Ethics, and the Milgram comparison (about 2:00 to 4:00)
 
 So was it ethical? No. I don't really think that's a close call. Nobody consented to what
 the guards ended up doing, because nobody knew what the guards would end up doing. People
-believed they couldn't quit, which is like the one thing you're supposed to guarantee. And
-there was nobody independent who could pull the plug. The way it actually ended was a
-colleague of his, Christina Maslach, comes down, sees the prisoners chained together with
-bags over their heads being marched to the bathroom, and basically loses it on him. She
-tells him these are young boys suffering and you're responsible. And he says something
-like, oh my god, you're right. So the study didn't end because of the data. It ended because
-somebody with fresh eyes was disgusted.
+believed they couldn't quit, which is like the one thing you're supposed to guarantee. And there was nobody independent who could pull the plug. Think about how it actually ended.
+His colleague walks in, sees the prisoners chained together with bags over their heads being
+marched to the bathroom, and basically loses it on him. These are young boys suffering and
+you're responsible. And his reaction is, oh my god, you're right. So the study didn't end
+because of the data. It ended because somebody with fresh eyes was disgusted.
 
 [pause]
 
-Now, Milgram. The documentary spends a good chunk of time on the shock experiment, where
-about two thirds of people went all the way up to what they thought was a dangerous shock
-because a guy in a lab coat kept saying, the experiment requires that you continue. Both
-studies lied to people. Both messed people up a bit.
+Now, Milgram. I thought it was interesting how much time the documentary gave the shock
+study, and I get why. Two thirds of people going all the way up because a guy in a lab coat
+keeps saying the experiment requires that you continue. Both studies lied to people. Both
+messed people up a bit.
 
 But for me Stanford is worse, and here's my reasoning. Milgram's harm was real, but it had
 a ceiling. You're in there for an hour, the guy getting shocked is an actor, and afterward
@@ -94,11 +83,9 @@ honest one, and I kind of think that's the whole point of the study.
 
 ## Section 5: Me as a guard (about 5:00 to 6:00)
 
-The guard one is harder, because there were really three kinds of guards in that film.
-
-You've got the one they nicknamed John Wayne, Dave Eshelman, who straight up says he
-decided to be as cold and cruel as possible and based his whole character on a movie prison
-warden. Then you've got guards who did the job but didn't go inventing new ways to
+The guard one is harder, because the way I see it there were really three kinds of guards.
+You've got John Wayne, Eshelman, who straight up says he decided to be as cold and cruel as
+possible and based the whole character on a movie prison warden. Then you've got guards who did the job but didn't go inventing new ways to
 humiliate people. And then you've got the ones who hated it, who never did anything
 degrading themselves, but also never said a single word to stop it. One of them literally
 became the errand guy, going out to pick up the food so he didn't have to watch.
@@ -118,9 +105,9 @@ So what should he have done differently. I've got three things.
 
 One, he should not have been the prison superintendent. He says this himself. Be the
 researcher and have somebody else run the prison, or run the prison and have a colleague
-above you who can shut it down at any moment. There's this scene where another psychologist
-asks him, what's your independent variable, and he gets furious, because in his head
-there's a prison break coming. That's not a researcher anymore. That's a warden.
+above you who can shut it down at any moment. Remember the part where the other psychologist asks him what his independent variable is,
+and he gets furious because in his head there's a prison break coming? That's not a
+researcher anymore. That's a warden.
 
 Two, he shouldn't have briefed the guards the way he did. He told them, create fear, make
 them feel like their lives are totally controlled, we have all the power and they have
@@ -148,7 +135,7 @@ I think it'd be less extreme, for a few reasons. Everybody would know they're on
 that the footage could end up online, which changes how people act. Most students have at
 least heard of this study, so they'd kind of know the script. And I think the guards would
 hesitate more, because the culture around that kind of abuse has shifted a lot since 1971.
-The film even mentions a British version being done for the BBC, and from what we've
+They tease a British version at the very end of the documentary, and from what we've
 covered, when the guards weren't told to be oppressive, mostly they weren't.
 
 But I don't think the core thing goes away. You give people uniforms, anonymity, sleep
