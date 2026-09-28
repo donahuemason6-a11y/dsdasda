@@ -3,9 +3,10 @@
 <style>
 @page { size: letter; margin: 0.28in; }
 * { box-sizing: border-box; }
-body { margin:0; font-family: Helvetica, Arial, "Liberation Sans", sans-serif; font-size: 8.4pt; line-height: 1.22; color:#000; background:#fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin:0; font-family: Helvetica, Arial, "Liberation Sans", sans-serif; font-size: 8.0pt; line-height: 1.2; color:#000; background:#fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 .side { column-count: 3; column-gap: 9pt; column-rule: 0.5pt solid #999; column-fill: auto; }
 .pb { break-after: page; page-break-after: always; }
+.s2 { font-size: 7.5pt; }
 h1 { column-span: all; font-size: 12pt; margin: 0 0 3pt 0; padding-bottom: 2pt; border-bottom: 1.5pt solid #000; }
 h1 .legend { font-size: 7.5pt; font-weight: normal; float: right; margin-top: 2pt; }
 h2 { font-size: 9.5pt; margin: 6pt 0 2pt 0; padding: 1.5pt 3pt; background:#000; color:#fff; break-after: avoid; }
@@ -57,7 +58,7 @@ b { font-weight: bold; }
 <li><b>Statistic</b> <span class="d">= number computed from the sample — the number they give you</span></li>
 </ul>
 <div class="box">P-arameter ↔ P-opulation &nbsp; S-tatistic ↔ S-ample</div>
-<div class="ex"><b>Ex (Q1):</b> diet study, 80 people, average drop 15 pts.<br>Population = all people who could use the diet · Sample = the 80 · Individual = one participant · Parameter = true mean drop for everyone (μ, unknown) · Statistic = 15 points (x̄)</div>
+<div class="ex"><b>Q:</b> "A nutritionist studies whether a new diet reduces cholesterol. She selects 80 participants and measures cholesterol before and after. After 12 weeks the average drop is 15 points. Identify the population, sample, individuals, parameter, statistic."<br><b>A:</b> Population = all people who could use the diet · Sample = the 80 participants · Individuals = each participant · Parameter = the true mean drop for everyone (μ, unknown) · Statistic = the 15-point average drop (x̄ = 15)</div>
 <p class="small"><b>Process:</b> 1 state the question → 2 collect data → 3 describe it → 4 inference (sample → population).</p>
 
 <h3>Variable types (Q2) — answer all 3</h3>
@@ -79,6 +80,7 @@ b { font-weight: bold; }
 <li>0 = none? <span class="f">YES → Ratio</span> <span class="d">(counts, $, time, weight, height, age)</span></li>
 </ol>
 <div class="box">Qualitative → Nominal or Ordinal. Quantitative → Ratio, except temperature / year = Interval.</div>
+<div class="ex"><b>Q:</b> "For each variable state: qualitative or quantitative; if quantitative, discrete or continuous; level of measurement."</div>
 <table>
 <tr><th>Variable</th><th>Q/Q</th><th>D/C</th><th>Level</th></tr>
 <tr class="e"><td>Car transmission (Q2a)</td><td>Qual</td><td>N/A</td><td>Nominal</td></tr>
@@ -102,7 +104,7 @@ b { font-weight: bold; }
 <li><b>Lurking variable</b> <span class="d">= not measured, but may be the real cause</span></li>
 <li><b>Census</b> <span class="d">= measure everyone</span> · <b>SRS</b> <span class="d">= every group of n equally likely</span>: number everyone 1–N, generate n random numbers</li>
 </ul>
-<div class="ex"><b>Ex (Q3):</b> survey, screen time vs GPA → Observational · Explanatory = screen time · Response = GPA · Causation? No.<br>Kids randomly assigned to music groups → Experiment. Teens tracked for years → Observational.</div>
+<div class="ex"><b>Q:</b> "Researchers collect survey responses from college students about daily screen time and GPA. Observational or experiment? Explanatory variable? Response variable? Can causation be claimed?"<br><b>A:</b> Observational (only surveyed) · Explanatory = daily screen time · Response = GPA · Causation: No.<br><b>Q:</b> "68 kindergartners were randomly assigned to xylophone, singing, or listening groups; IQ tested after 4 months." → <b>A:</b> Experiment (researcher assigned groups) → causation can be claimed.</div>
 
 <h3>Bias (Q4) — ask in order</h3>
 <ol>
@@ -110,14 +112,14 @@ b { font-weight: bold; }
 <li><b>Did they answer?</b> many didn't → <span class="f">Nonresponse bias</span> <span class="d">(only 20% replied, refused, hung up)</span></li>
 <li><b>Are answers true?</b> no → <span class="f">Response bias</span> <span class="d">(safe answers, leading question, lying)</span></li>
 </ol>
-<div class="ex"><b>Ex (Q4):</b> sent only to headquarters → Sampling · 20% respond, mostly unhappy → Nonresponse · "safe" answers → Response</div>
+<div class="ex"><b>Q:</b> "A company surveys employees about remote work. Identify the bias: (1) survey is sent only to employees at headquarters; (2) only 20% respond, mostly those unhappy with remote work; (3) some give 'safe' answers they think management wants."<br><b>A:</b> (1) Sampling bias · (2) Nonresponse bias · (3) Response bias</div>
 <p class="small"><b>Sampling error</b> <span class="d">= normal sample-vs-population difference</span>. <b>Nonsampling error</b> <span class="d">= the biases above</span>.</p>
 
 <h2>CH 2 — TABLES &amp; GRAPHS</h2>
 <h3>Category tables (Q5)</h3>
 <div class="box">RF = count ÷ total &nbsp;·&nbsp; Degrees = RF × 360 &nbsp;·&nbsp; % = RF × 100<br>count = RF × total &nbsp;·&nbsp; missing RF = 1 − others</div>
 <p class="small">Checks: counts add to total · RFs add to 1 · degrees add to 360.</p>
-<div class="ex"><b>Ex (Q5, total 200):</b> Sports 60 → 60/200 = 0.3000 → 0.3000 × 360 = 108° · Movies 50 → 0.2500 → 90° · Shopping 40 → 0.2000 → 72° · Reading 30 → 0.1500 → 54° · Other 20 → 0.1000 → 36°.<br>Most popular = biggest count (Sports). Reading = 15%. Sports or Movies = 110/200 = 55% &gt; 50% → True.</div>
+<div class="ex"><b>Q:</b> "200 households were asked their favorite weekend activity: Sports 60, Movies 50, Shopping 40, Reading 30, Other 20. Fill in the relative frequencies and degree measures. Which is most popular? What percent prefer Reading? True/False: more than half prefer Sports or Movies."<br><b>A:</b> Sports 60/200 = 0.3000 → 0.3000 × 360 = 108° · Movies 50/200 = 0.2500 → 90° · Shopping 0.2000 → 72° · Reading 0.1500 → 54° · Other 0.1000 → 36° · Most popular = Sports (biggest count) · Reading = 0.15 → 15% · Sports or Movies = (60+50)/200 = 0.55 = 55% &gt; 50% → True</div>
 <ul class="small">
 <li><b>Bar graph</b> <span class="d">= one bar per category, gaps between</span>. <span class="f">Axis starts at 0, equal widths, 2-D.</span> <b>Pareto</b> = tallest → shortest.</li>
 <li><b>Pie</b> <span class="d">= slices, angle = RF × 360°</span>; parts of a whole. <b>Bar</b> to compare categories.</li>
@@ -131,8 +133,14 @@ b { font-weight: bold; }
 <li><b>Histogram</b> <span class="d">= bars for classes, touching</span>. Most frequent class = biggest count (answer with the interval).</li>
 <li>How many in a range → add counts. Percent → counts ÷ total × 100.</li>
 </ul>
-<div class="ex"><b>Ex (Q6, 40 students; 40–49:4, 50–59:6, 60–69:10, 70–79:12, 80–89:8):</b> 3rd class 60–69 → limits 60, 69 · width 50 − 40 = 10 · ≥70: 12 + 8 = 20 → 20/40 = 50% · &lt;60: 4 + 6 = 10 · biggest count 12 → 70–79</div>
+<div class="ex"><b>Q:</b> "Quiz scores of 40 students: 40–49 (4), 50–59 (6), 60–69 (10), 70–79 (12), 80–89 (8). (a) Lower and upper limits of the 3rd class? (b) Class width? (c) What percent scored 70 or higher? (d) How many scored below 60? (e) Which class has the highest frequency?"<br><b>A:</b> (a) 3rd class = 60–69 → lower 60, upper 69 · (b) 50 − 40 = 10 · (c) 12 + 8 = 20 → 20/40 = 50% · (d) 4 + 6 = 10 · (e) 70–79 (frequency 12)</div>
 
+</div>
+
+<div class="side s2">
+<h1>STA2023 Exam 1 — Ch 1–3 — SIDE 2 <span class="legend"><span class="d">■ BLUE = definition</span> &nbsp; <span class="f">■ RED = formula / rule</span> &nbsp; <span class="e">■ GREEN = example</span> &nbsp; ■ BLACK = steps</span></h1>
+
+<h2>CH 2 (continued)</h2>
 <h3>Shape (Q7) — look where the TAIL points</h3>
 <ul>
 <li><b>Bell-shaped</b> <span class="d">= hump in middle, symmetric</span>: heights, weights, IQ</li>
@@ -141,37 +149,33 @@ b { font-weight: bold; }
 <li><b>Skewed LEFT</b> <span class="d">= tail left, a few very SMALL values</span>: easy exam scores</li>
 </ul>
 <div class="box">Skewed right → mean &gt; median &nbsp;·&nbsp; Skewed left → mean &lt; median &nbsp;·&nbsp; Symmetric → mean ≈ median</div>
-<div class="ex"><b>Ex (Q7):</b> salaries → skewed right · heights of boys → bell · die rolls → uniform · waiting times → skewed right</div>
+<div class="ex"><b>Q:</b> "Identify the likely shape: (a) salaries where a few executives earn millions; (b) heights of 10-year-old boys; (c) outcomes of rolling a fair die 200 times; (d) restaurant waiting times, most short but a few very long."<br><b>A:</b> (a) Skewed right · (b) Bell-shaped · (c) Uniform · (d) Skewed right</div>
 <ul class="small">
 <li><b>Stem-and-leaf</b> <span class="d">= stem = all digits but last, leaf = last digit</span> (56 → 5 | 6); list every stem, leaves in order, add key.</li>
 <li><b>Time-series</b> <span class="d">= time on bottom, value on side, dots connected</span>.</li>
 <li><b>Misleading graph</b> <span class="d">= axis not starting at 0, unequal bar widths, 3-D</span> → fix: start at 0, equal widths.</li>
 </ul>
-</div>
-
-<div class="side">
-<h1>STA2023 Exam 1 — Ch 1–3 — SIDE 2 <span class="legend"><span class="d">■ BLUE = definition</span> &nbsp; <span class="f">■ RED = formula / rule</span> &nbsp; <span class="e">■ GREEN = example</span> &nbsp; ■ BLACK = steps</span></h1>
 
 <h2>CH 3 — NUMBERS THAT DESCRIBE DATA</h2>
-<div class="ex"><b>Running example (Q8–Q11):</b> commute times of ALL 10 employees (= population), sorted:<br><b>18, 22, 25, 28, 30, 31, 33, 35, 36, 40</b> &nbsp; N = 10</div>
+<div class="ex"><b>Running example:</b> "The following are the one-way commute times (minutes) of 10 employees at a company: 18, 22, 25, 28, 30, 31, 33, 35, 36, 40." All 10 employees → treat as a POPULATION (N = 10). Questions: population mean, variance, SD, median, mode, shape; then a sample of the first 5; five-number summary, IQR, fences, outliers; Empirical Rule.</div>
 
 <h3>Mean (Q8a, Q9a)</h3>
 <p class="d">Average: add all values, divide by how many.</p>
 <div class="box">μ = Σx ÷ N (population) &nbsp;·&nbsp; x̄ = Σx ÷ n (sample)</div>
-<div class="ex">18+22+25+28+30+31+33+35+36+40 = 298 → μ = 298/10 = <b>29.8 min</b><br>Sample 18, 22, 25, 28, 30 → 123/5 → x̄ = <b>24.6 min</b></div>
+<div class="ex"><b>Q:</b> "Find the population mean." <b>A:</b> 18+22+25+28+30+31+33+35+36+40 = 298 → μ = 298/10 = <b>29.8 min</b><br><b>Q:</b> "Select the first 5 observations as a sample (18, 22, 25, 28, 30). Find the sample mean." <b>A:</b> 123/5 → x̄ = <b>24.6 min</b></div>
 
 <h3>Median (Q8c)</h3>
 <p class="d">Middle value of SORTED data.</p>
 <ol><li>Sort.</li><li>Count n.</li><li><span class="f">n odd → middle value. n even → average the two middle values.</span></li></ol>
-<div class="ex">n = 10 (even) → 5th &amp; 6th = 30, 31 → M = (30+31)/2 = <b>30.5 min</b><br>Odd: 76, 80, 84, <b>86</b>, 90, 92, 94 → M = 86</div>
+<div class="ex"><b>Q:</b> "Find the population median." <b>A:</b> n = 10 (even) → 5th &amp; 6th values = 30, 31 → M = (30+31)/2 = <b>30.5 min</b><br>Odd example: 76, 80, 84, <b>86</b>, 90, 92, 94 → M = 86</div>
 
 <h3>Mode (Q8d)</h3>
 <p class="d">Value that appears most. Two tie → both. Nothing repeats → <span class="f">"no mode"</span>.</p>
-<div class="ex">Commute data: nothing repeats → <b>no mode</b>. &nbsp; 7, 12, 12, 20, 20, 25 → modes 12 and 20.</div>
+<div class="ex"><b>Q:</b> "Find the population mode." <b>A:</b> nothing repeats → <b>no mode</b>. &nbsp; (7, 12, 12, 20, 20, 25 → modes 12 and 20.)</div>
 
 <h3>Shape from mean vs median (Q8e)</h3>
 <div class="box">mean &gt; median → skewed right &nbsp;·&nbsp; mean &lt; median → skewed left &nbsp;·&nbsp; equal → symmetric</div>
-<div class="ex">29.8 &lt; 30.5 → <b>skewed left (slightly)</b></div>
+<div class="ex"><b>Q:</b> "Based on mean vs. median, describe the shape." <b>A:</b> mean 29.8 &lt; median 30.5 → <b>skewed left (slightly)</b></div>
 <p class="small"><b>Resistant</b> <span class="d">= not thrown off by extreme values</span>: median &amp; IQR yes; mean, range, SD no. Symmetric → report mean &amp; SD. Skewed → median &amp; IQR.</p>
 
 <h3>Range</h3>
@@ -203,7 +207,7 @@ b { font-weight: bold; }
 <tr class="e"><td>40</td><td>10.2</td><td>104.04</td></tr>
 <tr class="e"><td>add</td><td>0 ✓</td><td><b>407.60</b></td></tr>
 </table>
-<div class="ex"><b>Q8b:</b> σ² = 407.60/10 = <b>40.76 min²</b> · σ = √40.76 = <b>6.38 min</b><br><b>Q9b (sample 18, 22, 25, 28, 30; x̄ = 24.6):</b> squares 43.56 + 6.76 + 0.16 + 11.56 + 29.16 = 91.20 → s² = 91.20/4 = <b>22.8 min²</b> (÷4, not ÷5) · s = √22.8 = 4.77</div>
+<div class="ex"><b>Q:</b> "Find the population variance and standard deviation." <b>A:</b> table above → σ² = 407.60/10 = <b>40.76 min²</b> · σ = √40.76 = <b>6.38 min</b><br><b>Q:</b> "Sample = first 5 observations (18, 22, 25, 28, 30). Find the sample variance." <b>A:</b> x̄ = 24.6; differences −6.6, −2.6, 0.4, 3.4, 5.4; squares 43.56 + 6.76 + 0.16 + 11.56 + 29.16 = 91.20 → s² = 91.20/(5−1) = 91.20/4 = <b>22.8 min²</b> (÷4, not ÷5) · s = √22.8 = 4.77</div>
 <p class="small"><b>Calculator (1-Var Stats):</b> <span class="f">σx = population SD, Sx = sample SD.</span> Variance = square the UNROUNDED SD. Still write the table.</p>
 
 <h3>Empirical Rule (Q11) — bell-shaped only</h3>
@@ -216,11 +220,11 @@ b { font-weight: bold; }
 </ol>
 <pre>10.6  17.0  23.4  29.8  36.2  42.6  49.0
  |2.35%|13.5%| 34% | 34% |13.5%|2.35%|</pre>
-<div class="ex"><b>Q11 (μ = 29.8, σ ≈ 6.4):</b> (a) 95% → 29.8 ± 2(6.4) = 29.8 ± 12.8 → <b>17.0 to 42.6</b> · (b) 23.4 to 36.2 = ±1 SD → <b>68%</b> · (c) 36.2 to 42.6 = 1 to 2 SD above → (95 − 68)/2 = <b>13.5%</b><br>Quick: above μ+1σ = 16% · above μ+2σ = 2.5% · μ+1σ to μ+3σ = 15.85%</div>
+<div class="ex"><b>Q:</b> "Use the population mean and SD. (a) About 95% of commute times lie between what two values? (b) What percent fall between 23.4 and 36.2 minutes? (c) Between 36.2 and 42.6 minutes?"<br><b>A:</b> μ = 29.8, σ ≈ 6.4 (his numbers match σ rounded to 6.4). (a) 95% = 2 SDs → 29.8 ± 2(6.4) = 29.8 ± 12.8 → <b>17.0 to 42.6</b> · (b) 23.4 = μ − 1σ, 36.2 = μ + 1σ → <b>68%</b> · (c) 36.2 = μ + 1σ, 42.6 = μ + 2σ → (95 − 68)/2 = <b>13.5%</b><br>Quick: above μ+1σ = 16% · above μ+2σ = 2.5% · μ+1σ to μ+3σ = 15.85%</div>
 
 <h3>z-score &amp; percentile</h3>
 <div class="box">z = (value − mean) ÷ SD &nbsp; (bigger z = relatively higher)</div>
-<div class="ex">ACT 27 (mean 18, SD 6): z = 9/6 = 1.50 · SAT 1200 (mean 1000, SD 200): z = 1.00 → ACT student did better</div>
+<div class="ex"><b>Q:</b> "Mean ACT is 18 with SD 6; mean SAT is 1000 with SD 200. Student A scored 27 on the ACT, Student B scored 1200 on the SAT. Who scored relatively higher?" <b>A:</b> A: z = (27 − 18)/6 = 1.50 · B: z = (1200 − 1000)/200 = 1.00 → <b>Student A</b></div>
 <p class="small"><b>95th percentile</b> <span class="d">= 95% of data at or below</span>. Median = 50th percentile.</p>
 
 <h3>Quartiles &amp; five-number summary (Q10a)</h3>
@@ -230,11 +234,11 @@ b { font-weight: bold; }
 <li><span class="f">Q₁ = median of lower half · Q₃ = median of upper half · n odd → leave the median OUT of both halves.</span></li>
 <li><span class="f">Five-number summary = Min, Q₁, M, Q₃, Max</span></li>
 </ol>
-<div class="ex">Lower 18, 22, <b>25</b>, 28, 30 → Q₁ = 25 · Upper 31, 33, <b>35</b>, 36, 40 → Q₃ = 35<br><b>18, 25, 30.5, 35, 40</b><br>Odd: 76, 80, 84 | 86 | 90, 92, 94 → Q₁ = 80, Q₃ = 92<br>32, 76, 80, 84 | 86, 90, 92, 94 → Q₁ = 78, M = 85, Q₃ = 91</div>
+<div class="ex"><b>Q:</b> "Find the five-number summary (min, Q₁, median, Q₃, max)." <b>A:</b> Lower half 18, 22, <b>25</b>, 28, 30 → Q₁ = 25 · Upper half 31, 33, <b>35</b>, 36, 40 → Q₃ = 35 · M = 30.5 → <b>18, 25, 30.5, 35, 40</b><br>Odd n: 76, 80, 84 | 86 | 90, 92, 94 → Q₁ = 80, Q₃ = 92<br>32, 76, 80, 84 | 86, 90, 92, 94 → Q₁ = 78, M = 85, Q₃ = 91</div>
 
 <h3>IQR, fences, outliers (Q10b, c)</h3>
 <div class="box">IQR = Q₃ − Q₁ &nbsp;·&nbsp; LF = Q₁ − 1.5·IQR &nbsp;·&nbsp; UF = Q₃ + 1.5·IQR<br>outlier = below LF or above UF</div>
-<div class="ex">IQR = 35 − 25 = <b>10</b> · 1.5 × 10 = 15 · LF = 25 − 15 = <b>10</b> · UF = 35 + 15 = <b>50</b> · 18 &gt; 10, 40 &lt; 50 → <b>no outliers</b><br>With outlier: Q₁ = 78, Q₃ = 91, IQR = 13, 1.5 × 13 = 19.5 → LF = 58.5, UF = 110.5 → <b>32 is an outlier</b></div>
+<div class="ex"><b>Q:</b> "Find the IQR. Find the lower and upper fences. Identify any outliers." <b>A:</b> IQR = 35 − 25 = <b>10</b> · 1.5 × 10 = 15 · LF = 25 − 15 = <b>10</b> · UF = 35 + 15 = <b>50</b> · smallest 18 &gt; 10 and largest 40 &lt; 50 → <b>no outliers</b><br>With outlier (32, 76, 80, 84, 86, 90, 92, 94): Q₁ = 78, Q₃ = 91, IQR = 13, 1.5 × 13 = 19.5 → LF = 58.5, UF = 110.5 → <b>32 is an outlier</b></div>
 
 <h3>Boxplot</h3>
 <ol>
