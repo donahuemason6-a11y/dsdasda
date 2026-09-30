@@ -57,7 +57,7 @@
   function wallClockUTC(ms, tz) {
     var parts = new Intl.DateTimeFormat('en-US', {
       timeZone: tz, year: 'numeric', month: '2-digit', day: '2-digit',
-      hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23'
+      hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false, hourCycle: 'h23'
     }).formatToParts(new Date(ms));
     var g = function (t) { var p = parts.filter(function (x) { return x.type === t; })[0]; return p ? parseInt(p.value, 10) : 0; };
     return Date.UTC(g('year'), g('month') - 1, g('day'), g('hour') % 24, g('minute'), g('second'));
@@ -67,7 +67,7 @@
     var target = Date.UTC(d[0], d[1] - 1, d[2], t[0], t[1], 0);
     var utc = target;
     try { for (var i = 0; i < 3; i++) utc = utc - (wallClockUTC(utc, tz) - target); }
-    catch (e) { return target; }
+    catch (e) { return new Date(d[0], d[1] - 1, d[2], t[0], t[1], 0).getTime(); } /* no zone data: assume the visitor is on site */
     return utc;
   }
 
@@ -98,6 +98,7 @@
   var LS_FAVS = 'tgmf-favs', LS_PPM = 'tgmf-ppm', LS_VIEW = 'tgmf-view';
   var PPM_STEPS = [2.0, 2.8, 3.8];
   var state = { view: 'timeline', stage: 'all', mine: false, favs: {}, ppm: 2.8, now: { eventDay: false, mins: 0 } };
+  var booted = false;
 
   try {
     var raw = store.get(LS_FAVS);
@@ -136,14 +137,17 @@
     try {
       var parts = new Intl.DateTimeFormat('en-US', {
         timeZone: F.timeZone, year: 'numeric', month: '2-digit', day: '2-digit',
-        hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
+        hour: '2-digit', minute: '2-digit', hour12: false, hourCycle: 'h23'
       }).formatToParts(new Date());
       var g = function (t) { var p = parts.filter(function (x) { return x.type === t; })[0]; return p ? p.value : ''; };
       var date = g('year') + '-' + g('month') + '-' + g('day');
       var h = parseInt(g('hour'), 10) % 24;
       return { eventDay: date === F.date, mins: h * 60 + parseInt(g('minute'), 10) };
     } catch (e) {
-      return { eventDay: false, mins: 0 };
+      /* no zone data: assume the visitor is on site and use device time */
+      var n = new Date();
+      var local = n.getFullYear() + '-' + pad(n.getMonth() + 1) + '-' + pad(n.getDate());
+      return { eventDay: local === F.date, mins: n.getHours() * 60 + n.getMinutes() };
     }
   }
   function statusClass(s) {
@@ -163,8 +167,11 @@
   /* Photos that fail to load fall back to the monogram tile. */
   function watchPhotos(root) {
     $$('img.photo', root).forEach(function (img) {
-      if (img.complete && img.naturalWidth === 0) { img.parentNode.classList.add('no-photo'); return; }
-      img.addEventListener('error', function () { img.parentNode.classList.add('no-photo'); });
+      var tile = img.parentNode;
+      if (img.complete && img.naturalWidth > 0) { tile.classList.add('has-photo'); return; }
+      if (img.complete && img.naturalWidth === 0) { tile.classList.add('no-photo'); return; }
+      img.addEventListener('load', function () { tile.classList.add('has-photo'); });
+      img.addEventListener('error', function () { tile.classList.add('no-photo'); });
     });
   }
 
@@ -179,10 +186,9 @@
       thumb(s) +
       '<span class="set-inner">' +
         '<span class="set-name"><i class="live-dot" aria-hidden="true"></i>' + esc(s.artist) + '</span>' +
-        '<span class="set-time">' + fmtRange(s.s, s.e) + '</span>' +
+        '<span class="set-meta"><span class="set-time">' + fmtRange(s.s, s.e) + '</span><span class="flag">Overlap</span></span>' +
       '</span>' +
       '<span class="star" aria-hidden="true"></span>' +
-      '<span class="flag">Overlap</span>' +
     '</button>';
   }
 
@@ -257,9 +263,14 @@
     watchPhotos(root);
   }
 
+  var liveLast = '';
   function renderLive() {
     var live = $('#live'), now = state.now, m = now.mins;
-    if (!now.eventDay || m < DAY_START - 90 || m > DAY_END) { live.hidden = true; live.innerHTML = ''; return; }
+    if (!now.eventDay || m < DAY_START - 90 || m > DAY_END) {
+      if (!live.hidden) { live.hidden = true; live.innerHTML = ''; }
+      liveLast = '';
+      return;
+    }
     var items = stages.map(function (st) {
       var on = null, next = null;
       for (var i = 0; i < sets.length; i++) {
@@ -273,7 +284,8 @@
         : '<b>Done for the night</b>';
       return '<div class="live-item" style="--c:' + st.color + '"><i class="dot"></i><span class="live-stage">' + esc(st.short) + '</span>' + body + '</div>';
     }).join('');
-    live.innerHTML = '<div class="wrap"><span class="live-tag"><i class="live-dot"></i>Right now</span>' + items + '</div>';
+    var html = '<div class="wrap"><span class="live-tag"><i class="live-dot"></i>Right now</span>' + items + '</div>';
+    if (html !== liveLast) { live.innerHTML = html; liveLast = html; }
     live.hidden = false;
   }
 
@@ -370,6 +382,12 @@
       line.hidden = !inDay;
       line.style.setProperty('--t', m - DAY_START);
       $('#nowLabel').textContent = fmt(m, true);
+      /* the time label sits in the gutter; hide any hour numeral it would cover */
+      var lr = inDay ? $('#nowLabel').getBoundingClientRect() : null;
+      $$('.hour').forEach(function (h) {
+        var r = h.getBoundingClientRect();
+        h.classList.toggle('is-under-now', !!lr && r.bottom > lr.top && r.top < lr.bottom);
+      });
     }
     $('#nowBtn').hidden = !(inDay && state.view === 'timeline');
     renderLive();
@@ -390,11 +408,12 @@
       b.classList.toggle('is-active', on);
       b.setAttribute('aria-selected', on);
     });
-    $('#timeline').hidden = view !== 'timeline';
-    $('#list').hidden = view !== 'list';
+    $('#timelineView').hidden = view !== 'timeline';
+    $('#listView').hidden = view !== 'list';
     $('#zoomOut').hidden = view !== 'timeline';
     $('#zoomIn').hidden = view !== 'timeline';
-    try { history.replaceState(null, '', '#' + view); } catch (e) { /* file:// etc. */ }
+    /* no element carries these ids, so the browser never scrolls to the fragment */
+    if (booted) { try { history.replaceState(null, '', '#' + view); } catch (e) { /* file:// etc. */ } }
     if (view === 'list') renderList();
     refreshNow();
   }
@@ -432,14 +451,18 @@
   function zoom(dir) {
     var i = PPM_STEPS.indexOf(state.ppm) + dir;
     if (i < 0 || i >= PPM_STEPS.length) return;
-    /* keep the same minute under the top of the viewport while zooming */
-    var body = $('.grid-body'), before = body ? body.getBoundingClientRect().top : 0;
-    var minuteAtTop = body ? Math.max(0, -before) / state.ppm : 0;
+    /* keep the same minute at the visible top edge of the grid (just under the
+       sticky toolbar and stage header) while zooming */
+    var body = $('.grid-body'), head = $('.grid-head');
+    if (!body) { setPpm(PPM_STEPS[i]); return; }
+    var edge = head ? head.getBoundingClientRect().bottom : 0;
+    var offset = body.getBoundingClientRect().top - edge;
+    if (offset >= 0) { setPpm(PPM_STEPS[i]); refreshNow(); return; } /* grid top not reached: leave the page where it is */
+    var minuteAtEdge = -offset / state.ppm;
     setPpm(PPM_STEPS[i]);
-    if (body) {
-      var after = body.getBoundingClientRect().top + window.pageYOffset;
-      window.scrollTo(0, after + minuteAtTop * state.ppm);
-    }
+    var bodyDocTop = body.getBoundingClientRect().top + window.pageYOffset;
+    window.scrollTo(0, Math.max(0, bodyDocTop + minuteAtEdge * state.ppm - edge));
+    refreshNow();
   }
 
   function jumpToNow(smooth) {
@@ -517,6 +540,7 @@
     renderList();
     refreshFavUI();
     setView(state.view);
+    booted = true;
 
     document.addEventListener('click', function (ev) {
       var t = ev.target.closest ? ev.target.closest('[data-id], [data-view], [data-stage]') : null;

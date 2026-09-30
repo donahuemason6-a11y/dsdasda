@@ -64,9 +64,9 @@
       </div>
       <div class="chips" id="stageChips" aria-label="Filter by stage"></div>
       <div class="tools">
-        <button type="button" class="chip chip-mine" id="mineBtn" aria-pressed="false">My sets <span class="count" id="mineCount">0</span></button>
-        <button type="button" class="icon-btn" id="zoomOut" aria-label="Zoom out timeline">−</button>
-        <button type="button" class="icon-btn" id="zoomIn" aria-label="Zoom in timeline">+</button>
+        <button type="button" class="chip chip-mine" id="mineBtn" aria-pressed="false" aria-label="My sets"><svg class="tick" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M2 7.5l3.2 3L12 3" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="label">My sets</span> <span class="count" id="mineCount">0</span></button>
+        <button type="button" class="icon-btn" id="zoomOut" aria-label="Zoom out timeline"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M1 7h12" stroke="currentColor" stroke-width="3" stroke-linecap="square"/></svg></button>
+        <button type="button" class="icon-btn" id="zoomIn" aria-label="Zoom in timeline"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" focusable="false"><path d="M1 7h12M7 1v12" stroke="currentColor" stroke-width="3" stroke-linecap="square"/></svg></button>
         <button type="button" class="icon-btn now-btn" id="nowBtn" hidden>Now</button>
       </div>
     </div>
@@ -82,13 +82,13 @@
   </div>
 
   <main>
-    <section class="view view-timeline" id="timeline">
+    <section class="view view-timeline" id="timelineView">
       <div class="wrap">
         <div class="grid" id="grid"></div>
       </div>
     </section>
 
-    <section class="view view-list" id="list" hidden>
+    <section class="view view-list" id="listView" hidden>
       <div class="wrap">
         <div id="listRoot"></div>
       </div>
