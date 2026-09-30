@@ -41,6 +41,14 @@ index.html?now=15:30
 
 ## What's on the page
 
+- **Countdown** to the first set (noon on festival day, Eastern time), ticking every second.
+- **Search** artists from the toolbar (press `/` to jump to it).
+- **Share link**: copies a link that adds your saved sets on a friend's phone.
+- **Add to calendar**: downloads an .ics file of your saved sets with 15-minute alerts.
+- **Heads-up**: on the day, a message appears 10 minutes before each saved set (while the page is open).
+- **Map** link in the header, and "Add to Home Screen" support on phones.
+- Keyboard: `1` timeline, `2` list, `M` my sets, `N` now, `/` search.
+
 - **Timeline**: both stages side by side, time down the left. Zoom with − / +.
 - **List**: chronological cards, grouped by hour.
 - **Stage filter**: All / Touch Grass / Meadows.

@@ -1,0 +1,11 @@
+{
+  "name": "TouchGrass Music Fest · Set Times",
+  "short_name": "Set Times",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0e110b",
+  "theme_color": "#0e110b",
+  "icons": [
+    { "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23c9ff3f'/%3E%3Cpath d='M14 44V22h10M24 22H14M28 44V22h9c4 0 6 2 6 5.5S41 33 37 33h-9' stroke='%230e110b' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

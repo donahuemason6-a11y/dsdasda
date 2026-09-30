@@ -42,6 +42,24 @@
     set: function (k, v) { try { window.localStorage.setItem(k, v); } catch (e) { /* private mode etc. */ } }
   };
 
+  /* The festival's wall clock, expressed as a UTC timestamp (handles daylight saving). */
+  function wallClockUTC(ms, tz) {
+    var parts = new Intl.DateTimeFormat('en-US', {
+      timeZone: tz, year: 'numeric', month: '2-digit', day: '2-digit',
+      hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false, hourCycle: 'h23'
+    }).formatToParts(new Date(ms));
+    var g = function (t) { var p = parts.filter(function (x) { return x.type === t; })[0]; return p ? parseInt(p.value, 10) : 0; };
+    return Date.UTC(g('year'), g('month') - 1, g('day'), g('hour') % 24, g('minute'), g('second'));
+  }
+  function zonedToUTC(dateStr, timeStr, tz) {
+    var d = dateStr.split('-').map(Number), t = timeStr.split(':').map(Number);
+    var target = Date.UTC(d[0], d[1] - 1, d[2], t[0], t[1], 0);
+    var utc = target;
+    try { for (var i = 0; i < 3; i++) utc = utc - (wallClockUTC(utc, tz) - target); }
+    catch (e) { return new Date(d[0], d[1] - 1, d[2], t[0], t[1], 0).getTime(); } /* no zone data: assume on site */
+    return utc;
+  }
+
   /* ---------- data ---------- */
   var DAY_START = toMin(F.dayStart), DAY_END = toMin(F.dayEnd), DAY_MINS = DAY_END - DAY_START;
   var stages = F.stages.map(function (st, i) {
@@ -69,6 +87,8 @@
   var PPM_STEPS = [2.0, 2.8, 3.8];
   var state = { view: 'timeline', stage: 'all', mine: false, favs: {}, ppm: 2.8, now: { eventDay: false, mins: 0 } };
   var booted = false;
+  var query = '';
+  var matches = function (s) { return !query || s.artist.toLowerCase().indexOf(query) !== -1; };
 
   try {
     var raw = store.get(LS_FAVS);
@@ -107,14 +127,16 @@
     try {
       var parts = new Intl.DateTimeFormat('en-US', {
         timeZone: F.timeZone, year: 'numeric', month: '2-digit', day: '2-digit',
-        hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
+        hour: '2-digit', minute: '2-digit', hour12: false, hourCycle: 'h23'
       }).formatToParts(new Date());
       var g = function (t) { var p = parts.filter(function (x) { return x.type === t; })[0]; return p ? p.value : ''; };
       var date = g('year') + '-' + g('month') + '-' + g('day');
       var h = parseInt(g('hour'), 10) % 24;
       return { eventDay: date === F.date, mins: h * 60 + parseInt(g('minute'), 10) };
     } catch (e) {
-      return { eventDay: false, mins: 0 };
+      var n = new Date();
+      var local = n.getFullYear() + '-' + pad(n.getMonth() + 1) + '-' + pad(n.getDate());
+      return { eventDay: local === F.date, mins: n.getHours() * 60 + n.getMinutes() };
     }
   }
   function statusClass(s) {
@@ -128,7 +150,7 @@
   /* ---------- rendering ---------- */
   function setBlock(s, conf) {
     var fav = isFav(s.id);
-    var cls = ['set', fav ? 'is-fav' : '', conf[s.id] ? 'is-conflict' : '', statusClass(s)].filter(Boolean).join(' ');
+    var cls = ['set', fav ? 'is-fav' : '', conf[s.id] ? 'is-conflict' : '', statusClass(s), matches(s) ? '' : 'is-dim'].filter(Boolean).join(' ');
     var top = Math.max(0, s.s - DAY_START);
     var dur = Math.min(s.e, DAY_END) - Math.max(s.s, DAY_START);
     if (dur <= 0) return '';
@@ -189,9 +211,10 @@
     var conf = conflicts();
     var items = sets.filter(function (s) { return vs[s.stage]; });
     if (state.mine) items = items.filter(function (s) { return isFav(s.id); });
+    if (query) items = items.filter(matches);
     var root = $('#listRoot');
     if (!items.length) {
-      root.innerHTML = '<p class="empty">' + (state.mine
+      root.innerHTML = '<p class="empty">' + (query ? 'No artist matches \u201c' + esc(query) + '\u201d.' : state.mine
         ? 'Nothing saved yet. Tap the ☆ on any set to build your day.'
         : 'No sets to show.') + '</p>';
       return;
@@ -209,6 +232,7 @@
     }).join('');
   }
 
+  var liveLast = '';
   function renderLive() {
     var live = $('#live'), now = state.now, m = now.mins;
     if (!now.eventDay || m < DAY_START - 90 || m > DAY_END) { live.hidden = true; live.innerHTML = ''; return; }
@@ -220,13 +244,67 @@
         if (!on && s.s <= m && m < s.e) on = s;
         if (!next && s.s > m) next = s;
       }
-      var body = on ? '<b>' + esc(on.artist) + '</b><span>until ' + fmt(on.e, true) + '</span>'
-        : next ? '<b>' + esc(next.artist) + '</b><span>up next · ' + fmt(next.s, true) + '</span>'
+      var body = on ? '<b>' + esc(on.artist) + '</b><span>until ' + fmt(on.e, true) + ' \u00b7 ' + (on.e - m) + ' min left</span>'
+        : next ? '<b>' + esc(next.artist) + '</b><span>up next \u00b7 ' + fmt(next.s, true) + ' \u00b7 in ' + (next.s - m) + ' min</span>'
         : '<b>Done for the night</b>';
       return '<div class="live-item" style="--c:' + st.color + '"><i class="dot"></i><span class="live-stage">' + esc(st.short) + '</span>' + body + '</div>';
     }).join('');
-    live.innerHTML = '<div class="wrap"><span class="live-tag"><i class="live-dot"></i>Right now</span>' + items + '</div>';
+    var html = '<div class="wrap"><span class="live-tag"><i class="live-dot"></i>Right now</span>' + items + '</div>';
+    if (html !== liveLast) { live.innerHTML = html; liveLast = html; }
     live.hidden = false;
+  }
+
+  /* ---------- countdown to the first note ---------- */
+  var START_AT = zonedToUTC(F.date, F.startTime || F.dayStart, F.timeZone);
+  var END_AT = zonedToUTC(F.date, F.dayEnd, F.timeZone);
+  var cdLast = '';
+  function renderCountdown() {
+    var el = $('#countdown');
+    if (!el) return;
+    var override = false;
+    try { override = /^\d{1,2}:\d{2}$/.test(new URLSearchParams(location.search).get('now') || ''); } catch (e) { /* ignore */ }
+    var nowMs = Date.now();
+    var diff = override ? -1 : START_AT - nowMs;
+    var mode = diff > 0 ? 'before' : (override || nowMs < END_AT) ? 'live' : 'after';
+    if (mode !== cdLast) {
+      var first = cdLast === '';
+      el.setAttribute('data-mode', mode);
+      cdLast = mode;
+      if (!first) refreshNow();
+      if (mode === 'live') {
+        el.innerHTML = '<span class="cd-label"><i class="live-dot"></i>Happening now</span>' +
+          '<span class="cd-note">Day of show \u00b7 scroll down for what\u2019s on</span>';
+      } else if (mode === 'after') {
+        el.innerHTML = '<span class="cd-label">That\u2019s a wrap</span>' +
+          '<span class="cd-note">Thanks for touching grass with us.</span>';
+      } else {
+        el.innerHTML = '<span class="cd-label">Music starts in</span>' +
+          '<span class="cd-units">' + ['Days', 'Hrs', 'Min', 'Sec'].map(function (n) {
+            return '<span class="cd-unit"><b class="cd-num" data-unit="' + n + '">00</b><span class="cd-name">' + n + '</span></span>';
+          }).join('') + '</span>';
+      }
+    }
+    if (mode !== 'before') return;
+    var secs = Math.floor(diff / 1000);
+    var d = Math.floor(secs / 86400), h = Math.floor(secs % 86400 / 3600), m = Math.floor(secs % 3600 / 60), sec = secs % 60;
+    var vals = { Days: String(d), Hrs: pad(h), Min: pad(m), Sec: pad(sec) };
+    $$('.cd-num', el).forEach(function (n) {
+      var v = vals[n.getAttribute('data-unit')];
+      if (n.textContent !== v) n.textContent = v;
+    });
+  }
+
+  /* one heads-up per saved set, ten minutes before it starts (while the page is open) */
+  var warned = {};
+  function headsUp(m, ev) {
+    if (!ev) return;
+    favList().forEach(function (s) {
+      var lead = s.s - m;
+      if (lead > 0 && lead <= 10 && !warned[s.id]) {
+        warned[s.id] = true;
+        toast(s.artist + ' starts in ' + lead + ' min \u00b7 ' + s.stageObj.name, 8000);
+      }
+    });
   }
 
   function renderMineBar() {
@@ -275,6 +353,7 @@
     }
     $('#nowBtn').hidden = !(inDay && state.view === 'timeline');
     renderLive();
+    headsUp(m, ev);
   }
 
   /* ---------- actions ---------- */
@@ -354,12 +433,69 @@
   }
 
   var toastTimer = null;
-  function toast(msg) {
+  function toast(msg, ms) {
     var el = $('#toast');
     el.textContent = msg;
     el.hidden = false;
     clearTimeout(toastTimer);
-    toastTimer = setTimeout(function () { el.hidden = true; }, 2200);
+    toastTimer = setTimeout(function () { el.hidden = true; }, ms || 2200);
+  }
+  function copyText(text, done) {
+    var fallback = function () {
+      var ta = document.createElement('textarea');
+      ta.value = text; ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); done(); } catch (e) { toast('Copy failed on this browser'); }
+      document.body.removeChild(ta);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, fallback);
+    else fallback();
+  }
+
+  /* share saved sets as a link (?sets=id,id) */
+  function shareLink() {
+    var list = favList();
+    if (!list.length) { toast('Nothing saved yet'); return; }
+    var url = location.href.split('?')[0].split('#')[0] + '?sets=' + list.map(function (s) { return s.id; }).join(',');
+    var done = function () { toast('Link copied \u2014 send it to your crew'); };
+    if (navigator.share) navigator.share({ title: F.name + ' \u00b7 my sets', url: url }).then(done, function () { copyText(url, done); });
+    else copyText(url, done);
+  }
+
+  /* saved sets as an .ics file for any calendar app */
+  function icsStamp(ms) { return new Date(ms).toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, ''); }
+  function fmt24(min) { return pad(Math.floor(min / 60)) + ':' + pad(min % 60); }
+  function downloadCalendar() {
+    var list = favList();
+    if (!list.length) { toast('Nothing saved yet'); return; }
+    var lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//' + F.name + '//Set Times//EN', 'CALSCALE:GREGORIAN'];
+    list.forEach(function (s) {
+      lines.push('BEGIN:VEVENT',
+        'UID:' + s.id + '@' + slug(F.name),
+        'DTSTAMP:' + icsStamp(Date.now()),
+        'DTSTART:' + icsStamp(zonedToUTC(F.date, fmt24(s.s), F.timeZone)),
+        'DTEND:' + icsStamp(zonedToUTC(F.date, fmt24(s.e), F.timeZone)),
+        'SUMMARY:' + s.artist + ' \u00b7 ' + s.stageObj.name,
+        'LOCATION:' + F.venue + (F.city ? ', ' + F.city : ''),
+        'DESCRIPTION:' + F.name + ' \u2014 ' + (F.note || ''),
+        'BEGIN:VALARM', 'TRIGGER:-PT15M', 'ACTION:DISPLAY', 'DESCRIPTION:' + s.artist + ' in 15 minutes', 'END:VALARM',
+        'END:VEVENT');
+    });
+    lines.push('END:VCALENDAR');
+    var blob = new Blob([lines.join('\r\n')], { type: 'text/calendar;charset=utf-8' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob); a.download = slug(F.name) + '-my-sets.ics';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+    toast('Calendar file ready \u2014 open it to add ' + list.length + ' set' + (list.length === 1 ? '' : 's'));
+  }
+
+  function setQuery(q) {
+    query = q.trim().toLowerCase();
+    renderTimeline();
+    renderList();
+    refreshNow();
   }
 
   function copyList() {
@@ -406,6 +542,19 @@
     $('#festNote').textContent = F.note || '';
     $('#footNote').textContent = F.note || '';
     document.title = F.name + ' · Set Times';
+    var map = $('#mapLink');
+    if (F.mapUrl) map.href = F.mapUrl; else map.hidden = true;
+
+    /* sets shared by link: ?sets=id,id merges into My sets */
+    try {
+      var shared = new URLSearchParams(location.search).get('sets');
+      if (shared) {
+        var added = 0;
+        shared.split(',').forEach(function (id) { if (setById[id] && !isFav(id)) { state.favs[id] = true; added++; } });
+        if (added) { store.set(LS_FAVS, JSON.stringify(Object.keys(state.favs))); setTimeout(function () { toast('Added ' + added + ' shared set' + (added === 1 ? '' : 's') + ' to My sets'); }, 400); }
+        state.mine = true;
+      }
+    } catch (e) { /* ignore */ }
 
     var chips = $('#stageChips');
     chips.innerHTML = '<button type="button" class="chip is-active" data-stage="all" aria-pressed="true">All stages</button>' +
@@ -432,6 +581,20 @@
     $('#nowBtn').addEventListener('click', function () { jumpToNow(true); });
     $('#copyBtn').addEventListener('click', copyList);
     $('#clearBtn').addEventListener('click', clearAll);
+    $('#shareBtn').addEventListener('click', shareLink);
+    $('#calBtn').addEventListener('click', downloadCalendar);
+    var box = $('#searchBox'), searchTimer = null;
+    box.addEventListener('input', function () { clearTimeout(searchTimer); searchTimer = setTimeout(function () { setQuery(box.value); }, 120); });
+    box.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') { box.value = ''; setQuery(''); box.blur(); } });
+    document.addEventListener('keydown', function (ev) {
+      var tag = (ev.target.tagName || '').toLowerCase();
+      if (tag === 'input' || tag === 'textarea' || ev.metaKey || ev.ctrlKey || ev.altKey) return;
+      if (ev.key === '1') setView('timeline');
+      else if (ev.key === '2') setView('list');
+      else if (ev.key === 'm' || ev.key === 'M') setMine(!state.mine);
+      else if (ev.key === 'n' || ev.key === 'N') jumpToNow(true);
+      else if (ev.key === '/') { ev.preventDefault(); box.focus(); }
+    });
 
     /* keep the sticky stage header just under the toolbar, whatever its height */
     var toolbar = $('#toolbar');
@@ -440,8 +603,10 @@
     if (window.ResizeObserver) new ResizeObserver(measure).observe(toolbar);
     else window.addEventListener('resize', measure);
 
+    (function tick() { renderCountdown(); setTimeout(tick, 1000 - (Date.now() % 1000)); })();
     setInterval(refreshNow, 30000);
-    document.addEventListener('visibilitychange', function () { if (!document.hidden) refreshNow(); });
+    document.addEventListener('visibilitychange', function () { if (!document.hidden) { renderCountdown(); refreshNow(); } });
+    if (state.mine) setMine(true);
 
     booted = true; /* the page always opens at the top; the Now button jumps to the current time on the day */
   }

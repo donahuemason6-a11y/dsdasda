@@ -6,6 +6,9 @@
   <title>TouchGrass Music Fest · Set Times</title>
   <meta name="description" content="Set times for both stages at TouchGrass Music Fest, Saturday October 3, 2026 at Orlando Amphitheater. Save your sets and spot overlaps.">
   <meta name="theme-color" content="#0e110b">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Set Times">
+  <link rel="manifest" href="manifest.webmanifest">
   <meta property="og:title" content="TouchGrass Music Fest · Set Times">
   <meta property="og:description" content="Both stages, one screen. Save your sets and spot overlaps.">
   <meta property="og:type" content="website">
@@ -27,7 +30,10 @@
         <span>Two stages</span>
         <span class="sep" aria-hidden="true">·</span>
         <span class="note" id="festNote">Set times subject to change.</span>
+        <span class="sep" aria-hidden="true">·</span>
+        <a class="map-link" id="mapLink" href="#" target="_blank" rel="noopener">Map</a>
       </p>
+      <div class="countdown" id="countdown" data-mode="before" aria-live="off"></div>
     </div>
   </header>
 
@@ -40,6 +46,7 @@
         <button type="button" class="seg-btn" data-view="list" role="tab" aria-selected="false">List</button>
       </div>
       <div class="chips" id="stageChips" aria-label="Filter by stage"></div>
+      <label class="search" for="searchBox"><span class="sr-only">Search artists</span><input type="search" id="searchBox" placeholder="Search artists" autocomplete="off" spellcheck="false"></label>
       <div class="tools">
         <button type="button" class="chip chip-mine" id="mineBtn" aria-pressed="false">★ My sets <span class="count" id="mineCount">0</span></button>
         <button type="button" class="icon-btn" id="zoomOut" aria-label="Zoom out timeline">−</button>
@@ -53,6 +60,8 @@
     <div class="wrap">
       <span id="mineSummary"></span>
       <span class="spacer"></span>
+      <button type="button" class="text-btn" id="shareBtn">Share link</button>
+      <button type="button" class="text-btn" id="calBtn">Add to calendar</button>
       <button type="button" class="text-btn" id="copyBtn">Copy list</button>
       <button type="button" class="text-btn" id="clearBtn">Clear all</button>
     </div>
@@ -75,7 +84,7 @@
   <footer class="ground">
     <div class="wrap">
       <p>*<span id="footNote">Set times subject to change.</span></p>
-      <p>Tap a set to save it · Saved sets stay on this device</p>
+      <p>Tap a set to save it · Saved sets stay on this device · Keys: 1 timeline, 2 list, M my sets, / search</p>
     </div>
   </footer>
 
