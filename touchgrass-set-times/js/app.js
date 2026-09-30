@@ -42,6 +42,30 @@
     set: function (k, v) { try { window.localStorage.setItem(k, v); } catch (e) { /* private mode etc. */ } }
   };
 
+  function initials(name) {
+    var words = String(name).replace(/[_]/g, ' ').split(/[\s&]+/).filter(Boolean);
+    if (!words.length) return '?';
+    if (words.length === 1) return words[0].slice(0, 2).toUpperCase();
+    return (words[0][0] + words[1][0]).toUpperCase();
+  }
+  /* The festival's wall clock, expressed as a UTC timestamp (handles daylight saving). */
+  function wallClockUTC(ms, tz) {
+    var parts = new Intl.DateTimeFormat('en-US', {
+      timeZone: tz, year: 'numeric', month: '2-digit', day: '2-digit',
+      hour: '2-digit', minute: '2-digit', second: '2-digit', hourCycle: 'h23'
+    }).formatToParts(new Date(ms));
+    var g = function (t) { var p = parts.filter(function (x) { return x.type === t; })[0]; return p ? parseInt(p.value, 10) : 0; };
+    return Date.UTC(g('year'), g('month') - 1, g('day'), g('hour') % 24, g('minute'), g('second'));
+  }
+  function zonedToUTC(dateStr, timeStr, tz) {
+    var d = dateStr.split('-').map(Number), t = timeStr.split(':').map(Number);
+    var target = Date.UTC(d[0], d[1] - 1, d[2], t[0], t[1], 0);
+    var utc = target;
+    try { for (var i = 0; i < 3; i++) utc = utc - (wallClockUTC(utc, tz) - target); }
+    catch (e) { return target; }
+    return utc;
+  }
+
   /* ---------- data ---------- */
   var DAY_START = toMin(F.dayStart), DAY_END = toMin(F.dayEnd), DAY_MINS = DAY_END - DAY_START;
   var stages = F.stages.map(function (st, i) {
@@ -56,6 +80,7 @@
       stage: s.stage,
       stageObj: stageById[s.stage],
       artist: s.artist,
+      photo: s.photo || '',
       s: toMin(s.start),
       e: toMin(s.end)
     };
@@ -125,6 +150,19 @@
   }
 
   /* ---------- rendering ---------- */
+  function thumb(s) {
+    return '<span class="thumb' + (s.photo ? '' : ' no-photo') + '" aria-hidden="true">' +
+      (s.photo ? '<img class="photo" src="' + esc(s.photo) + '" alt="" loading="lazy" decoding="async">' : '') +
+      '<span class="mono">' + esc(initials(s.artist)) + '</span></span>';
+  }
+  /* Photos that fail to load fall back to the monogram tile. */
+  function watchPhotos(root) {
+    $$('img.photo', root).forEach(function (img) {
+      if (img.complete && img.naturalWidth === 0) { img.parentNode.classList.add('no-photo'); return; }
+      img.addEventListener('error', function () { img.parentNode.classList.add('no-photo'); });
+    });
+  }
+
   function setBlock(s, conf) {
     var fav = isFav(s.id);
     var cls = ['set', fav ? 'is-fav' : '', conf[s.id] ? 'is-conflict' : '', statusClass(s)].filter(Boolean).join(' ');
@@ -133,6 +171,7 @@
     if (dur <= 0) return '';
     return '<button type="button" class="' + cls + '" data-id="' + s.id + '" style="--s:' + top + ';--d:' + dur + '"' +
       ' aria-pressed="' + fav + '" aria-label="' + esc(s.artist) + ', ' + fmtRange(s.s, s.e) + ', ' + esc(s.stageObj.name) + '. Tap to save.">' +
+      thumb(s) +
       '<span class="set-inner">' +
         '<span class="set-name"><i class="live-dot" aria-hidden="true"></i>' + esc(s.artist) + '</span>' +
         '<span class="set-time">' + fmtRange(s.s, s.e) + '</span>' +
@@ -165,12 +204,14 @@
         '<div class="gutter">' + hours.join('') + '</div>' + cols +
         '<div class="now-line" id="nowLine" hidden><span id="nowLabel"></span></div>' +
       '</div>';
+    watchPhotos(grid);
   }
 
   function card(s, conf) {
     var fav = isFav(s.id);
     var cls = ['card', fav ? 'is-fav' : '', conf[s.id] ? 'is-conflict' : '', statusClass(s)].filter(Boolean).join(' ');
     return '<button type="button" class="' + cls + '" data-id="' + s.id + '" style="--c:' + s.stageObj.color + '" aria-pressed="' + fav + '">' +
+      thumb(s) +
       '<span class="card-time"><b>' + fmt(s.s) + '</b><span>to ' + fmt(s.e, true) + '</span></span>' +
       '<span class="card-main">' +
         '<span class="card-name">' + esc(s.artist) + '</span>' +
@@ -206,6 +247,7 @@
         byHour[h].map(function (s) { return '<li>' + card(s, conf) + '</li>'; }).join('') +
       '</ul></section>';
     }).join('');
+    watchPhotos(root);
   }
 
   function renderLive() {
@@ -226,6 +268,44 @@
     }).join('');
     live.innerHTML = '<div class="wrap"><span class="live-tag"><i class="live-dot"></i>Right now</span>' + items + '</div>';
     live.hidden = false;
+  }
+
+  /* ---------- countdown to the first note ---------- */
+  var START_AT = zonedToUTC(F.date, F.startTime || F.dayStart, F.timeZone);
+  var END_AT = zonedToUTC(F.date, F.dayEnd, F.timeZone);
+  var cdLast = '';
+  function renderCountdown() {
+    var el = $('#countdown');
+    if (!el) return;
+    var override = false;
+    try { override = /^\d{1,2}:\d{2}$/.test(new URLSearchParams(location.search).get('now') || ''); } catch (e) { /* ignore */ }
+    var nowMs = Date.now();
+    var diff = override ? -1 : START_AT - nowMs;
+    var mode = diff > 0 ? 'before' : (override || nowMs < END_AT) ? 'live' : 'after';
+    if (mode !== cdLast) {
+      el.setAttribute('data-mode', mode);
+      cdLast = mode;
+      if (mode === 'live') {
+        el.innerHTML = '<span class="cd-label"><i class="live-dot"></i>Happening now</span>' +
+          '<span class="cd-note">Gates are open. Scroll down for what\u2019s on.</span>';
+      } else if (mode === 'after') {
+        el.innerHTML = '<span class="cd-label">That\u2019s a wrap</span>' +
+          '<span class="cd-note">Thanks for touching grass with us.</span>';
+      } else {
+        el.innerHTML = '<span class="cd-label">Music starts in</span>' +
+          '<span class="cd-units">' + ['Days', 'Hrs', 'Min', 'Sec'].map(function (n) {
+            return '<span class="cd-unit"><b class="cd-num" data-unit="' + n + '">00</b><span class="cd-name">' + n + '</span></span>';
+          }).join('') + '</span>';
+      }
+    }
+    if (mode !== 'before') return;
+    var secs = Math.floor(diff / 1000);
+    var d = Math.floor(secs / 86400), h = Math.floor(secs % 86400 / 3600), m = Math.floor(secs % 3600 / 60), sec = secs % 60;
+    var vals = { Days: String(d), Hrs: pad(h), Min: pad(m), Sec: pad(sec) };
+    $$('.cd-num', el).forEach(function (n) {
+      var v = vals[n.getAttribute('data-unit')];
+      if (n.textContent !== v) n.textContent = v;
+    });
   }
 
   function renderMineBar() {
@@ -439,6 +519,8 @@
     if (window.ResizeObserver) new ResizeObserver(measure).observe(toolbar);
     else window.addEventListener('resize', measure);
 
+    renderCountdown();
+    setInterval(renderCountdown, 1000);
     setInterval(refreshNow, 30000);
     document.addEventListener('visibilitychange', function () { if (!document.hidden) refreshNow(); });
 
