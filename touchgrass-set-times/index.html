@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>TouchGrass Music Fest · Set Times</title>
+  <meta name="description" content="Set times for both stages at TouchGrass Music Fest, Saturday October 3, 2026 at Orlando Amphitheater. Save your sets and spot overlaps.">
+  <meta name="theme-color" content="#0e110b">
+  <meta property="og:title" content="TouchGrass Music Fest · Set Times">
+  <meta property="og:description" content="Both stages, one screen. Save your sets and spot overlaps.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23c9ff3f'/%3E%3Cpath d='M14 44V22h10M24 22H14M28 44V22h9c4 0 6 2 6 5.5S41 33 37 33h-9' stroke='%230e110b' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="masthead">
+    <div class="wrap">
+      <p class="eyebrow"><span id="festName">TouchGrass Music Fest</span> · <span id="festVenue">Orlando Amphitheater</span></p>
+      <h1 class="title">Set Times</h1>
+      <p class="meta">
+        <span id="festDate">Saturday, October 3, 2026</span>
+        <span class="sep" aria-hidden="true">·</span>
+        <span>Two stages</span>
+        <span class="sep" aria-hidden="true">·</span>
+        <span class="note" id="festNote">Set times subject to change.</span>
+      </p>
+    </div>
+  </header>
+
+  <section class="live" id="live" hidden aria-live="polite"></section>
+
+  <div class="toolbar" id="toolbar">
+    <div class="wrap toolbar-row">
+      <div class="seg" role="tablist" aria-label="View">
+        <button type="button" class="seg-btn is-active" data-view="timeline" role="tab" aria-selected="true">Timeline</button>
+        <button type="button" class="seg-btn" data-view="list" role="tab" aria-selected="false">List</button>
+      </div>
+      <div class="chips" id="stageChips" aria-label="Filter by stage"></div>
+      <div class="tools">
+        <button type="button" class="chip chip-mine" id="mineBtn" aria-pressed="false">★ My sets <span class="count" id="mineCount">0</span></button>
+        <button type="button" class="icon-btn" id="zoomOut" aria-label="Zoom out timeline">−</button>
+        <button type="button" class="icon-btn" id="zoomIn" aria-label="Zoom in timeline">+</button>
+        <button type="button" class="icon-btn now-btn" id="nowBtn" hidden>Now</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="minebar" id="minebar" hidden>
+    <div class="wrap">
+      <span id="mineSummary"></span>
+      <span class="spacer"></span>
+      <button type="button" class="text-btn" id="copyBtn">Copy list</button>
+      <button type="button" class="text-btn" id="clearBtn">Clear all</button>
+    </div>
+  </div>
+
+  <main>
+    <section class="view view-timeline" id="timeline">
+      <div class="wrap">
+        <div class="grid" id="grid"></div>
+      </div>
+    </section>
+
+    <section class="view view-list" id="list" hidden>
+      <div class="wrap">
+        <div id="listRoot"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ground">
+    <div class="wrap">
+      <p>*<span id="footNote">Set times subject to change.</span></p>
+      <p>Tap a set to save it · Saved sets stay on this device</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" hidden role="status"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
