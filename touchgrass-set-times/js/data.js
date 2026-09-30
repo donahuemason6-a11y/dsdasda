@@ -10,6 +10,7 @@
 window.FESTIVAL = {
   name: "TouchGrass Music Fest",
   dateLabel: "Saturday, October 3, 2026",
+  dateShort: "Sat Oct 3, 2026",
   date: "2026-10-03",             // YYYY-MM-DD. On this day the page shows the live "Right now" bar.
   timeZone: "America/New_York",   // IANA time zone the festival runs in
   venue: "Orlando Amphitheater",

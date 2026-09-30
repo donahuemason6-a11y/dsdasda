@@ -45,7 +45,12 @@
   function initials(name) {
     var words = String(name).replace(/[_]/g, ' ').split(/[\s&]+/).filter(Boolean);
     if (!words.length) return '?';
-    if (words.length === 1) return words[0].slice(0, 2).toUpperCase();
+    if (words.length === 1) {
+      var caps = words[0].match(/[A-Z]/g) || [];
+      var lower = words[0].match(/[a-z]/g) || [];
+      /* mixed case like TiaCorine keeps its capitals; JID or Cochise use one letter */
+      return (caps.length > 1 && lower.length ? caps.slice(0, 2).join('') : words[0][0]).toUpperCase();
+    }
     return (words[0][0] + words[1][0]).toUpperCase();
   }
   /* The festival's wall clock, expressed as a UTC timestamp (handles daylight saving). */
@@ -176,7 +181,7 @@
         '<span class="set-name"><i class="live-dot" aria-hidden="true"></i>' + esc(s.artist) + '</span>' +
         '<span class="set-time">' + fmtRange(s.s, s.e) + '</span>' +
       '</span>' +
-      '<span class="star" aria-hidden="true">' + (fav ? '★' : '☆') + '</span>' +
+      '<span class="star" aria-hidden="true"></span>' +
       '<span class="flag">Overlap</span>' +
     '</button>';
   }
@@ -185,7 +190,9 @@
     var vs = visibleStages();
     var conf = conflicts();
     var head = vs.map(function (st) {
-      return '<div class="stage-head" style="--c:' + st.color + '">' + esc(st.name) + '</div>';
+      var n = sets.filter(function (s) { return s.stage === st.id; }).length;
+      return '<div class="stage-head" style="--c:' + st.color + '"><span class="long">' + esc(st.name) + '</span>' +
+        '<span class="short">' + esc(st.short) + '</span><small>' + n + ' sets</small></div>';
     }).join('');
     var hours = [];
     for (var m = Math.ceil(DAY_START / 60) * 60; m <= DAY_END; m += 60) {
@@ -199,7 +206,7 @@
     var grid = $('#grid');
     grid.style.setProperty('--cols', vs.length);
     grid.innerHTML =
-      '<div class="grid-head"><div class="corner"></div>' + head + '</div>' +
+      '<div class="grid-head"><div class="corner">' + esc(tzAbbr()) + '</div>' + head + '</div>' +
       '<div class="grid-body" style="--day-mins:' + DAY_MINS + '">' +
         '<div class="gutter">' + hours.join('') + '</div>' + cols +
         '<div class="now-line" id="nowLine" hidden><span id="nowLabel"></span></div>' +
@@ -219,7 +226,7 @@
           '<span class="tag tag-live">On now</span><span class="tag tag-conflict">Overlaps</span>' +
         '</span>' +
       '</span>' +
-      '<span class="star" aria-hidden="true">' + (fav ? '★' : '☆') + '</span>' +
+      '<span class="star" aria-hidden="true"></span>' +
     '</button>';
   }
 
@@ -232,7 +239,7 @@
     var root = $('#listRoot');
     if (!items.length) {
       root.innerHTML = '<p class="empty">' + (state.mine
-        ? 'Nothing saved yet. Tap the ☆ on any set to build your day.'
+        ? 'Nothing saved yet. Tap any set to save it.'
         : 'No sets to show.') + '</p>';
       return;
     }
@@ -273,6 +280,16 @@
   /* ---------- countdown to the first note ---------- */
   var START_AT = zonedToUTC(F.date, F.startTime || F.dayStart, F.timeZone);
   var END_AT = zonedToUTC(F.date, F.dayEnd, F.timeZone);
+  function tzAbbr() {
+    if (tzAbbr.value !== undefined) return tzAbbr.value;
+    try {
+      var p = new Intl.DateTimeFormat('en-US', { timeZone: F.timeZone, timeZoneName: 'short' })
+        .formatToParts(new Date(zonedToUTC(F.date, F.startTime || F.dayStart, F.timeZone)))
+        .filter(function (x) { return x.type === 'timeZoneName'; })[0];
+      tzAbbr.value = p ? p.value : '';
+    } catch (e) { tzAbbr.value = ''; }
+    return tzAbbr.value;
+  }
   var cdLast = '';
   function renderCountdown() {
     var el = $('#countdown');
@@ -283,11 +300,15 @@
     var diff = override ? -1 : START_AT - nowMs;
     var mode = diff > 0 ? 'before' : (override || nowMs < END_AT) ? 'live' : 'after';
     if (mode !== cdLast) {
+      var first = cdLast === '';
       el.setAttribute('data-mode', mode);
+      var masthead = $('.masthead');
+      if (masthead) masthead.classList.toggle('is-live', mode !== 'before');
       cdLast = mode;
+      if (!first) refreshNow();
       if (mode === 'live') {
         el.innerHTML = '<span class="cd-label"><i class="live-dot"></i>Happening now</span>' +
-          '<span class="cd-note">Gates are open. Scroll down for what\u2019s on.</span>';
+          '<span class="cd-note">Day of show \u00b7 scroll for what\u2019s on</span>';
       } else if (mode === 'after') {
         el.innerHTML = '<span class="cd-label">That\u2019s a wrap</span>' +
           '<span class="cd-note">Thanks for touching grass with us.</span>';
@@ -313,7 +334,7 @@
     if (!state.mine) { bar.hidden = true; return; }
     var n = favCount(), c = Object.keys(conflicts()).length;
     $('#mineSummary').innerHTML = n
-      ? '<b>' + n + '</b> set' + (n === 1 ? '' : 's') + ' saved' + (c ? ' · <span class="warn">⚠ ' + c + ' overlap</span>' : '')
+      ? '<b>' + n + '</b> set' + (n === 1 ? '' : 's') + ' saved' + (c ? ' <span class="warn">' + c + ' overlap</span>' : '')
       : 'Tap any set to save it here';
     $('#copyBtn').hidden = !n;
     $('#clearBtn').hidden = !n;
@@ -328,8 +349,6 @@
       el.classList.toggle('is-fav', fav);
       el.classList.toggle('is-conflict', !!conf[id]);
       el.setAttribute('aria-pressed', fav);
-      var star = el.querySelector('.star');
-      if (star) star.textContent = fav ? '★' : '☆';
     });
     $('#mineCount').textContent = favCount();
     renderMineBar();
@@ -481,13 +500,14 @@
   function init() {
     $('#festName').textContent = F.name;
     $('#festVenue').textContent = F.venue + (F.city ? ', ' + F.city : '');
-    $('#festDate').textContent = F.dateLabel;
-    $('#festNote').textContent = F.note || '';
+    $('#festDate').textContent = F.dateShort || F.dateLabel;
+    $('#festHours').textContent = fmtHour(DAY_START) + ' \u2013 ' + fmtHour(DAY_END);
+    $('#festStages').textContent = stages.length === 1 ? 'One stage' : stages.length === 2 ? 'Two stages' : stages.length + ' stages';
     $('#footNote').textContent = F.note || '';
     document.title = F.name + ' · Set Times';
 
     var chips = $('#stageChips');
-    chips.innerHTML = '<button type="button" class="chip is-active" data-stage="all" aria-pressed="true">All stages</button>' +
+    chips.innerHTML = '<button type="button" class="chip is-active" data-stage="all" style="--c:var(--ink)" aria-pressed="true">All</button>' +
       stages.map(function (st) {
         return '<button type="button" class="chip" data-stage="' + st.id + '" style="--c:' + st.color + '" aria-pressed="false"><i class="dot"></i>' + esc(st.short) + '</button>';
       }).join('');
@@ -519,10 +539,10 @@
     if (window.ResizeObserver) new ResizeObserver(measure).observe(toolbar);
     else window.addEventListener('resize', measure);
 
-    renderCountdown();
-    setInterval(renderCountdown, 1000);
+    /* tick on the whole second so the countdown never skips or doubles a digit */
+    (function tick() { renderCountdown(); setTimeout(tick, 1000 - (Date.now() % 1000)); })();
     setInterval(refreshNow, 30000);
-    document.addEventListener('visibilitychange', function () { if (!document.hidden) refreshNow(); });
+    document.addEventListener('visibilitychange', function () { if (!document.hidden) { renderCountdown(); refreshNow(); } });
 
     /* on the festival day, open on what's happening now */
     if (state.now.eventDay && state.view === 'timeline') {
