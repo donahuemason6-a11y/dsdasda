@@ -399,10 +399,6 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--ink); outline-o
 @media (max-width: 640px) { .search { order: 4; flex-basis: 100%; } }
 
 /* ---------- grounds map ---------- */
-.map-section { padding-block: 8px 48px; }
-.map-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 6px; padding-top: 18px; border-top: 1px solid var(--line); }
-.map-title { margin: 0; font-family: var(--font-display); font-weight: 400; text-transform: uppercase; letter-spacing: 0.03em; font-size: 24px; color: var(--lime); }
-.map-tools { display: flex; gap: 6px; }
-.map-hint { margin: 0 0 10px; text-align: left; font-family: var(--font-cond); font-weight: 600; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-2); }
+.map-hint { margin: 0 0 10px; text-align: center; font-family: var(--font-cond); font-weight: 600; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-2); }
 .map-viewer { overflow: auto; max-height: 78vh; border-radius: var(--radius); background: var(--panel); border: 1.5px solid var(--line); -webkit-overflow-scrolling: touch; touch-action: pan-x pan-y pinch-zoom; }
 .map-viewer img { display: block; width: 100%; max-width: none; height: auto; }
