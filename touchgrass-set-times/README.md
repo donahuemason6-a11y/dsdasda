@@ -46,7 +46,7 @@ index.html?now=15:30
 - **Share link**: copies a link that adds your saved sets on a friend's phone.
 - **Add to calendar**: downloads an .ics file of your saved sets with 15-minute alerts.
 - **Heads-up**: on the day, a message appears 10 minutes before each saved set (while the page is open).
-- **Map** tab with the festival grounds map (zoomable), a Directions link, and "Add to Home Screen" support on phones. Replace `img/festival-map.webp` to update the map.
+- **Grounds map** below the schedule (zoomable), a Directions link, and "Add to Home Screen" support on phones. Replace `img/festival-map.webp` to update the map.
 - Keyboard: `1` timeline, `2` list, `M` my sets, `N` now, `/` search.
 
 - **Timeline**: both stages side by side, time down the left. Zoom with − / +.
