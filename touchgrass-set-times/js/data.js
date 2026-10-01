@@ -14,7 +14,8 @@ window.FESTIVAL = {
   venue: "Orlando Amphitheater",
   city: "Orlando, FL",
   startTime: "12:00",             // music starts; the countdown runs to this moment on "date"
-  mapUrl: "https://www.google.com/maps/search/?api=1&query=Orlando+Amphitheater+Orlando+FL",
+  mapImage: "img/festival-map.webp",   // the festival grounds map shown on the Map tab
+  mapUrl: "https://www.google.com/maps/search/?api=1&query=Orlando+Amphitheater+Orlando+FL", // directions link
   dayStart: "12:00",              // first hour shown on the timeline
   dayEnd: "23:00",                // last hour shown on the timeline
   note: "Set times subject to change.",

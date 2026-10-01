@@ -31,7 +31,9 @@
         <span class="sep" aria-hidden="true">·</span>
         <span class="note" id="festNote">Set times subject to change.</span>
         <span class="sep" aria-hidden="true">·</span>
-        <a class="map-link" id="mapLink" href="#" target="_blank" rel="noopener">Map</a>
+        <a class="map-link" href="#map" data-view="map">Map</a>
+        <span class="sep" aria-hidden="true">·</span>
+        <a class="map-link" id="mapLink" href="#" target="_blank" rel="noopener">Directions</a>
       </p>
       <div class="countdown" id="countdown" data-mode="before" aria-live="off"></div>
     </div>
@@ -44,6 +46,7 @@
       <div class="seg" role="tablist" aria-label="View">
         <button type="button" class="seg-btn is-active" data-view="timeline" role="tab" aria-selected="true">Timeline</button>
         <button type="button" class="seg-btn" data-view="list" role="tab" aria-selected="false">List</button>
+        <button type="button" class="seg-btn" data-view="map" role="tab" aria-selected="false">Map</button>
       </div>
       <div class="chips" id="stageChips" aria-label="Filter by stage"></div>
       <label class="search" for="searchBox"><span class="sr-only">Search artists</span><input type="search" id="searchBox" placeholder="Search artists" autocomplete="off" spellcheck="false"></label>
@@ -52,6 +55,8 @@
         <button type="button" class="icon-btn" id="zoomOut" aria-label="Zoom out timeline">−</button>
         <button type="button" class="icon-btn" id="zoomIn" aria-label="Zoom in timeline">+</button>
         <button type="button" class="icon-btn now-btn" id="nowBtn" hidden>Now</button>
+        <button type="button" class="icon-btn" id="mapOut" aria-label="Zoom out map" hidden>−</button>
+        <button type="button" class="icon-btn" id="mapIn" aria-label="Zoom in map" hidden>+</button>
       </div>
     </div>
   </div>
@@ -74,6 +79,13 @@
       </div>
     </section>
 
+    <section class="view view-map" id="mapView" hidden>
+      <div class="wrap">
+        <p class="map-hint">Pinch or use − / + to zoom · drag to pan</p>
+        <div class="map-viewer" id="mapViewer"><img id="mapImg" src="" alt="Festival grounds map: Touch Grass Stage top right, Meadows Stage left, VIP Lounge right, entrance at the bottom. Legend: neon lawn, merch, photo op, drinks, box office, airbrush tent, info, green room, mechanical alligator, lockers, food, restroom, gametruck, ADA."></div>
+      </div>
+    </section>
+
     <section class="view view-list" id="listView" hidden>
       <div class="wrap">
         <div id="listRoot"></div>
@@ -84,7 +96,7 @@
   <footer class="ground">
     <div class="wrap">
       <p>*<span id="footNote">Set times subject to change.</span></p>
-      <p>Tap a set to save it · Saved sets stay on this device · Keys: 1 timeline, 2 list, M my sets, / search</p>
+      <p>Tap a set to save it · Saved sets stay on this device · Keys: 1 timeline, 2 list, 3 map, M my sets, / search</p>
     </div>
   </footer>
 

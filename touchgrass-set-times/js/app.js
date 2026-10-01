@@ -97,8 +97,9 @@
   var savedPpm = parseFloat(store.get(LS_PPM));
   if (PPM_STEPS.indexOf(savedPpm) !== -1) state.ppm = savedPpm;
   var hashView = location.hash.replace('#', '');
-  if (hashView === 'list' || hashView === 'timeline') state.view = hashView;
-  else { var v = store.get(LS_VIEW); if (v === 'list' || v === 'timeline') state.view = v; }
+  var VIEWS = ['timeline', 'list', 'map'];
+  if (VIEWS.indexOf(hashView) !== -1) state.view = hashView;
+  else { var v = store.get(LS_VIEW); if (VIEWS.indexOf(v) !== -1) state.view = v; }
 
   var favCount = function () { return Object.keys(state.favs).length; };
   var isFav = function (id) { return state.favs[id] === true; };
@@ -373,8 +374,11 @@
     });
     $('#timelineView').hidden = view !== 'timeline';
     $('#listView').hidden = view !== 'list';
+    $('#mapView').hidden = view !== 'map';
     $('#zoomOut').hidden = view !== 'timeline';
     $('#zoomIn').hidden = view !== 'timeline';
+    $('#mapOut').hidden = view !== 'map';
+    $('#mapIn').hidden = view !== 'map';
     if (booted) { try { history.replaceState(null, '', '#' + view); } catch (e) { /* file:// etc. */ } }
     if (view === 'list') renderList();
     refreshNow();
@@ -544,6 +548,13 @@
     document.title = F.name + ' · Set Times';
     var map = $('#mapLink');
     if (F.mapUrl) map.href = F.mapUrl; else map.hidden = true;
+    /* grounds map with simple zoom steps; the container scrolls */
+    var mapImg = $('#mapImg'), mapZoom = 0, MAP_STEPS = [100, 150, 200, 300];
+    if (F.mapImage) mapImg.src = F.mapImage; else $$('[data-view="map"]').forEach(function (b) { b.hidden = true; });
+    var applyMapZoom = function () { mapImg.style.width = MAP_STEPS[mapZoom] + '%'; $('#mapOut').disabled = mapZoom === 0; $('#mapIn').disabled = mapZoom === MAP_STEPS.length - 1; };
+    $('#mapOut').addEventListener('click', function () { if (mapZoom > 0) { mapZoom--; applyMapZoom(); } });
+    $('#mapIn').addEventListener('click', function () { if (mapZoom < MAP_STEPS.length - 1) { mapZoom++; applyMapZoom(); } });
+    applyMapZoom();
 
     /* sets shared by link: ?sets=id,id merges into My sets */
     try {
@@ -571,6 +582,7 @@
     document.addEventListener('click', function (ev) {
       var t = ev.target.closest ? ev.target.closest('[data-id], [data-view], [data-stage]') : null;
       if (!t) return;
+      if (t.tagName === 'A') ev.preventDefault();
       if (t.hasAttribute('data-id')) toggleFav(t.getAttribute('data-id'));
       else if (t.hasAttribute('data-view')) setView(t.getAttribute('data-view'));
       else if (t.hasAttribute('data-stage')) setStage(t.getAttribute('data-stage'));
@@ -591,6 +603,7 @@
       if (tag === 'input' || tag === 'textarea' || ev.metaKey || ev.ctrlKey || ev.altKey) return;
       if (ev.key === '1') setView('timeline');
       else if (ev.key === '2') setView('list');
+      else if (ev.key === '3') setView('map');
       else if (ev.key === 'm' || ev.key === 'M') setMine(!state.mine);
       else if (ev.key === 'n' || ev.key === 'N') jumpToNow(true);
       else if (ev.key === '/') { ev.preventDefault(); box.focus(); }
