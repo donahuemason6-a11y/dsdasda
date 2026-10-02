@@ -1,0 +1,39 @@
+{
+  "name": "StealAFlag",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+      "Shared": {
+        "$path": "src/ReplicatedStorage/Shared"
+      }
+    },
+    "ServerScriptService": {
+      "$className": "ServerScriptService",
+      "$path": "src/ServerScriptService"
+    },
+    "ServerStorage": {
+      "$className": "ServerStorage",
+      "$path": "src/ServerStorage"
+    },
+    "StarterPlayer": {
+      "$className": "StarterPlayer",
+      "StarterPlayerScripts": {
+        "$className": "StarterPlayerScripts",
+        "$path": "src/StarterPlayer/StarterPlayerScripts"
+      }
+    },
+    "Teams": {
+      "$className": "Teams"
+    },
+    "Workspace": {
+      "$className": "Workspace"
+    },
+    "Lighting": {
+      "$className": "Lighting"
+    },
+    "SoundService": {
+      "$className": "SoundService"
+    }
+  }
+}

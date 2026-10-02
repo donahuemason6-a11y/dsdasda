@@ -1,0 +1,1862 @@
+<roblox version="4">
+  <Item class="Lighting" referent="0">
+    <Properties>
+      <string name="Name">Lighting</string>
+    </Properties>
+  </Item>
+  <Item class="ReplicatedStorage" referent="1">
+    <Properties>
+      <string name="Name">ReplicatedStorage</string>
+    </Properties>
+    <Item class="Folder" referent="2">
+      <Properties>
+        <string name="Name">Shared</string>
+      </Properties>
+      <Item class="ModuleScript" referent="3">
+        <Properties>
+          <string name="Name">Config</string>
+          <string name="Source"><![CDATA[--[[
+	Config
+	Every tunable setting for Steal a Flag lives here. Both the server and the
+	client require this module, so keep it free of server-only references.
+]]
+
+local Config = {}
+
+Config.GameName = "Steal a Flag"
+
+-- Team definitions. Team 1 owns the -X end of the arena, team 2 owns the +X end.
+-- Colors[1] is the main colour (floor, player outline, HUD box). Every entry in
+-- Colors is painted as a stripe on that team's flag and on the wall behind its base,
+-- so a team can have two, three or more colours.
+Config.Teams = {
+	{
+		Name = "Blue Team",
+		TeamColor = BrickColor.new("Bright blue"),
+		Colors = {
+			Color3.fromRGB(13, 105, 172),
+			Color3.fromRGB(128, 187, 219),
+		},
+	},
+	{
+		Name = "Red Team",
+		TeamColor = BrickColor.new("Bright red"),
+		Colors = {
+			Color3.fromRGB(196, 40, 28),
+			Color3.fromRGB(245, 205, 48),
+		},
+	},
+}
+
+-- Rounds
+Config.CapturesToWin = 3
+Config.RoundLength = 300 -- seconds
+Config.IntermissionLength = 15 -- seconds between rounds
+Config.RoundEndLength = 8 -- seconds the winner is shown
+Config.MinPlayersToStart = 2 -- Studio play-testing always allows a single player
+
+-- Flags
+Config.PickupRadius = 5 -- studs from the flag needed to grab it
+Config.CaptureRadius = 7 -- studs from your own flag stand needed to score
+Config.FlagReturnTime = 20 -- seconds a dropped flag waits before going home by itself
+Config.RequireOwnFlagHome = true -- classic rule: you cannot score while your own flag is away
+
+-- Players
+Config.RespawnTime = 4
+Config.SpawnProtection = 3 -- seconds of forcefield after spawning
+Config.WalkSpeed = 18
+Config.FlagCarrierWalkSpeed = 15 -- carrying the flag slows you down a little
+
+-- Weapon
+Config.Weapon = {
+	Name = "Blaster",
+	Damage = 25,
+	Cooldown = 0.3, -- seconds between shots
+	Range = 250, -- studs
+	FriendlyFire = false,
+}
+
+-- Map (all sizes in studs)
+Config.Map = {
+	Length = 280, -- X axis, base to base
+	Width = 150, -- Z axis
+	WallHeight = 26,
+	BaseDepth = 60, -- how deep each team's coloured zone is
+}
+
+return Config
+]]></string>
+        </Properties>
+      </Item>
+    </Item>
+  </Item>
+  <Item class="ServerScriptService" referent="4">
+    <Properties>
+      <string name="Name">ServerScriptService</string>
+    </Properties>
+    <Item class="Script" referent="5">
+      <Properties>
+        <string name="Name">Main</string>
+        <token name="RunContext">0</token>
+        <string name="Source"><![CDATA[--[[
+	Main
+	Server entry point for Steal a Flag. Builds the map, sets up teams, flags,
+	weapons and player stats, then starts the round loop.
+]]
+
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local Config = require(ReplicatedStorage:WaitForChild("Shared"):WaitForChild("Config"))
+
+local Modules = script.Parent:WaitForChild("Modules")
+local MapBuilder = require(Modules:WaitForChild("MapBuilder"))
+local TeamManager = require(Modules:WaitForChild("TeamManager"))
+local FlagManager = require(Modules:WaitForChild("FlagManager"))
+local CombatServer = require(Modules:WaitForChild("CombatServer"))
+local RoundManager = require(Modules:WaitForChild("RoundManager"))
+
+Players.RespawnTime = Config.RespawnTime
+
+TeamManager.Init()
+local map = MapBuilder.Build()
+FlagManager.Init(map)
+CombatServer.Init()
+
+local function setupLeaderstats(player)
+	if player:FindFirstChild("leaderstats") then
+		return
+	end
+	local stats = Instance.new("Folder")
+	stats.Name = "leaderstats"
+	for _, statName in ipairs({ "Captures", "Kills", "Returns" }) do
+		local value = Instance.new("IntValue")
+		value.Name = statName
+		value.Value = 0
+		value.Parent = stats
+	end
+	stats.Parent = player
+end
+
+local function addTeamVisuals(player, character)
+	local teamIndex = TeamManager.GetIndex(player)
+	if not teamIndex then
+		return
+	end
+	local color = Config.Teams[teamIndex].Colors[1]
+
+	-- coloured outline so teams are obvious at a glance (hidden behind walls)
+	local highlight = Instance.new("Highlight")
+	highlight.Name = "TeamOutline"
+	highlight.FillTransparency = 1
+	highlight.OutlineColor = color
+	highlight.OutlineTransparency = 0
+	highlight.DepthMode = Enum.HighlightDepthMode.Occluded
+	highlight.Parent = character
+
+	-- team-coloured name tag that replaces the default one
+	local head = character:FindFirstChild("Head")
+	local humanoid = character:FindFirstChildOfClass("Humanoid")
+	if head and humanoid then
+		humanoid.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
+
+		local billboard = Instance.new("BillboardGui")
+		billboard.Name = "NameTag"
+		billboard.Adornee = head
+		billboard.Size = UDim2.new(0, 200, 0, 40)
+		billboard.StudsOffset = Vector3.new(0, 2.4, 0)
+		billboard.MaxDistance = 140
+		billboard.AlwaysOnTop = false
+		billboard.PlayerToHideFrom = player
+
+		local label = Instance.new("TextLabel")
+		label.Size = UDim2.new(1, 0, 1, 0)
+		label.BackgroundTransparency = 1
+		label.Font = Enum.Font.GothamBold
+		label.TextScaled = true
+		label.Text = player.DisplayName
+		label.TextColor3 = color
+		label.TextStrokeTransparency = 0.3
+		label.TextStrokeColor3 = Color3.new(0, 0, 0)
+		label.Parent = billboard
+
+		billboard.Parent = head
+	end
+end
+
+local function onCharacterAdded(player, character)
+	local humanoid = character:WaitForChild("Humanoid", 10)
+	if not humanoid then
+		return
+	end
+	humanoid.WalkSpeed = Config.WalkSpeed
+
+	addTeamVisuals(player, character)
+	task.spawn(CombatServer.TintWeapon, player)
+
+	humanoid.Died:Once(function()
+		FlagManager.OnPlayerDied(player)
+		CombatServer.OnCharacterDied(player, humanoid)
+	end)
+end
+
+local function onPlayerAdded(player)
+	setupLeaderstats(player)
+	TeamManager.AssignSmallest(player)
+
+	player.CharacterAdded:Connect(function(character)
+		onCharacterAdded(player, character)
+	end)
+	if player.Character then
+		onCharacterAdded(player, player.Character)
+	end
+end
+
+Players.PlayerAdded:Connect(onPlayerAdded)
+for _, player in ipairs(Players:GetPlayers()) do
+	onPlayerAdded(player)
+end
+
+Players.PlayerRemoving:Connect(function(player)
+	FlagManager.OnPlayerRemoving(player)
+	CombatServer.OnPlayerRemoving(player)
+end)
+
+RoundManager.Start()
+print(string.format("[%s] server ready", Config.GameName))
+]]></string>
+      </Properties>
+    </Item>
+    <Item class="Folder" referent="6">
+      <Properties>
+        <string name="Name">Modules</string>
+      </Properties>
+      <Item class="ModuleScript" referent="7">
+        <Properties>
+          <string name="Name">CombatServer</string>
+          <string name="Source"><![CDATA[--[[
+	CombatServer
+	Hands out the Blaster and validates every shot on the server: cooldown, range,
+	line of sight and friendly fire are all checked here, never on the client.
+]]
+
+local Players = game:GetService("Players")
+local ServerStorage = game:GetService("ServerStorage")
+local StarterPack = game:GetService("StarterPack")
+local Workspace = game:GetService("Workspace")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local Config = require(ReplicatedStorage:WaitForChild("Shared"):WaitForChild("Config"))
+local GameState = require(script.Parent:WaitForChild("GameState"))
+local TeamManager = require(script.Parent:WaitForChild("TeamManager"))
+
+local CombatServer = {}
+
+local KILL_CREDIT_WINDOW = 6 -- seconds after a hit that a death still counts as a kill
+
+local toolName = Config.Weapon.Name
+local lastFire = {}
+
+local function ensureHandle(tool)
+	if tool:FindFirstChild("Handle") then
+		return
+	end
+	local handle = Instance.new("Part")
+	handle.Name = "Handle"
+	handle.Size = Vector3.new(0.5, 0.9, 2.4)
+	handle.Color = Color3.fromRGB(40, 40, 45)
+	handle.Material = Enum.Material.Metal
+	handle.CanCollide = false
+	handle.Parent = tool
+end
+
+local function addStat(player, statName, amount)
+	local stats = player:FindFirstChild("leaderstats")
+	local stat = stats and stats:FindFirstChild(statName)
+	if stat then
+		stat.Value += amount
+	end
+end
+
+local function onFire(player, targetPosition)
+	if typeof(targetPosition) ~= "Vector3" then
+		return
+	end
+	local character = player.Character
+	if not character then
+		return
+	end
+	local humanoid = character:FindFirstChildOfClass("Humanoid")
+	if not humanoid or humanoid.Health <= 0 then
+		return
+	end
+	local tool = character:FindFirstChild(toolName)
+	if not tool or not tool:IsA("Tool") then
+		return -- not equipped
+	end
+
+	local now = os.clock()
+	local last = lastFire[player]
+	if last and now - last < Config.Weapon.Cooldown * 0.9 then
+		return
+	end
+	lastFire[player] = now
+
+	local head = character:FindFirstChild("Head")
+	if not head then
+		return
+	end
+	local origin = head.Position
+	local direction = targetPosition - origin
+	if direction.Magnitude < 0.5 then
+		return
+	end
+	direction = direction.Unit * Config.Weapon.Range
+
+	local params = RaycastParams.new()
+	params.FilterType = Enum.RaycastFilterType.Exclude
+	params.FilterDescendantsInstances = { character }
+	params.IgnoreWater = true
+	local result = Workspace:Raycast(origin, direction, params)
+	local endPosition = result and result.Position or (origin + direction)
+
+	if result then
+		local hitModel = result.Instance:FindFirstAncestorOfClass("Model")
+		local victim = hitModel and Players:GetPlayerFromCharacter(hitModel)
+		if victim and victim ~= player then
+			local victimHumanoid = hitModel:FindFirstChildOfClass("Humanoid")
+			if victimHumanoid and victimHumanoid.Health > 0 then
+				if Config.Weapon.FriendlyFire or victim.Team ~= player.Team then
+					victimHumanoid:SetAttribute("LastHitBy", player.UserId)
+					victimHumanoid:SetAttribute("LastHitTime", os.clock())
+					victimHumanoid:TakeDamage(Config.Weapon.Damage)
+				end
+			end
+		end
+	end
+
+	local handle = tool:FindFirstChild("Handle")
+	local visualOrigin = handle and handle.Position or origin
+	local teamIndex = TeamManager.GetIndex(player)
+	local color = teamIndex and Config.Teams[teamIndex].Colors[1] or Color3.new(1, 1, 1)
+	GameState.WeaponFiredRemote:FireAllClients(visualOrigin, endPosition, color)
+end
+
+function CombatServer.Init()
+	local template = ServerStorage:FindFirstChild(toolName) or StarterPack:FindFirstChild(toolName)
+	if not template or not template:IsA("Tool") then
+		warn("[Steal a Flag] No Tool named '" .. toolName .. "' found in ServerStorage; players will be unarmed.")
+		return
+	end
+	ensureHandle(template)
+
+	-- StarterPack hands the tool to every player on every spawn, no timing games needed.
+	if not StarterPack:FindFirstChild(toolName) then
+		local copy = template:Clone()
+		copy.Parent = StarterPack
+	end
+
+	GameState.FireWeaponRemote.OnServerEvent:Connect(onFire)
+end
+
+-- Tints the player's blaster in their team colour. Purely cosmetic.
+function CombatServer.TintWeapon(player)
+	local teamIndex = TeamManager.GetIndex(player)
+	if not teamIndex then
+		return
+	end
+	local color = Config.Teams[teamIndex].Colors[1]
+	local backpack = player:FindFirstChildOfClass("Backpack")
+	local tool = (backpack and backpack:FindFirstChild(toolName))
+		or (player.Character and player.Character:FindFirstChild(toolName))
+	if not tool and backpack then
+		tool = backpack:WaitForChild(toolName, 3)
+	end
+	local handle = tool and tool:FindFirstChild("Handle")
+	if handle then
+		handle.Color = color
+	end
+end
+
+function CombatServer.OnCharacterDied(player, humanoid)
+	local killerId = humanoid:GetAttribute("LastHitBy")
+	local hitTime = humanoid:GetAttribute("LastHitTime")
+	if not killerId or not hitTime or os.clock() - hitTime > KILL_CREDIT_WINDOW then
+		return
+	end
+	local killer = Players:GetPlayerByUserId(killerId)
+	if killer and killer ~= player then
+		addStat(killer, "Kills", 1)
+	end
+end
+
+function CombatServer.OnPlayerRemoving(player)
+	lastFire[player] = nil
+end
+
+return CombatServer
+]]></string>
+        </Properties>
+      </Item>
+      <Item class="ModuleScript" referent="8">
+        <Properties>
+          <string name="Name">FlagManager</string>
+          <string name="Source"><![CDATA[--[[
+	FlagManager
+	Builds the two flags and runs every flag rule: stealing, carrying, dropping,
+	returning and capturing. Flag positions are checked a few times a second
+	with distance tests instead of Touched events, which is far more reliable.
+]]
+
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local Workspace = game:GetService("Workspace")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local Config = require(ReplicatedStorage:WaitForChild("Shared"):WaitForChild("Config"))
+local GameState = require(script.Parent:WaitForChild("GameState"))
+local TeamManager = require(script.Parent:WaitForChild("TeamManager"))
+
+local FlagManager = {}
+FlagManager.Flags = {}
+FlagManager.Enabled = false
+FlagManager.OnCapture = nil -- callback(scoringTeamIndex, player), set by RoundManager
+
+local POLE_HEIGHT = 9
+local BANNER_WIDTH = 5
+local BANNER_HEIGHT = 3.5
+local TICK_INTERVAL = 0.1
+
+local flagsFolder = nil
+
+-- The pole is a cylinder, whose long axis is its local X. Rotating it 90 degrees
+-- around Z stands it upright, so "up the pole" is +X in the pole's local space.
+local function poleCFrameAt(groundPosition)
+	return CFrame.new(groundPosition + Vector3.new(0, POLE_HEIGHT / 2, 0)) * CFrame.Angles(0, 0, math.rad(90))
+end
+
+local function weldTo(part, base)
+	local weld = Instance.new("WeldConstraint")
+	weld.Part0 = base
+	weld.Part1 = part
+	weld.Parent = part
+end
+
+local function addStat(player, statName, amount)
+	local stats = player:FindFirstChild("leaderstats")
+	local stat = stats and stats:FindFirstChild(statName)
+	if stat then
+		stat.Value += amount
+	end
+end
+
+local function buildFlag(index, def, groundPosition)
+	local model = Instance.new("Model")
+	model.Name = def.Name .. " Flag"
+
+	local pole = Instance.new("Part")
+	pole.Name = "Pole"
+	pole.Shape = Enum.PartType.Cylinder
+	pole.Size = Vector3.new(POLE_HEIGHT, 0.5, 0.5)
+	pole.Color = Color3.fromRGB(225, 225, 225)
+	pole.Material = Enum.Material.Metal
+	pole.Anchored = true
+	pole.CanCollide = false
+	pole.CFrame = poleCFrameAt(groundPosition)
+	pole.Parent = model
+	model.PrimaryPart = pole
+
+	local parts = { pole }
+
+	-- banner: one stripe per team colour, stacked from the top of the pole down
+	local stripeHeight = BANNER_HEIGHT / #def.Colors
+	for i, color in ipairs(def.Colors) do
+		local stripe = Instance.new("Part")
+		stripe.Name = "Stripe" .. i
+		stripe.Size = Vector3.new(stripeHeight, 0.2, BANNER_WIDTH)
+		stripe.CFrame = pole.CFrame * CFrame.new(POLE_HEIGHT / 2 - 0.4 - stripeHeight * (i - 0.5), 0, BANNER_WIDTH / 2 + 0.25)
+		stripe.Color = color
+		stripe.Material = Enum.Material.SmoothPlastic
+		stripe.Anchored = true
+		stripe.CanCollide = false
+		stripe.Parent = model
+		weldTo(stripe, pole)
+		table.insert(parts, stripe)
+	end
+
+	-- glowing orb on top so the flag is easy to spot from far away
+	local orb = Instance.new("Part")
+	orb.Name = "Orb"
+	orb.Shape = Enum.PartType.Ball
+	orb.Size = Vector3.new(1.3, 1.3, 1.3)
+	orb.CFrame = pole.CFrame * CFrame.new(POLE_HEIGHT / 2 + 0.4, 0, 0)
+	orb.Color = def.Colors[1]
+	orb.Material = Enum.Material.Neon
+	orb.Anchored = true
+	orb.CanCollide = false
+	orb.Parent = model
+	weldTo(orb, pole)
+	table.insert(parts, orb)
+
+	local light = Instance.new("PointLight")
+	light.Color = def.Colors[1]
+	light.Range = 14
+	light.Brightness = 2
+	light.Parent = orb
+
+	local offsets = {}
+	for _, part in ipairs(parts) do
+		part.CanQuery = false -- flags never block shots or mouse aim
+		part.CanTouch = false
+		part.Massless = true
+		if part ~= pole then
+			offsets[part] = pole.CFrame:ToObjectSpace(part.CFrame)
+		end
+	end
+
+	model.Parent = flagsFolder
+
+	return {
+		Index = index,
+		Model = model,
+		Pole = pole,
+		Parts = parts,
+		Offsets = offsets,
+		HomeCFrame = pole.CFrame,
+		HomePosition = groundPosition,
+		GroundPosition = groundPosition,
+		State = "Home",
+		Carrier = nil,
+		Weld = nil,
+		DropTime = 0,
+		LastCarrierPosition = nil,
+	}
+end
+
+-- Re-aligns every banner part to the pole, so the flag always looks right after teleporting it.
+local function snapParts(flag)
+	for part, offset in pairs(flag.Offsets) do
+		part.CFrame = flag.Pole.CFrame * offset
+	end
+end
+
+local function setAnchored(flag, anchored)
+	for _, part in ipairs(flag.Parts) do
+		part.Anchored = anchored
+	end
+end
+
+local function setState(flag, state, carrierName)
+	flag.State = state
+	GameState.Set("Flag" .. flag.Index .. "State", state)
+	GameState.Set("Flag" .. flag.Index .. "Carrier", carrierName or "")
+end
+
+local function clearCarrier(flag)
+	if flag.Weld then
+		flag.Weld:Destroy()
+		flag.Weld = nil
+	end
+	local carrier = flag.Carrier
+	flag.Carrier = nil
+	if carrier then
+		carrier:SetAttribute("CarryingFlag", nil)
+		local character = carrier.Character
+		local humanoid = character and character:FindFirstChildOfClass("Humanoid")
+		if humanoid and humanoid.Health > 0 then
+			humanoid.WalkSpeed = Config.WalkSpeed
+		end
+	end
+end
+
+local function getAliveRoot(player)
+	local character = player.Character
+	if not character then
+		return nil
+	end
+	local humanoid = character:FindFirstChildOfClass("Humanoid")
+	if not humanoid or humanoid.Health <= 0 then
+		return nil
+	end
+	return character:FindFirstChild("HumanoidRootPart")
+end
+
+local function withinReach(root, groundPosition, radius)
+	local offset = root.Position - groundPosition
+	local horizontal = Vector3.new(offset.X, 0, offset.Z).Magnitude
+	return horizontal <= radius and math.abs(offset.Y) <= 8
+end
+
+function FlagManager.ReturnHome(flag)
+	clearCarrier(flag)
+	setAnchored(flag, true)
+	flag.Pole.CFrame = flag.HomeCFrame
+	snapParts(flag)
+	flag.GroundPosition = flag.HomePosition
+	setState(flag, "Home")
+end
+
+function FlagManager.Pickup(flag, player)
+	local character = player.Character
+	if not character then
+		return
+	end
+	local humanoid = character:FindFirstChildOfClass("Humanoid")
+	if not humanoid or humanoid.Health <= 0 then
+		return
+	end
+	local torso = character:FindFirstChild("UpperTorso")
+		or character:FindFirstChild("Torso")
+		or character:FindFirstChild("HumanoidRootPart")
+	if not torso then
+		return
+	end
+
+	clearCarrier(flag)
+
+	-- Position the pole on the carrier's back while still anchored, weld it, then let it move.
+	setAnchored(flag, true)
+	flag.Pole.CFrame = torso.CFrame
+		* CFrame.new(0, 0.8, 0.9)
+		* CFrame.Angles(math.rad(-20), 0, 0)
+		* CFrame.Angles(0, 0, math.rad(90))
+	snapParts(flag)
+
+	local weld = Instance.new("WeldConstraint")
+	weld.Name = "CarryWeld"
+	weld.Part0 = torso
+	weld.Part1 = flag.Pole
+	weld.Parent = flag.Pole
+	flag.Weld = weld
+	setAnchored(flag, false)
+
+	flag.Carrier = player
+	flag.LastCarrierPosition = torso.Position
+	player:SetAttribute("CarryingFlag", flag.Index)
+	humanoid.WalkSpeed = Config.FlagCarrierWalkSpeed
+	setState(flag, "Carried", player.Name)
+
+	local def = Config.Teams[flag.Index]
+	GameState.Broadcast(player.Name .. " stole the " .. def.Name .. " flag!", def.Colors[1], 3, "pickup")
+end
+
+function FlagManager.Drop(flag, position)
+	local carrierCharacter = flag.Carrier and flag.Carrier.Character
+	clearCarrier(flag)
+	setAnchored(flag, true)
+
+	local map = Config.Map
+	local margin = 6
+	local x = math.clamp(position.X, -map.Length / 2 + margin, map.Length / 2 - margin)
+	local z = math.clamp(position.Z, -map.Width / 2 + margin, map.Width / 2 - margin)
+
+	-- find the ground under the drop point so the flag sits on whatever the carrier stood on
+	local exclude = { flagsFolder }
+	for _, player in ipairs(Players:GetPlayers()) do
+		if player.Character then
+			table.insert(exclude, player.Character)
+		end
+	end
+	if carrierCharacter then
+		table.insert(exclude, carrierCharacter)
+	end
+	local params = RaycastParams.new()
+	params.FilterType = Enum.RaycastFilterType.Exclude
+	params.FilterDescendantsInstances = exclude
+	local result = Workspace:Raycast(Vector3.new(x, position.Y + 2, z), Vector3.new(0, -80, 0), params)
+	local groundY = result and result.Position.Y or 0
+	local ground = Vector3.new(x, groundY, z)
+
+	flag.Pole.CFrame = poleCFrameAt(ground)
+	snapParts(flag)
+	flag.GroundPosition = ground
+	flag.DropTime = os.clock()
+	setState(flag, "Dropped")
+
+	local def = Config.Teams[flag.Index]
+	GameState.Broadcast("The " .. def.Name .. " flag was dropped!", def.Colors[1], 3, "drop")
+end
+
+local function capture(flag, player)
+	local scoringIndex = TeamManager.GetIndex(player)
+	if not scoringIndex then
+		return
+	end
+	local def = Config.Teams[flag.Index]
+	local scoringDef = Config.Teams[scoringIndex]
+
+	FlagManager.ReturnHome(flag)
+	addStat(player, "Captures", 1)
+	GameState.Broadcast(
+		player.Name .. " captured the " .. def.Name .. " flag for " .. scoringDef.Name .. "!",
+		scoringDef.Colors[1],
+		4,
+		"capture"
+	)
+	if FlagManager.OnCapture then
+		FlagManager.OnCapture(scoringIndex, player)
+	end
+end
+
+function FlagManager.Tick()
+	local now = os.clock()
+
+	for _, flag in ipairs(FlagManager.Flags) do
+		local def = Config.Teams[flag.Index]
+
+		if flag.State == "Carried" then
+			local carrier = flag.Carrier
+			local root = carrier and carrier.Parent == Players and getAliveRoot(carrier)
+			if not root then
+				FlagManager.Drop(flag, flag.LastCarrierPosition or flag.HomePosition)
+			else
+				flag.LastCarrierPosition = root.Position
+				local carrierIndex = TeamManager.GetIndex(carrier)
+				if carrierIndex == nil or carrierIndex == flag.Index then
+					-- carrier switched teams while holding it
+					FlagManager.Drop(flag, root.Position)
+				elseif FlagManager.Enabled then
+					local ownFlag = FlagManager.Flags[carrierIndex]
+					local ownFlagReady = (not Config.RequireOwnFlagHome) or ownFlag.State == "Home"
+					if ownFlagReady and withinReach(root, ownFlag.HomePosition, Config.CaptureRadius) then
+						capture(flag, carrier)
+					end
+				end
+			end
+		elseif flag.State == "Dropped" and now - flag.DropTime >= Config.FlagReturnTime then
+			FlagManager.ReturnHome(flag)
+			GameState.Broadcast("The " .. def.Name .. " flag returned to base.", def.Colors[1], 3, "return")
+		end
+
+		if FlagManager.Enabled and (flag.State == "Home" or flag.State == "Dropped") then
+			for _, player in ipairs(Players:GetPlayers()) do
+				local root = getAliveRoot(player)
+				if root and withinReach(root, flag.GroundPosition, Config.PickupRadius) then
+					local teamIndex = TeamManager.GetIndex(player)
+					if teamIndex == flag.Index then
+						if flag.State == "Dropped" then
+							FlagManager.ReturnHome(flag)
+							addStat(player, "Returns", 1)
+							GameState.Broadcast(player.Name .. " returned the " .. def.Name .. " flag!", def.Colors[1], 3, "return")
+							break
+						end
+					elseif teamIndex ~= nil and player:GetAttribute("CarryingFlag") == nil then
+						FlagManager.Pickup(flag, player)
+						break
+					end
+				end
+			end
+		end
+	end
+end
+
+function FlagManager.OnPlayerDied(player)
+	for _, flag in ipairs(FlagManager.Flags) do
+		if flag.State == "Carried" and flag.Carrier == player then
+			local character = player.Character
+			local root = character and character:FindFirstChild("HumanoidRootPart")
+			FlagManager.Drop(flag, (root and root.Position) or flag.LastCarrierPosition or flag.HomePosition)
+		end
+	end
+end
+
+function FlagManager.OnPlayerRemoving(player)
+	FlagManager.OnPlayerDied(player)
+end
+
+function FlagManager.ResetAll()
+	for _, flag in ipairs(FlagManager.Flags) do
+		FlagManager.ReturnHome(flag)
+	end
+end
+
+function FlagManager.SetEnabled(enabled)
+	FlagManager.Enabled = enabled
+end
+
+function FlagManager.Init(map)
+	flagsFolder = map.Folders.Flags
+	for index, def in ipairs(Config.Teams) do
+		local base = map.Bases[index]
+		FlagManager.Flags[index] = buildFlag(index, def, base.FlagStandPosition)
+	end
+
+	local accumulator = 0
+	RunService.Heartbeat:Connect(function(dt)
+		accumulator += dt
+		if accumulator < TICK_INTERVAL then
+			return
+		end
+		accumulator = 0
+		FlagManager.Tick()
+	end)
+end
+
+return FlagManager
+]]></string>
+        </Properties>
+      </Item>
+      <Item class="ModuleScript" referent="9">
+        <Properties>
+          <string name="Name">GameState</string>
+          <string name="Source"><![CDATA[--[[
+	GameState
+	Owns the ReplicatedStorage objects the client reads: a GameState folder whose
+	attributes describe the match, and the Remotes folder. Everything is created
+	on demand so the game also works when the scripts are pasted into Studio by hand.
+]]
+
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local GameState = {}
+
+local function ensure(parent, name, className)
+	local existing = parent:FindFirstChild(name)
+	if existing then
+		return existing
+	end
+	local instance = Instance.new(className)
+	instance.Name = name
+	instance.Parent = parent
+	return instance
+end
+
+GameState.Folder = ensure(ReplicatedStorage, "GameState", "Folder")
+GameState.Remotes = ensure(ReplicatedStorage, "Remotes", "Folder")
+
+GameState.FireWeaponRemote = ensure(GameState.Remotes, "FireWeapon", "RemoteEvent")
+GameState.WeaponFiredRemote = ensure(GameState.Remotes, "WeaponFired", "RemoteEvent")
+GameState.AnnounceRemote = ensure(GameState.Remotes, "Announce", "RemoteEvent")
+
+function GameState.Set(key, value)
+	GameState.Folder:SetAttribute(key, value)
+end
+
+function GameState.Get(key)
+	return GameState.Folder:GetAttribute(key)
+end
+
+-- Shows a message on every player's screen. `kind` picks the sound the client plays
+-- ("info", "pickup", "drop", "return", "capture", "win").
+function GameState.Broadcast(text, color, duration, kind)
+	GameState.AnnounceRemote:FireAllClients(text, color or Color3.new(1, 1, 1), duration or 3, kind or "info")
+end
+
+-- Starting values so the HUD never reads nil.
+GameState.Set("Phase", "Intermission")
+GameState.Set("TimeLeft", 0)
+GameState.Set("Status", "Starting up...")
+GameState.Set("Score1", 0)
+GameState.Set("Score2", 0)
+GameState.Set("Flag1State", "Home")
+GameState.Set("Flag2State", "Home")
+GameState.Set("Flag1Carrier", "")
+GameState.Set("Flag2Carrier", "")
+GameState.Set("Winner", "")
+
+return GameState
+]]></string>
+        </Properties>
+      </Item>
+      <Item class="ModuleScript" referent="10">
+        <Properties>
+          <string name="Name">MapBuilder</string>
+          <string name="Source"><![CDATA[--[[
+	MapBuilder
+	Builds the whole arena from code when the server starts: floor, walls, cover,
+	coloured base zones, flag stands and team spawns. Nothing has to be placed in
+	Studio by hand. Returns a table describing each base so FlagManager can place the flags.
+]]
+
+local Workspace = game:GetService("Workspace")
+local Lighting = game:GetService("Lighting")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local Config = require(ReplicatedStorage:WaitForChild("Shared"):WaitForChild("Config"))
+
+local MapBuilder = {}
+
+local NEUTRAL_FLOOR = Color3.fromRGB(70, 72, 76)
+local NEUTRAL_WALL = Color3.fromRGB(120, 122, 126)
+local COVER_COLOR = Color3.fromRGB(99, 95, 98)
+
+local function makePart(props)
+	local part = Instance.new("Part")
+	part.Anchored = true
+	part.TopSurface = Enum.SurfaceType.Smooth
+	part.BottomSurface = Enum.SurfaceType.Smooth
+	local parent = props.Parent
+	if props.CanCollide ~= nil then
+		part.CanCollide = props.CanCollide -- must be set before CanQuery or CanTouch
+	end
+	for key, value in pairs(props) do
+		if key ~= "Parent" and key ~= "CanCollide" then
+			part[key] = value
+		end
+	end
+	part.Parent = parent
+	return part
+end
+
+local function folder(name, parent)
+	local f = Instance.new("Folder")
+	f.Name = name
+	f.Parent = parent
+	return f
+end
+
+-- Removes the Baseplate and spawn that a fresh Studio template ships with,
+-- otherwise players could spawn in the middle of the arena.
+local function clearTemplateObjects()
+	for _, child in ipairs(Workspace:GetChildren()) do
+		if child.Name == "Baseplate" or (child:IsA("SpawnLocation") and child.Name == "SpawnLocation") then
+			child:Destroy()
+		end
+	end
+end
+
+local function buildFloorAndWalls(structure)
+	local map = Config.Map
+	local length, width, height = map.Length, map.Width, map.WallHeight
+
+	makePart({
+		Name = "Floor",
+		Size = Vector3.new(length + 4, 4, width + 4),
+		Position = Vector3.new(0, -2, 0),
+		Color = NEUTRAL_FLOOR,
+		Material = Enum.Material.Concrete,
+		Parent = structure,
+	})
+
+	-- centre line
+	makePart({
+		Name = "CentreLine",
+		Size = Vector3.new(1.5, 0.2, width),
+		Position = Vector3.new(0, 0.1, 0),
+		Color = Color3.fromRGB(235, 235, 235),
+		Material = Enum.Material.SmoothPlastic,
+		CanCollide = false,
+		Parent = structure,
+	})
+
+	-- long side walls
+	for _, sign in ipairs({ -1, 1 }) do
+		makePart({
+			Name = "SideWall",
+			Size = Vector3.new(length + 4, height, 2),
+			Position = Vector3.new(0, height / 2, sign * (width / 2 + 1)),
+			Color = NEUTRAL_WALL,
+			Material = Enum.Material.Brick,
+			Parent = structure,
+		})
+	end
+
+	-- end walls, painted in vertical stripes of the team that owns that end
+	for teamIndex, def in ipairs(Config.Teams) do
+		local sign = (teamIndex == 1) and -1 or 1
+		local colors = def.Colors
+		local stripeCount = #colors * 3
+		local stripeWidth = (width + 4) / stripeCount
+		for i = 1, stripeCount do
+			local z = -(width + 4) / 2 + stripeWidth * (i - 0.5)
+			makePart({
+				Name = def.Name .. " Wall",
+				Size = Vector3.new(2, height, stripeWidth),
+				Position = Vector3.new(sign * (length / 2 + 1), height / 2, z),
+				Color = colors[((i - 1) % #colors) + 1],
+				Material = Enum.Material.SmoothPlastic,
+				Parent = structure,
+			})
+		end
+	end
+end
+
+local function buildCover(structure)
+	-- One half of the arena (positive X). Every block is mirrored to the other side
+	-- so both teams get exactly the same layout.
+	local halfLayout = {
+		{ pos = Vector3.new(28, 0, 12), size = Vector3.new(6, 7, 6) },
+		{ pos = Vector3.new(28, 0, -12), size = Vector3.new(6, 7, 6) },
+		{ pos = Vector3.new(55, 0, 0), size = Vector3.new(16, 5, 6) },
+		{ pos = Vector3.new(55, 0, 40), size = Vector3.new(10, 6, 10) },
+		{ pos = Vector3.new(55, 0, -40), size = Vector3.new(10, 6, 10) },
+		{ pos = Vector3.new(80, 0, 22), size = Vector3.new(6, 9, 6) },
+		{ pos = Vector3.new(80, 0, -22), size = Vector3.new(6, 9, 6) },
+		{ pos = Vector3.new(35, 0, 58), size = Vector3.new(10, 12, 10) },
+		{ pos = Vector3.new(35, 0, -58), size = Vector3.new(10, 12, 10) },
+		{ pos = Vector3.new(105, 0, 50), size = Vector3.new(8, 4, 8) },
+		{ pos = Vector3.new(105, 0, -50), size = Vector3.new(8, 4, 8) },
+	}
+
+	for _, entry in ipairs(halfLayout) do
+		for _, sign in ipairs({ -1, 1 }) do
+			local size = entry.size
+			local pos = Vector3.new(entry.pos.X * sign, size.Y / 2, entry.pos.Z)
+			makePart({
+				Name = "Cover",
+				Size = size,
+				Position = pos,
+				Color = COVER_COLOR,
+				Material = Enum.Material.Slate,
+				Parent = structure,
+			})
+		end
+	end
+
+	-- centre pillar blocks the straight shot from base to base
+	makePart({
+		Name = "CentrePillar",
+		Size = Vector3.new(8, 16, 8),
+		Position = Vector3.new(0, 8, 0),
+		Color = COVER_COLOR,
+		Material = Enum.Material.Slate,
+		Parent = structure,
+	})
+
+	-- two low platforms you can hop on to
+	for _, sign in ipairs({ -1, 1 }) do
+		makePart({
+			Name = "CentrePlatform",
+			Size = Vector3.new(14, 3, 14),
+			Position = Vector3.new(0, 1.5, sign * 28),
+			Color = Color3.fromRGB(130, 130, 135),
+			Material = Enum.Material.Concrete,
+			Parent = structure,
+		})
+	end
+end
+
+local function buildBase(teamIndex, def, folders)
+	local map = Config.Map
+	local sign = (teamIndex == 1) and -1 or 1
+	local mainColor = def.Colors[1]
+
+	-- coloured floor zone
+	local zoneCentreX = sign * (map.Length / 2 - map.BaseDepth / 2)
+	makePart({
+		Name = def.Name .. " Zone",
+		Size = Vector3.new(map.BaseDepth, 0.2, map.Width),
+		Position = Vector3.new(zoneCentreX, 0.1, 0),
+		Color = mainColor,
+		Material = Enum.Material.SmoothPlastic,
+		Parent = folders.Bases,
+	})
+
+	-- flag stand: a short pedestal plus a glowing capture ring around it
+	local standX = zoneCentreX
+	local pedestal = makePart({
+		Name = def.Name .. " Pedestal",
+		Shape = Enum.PartType.Cylinder,
+		Size = Vector3.new(0.6, 7, 7),
+		CFrame = CFrame.new(standX, 0.3 + 0.2, 0) * CFrame.Angles(0, 0, math.rad(90)),
+		Color = Color3.fromRGB(240, 240, 240),
+		Material = Enum.Material.Marble,
+		Parent = folders.Bases,
+	})
+
+	makePart({
+		Name = def.Name .. " CaptureRing",
+		Shape = Enum.PartType.Cylinder,
+		Size = Vector3.new(0.15, Config.CaptureRadius * 2, Config.CaptureRadius * 2),
+		CFrame = CFrame.new(standX, 0.28, 0) * CFrame.Angles(0, 0, math.rad(90)),
+		Color = mainColor,
+		Material = Enum.Material.Neon,
+		Transparency = 0.45,
+		CanCollide = false,
+		CanQuery = false,
+		CanTouch = false,
+		Parent = folders.Zones,
+	})
+
+	-- spawns in a row behind the flag stand
+	local spawnX = sign * (map.Length / 2 - 12)
+	for i, z in ipairs({ -36, -12, 12, 36 }) do
+		local spawn = Instance.new("SpawnLocation")
+		spawn.Name = def.Name .. " Spawn " .. i
+		spawn.Size = Vector3.new(6, 1, 6)
+		spawn.Position = Vector3.new(spawnX, 0.5, z)
+		spawn.Anchored = true
+		spawn.TopSurface = Enum.SurfaceType.Smooth
+		spawn.Color = mainColor
+		spawn.Material = Enum.Material.SmoothPlastic
+		spawn.TeamColor = def.TeamColor
+		spawn.Neutral = false
+		spawn.AllowTeamChangeOnTouch = false
+		spawn.Duration = Config.SpawnProtection
+		spawn.Parent = folders.Spawns
+	end
+
+	return {
+		Index = teamIndex,
+		Sign = sign,
+		FlagStandPosition = Vector3.new(standX, pedestal.Position.Y + 0.3, 0),
+	}
+end
+
+local function setupLighting()
+	Lighting.ClockTime = 14
+	Lighting.Brightness = 2
+	Lighting.GlobalShadows = true
+	Lighting.Ambient = Color3.fromRGB(90, 90, 95)
+	Lighting.OutdoorAmbient = Color3.fromRGB(128, 128, 128)
+	if not Lighting:FindFirstChildOfClass("Atmosphere") then
+		local atmosphere = Instance.new("Atmosphere")
+		atmosphere.Density = 0.25
+		atmosphere.Parent = Lighting
+	end
+end
+
+function MapBuilder.Build()
+	clearTemplateObjects()
+
+	local existing = Workspace:FindFirstChild("Map")
+	if existing then
+		existing:Destroy()
+	end
+
+	local mapFolder = folder("Map", Workspace)
+	local folders = {
+		Structure = folder("Structure", mapFolder),
+		Bases = folder("Bases", mapFolder),
+		Zones = folder("Zones", mapFolder),
+		Spawns = folder("Spawns", mapFolder),
+		Flags = folder("Flags", mapFolder),
+	}
+
+	buildFloorAndWalls(folders.Structure)
+	buildCover(folders.Structure)
+
+	local bases = {}
+	for teamIndex, def in ipairs(Config.Teams) do
+		bases[teamIndex] = buildBase(teamIndex, def, folders)
+	end
+
+	setupLighting()
+
+	return {
+		Folder = mapFolder,
+		Folders = folders,
+		Bases = bases,
+	}
+end
+
+return MapBuilder
+]]></string>
+        </Properties>
+      </Item>
+      <Item class="ModuleScript" referent="11">
+        <Properties>
+          <string name="Name">RoundManager</string>
+          <string name="Source"><![CDATA[--[[
+	RoundManager
+	The match loop: intermission -> round -> results, forever. A round ends when a
+	team reaches Config.CapturesToWin or the clock runs out.
+]]
+
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local Config = require(ReplicatedStorage:WaitForChild("Shared"):WaitForChild("Config"))
+local GameState = require(script.Parent:WaitForChild("GameState"))
+local TeamManager = require(script.Parent:WaitForChild("TeamManager"))
+local FlagManager = require(script.Parent:WaitForChild("FlagManager"))
+
+local RoundManager = {}
+
+local scores = { 0, 0 }
+local roundOver = false
+
+local function publishScores()
+	GameState.Set("Score1", scores[1])
+	GameState.Set("Score2", scores[2])
+end
+
+local function minPlayers()
+	if RunService:IsStudio() then
+		return 1
+	end
+	return Config.MinPlayersToStart
+end
+
+local function respawnEveryone()
+	for _, player in ipairs(Players:GetPlayers()) do
+		task.spawn(function()
+			pcall(function()
+				player:LoadCharacter()
+			end)
+		end)
+	end
+end
+
+function RoundManager.AddCapture(teamIndex)
+	scores[teamIndex] += 1
+	publishScores()
+	if scores[teamIndex] >= Config.CapturesToWin then
+		roundOver = true
+	end
+end
+
+local function runIntermission()
+	GameState.Set("Phase", "Intermission")
+	FlagManager.SetEnabled(false)
+	FlagManager.ResetAll()
+
+	local timeLeft = Config.IntermissionLength
+	while timeLeft > 0 do
+		local playerCount = #Players:GetPlayers()
+		local needed = minPlayers()
+		if playerCount < needed then
+			GameState.Set("Status", string.format("Waiting for players (%d/%d)", playerCount, needed))
+			GameState.Set("TimeLeft", Config.IntermissionLength)
+			timeLeft = Config.IntermissionLength
+		else
+			GameState.Set("Status", "Next round starting soon")
+			GameState.Set("TimeLeft", timeLeft)
+			timeLeft -= 1
+		end
+		task.wait(1)
+	end
+end
+
+local function runRound()
+	scores = { 0, 0 }
+	roundOver = false
+	publishScores()
+	GameState.Set("Winner", "")
+
+	TeamManager.Balance()
+	FlagManager.ResetAll()
+	respawnEveryone()
+
+	GameState.Set("Phase", "Round")
+	GameState.Set("Status", string.format("First to %d captures wins", Config.CapturesToWin))
+	GameState.Broadcast("Round started. Steal the enemy flag!", Color3.new(1, 1, 1), 4, "info")
+	FlagManager.SetEnabled(true)
+
+	local timeLeft = Config.RoundLength
+	while timeLeft > 0 and not roundOver do
+		GameState.Set("TimeLeft", timeLeft)
+		task.wait(1)
+		timeLeft -= 1
+	end
+	GameState.Set("TimeLeft", 0)
+	FlagManager.SetEnabled(false)
+end
+
+local function showResults()
+	GameState.Set("Phase", "Ended")
+
+	local winnerIndex = nil
+	if scores[1] > scores[2] then
+		winnerIndex = 1
+	elseif scores[2] > scores[1] then
+		winnerIndex = 2
+	end
+
+	if winnerIndex then
+		local def = Config.Teams[winnerIndex]
+		GameState.Set("Winner", def.Name)
+		GameState.Set("Status", def.Name .. " wins!")
+		GameState.Broadcast(def.Name .. " wins the round!", def.Colors[1], Config.RoundEndLength, "win")
+	else
+		GameState.Set("Winner", "Draw")
+		GameState.Set("Status", "It's a draw!")
+		GameState.Broadcast("It's a draw!", Color3.new(1, 1, 1), Config.RoundEndLength, "win")
+	end
+
+	task.wait(Config.RoundEndLength)
+end
+
+function RoundManager.Start()
+	FlagManager.OnCapture = RoundManager.AddCapture
+	task.spawn(function()
+		while true do
+			runIntermission()
+			runRound()
+			showResults()
+		end
+	end)
+end
+
+return RoundManager
+]]></string>
+        </Properties>
+      </Item>
+      <Item class="ModuleScript" referent="12">
+        <Properties>
+          <string name="Name">TeamManager</string>
+          <string name="Source"><![CDATA[--[[
+	TeamManager
+	Creates the two Team objects, puts joining players on the smaller team and
+	rebalances at the start of every round.
+]]
+
+local Players = game:GetService("Players")
+local Teams = game:GetService("Teams")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local Config = require(ReplicatedStorage:WaitForChild("Shared"):WaitForChild("Config"))
+
+local TeamManager = {}
+TeamManager.Teams = {}
+
+local joinCounter = 0
+
+function TeamManager.Init()
+	for index, def in ipairs(Config.Teams) do
+		local team = Teams:FindFirstChild(def.Name)
+		if not team then
+			team = Instance.new("Team")
+			team.Name = def.Name
+		end
+		team.TeamColor = def.TeamColor
+		team.AutoAssignable = false
+		team.Parent = Teams
+		TeamManager.Teams[index] = team
+	end
+
+	-- anything else in Teams would let players end up on a team the game does not know
+	for _, team in ipairs(Teams:GetTeams()) do
+		if not table.find(TeamManager.Teams, team) then
+			team:Destroy()
+		end
+	end
+end
+
+function TeamManager.GetIndex(player)
+	for index, team in ipairs(TeamManager.Teams) do
+		if player.Team == team then
+			return index
+		end
+	end
+	return nil
+end
+
+function TeamManager.GetEnemyIndex(index)
+	return (index == 1) and 2 or 1
+end
+
+function TeamManager.GetTeam(index)
+	return TeamManager.Teams[index]
+end
+
+function TeamManager.Count(index)
+	return #TeamManager.Teams[index]:GetPlayers()
+end
+
+function TeamManager.SetTeam(player, index)
+	player.Team = TeamManager.Teams[index]
+	player.Neutral = false
+end
+
+function TeamManager.AssignSmallest(player)
+	joinCounter += 1
+	player:SetAttribute("JoinOrder", joinCounter)
+
+	local best, bestCount = 1, math.huge
+	for index in ipairs(TeamManager.Teams) do
+		local count = TeamManager.Count(index)
+		if count < bestCount then
+			best, bestCount = index, count
+		end
+	end
+	TeamManager.SetTeam(player, best)
+end
+
+-- Moves the newest players off the bigger team until the sizes differ by at most one.
+function TeamManager.Balance()
+	for _, player in ipairs(Players:GetPlayers()) do
+		if not TeamManager.GetIndex(player) then
+			TeamManager.AssignSmallest(player)
+		end
+	end
+
+	while true do
+		local big, small = 1, 2
+		if TeamManager.Count(2) > TeamManager.Count(1) then
+			big, small = 2, 1
+		end
+		if TeamManager.Count(big) - TeamManager.Count(small) < 2 then
+			break
+		end
+
+		local newest, newestOrder = nil, -1
+		for _, player in ipairs(TeamManager.Teams[big]:GetPlayers()) do
+			local order = player:GetAttribute("JoinOrder") or 0
+			if order > newestOrder then
+				newest, newestOrder = player, order
+			end
+		end
+		if not newest then
+			break
+		end
+		TeamManager.SetTeam(newest, small)
+	end
+end
+
+return TeamManager
+]]></string>
+        </Properties>
+      </Item>
+    </Item>
+  </Item>
+  <Item class="ServerStorage" referent="13">
+    <Properties>
+      <string name="Name">ServerStorage</string>
+    </Properties>
+    <Item class="Tool" referent="14">
+      <Properties>
+        <string name="Name">Blaster</string>
+        <bool name="CanBeDropped">false</bool>
+        <bool name="NeedsPivotMigration">false</bool>
+        <bool name="RequiresHandle">true</bool>
+        <string name="ToolTip">Blaster: click to fire</string>
+      </Properties>
+      <Item class="LocalScript" referent="15">
+        <Properties>
+          <string name="Name">BlasterClient</string>
+          <string name="Source"><![CDATA[--[[
+	BlasterClient
+	Runs inside the Blaster tool on each player's machine. It only reports where the
+	player aimed; the server decides whether anything was hit.
+]]
+
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local RunService = game:GetService("RunService")
+
+local tool = script.Parent
+local player = Players.LocalPlayer
+local Config = require(ReplicatedStorage:WaitForChild("Shared"):WaitForChild("Config"))
+local remotes = ReplicatedStorage:WaitForChild("Remotes")
+local fireRemote = remotes:WaitForChild("FireWeapon")
+
+local mouse = player:GetMouse()
+local holding = false
+local lastShot = 0
+
+local function shoot()
+	local now = os.clock()
+	if now - lastShot < Config.Weapon.Cooldown then
+		return
+	end
+	lastShot = now
+	fireRemote:FireServer(mouse.Hit.Position)
+end
+
+-- Hold the button (or finger) down to keep firing.
+tool.Activated:Connect(function()
+	holding = true
+	shoot()
+	while holding and tool.Parent == player.Character do
+		RunService.Heartbeat:Wait()
+		shoot()
+	end
+end)
+
+tool.Deactivated:Connect(function()
+	holding = false
+end)
+
+tool.Unequipped:Connect(function()
+	holding = false
+end)
+]]></string>
+        </Properties>
+      </Item>
+    </Item>
+  </Item>
+  <Item class="SoundService" referent="16">
+    <Properties>
+      <string name="Name">SoundService</string>
+    </Properties>
+  </Item>
+  <Item class="StarterPlayer" referent="17">
+    <Properties>
+      <string name="Name">StarterPlayer</string>
+    </Properties>
+    <Item class="StarterPlayerScripts" referent="18">
+      <Properties>
+        <string name="Name">StarterPlayerScripts</string>
+      </Properties>
+      <Item class="LocalScript" referent="19">
+        <Properties>
+          <string name="Name">Effects</string>
+          <string name="Source"><![CDATA[--[[
+	Effects
+	Draws a tracer and impact flash for every shot the server reports.
+	Everything here is local to this player's camera and never replicated.
+]]
+
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Debris = game:GetService("Debris")
+local Workspace = game:GetService("Workspace")
+local TweenService = game:GetService("TweenService")
+
+local remotes = ReplicatedStorage:WaitForChild("Remotes")
+local weaponFired = remotes:WaitForChild("WeaponFired")
+
+local SHOT_SOUND = "rbxasset://sounds/electronicpingshort.wav"
+
+local function localPart()
+	local part = Instance.new("Part")
+	part.Anchored = true
+	part.CanCollide = false
+	part.CanQuery = false
+	part.CanTouch = false
+	part.CastShadow = false
+	part.Material = Enum.Material.Neon
+	return part
+end
+
+weaponFired.OnClientEvent:Connect(function(origin, endPosition, color)
+	if typeof(origin) ~= "Vector3" or typeof(endPosition) ~= "Vector3" then
+		return
+	end
+	local distance = (endPosition - origin).Magnitude
+	if distance < 0.1 then
+		return
+	end
+	color = (typeof(color) == "Color3") and color or Color3.new(1, 1, 1)
+	local camera = Workspace.CurrentCamera
+
+	local tracer = localPart()
+	tracer.Name = "Tracer"
+	tracer.Color = color
+	tracer.Size = Vector3.new(0.12, 0.12, distance)
+	tracer.CFrame = CFrame.lookAt(origin, endPosition) * CFrame.new(0, 0, -distance / 2)
+	tracer.Parent = camera
+	TweenService:Create(tracer, TweenInfo.new(0.12), { Transparency = 1 }):Play()
+	Debris:AddItem(tracer, 0.15)
+
+	local flash = localPart()
+	flash.Name = "Impact"
+	flash.Shape = Enum.PartType.Ball
+	flash.Color = color
+	flash.Size = Vector3.new(0.8, 0.8, 0.8)
+	flash.Position = endPosition
+	flash.Parent = camera
+	TweenService:Create(flash, TweenInfo.new(0.2), { Size = Vector3.new(0.2, 0.2, 0.2), Transparency = 1 }):Play()
+	Debris:AddItem(flash, 0.25)
+
+	local sound = Instance.new("Sound")
+	sound.SoundId = SHOT_SOUND
+	sound.Volume = 0.4
+	sound.PlaybackSpeed = 1.6
+	sound.RollOffMaxDistance = 120
+	local emitter = localPart()
+	emitter.Transparency = 1
+	emitter.Size = Vector3.new(0.1, 0.1, 0.1)
+	emitter.Position = origin
+	emitter.Parent = camera
+	sound.Parent = emitter
+	sound:Play()
+	Debris:AddItem(emitter, 2)
+end)
+]]></string>
+        </Properties>
+      </Item>
+      <Item class="LocalScript" referent="20">
+        <Properties>
+          <string name="Name">HUD</string>
+          <string name="Source"><![CDATA[--[[
+	HUD
+	Builds the on-screen interface from code: scores, round timer, flag status,
+	announcements and the "you have the flag" warning. Reads everything from the
+	GameState attributes the server replicates.
+]]
+
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local TweenService = game:GetService("TweenService")
+local SoundService = game:GetService("SoundService")
+
+local player = Players.LocalPlayer
+local Config = require(ReplicatedStorage:WaitForChild("Shared"):WaitForChild("Config"))
+local state = ReplicatedStorage:WaitForChild("GameState")
+local remotes = ReplicatedStorage:WaitForChild("Remotes")
+local announceRemote = remotes:WaitForChild("Announce")
+local playerGui = player:WaitForChild("PlayerGui")
+
+local WHITE = Color3.new(1, 1, 1)
+local PANEL = Color3.fromRGB(20, 20, 24)
+
+local SOUNDS = {
+	pickup = "rbxasset://sounds/snap.mp3",
+	drop = "rbxasset://sounds/collide.wav",
+	["return"] = "rbxasset://sounds/button.wav",
+	capture = "rbxasset://sounds/victory.wav",
+	win = "rbxasset://sounds/victory.wav",
+	info = "rbxasset://sounds/electronicpingshort.wav",
+}
+
+local function makeLabel(parent, props)
+	local label = Instance.new("TextLabel")
+	label.BackgroundTransparency = 1
+	label.Font = Enum.Font.GothamBold
+	label.TextColor3 = WHITE
+	label.TextScaled = true
+	label.TextStrokeTransparency = 0.6
+	label.Size = UDim2.new(1, 0, 1, 0)
+	for key, value in pairs(props) do
+		label[key] = value
+	end
+	label.Parent = parent
+	return label
+end
+
+local function makeFrame(parent, props)
+	local frame = Instance.new("Frame")
+	frame.BackgroundColor3 = PANEL
+	frame.BackgroundTransparency = 0.25
+	frame.BorderSizePixel = 0
+	for key, value in pairs(props) do
+		frame[key] = value
+	end
+	local corner = Instance.new("UICorner")
+	corner.CornerRadius = UDim.new(0, 8)
+	corner.Parent = frame
+	frame.Parent = parent
+	return frame
+end
+
+local gui = Instance.new("ScreenGui")
+gui.Name = "StealAFlagHUD"
+gui.ResetOnSpawn = false
+gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+gui.Parent = playerGui
+
+-- Top bar: team 1 score | timer | team 2 score ---------------------------------
+local topBar = Instance.new("Frame")
+topBar.Name = "TopBar"
+topBar.AnchorPoint = Vector2.new(0.5, 0)
+topBar.Position = UDim2.new(0.5, 0, 0, 10)
+topBar.Size = UDim2.new(0, 560, 0, 64)
+topBar.BackgroundTransparency = 1
+topBar.Parent = gui
+
+local teamBoxes = {}
+for index, def in ipairs(Config.Teams) do
+	local box = makeFrame(topBar, {
+		Name = "Team" .. index,
+		Size = UDim2.new(0, 190, 1, 0),
+		Position = (index == 1) and UDim2.new(0, 0, 0, 0) or UDim2.new(1, -190, 0, 0),
+		BackgroundColor3 = def.Colors[1],
+		BackgroundTransparency = 0.1,
+	})
+	makeLabel(box, {
+		Name = "Title",
+		Text = def.Name,
+		Size = UDim2.new(1, -10, 0, 20),
+		Position = UDim2.new(0, 5, 0, 4),
+	})
+	local score = makeLabel(box, {
+		Name = "Score",
+		Text = "0",
+		Size = UDim2.new(1, -10, 0, 36),
+		Position = UDim2.new(0, 5, 0, 24),
+	})
+	teamBoxes[index] = { Frame = box, Score = score }
+end
+
+local centreBox = makeFrame(topBar, {
+	Name = "Centre",
+	Size = UDim2.new(0, 170, 1, 0),
+	Position = UDim2.new(0.5, -85, 0, 0),
+})
+local timerLabel = makeLabel(centreBox, {
+	Name = "Timer",
+	Text = "0:00",
+	Size = UDim2.new(1, -10, 0, 36),
+	Position = UDim2.new(0, 5, 0, 4),
+})
+local phaseLabel = makeLabel(centreBox, {
+	Name = "Phase",
+	Text = "",
+	Size = UDim2.new(1, -10, 0, 18),
+	Position = UDim2.new(0, 5, 0, 42),
+	Font = Enum.Font.Gotham,
+})
+
+-- Status + flag lines under the top bar ------------------------------------------
+local statusLabel = makeLabel(gui, {
+	Name = "Status",
+	Text = "",
+	AnchorPoint = Vector2.new(0.5, 0),
+	Position = UDim2.new(0.5, 0, 0, 80),
+	Size = UDim2.new(0, 560, 0, 22),
+	Font = Enum.Font.Gotham,
+})
+
+local flagLabels = {}
+for index, def in ipairs(Config.Teams) do
+	flagLabels[index] = makeLabel(gui, {
+		Name = "Flag" .. index,
+		Text = "",
+		AnchorPoint = Vector2.new(0.5, 0),
+		Position = UDim2.new(0.5, 0, 0, 104 + (index - 1) * 20),
+		Size = UDim2.new(0, 560, 0, 18),
+		Font = Enum.Font.Gotham,
+		TextColor3 = def.Colors[1],
+	})
+end
+
+-- Announcement in the middle of the screen ------------------------------------
+local announceLabel = makeLabel(gui, {
+	Name = "Announcement",
+	Text = "",
+	AnchorPoint = Vector2.new(0.5, 0.5),
+	Position = UDim2.new(0.5, 0, 0.3, 0),
+	Size = UDim2.new(0.8, 0, 0, 44),
+	TextStrokeTransparency = 0.2,
+	TextTransparency = 1,
+})
+
+-- Alert strip at the bottom (carrying the flag / your flag was stolen) ---------
+local alertFrame = makeFrame(gui, {
+	Name = "Alert",
+	AnchorPoint = Vector2.new(0.5, 1),
+	Position = UDim2.new(0.5, 0, 1, -24),
+	Size = UDim2.new(0, 520, 0, 40),
+	Visible = false,
+})
+local alertLabel = makeLabel(alertFrame, {
+	Name = "Text",
+	Text = "",
+	Size = UDim2.new(1, -16, 1, -8),
+	Position = UDim2.new(0, 8, 0, 4),
+})
+
+-- Controls hint that fades away after a while ---------------------------------
+local hintLabel = makeLabel(gui, {
+	Name = "Hint",
+	Text = "Click to shoot. Walk into the enemy flag to steal it, then carry it back to your glowing ring.",
+	AnchorPoint = Vector2.new(0.5, 1),
+	Position = UDim2.new(0.5, 0, 1, -72),
+	Size = UDim2.new(0, 640, 0, 20),
+	Font = Enum.Font.Gotham,
+})
+task.delay(14, function()
+	TweenService:Create(hintLabel, TweenInfo.new(1), { TextTransparency = 1, TextStrokeTransparency = 1 }):Play()
+end)
+
+-- Helpers ---------------------------------------------------------------------
+local function myTeamIndex()
+	local team = player.Team
+	if not team then
+		return nil
+	end
+	for index, def in ipairs(Config.Teams) do
+		if team.Name == def.Name then
+			return index
+		end
+	end
+	return nil
+end
+
+local function formatTime(seconds)
+	seconds = math.max(0, math.floor(tonumber(seconds) or 0))
+	return string.format("%d:%02d", seconds // 60, seconds % 60)
+end
+
+local function playSound(kind)
+	local id = SOUNDS[kind]
+	if not id then
+		return
+	end
+	local sound = Instance.new("Sound")
+	sound.SoundId = id
+	sound.Volume = 0.6
+	SoundService:PlayLocalSound(sound)
+	task.delay(4, function()
+		sound:Destroy()
+	end)
+end
+
+local function refresh()
+	local phase = state:GetAttribute("Phase") or "Intermission"
+	timerLabel.Text = formatTime(state:GetAttribute("TimeLeft"))
+	if phase == "Round" then
+		phaseLabel.Text = "ROUND"
+	elseif phase == "Ended" then
+		phaseLabel.Text = "ROUND OVER"
+	else
+		phaseLabel.Text = "INTERMISSION"
+	end
+	statusLabel.Text = state:GetAttribute("Status") or ""
+
+	for index, def in ipairs(Config.Teams) do
+		teamBoxes[index].Score.Text = tostring(state:GetAttribute("Score" .. index) or 0)
+
+		local flagState = state:GetAttribute("Flag" .. index .. "State") or "Home"
+		local carrier = state:GetAttribute("Flag" .. index .. "Carrier") or ""
+		local text
+		if flagState == "Carried" then
+			text = "taken by " .. carrier
+		elseif flagState == "Dropped" then
+			text = "dropped on the field!"
+		else
+			text = "safe at base"
+		end
+		flagLabels[index].Text = def.Name .. " flag: " .. text
+	end
+
+	-- bottom alert
+	local mine = myTeamIndex()
+	local carrying = player:GetAttribute("CarryingFlag")
+	if carrying then
+		alertFrame.Visible = true
+		alertFrame.BackgroundColor3 = Config.Teams[carrying].Colors[1]
+		alertLabel.Text = "YOU HAVE THE FLAG! Run it back to your ring!"
+	elseif mine and state:GetAttribute("Flag" .. mine .. "State") == "Carried" then
+		alertFrame.Visible = true
+		alertFrame.BackgroundColor3 = Color3.fromRGB(120, 20, 20)
+		alertLabel.Text = "Your flag was stolen by " .. (state:GetAttribute("Flag" .. mine .. "Carrier") or "") .. "!"
+	elseif mine and state:GetAttribute("Flag" .. mine .. "State") == "Dropped" then
+		alertFrame.Visible = true
+		alertFrame.BackgroundColor3 = Color3.fromRGB(120, 90, 20)
+		alertLabel.Text = "Your flag is on the ground. Touch it to return it!"
+	else
+		alertFrame.Visible = false
+	end
+end
+
+local announceToken = 0
+announceRemote.OnClientEvent:Connect(function(text, color, duration, kind)
+	announceToken += 1
+	local token = announceToken
+	announceLabel.Text = tostring(text)
+	announceLabel.TextColor3 = (typeof(color) == "Color3") and color or WHITE
+	announceLabel.TextTransparency = 0
+	announceLabel.TextStrokeTransparency = 0.2
+	playSound(kind)
+	task.delay(tonumber(duration) or 3, function()
+		if token ~= announceToken then
+			return
+		end
+		TweenService:Create(announceLabel, TweenInfo.new(0.6), { TextTransparency = 1, TextStrokeTransparency = 1 }):Play()
+	end)
+end)
+
+state.AttributeChanged:Connect(refresh)
+player.AttributeChanged:Connect(refresh)
+player:GetPropertyChangedSignal("Team"):Connect(refresh)
+refresh()
+]]></string>
+        </Properties>
+      </Item>
+    </Item>
+  </Item>
+  <Item class="Teams" referent="21">
+    <Properties>
+      <string name="Name">Teams</string>
+    </Properties>
+  </Item>
+  <Item class="Workspace" referent="22">
+    <Properties>
+      <string name="Name">Workspace</string>
+      <bool name="NeedsPivotMigration">false</bool>
+    </Properties>
+  </Item>
+</roblox>
