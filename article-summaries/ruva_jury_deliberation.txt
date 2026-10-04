@@ -1,0 +1,25 @@
+Student Name: Mason Donahue
+Name of Article: What Drives a Jury's Deliberation? The Influence of Pretrial Publicity and Jury Composition on Deliberation Slant and Content
+Name of Journal: Psychology, Public Policy, and Law (American Psychological Association)
+Article Authors: Christine L. Ruva, Stephanie E. Diaz Ortega, and Kathleen A. O'Grady
+Article Date: 2022, Volume 28, Issue 1, pages 32-52
+
+## Summary
+
+Ruva, Diaz Ortega, and O'Grady set out to answer a question that most pretrial publicity research has skipped over: what actually happens inside the jury room when some or all of the jurors have read slanted news coverage before trial. Earlier work had already shown that pretrial publicity shifts individual verdicts. This study looks instead at the content, slant, and style of the deliberations themselves, and it compares pure juries, where every member saw the same kind of coverage, with mixed juries, where half the members saw one kind and half saw another or none at all.
+
+The data came from 63 videotaped mock jury deliberations involving 333 college students. About a week before the trial, participants read news stories that painted the defendant as a calculating killer, stories that painted the victim as a violent and threatening husband, or unrelated crime stories. They then watched a 21-minute edited version of a real New Mexico murder trial in which a woman claimed she shot her estranged husband in self-defense, and they deliberated for up to 25 minutes. Trained coders logged what each jury discussed, whether each piece of evidence was framed in favor of the prosecution or the defense, how often the jury took straw polls, and whether anyone mentioned or corrected the pretrial coverage.
+
+Several patterns stood out. Juries made up entirely of negative-victim jurors were the most verdict-driven. They polled early and often, spent more time talking about the verdict, and spent less time on the evidence. When they did discuss the evidence, they framed it in a way that favored the defense, while pure negative-defendant juries framed the same evidence in a way that favored the prosecution. Mixing exposed jurors with unexposed jurors did not wash this out. Mixed juries containing negative-defendant members still leaned toward the prosecution, and mixed juries containing negative-victim members still leaned toward the defense.
+
+The coverage also made its way into the conversation despite clear instructions not to use it. Nearly every exposed jury brought it up at least once, and most of that discussion went uncorrected. Jurors who had not seen the stories almost never corrected those who had, which makes sense, since they had no way of knowing what was and was not in the trial. Most correction came from exposed jurors catching themselves.
+
+The most consequential finding was the mediation result. The slant of the evidence discussion explained how jury composition affected jurors' post-deliberation guilt ratings. Unexposed jurors who deliberated alongside negative-defendant jurors ended up with higher guilt ratings than unexposed jurors on pure juries, meaning the bias spread through the way the evidence was discussed rather than through direct repetition of the news stories. The authors conclude that courts are wrong to treat jury instructions and deliberation as a cure for pretrial publicity, because the bias appears to be built into how exposed jurors encode and remember the evidence in the first place.
+
+## Opinion
+
+I found this article convincing, mostly because the authors looked at behavior rather than outcomes alone. It is one thing to show that exposed jurors vote differently. It is another to watch them steer a conversation about a detective's testimony in a particular direction without ever mentioning the article they read. That detail makes the source-confusion explanation feel concrete rather than theoretical, and it explains why admonitions from the bench accomplish so little.
+
+The study has real limits, and the authors are candid about them. The juries were small, the trial was short, the jurors were students, and a large share of the juries never reached a verdict. A twelve-person jury hearing days of testimony might behave differently, and a strong unexposed majority might correct bias in ways these four- to six-person groups could not. Even so, the direction of the findings matches decades of prior work, and I do not think the limitations undercut the central point.
+
+What stays with me is the legal implication. If unexposed jurors can absorb bias from their peers through ordinary evidence discussion, then a mixed jury is not a safe harbor, and the Sixth Amendment problem in high-profile cases is harder to solve than courts tend to admit. The article makes a persuasive case that remedies such as change of venue, which judges rarely grant, deserve more serious consideration than another round of instructions that jurors cannot actually follow.
