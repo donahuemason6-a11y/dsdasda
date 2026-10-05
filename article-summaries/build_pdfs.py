@@ -75,8 +75,6 @@ def build(path: Path):
     table = Table(rows, colWidths=[1.45 * inch, 5.05 * inch])
     table.setStyle(TableStyle([
         ("VALIGN", (0, 0), (-1, -1), "TOP"),
-        ("LINEBELOW", (0, -1), (-1, -1), 0.75, colors.black),
-        ("LINEABOVE", (0, 0), (-1, 0), 0.75, colors.black),
         ("BOTTOMPADDING", (0, 0), (-1, -1), 4),
         ("TOPPADDING", (0, 0), (-1, -1), 4),
         ("LEFTPADDING", (0, 0), (-1, -1), 0),
