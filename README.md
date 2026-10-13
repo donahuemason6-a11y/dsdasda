@@ -1,16 +1,10 @@
-# Roll4It — COP 3223 Assignment 1
+# My Files
 
-Prints the Roll For It game logo, a sample row of six dice, and a sample
-card holding four dice, then pauses until the user presses Enter.
-
-## Build and run
-
-```
-gcc -Wall -o roll4it Roll4It/roll4it.c
-./roll4it
-```
-
-## Submitting
-
-Upload `Roll4It.zip` (the zipped `Roll4It` project folder) to the
-Webcourses assignment.
+| Folder | What goes here |
+| --- | --- |
+| 🚁 `Drone Shine Cleaning Services/` | Drone Shine business files |
+| 💻 `COP 3223C - Programming in C/` | Roll4It project and assignment submissions |
+| 🕵️ `POS4407 - The Intelligence Community/` | Middle East whistleblowers report and research notes |
+| 🧠 `PSY 2012 - General Psychology/` | Psychology notes and chapter PowerPoints |
+| 📊 `STA 2023 - Statistics/` | Statistics class files |
+| 📁 `Other/` | Anything else |
