@@ -3,9 +3,9 @@
 <style>
 @page { size: letter; margin: 0.22in; }
 * { box-sizing: border-box; }
-body { margin:0; font-family: Helvetica, Arial, "Liberation Sans", sans-serif; font-size: 7.2pt; line-height: 1.17; color:#000; background:#fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin:0; font-family: Helvetica, Arial, "Liberation Sans", sans-serif; font-size: 7.1pt; line-height: 1.17; color:#000; background:#fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 .side { column-count: 3; column-gap: 7pt; column-rule: 0.5pt solid #999; column-fill: auto; }
-.s2 { font-size: 7.2pt; }
+.s2 { font-size: 7.1pt; }
 .pb { break-after: page; page-break-after: always; }
 h1 { column-span: all; font-size: 1.5em; margin: 0 0 2pt 0; padding-bottom: 1.5pt; border-bottom: 1.2pt solid #000; }
 h1 .legend { font-size: 0.62em; font-weight: normal; float: right; margin-top: 2pt; }
@@ -69,7 +69,7 @@ th { background:#e8e8e8; }
 <h2>EXAM 1 SKILLS THAT COME BACK</h2>
 <ul>
 <li><b>Mean</b> <span class="d">= add everything, divide by how many (the balance point)</span>. <span class="f">μ = Σx ÷ N, x̄ = Σx ÷ n</span></li>
-<li><b>Median</b> <span class="d">= sort, take the middle (average the two middles if even count); not affected by outliers</span>. <b>Mode</b> <span class="d">= most frequent value; none if nothing repeats</span>.</li>
+<li><b>Median</b> <span class="d">= sort, take the middle (average the two middles if even count); resistant to outliers — the mean is not</span>. <b>Mode</b> <span class="d">= most frequent value(s); can be more than one; none if nothing repeats</span>.</li>
 <li><b>Standard deviation</b> <span class="d">= on average, how far values are from the mean. Small SD = values huddle near the mean; big SD = spread out. Why the recipe: the gaps (x − mean) always add to 0, so square them (all positive), average the squares (= variance), then √ to get back to normal units (= SD).</span></li>
 </ul>
 <div class="box">σ² = Σ(x − μ)² ÷ N &nbsp;(population) &nbsp;·&nbsp; s² = Σ(x − x̄)² ÷ (n − 1) &nbsp;(sample) &nbsp;·&nbsp; SD = √variance<br>"sample" → divide by n − 1 &nbsp;·&nbsp; calculator: σx = population SD, Sx = sample SD</div>
@@ -78,21 +78,21 @@ th { background:#e8e8e8; }
 </ol>
 <div class="ex"><b>Q:</b> "Sample 18, 22, 25, 28, 30: sample variance and SD?" <b>A:</b> x̄ = 123/5 = 24.6; gaps −6.6, −2.6, 0.4, 3.4, 5.4; squares 43.56 + 6.76 + 0.16 + 11.56 + 29.16 = 91.20; s² = 91.20/4 = <b>22.8</b>; s = √22.8 = <b>4.77</b>.</div>
 <ul>
-<li><b>z-score</b> <span class="d">= how many SDs away from the mean; + above, − below. Lets you compare different scales: the bigger z did relatively better.</span> <span class="f">z = (x − μ) ÷ σ</span> <span class="e">ACT 27 (μ 18, σ 6): z = 1.50 beats SAT 1200 (μ 1000, σ 200): z = 1.00.</span></li>
+<li><b>z-score</b> <span class="d">= how many SDs away from the mean; + above, − below. Lets you compare different scales: the bigger z did relatively better.</span> <span class="f">z = (x − μ) ÷ σ</span> <span class="e">ACT 27 (μ 18, σ 6): z = 1.50 beats SAT 1200 (μ 1000, σ 200): z = 1.00.</span> <span class="d">If lower is better (race times), the smaller z did better. z below −2 or above 2 → unusual.</span></li>
 <li><b>Empirical Rule</b> <span class="d">(bell-shaped data only): 68% of values within 1 SD of the mean, 95% within 2, 99.7% within 3; the pieces are 34 | 13.5 | 2.35 | 0.15 on each side.</span> <span class="e">μ = 29.8, σ = 6.4: 95% between 29.8 ± 12.8 = 17.0 and 42.6; IQ 85 to 130 = 34 + 34 + 13.5 = 81.5%.</span></li>
-<li><b>Quartiles</b> <span class="d">cut sorted data into quarters: Q₂ = median, Q₁/Q₃ = medians of the lower/upper halves (odd n → leave the median out).</span> <span class="f">IQR = Q₃ − Q₁; outlier if below Q₁ − 1.5·IQR or above Q₃ + 1.5·IQR</span></li>
+<li><b>Quartiles</b> <span class="d">cut sorted data into quarters: Q₂ = median, Q₁/Q₃ = medians of the lower/upper halves (odd n → leave the median out).</span> <span class="f">IQR = Q₃ − Q₁; lower fence = Q₁ − 1.5·IQR, upper fence = Q₃ + 1.5·IQR; outlier = below the lower fence or above the upper fence</span></li>
 </ul>
 
 <h2>CH 4 — PROBABILITY</h2>
 <h3>What probability is</h3>
 <ul>
-<li><b>Probability</b> <span class="d">= the long-run fraction of times something happens (flip a coin a million times → about half heads → 0.5)</span>. <span class="f">0 ≤ P(E) ≤ 1; all outcomes together add to 1.</span> <b>Unusual</b> <span class="d">= less than 0.05</span>.</li>
+<li><b>Probability</b> <span class="d">= the long-run fraction of times something happens (flip a coin a million times → about half heads → 0.5)</span>. <span class="f">0 ≤ P(E) ≤ 1; all outcomes together add to 1.</span> <b>Unusual event</b> <span class="d">= probability less than 0.05</span>.</li>
 <li><b>Sample space S</b> <span class="d">= the list of everything that could happen</span>; an <b>event</b> <span class="d">= any part of that list you care about</span>. <span class="e">Two coin flips: S = {HH, HT, TH, TT}.</span></li>
 <li><b>Classical</b> <span class="d">(all outcomes equally likely — dice, cards, coins): just count.</span> <span class="f">P(E) = N(E) ÷ N(S)</span> <span class="e">P(two heads) = 1/4 = 0.25; P(at least one tail) = 3/4.</span></li>
 <li><b>Empirical</b> <span class="d">(from data you collected): how often it happened.</span> <span class="f">P(E) ≈ frequency ÷ total trials</span> <span class="e">22 of 200 carpool → 0.11; 5 walk → 0.025 &lt; 0.05 → unusual.</span></li>
 <li><b>Subjective</b> <span class="d">= an educated guess when there's no data (chance of a recession).</span></li>
 <li><b>Probability model</b> <span class="d">= list of outcomes with probabilities; valid only if each is 0–1 and they add to 1.</span> <span class="e">{A 0.40, B 0.20} → not valid (sum 0.60); a −0.10 → not valid.</span></li>
-<li><b>Disjoint</b> <span class="d">= can't both happen at once (a card can't be a king AND a queen)</span>. <b>Independent</b> <span class="d">= one happening doesn't change the odds of the other (two coin flips; two different drivers)</span>.</li>
+<li><b>Disjoint</b> (= mutually exclusive) <span class="d">= no outcomes in common, can't both happen (a card can't be a king AND a queen), so P(E and F) = 0</span>. <b>Independent</b> <span class="d">= E happening does not change the probability of F (two coin flips; two different drivers)</span>. <span class="f">Disjoint is NOT independent:</span> <span class="d">if E and F are disjoint and both possible, knowing E happened means F didn't → dependent.</span></li>
 </ul>
 
 <h3>The rules — spot the keyword</h3>
@@ -142,7 +142,7 @@ Row totals: full-time 40, part-time 16, unemployed 5, not in labor force 17.<br>
 
 <h2>CH 5 — DISCRETE RANDOM VARIABLES</h2>
 <ul>
-<li><b>Random variable X</b> <span class="d">= the number that comes out of a chance experiment (games in a series, profit from a bet, # who say yes).</span> <b>Discrete</b> <span class="d">= you count it (0, 1, 2, …: pieces, people, colors)</span>; <b>continuous</b> <span class="d">= you measure it (time, mass, temperature — any decimal)</span>.</li>
+<li><b>Random variable X</b> <span class="d">= the number that comes out of a chance experiment (games in a series, profit from a bet, # who say yes).</span> <b>Discrete</b> <span class="d">= you count it (0, 1, 2, …: number of pieces, people, heads)</span>; <b>continuous</b> <span class="d">= you measure it (time, mass, temperature — any decimal)</span>.</li>
 <li><b>Probability distribution</b> <span class="d">= a table of every value X can take with its probability (or a graph / formula).</span></li>
 </ul>
 <div class="box">VALID only if (1) every P(x) is between 0 and 1 AND (2) Σ P(x) = 1<br>
@@ -156,7 +156,7 @@ SD: σ<sub>X</sub> = √( Σ [ (x − μ)² · P(x) ] ) &nbsp;&nbsp; shortcut �
 <li>From counts: P(x) = count ÷ total. Check the P(x) add to 1.</li>
 <li>Mean: multiply each x by its P(x); add.</li>
 <li>SD: (x − μ)² for each x; times P(x); add; √.</li>
-<li>Graph: probability histogram — one bar centered on each x, height = P(x).</li>
+<li>Graph: a vertical line (or bar) above each x, height = P(x); x across, P(x) up.</li>
 </ol>
 <div class="ex"><b>Q:</b> "Is this a valid discrete probability distribution? x: 0, 1, 2, 3, 4 with P(x): 0.34, 0.21, 0.13, 0.04, 0.01." <b>A:</b> each P(x) is 0–1 ✓, but 0.34 + 0.21 + 0.13 + 0.04 + 0.01 = 0.73 ≠ 1 → <b>NOT valid</b>.</div>
 <div class="ex"><b>Q:</b> "Games played in the Stanley Cup: x = 4 (20 times), 5 (20), 6 (26), 7 (17). (a) Build the distribution. (b) Graph it. (c) Mean and interpret. (d) SD."<br>
@@ -175,7 +175,7 @@ SD: σ<sub>X</sub> = √( Σ [ (x − μ)² · P(x) ] ) &nbsp;&nbsp; shortcut �
 <h2>CH 5 (cont.) — BINOMIAL</h2>
 <p><b>Binomial experiment</b> <span class="d">= the same yes/no trial repeated: (1) a FIXED number of trials n, (2) trials independent, (3) only two outcomes each time (success / failure), (4) the SAME p every trial. X = how many successes. Not binomial if n isn't fixed ("keep going until…") or picks are without replacement from a small group (p changes).</span></p>
 <div class="box">P(x) = <sub>n</sub>C<sub>x</sub> · p<sup>x</sup> · (1 − p)<sup>n − x</sup> &nbsp;&nbsp; <sub>n</sub>C<sub>x</sub> = <span class='fr'><span class='n'>n!</span><span>x!(n − x)!</span></span><br>
-μ = n·p &nbsp;&nbsp;&nbsp; σ = √( n·p·(1 − p) ) &nbsp;&nbsp;&nbsp; Excel =BINOM.DIST(x, n, p, FALSE) exactly; TRUE = P(X ≤ x)</div>
+μ = n·p &nbsp;&nbsp;&nbsp; σ = √( n·p·(1 − p) ) &nbsp;&nbsp;&nbsp; Excel =BINOM.DIST(x, n, p, FALSE) exactly; TRUE = P(X ≤ x)<br>Unusual count (when np(1 − p) ≥ 10): x below μ − 2σ or above μ + 2σ</div>
 <p class="small d">Read the formula as: (number of ways to place the x successes among the n trials) × (probability of the x successes) × (probability of the n − x failures).</p>
 <table>
 <tr><th>Words</th><th>Compute</th></tr>
@@ -191,7 +191,7 @@ n = 10, p = 0.60, 1 − p = 0.40<br>
 <b>(a)</b> P(3) = <sub>10</sub>C<sub>3</sub>(0.6)<sup>3</sup>(0.4)<sup>7</sup> = 120 · 0.216 · 0.0016384 = <b>0.0425</b><br>
 <b>(b)</b> P(0) = (0.4)<sup>10</sup> = 0.0001; P(1) = 10(0.6)(0.4)<sup>9</sup> = 0.0016; P(2) = 45(0.36)(0.4)<sup>8</sup> = 0.0106 → P(X &lt; 3) = <b>0.0123</b><br>
 <b>(c)</b> P(1) + P(2) + P(3) = 0.0016 + 0.0106 + 0.0425 = <b>0.0547</b><br>
-<b>(d)</b> μ = 200(0.60) = <b>120</b>; σ = √(200 · 0.60 · 0.40) = √48 = <b>6.93</b></div>
+<b>(d)</b> μ = 200(0.60) = <b>120</b>; σ = √(200 · 0.60 · 0.40) = √48 = <b>6.93</b>. "Would 130 be unusual?" 120 ± 2(6.93) = 106.1 to 133.9 → 130 is inside → <b>not unusual</b>.</div>
 <div class="ex"><b>Q:</b> "Binomial or not? (1) Roll a pair of dice 10 times, count 7s. (2) Select flights until 10 late ones are found. (3) Pick 4 of 30 students, count females." <b>A:</b> (1) YES: n = 10, p = 6/36 = 1/6. (2) NO: n not fixed. (3) NO: without replacement from 30 (4/30 = 13% &gt; 5%) → not independent.<br>
 <b>Q:</b> "On-time rate 0.70, 4 flights: distribution?" <b>A:</b> P(0) = (0.3)⁴ = 0.0081 · P(1) = 4(0.7)(0.3)³ = 0.0756 · P(2) = 6(0.49)(0.09) = 0.2646 · P(3) = 4(0.343)(0.3) = 0.4116 · P(4) = (0.7)⁴ = 0.2401<br>
 <b>Q:</b> "Free throws 95%, 3 shots: P(all 3)? P(less than 3)? mean &amp; SD?" <b>A:</b> 0.95³ = <b>0.8574</b>; 1 − 0.8574 = <b>0.1426</b>; μ = 3(0.95) = <b>2.85</b>; σ = √(3·0.95·0.05) = <b>0.38</b><br>
@@ -205,15 +205,15 @@ n = 10, p = 0.60, 1 − p = 0.40<br>
 </ul>
 <h3>Uniform distribution ★Q5</h3>
 <p><b>Uniform on [a, b]</b> <span class="d">= a flat rectangle: every stretch of the same length is equally likely (friend is as likely to be 3–4 min late as 25–26 min late). Height = 1/(b − a) so the rectangle's area is 1. Probability of an interval = its share of the total width.</span></p>
-<div class="box">height = <span class='fr'><span class='n'>1</span><span>b − a</span></span> &nbsp;&nbsp;&nbsp; P(c ≤ X ≤ d) = <span class='fr'><span class='n'>d − c</span><span>b − a</span></span> &nbsp;&nbsp;&nbsp; "P% within the next t" → t = P × (b − a)</div>
+<div class="box">height = <span class='fr'><span class='n'>1</span><span>b − a</span></span> &nbsp;&nbsp;&nbsp; P(c ≤ X ≤ d) = <span class='fr'><span class='n'>d − c</span><span>b − a</span></span> &nbsp;&nbsp;&nbsp; value with area P to its LEFT: x = a + P·(b − a)</div>
 <div class="ex"><b>Q:</b> "Daytime temperature X is uniformly distributed between 70°F and 100°F. (a) Sketch/describe the pdf. (b) P(75 ≤ X ≤ 85)? (c) P(X &lt; 80)?"<br>
 <b>(a)</b> rectangle from 70 to 100, height 1/(100 − 70) = 1/30 (area 30 × 1/30 = 1)<br>
 <b>(b)</b> (85 − 75)/30 = 10/30 = <b>0.3333</b> &nbsp;&nbsp; <b>(c)</b> (80 − 70)/30 = 10/30 = <b>0.3333</b></div>
-<div class="ex"><b>Q:</b> "Friend is 0–30 min late, uniform. P(10 to 20 min late)? 20% chance they arrive within the next ___ min?" <b>A:</b> 10/30 = 0.3333; 0.20 × 30 = <b>6 min</b>. "Random number 0–10: P(between 2 and 5)? P(exactly 4.35)?" <b>A:</b> 3/10 = 0.3; <b>0</b>.</div>
+<div class="ex"><b>Q:</b> "Friend is 0–30 min late, uniform. P(10 to 20 min late)? 20% chance they arrive within the next ___ min?" <b>A:</b> 10/30 = 0.3333; 0 + 0.20(30) = <b>6 min</b> (70–100°F: coolest 20% → 70 + 0.20(30) = 76°F). "Random number 0–10: P(between 2 and 5)? P(exactly 4.35)?" <b>A:</b> 3/10 = 0.3; <b>0</b>.</div>
 
 <h3>Normal distribution</h3>
 <p><b>Normal</b> <span class="d">= the bell curve: symmetric around μ, most values near the middle, fewer far out. Every normal curve has the same shape — μ slides it left/right, σ makes it wider (big σ) or narrower (small σ).</span></p>
-<p class="small d"><b>Properties:</b> (1) symmetric about μ; (2) mean = median = mode = μ, the highest point; (3) inflection points at μ ± σ; (4) total area = 1; (5) tails get closer to the axis but never touch; (6) Empirical Rule: 68% within 1σ, 95% within 2σ, 99.7% within 3σ; (7) the area over an interval = the proportion of the population in it = the probability one random value lands in it.</p>
+<p class="small d"><b>Properties:</b> (1) symmetric about μ; (2) mean = median = mode = μ, the highest point; (3) inflection points at μ ± σ; (4) total area = 1; (5) tails get closer to the axis but never touch; (6) Empirical Rule: 68% within 1σ, 95% within 2σ, 99.7% within 3σ; (7) half the area (0.5) lies on each side of μ.</p>
 <p><b>Standard normal Z</b> <span class="d">= the normal curve with μ = 0, σ = 1. <b>The trick of the chapter:</b> you can't have a table for every μ and σ, so convert your value to a z-score and use ONE table (Table V), which gives the area to the LEFT of z.</span></p>
 <div class="box">z = <span class='fr'><span class='n'>x − μ</span><span>σ</span></span> &nbsp;(round z to 2 decimals) &nbsp;&nbsp;&nbsp;&nbsp; x = μ + z·σ<br>
 LEFT of x ("less than / below / shorter"): table value<br>
@@ -239,13 +239,13 @@ Negative z: left of −z = 1 − (left of +z)</div>
 <b>Q:</b> "Cholesterol μ = 180, σ = 36.2: P(above 200)?" <b>A:</b> z = 0.55 → 1 − 0.7088 = <b>0.2912</b><br>
 <b>Q:</b> "Pregnancy μ = 266, σ = 16: P(259 days or less)?" <b>A:</b> z = −0.44 → <b>0.3300</b><br>
 <b>Q:</b> "Heights μ = 38.72, σ = 3.17: P(shorter than 35)?" <b>A:</b> z = −1.17 → <b>0.1210</b><br>
-<b>Q:</b> "IQ: P(outside 70 to 130)?" <b>A:</b> z = ±2.00 → 0.0228 + 0.0228 = <b>0.0455</b></div>
+<b>Q:</b> "IQ: P(outside 70 to 130)?" <b>A:</b> z = ±2.00 → 0.0228 + 0.0228 = <b>0.0456</b></div>
 
 <h3>Backwards — find x from a percent / percentile</h3>
-<p class="d">Now the area is GIVEN and you want the value. Reverse the steps: area → z (from inside the table) → x = μ + zσ. "k-th percentile" = the value with k% of the data below it, so area to the left = 0.k.</p>
+<p class="d">Now the area is GIVEN and you want the value. Reverse the steps: area → z (from inside the table) → x = μ + zσ. "k-th percentile" = the value with k% of the data below it, so area to the left = k/100 (5th → 0.05, 20th → 0.20, 98th → 0.98).</p>
 <ol>
 <li>Draw &amp; shade; turn the words into an area to the LEFT ("top 10%" → left area 0.90; "bottom 5%" → 0.05; "middle 80%" → 0.10 and 0.90).</li>
-<li>Find that area INSIDE the table (closest value); read z from the row and column.</li>
+<li>Find that area INSIDE the table (closest value); read z from the row and column. Exactly halfway between two entries → average the two z's (0.95 → 1.645, 0.995 → 2.575).</li>
 <li>x = μ + z·σ.</li>
 </ol>
 <table>
