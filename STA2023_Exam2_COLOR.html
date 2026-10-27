@@ -1,78 +1,129 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><title>STA2023 Exam 2 Cheat Sheet</title>
 <style>
-@page { size: letter; margin: 0.28in; }
+@page { size: letter; margin: 0.22in; }
 * { box-sizing: border-box; }
-body { margin:0; font-family: Helvetica, Arial, "Liberation Sans", sans-serif; font-size: 7.1pt; line-height: 1.2; color:#000; background:#fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-.side { column-count: 3; column-gap: 9pt; column-rule: 0.5pt solid #999; column-fill: auto; }
-.s2 { font-size: 6.9pt; }
+body { margin:0; font-family: Helvetica, Arial, "Liberation Sans", sans-serif; font-size: 7.2pt; line-height: 1.17; color:#000; background:#fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.side { column-count: 3; column-gap: 7pt; column-rule: 0.5pt solid #999; column-fill: auto; }
+.s2 { font-size: 7.2pt; }
 .pb { break-after: page; page-break-after: always; }
-h1 { column-span: all; font-size: 12pt; margin: 0 0 3pt 0; padding-bottom: 2pt; border-bottom: 1.5pt solid #000; }
-h1 .legend { font-size: 7.5pt; font-weight: normal; float: right; margin-top: 2pt; }
-h2 { font-size: 9.5pt; margin: 6pt 0 2pt 0; padding: 1.5pt 3pt; background:#000; color:#fff; break-after: avoid; }
-h3 { font-size: 8.6pt; margin: 5pt 0 1.5pt 0; border-bottom: 0.8pt solid #000; break-after: avoid; }
-ul { margin: 0 0 3pt 0; padding-left: 10pt; } li { margin: 0 0 1pt 0; }
-ol { margin: 0 0 3pt 0; padding-left: 12pt; } ol li { margin: 0 0 1pt 0; }
-p { margin: 0 0 2.5pt 0; }
+h1 { column-span: all; font-size: 1.5em; margin: 0 0 2pt 0; padding-bottom: 1.5pt; border-bottom: 1.2pt solid #000; }
+h1 .legend { font-size: 0.62em; font-weight: normal; float: right; margin-top: 2pt; }
+h2 { font-size: 1.2em; margin: 4pt 0 1.5pt 0; padding: 1pt 3pt; background:#000; color:#fff; break-after: avoid; }
+h3 { font-size: 1.1em; margin: 3.5pt 0 1pt 0; border-bottom: 0.7pt solid #000; break-after: avoid; }
+ul { margin: 0 0 2pt 0; padding-left: 9pt; } li { margin: 0 0 0.6pt 0; }
+ol { margin: 0 0 2pt 0; padding-left: 11pt; } ol li { margin: 0 0 0.6pt 0; }
+p { margin: 0 0 2pt 0; }
 .d { color:#0033cc; }
 .f { color:#cc0000; font-weight: bold; }
 .e { color:#007a1f; }
-.box { border: 1pt solid #cc0000; color:#cc0000; padding: 2pt 4pt; margin: 2pt 0 3pt 0; font-weight: bold; break-inside: avoid; }
-.ex { border-left: 2.5pt solid #007a1f; padding: 1pt 0 1pt 4pt; margin: 2pt 0 3pt 0; color:#007a1f; break-inside: auto; }
+.box { border: 0.9pt solid #cc0000; color:#cc0000; padding: 1.5pt 3pt; margin: 1.5pt 0 2.5pt 0; font-weight: bold; break-inside: avoid; }
+.ex { border-left: 2pt solid #007a1f; padding: 0.5pt 0 0.5pt 3.5pt; margin: 1.5pt 0 2.5pt 0; color:#007a1f; }
 .warn { color:#cc0000; }
-table { border-collapse: collapse; width:100%; margin: 2pt 0 3pt 0; font-size: 0.95em; break-inside: avoid; }
-td, th { border: 0.4pt solid #666; padding: 1pt 3pt; vertical-align: top; text-align: left; }
+table { border-collapse: collapse; width:100%; margin: 1.5pt 0 2.5pt 0; font-size: 0.95em; break-inside: avoid; }
+td, th { border: 0.35pt solid #666; padding: 0.6pt 2.2pt; vertical-align: top; text-align: left; }
 th { background:#e8e8e8; }
-.zt { font-size: 0.8em; } .zt { table-layout: fixed; } .zt td, .zt th { padding: 0 0.6pt; text-align: right; border: 0.3pt solid #999; overflow: hidden; } .zt th { text-align: center; }
+.zt { font-size: 0.8em; table-layout: fixed; } .zt td, .zt th { padding: 0 0.5pt; text-align: right; border: 0.3pt solid #999; overflow: hidden; } .zt th { text-align: center; }
 .fr { display:inline-block; vertical-align:middle; text-align:center; line-height:1.05; margin:0 1pt; }
-.fr span { display:block; padding:0 2pt; } .fr .n { border-bottom: 0.8pt solid currentColor; }
+.fr span { display:block; padding:0 2pt; } .fr .n { border-bottom: 0.7pt solid currentColor; }
 .small { font-size: 0.93em; }
-.steps { margin-left: 9pt; }
 </style></head><body>
 
 <div class="side pb">
-<h1>STA2023 Exam 2 — Ch 4–6 — SIDE 1 <span class="legend"><span class="d">■ BLUE = definition</span> &nbsp; <span class="f">■ RED = formula / rule</span> &nbsp; <span class="e">■ GREEN = example</span> &nbsp; ■ BLACK = steps</span></h1>
+<h1>STA2023 Exam 2 — Ch 4–6 — SIDE 1 <span class="legend"><span class="d">■ BLUE = what it means</span> &nbsp; <span class="f">■ RED = formula / rule</span> &nbsp; <span class="e">■ GREEN = worked question</span> &nbsp; ■ BLACK = steps</span></h1>
 
-<h2>SYMBOLS</h2>
+<h2>SYMBOLS — what they mean</h2>
 <table>
-<tr><th>Symbol</th><th>Means</th></tr>
-<tr><td>P(E)</td><td class="d">probability that event E happens (0 to 1)</td></tr>
-<tr><td>N(E), N(S)</td><td class="d"># of outcomes in E; # of outcomes in the whole sample space</td></tr>
-<tr><td>E<sup>c</sup> / "not E"</td><td class="d">complement = everything that is NOT E</td></tr>
-<tr><td>P(F | E)</td><td class="d">probability of F <b>given</b> E already happened</td></tr>
-<tr><td><sub>n</sub>C<sub>r</sub>, <sub>n</sub>P<sub>r</sub>, n!</td><td class="d">combinations (order doesn't matter), permutations (order matters), factorial</td></tr>
-<tr><td>X / x</td><td class="d">random variable / one specific value of it</td></tr>
-<tr><td>P(x)</td><td class="d">probability that X equals x</td></tr>
-<tr><td>μ<sub>X</sub>, σ<sub>X</sub></td><td class="d">mean (expected value) and standard deviation of X</td></tr>
-<tr><td>n, p, x</td><td class="d">binomial: # of trials, P(success) on one trial, # of successes</td></tr>
-<tr><td>z</td><td class="d">z-score = how many SDs a value is from the mean</td></tr>
+<tr><th>Symbol</th><th>Plain English</th></tr>
 <tr><td>Σ</td><td class="d">"add them all up"</td></tr>
+<tr><td>N / n</td><td class="d">how many values: N = the whole population, n = a sample</td></tr>
+<tr><td>μ ("mu") / x̄ ("x-bar")</td><td class="d">the mean (average): μ for a population, x̄ for a sample</td></tr>
+<tr><td>σ ("sigma") / s</td><td class="d">standard deviation = typical distance of a value from the mean</td></tr>
+<tr><td>σ², s²</td><td class="d">variance = the SD squared (a middle step)</td></tr>
+<tr><td>z</td><td class="d">z-score = how many SDs a value sits above (+) or below (−) the mean</td></tr>
+<tr><td>P(E)</td><td class="d">probability of event E: a number from 0 (impossible) to 1 (certain)</td></tr>
+<tr><td>N(E), N(S)</td><td class="d"># of outcomes in E; # of outcomes in the whole sample space</td></tr>
+<tr><td>E<sup>c</sup></td><td class="d">"not E" (the complement)</td></tr>
+<tr><td>P(F | E)</td><td class="d">probability of F <b>given</b> you already know E happened</td></tr>
+<tr><td>X / x</td><td class="d">X = the random variable (the number an experiment produces); x = one specific value</td></tr>
+<tr><td>P(x)</td><td class="d">probability that X comes out equal to x</td></tr>
+<tr><td>μ<sub>X</sub>, σ<sub>X</sub>, E(X)</td><td class="d">mean, SD of a random variable; E(X) = expected value = same as μ<sub>X</sub></td></tr>
+<tr><td>n, p, 1 − p</td><td class="d">binomial: # of trials, P(success) on one trial, P(failure)</td></tr>
+<tr><td><sub>n</sub>C<sub>r</sub>, <sub>n</sub>P<sub>r</sub>, n!</td><td class="d">ways to choose r of n (order doesn't / does matter); n! = n(n−1)(n−2)···1</td></tr>
 </table>
-<div class="box">Round probabilities to 4 decimals. Every answer: formula → plug in → arithmetic → boxed answer.</div>
+<div class="box">Greek letter or capital N → population. Plain letter or small n → sample.<br>Round probabilities to 4 decimals. Every answer: formula → plug in → arithmetic → boxed answer.</div>
+
+<h2>WHICH TOOL? — read the question first</h2>
+<table>
+<tr><th>Question says…</th><th>Use</th></tr>
+<tr><td>table of counts + "or / and / given"</td><td>Ch 4 rules on the two-way table</td></tr>
+<tr><td>"how many ways"</td><td>counting (multiply / <sub>n</sub>P<sub>r</sub> / <sub>n</sub>C<sub>r</sub>)</td></tr>
+<tr><td>"at least one"</td><td>1 − P(none)</td></tr>
+<tr><td>table of x and P(x), or counts of outcomes</td><td>distribution: valid? μ = Σx·P(x), σ</td></tr>
+<tr><td>n trials, probability p, "how many successes"</td><td>binomial formula; μ = np, σ = √(np(1−p))</td></tr>
+<tr><td>"uniformly distributed between a and b"</td><td>rectangle: fraction of the width</td></tr>
+<tr><td>"normally distributed, mean μ, SD σ"</td><td>z = (x − μ)/σ → table → left / right / between</td></tr>
+<tr><td>"what value is the __th percentile / top 10%"</td><td>backwards: area → z → x = μ + zσ</td></tr>
+</table>
+
+<h2>EXAM 1 SKILLS THAT COME BACK</h2>
+<ul>
+<li><b>Mean</b> <span class="d">= add everything, divide by how many (the balance point)</span>. <span class="f">μ = Σx ÷ N, x̄ = Σx ÷ n</span></li>
+<li><b>Median</b> <span class="d">= sort, take the middle (average the two middles if even count); not affected by outliers</span>. <b>Mode</b> <span class="d">= most frequent value; none if nothing repeats</span>.</li>
+<li><b>Standard deviation</b> <span class="d">= on average, how far values are from the mean. Small SD = values huddle near the mean; big SD = spread out. Why the recipe: the gaps (x − mean) always add to 0, so square them (all positive), average the squares (= variance), then √ to get back to normal units (= SD).</span></li>
+</ul>
+<div class="box">σ² = Σ(x − μ)² ÷ N &nbsp;(population) &nbsp;·&nbsp; s² = Σ(x − x̄)² ÷ (n − 1) &nbsp;(sample) &nbsp;·&nbsp; SD = √variance<br>"sample" → divide by n − 1 &nbsp;·&nbsp; calculator: σx = population SD, Sx = sample SD</div>
+<ol>
+<li>Find the mean. 2. Each value − mean. 3. Square each. 4. Add. 5. ÷ N or ÷ (n − 1). 6. √.</li>
+</ol>
+<div class="ex"><b>Q:</b> "Sample 18, 22, 25, 28, 30: sample variance and SD?" <b>A:</b> x̄ = 123/5 = 24.6; gaps −6.6, −2.6, 0.4, 3.4, 5.4; squares 43.56 + 6.76 + 0.16 + 11.56 + 29.16 = 91.20; s² = 91.20/4 = <b>22.8</b>; s = √22.8 = <b>4.77</b>.</div>
+<ul>
+<li><b>z-score</b> <span class="d">= how many SDs away from the mean; + above, − below. Lets you compare different scales: the bigger z did relatively better.</span> <span class="f">z = (x − μ) ÷ σ</span> <span class="e">ACT 27 (μ 18, σ 6): z = 1.50 beats SAT 1200 (μ 1000, σ 200): z = 1.00.</span></li>
+<li><b>Empirical Rule</b> <span class="d">(bell-shaped data only): 68% of values within 1 SD of the mean, 95% within 2, 99.7% within 3; the pieces are 34 | 13.5 | 2.35 | 0.15 on each side.</span> <span class="e">μ = 29.8, σ = 6.4: 95% between 29.8 ± 12.8 = 17.0 and 42.6; IQ 85 to 130 = 34 + 34 + 13.5 = 81.5%.</span></li>
+<li><b>Quartiles</b> <span class="d">cut sorted data into quarters: Q₂ = median, Q₁/Q₃ = medians of the lower/upper halves (odd n → leave the median out).</span> <span class="f">IQR = Q₃ − Q₁; outlier if below Q₁ − 1.5·IQR or above Q₃ + 1.5·IQR</span></li>
+</ul>
 
 <h2>CH 4 — PROBABILITY</h2>
-<h3>Basics</h3>
+<h3>What probability is</h3>
 <ul>
-<li><b>Probability</b> <span class="d">= long-run proportion of times an outcome happens</span>. <span class="f">0 ≤ P(E) ≤ 1; all outcomes add to 1</span>. <b>Unusual</b> <span class="d">= P &lt; 0.05</span>.</li>
-<li><b>Sample space S</b> <span class="d">= all possible outcomes</span>; <b>event</b> <span class="d">= some of them</span>.</li>
-<li><b>Classical</b> (equally likely): <span class="f">P(E) = N(E) ÷ N(S)</span>. <b>Empirical</b> (from data): <span class="f">P(E) ≈ frequency ÷ total</span>. <b>Subjective</b> = educated guess.</li>
-<li><b>Disjoint</b> <span class="d">= can't both happen (no overlap)</span>. <b>Independent</b> <span class="d">= one doesn't change the chance of the other</span>.</li>
+<li><b>Probability</b> <span class="d">= the long-run fraction of times something happens (flip a coin a million times → about half heads → 0.5)</span>. <span class="f">0 ≤ P(E) ≤ 1; all outcomes together add to 1.</span> <b>Unusual</b> <span class="d">= less than 0.05</span>.</li>
+<li><b>Sample space S</b> <span class="d">= the list of everything that could happen</span>; an <b>event</b> <span class="d">= any part of that list you care about</span>. <span class="e">Two coin flips: S = {HH, HT, TH, TT}.</span></li>
+<li><b>Classical</b> <span class="d">(all outcomes equally likely — dice, cards, coins): just count.</span> <span class="f">P(E) = N(E) ÷ N(S)</span> <span class="e">P(two heads) = 1/4 = 0.25; P(at least one tail) = 3/4.</span></li>
+<li><b>Empirical</b> <span class="d">(from data you collected): how often it happened.</span> <span class="f">P(E) ≈ frequency ÷ total trials</span> <span class="e">22 of 200 carpool → 0.11; 5 walk → 0.025 &lt; 0.05 → unusual.</span></li>
+<li><b>Subjective</b> <span class="d">= an educated guess when there's no data (chance of a recession).</span></li>
+<li><b>Probability model</b> <span class="d">= list of outcomes with probabilities; valid only if each is 0–1 and they add to 1.</span> <span class="e">{A 0.40, B 0.20} → not valid (sum 0.60); a −0.10 → not valid.</span></li>
+<li><b>Disjoint</b> <span class="d">= can't both happen at once (a card can't be a king AND a queen)</span>. <b>Independent</b> <span class="d">= one happening doesn't change the odds of the other (two coin flips; two different drivers)</span>.</li>
 </ul>
-<div class="box">NOT: P(E<sup>c</sup>) = 1 − P(E)<br>
-OR: P(E or F) = P(E) + P(F) − P(E and F) &nbsp;(disjoint → P(E and F) = 0)<br>
-AND (independent): P(E and F) = P(E)·P(F)<br>
-AND (general): P(E and F) = P(E)·P(F | E)<br>
-GIVEN: P(F | E) = <span class='fr'><span class='n'>P(E and F)</span><span>P(E)</span></span> = <span class='fr'><span class='n'>N(E and F)</span><span>N(E)</span></span><br>
-AT LEAST ONE: P(at least 1) = 1 − P(none)<br>
-Independent test: P(F | E) = P(F)?  yes → independent</div>
 
-<h3>Contingency table (two-way table) ★Q1</h3>
+<h3>The rules — spot the keyword</h3>
+<div class="box">NOT: &nbsp;P(E<sup>c</sup>) = 1 − P(E)<br>
+OR: &nbsp;P(E or F) = P(E) + P(F) − P(E and F) &nbsp;&nbsp;(disjoint → the overlap is 0, just add)<br>
+AND, independent: &nbsp;P(E and F) = P(E) · P(F)<br>
+AND, general: &nbsp;P(E and F) = P(E) · P(F | E)<br>
+GIVEN: &nbsp;P(F | E) = <span class='fr'><span class='n'>P(E and F)</span><span>P(E)</span></span> = <span class='fr'><span class='n'>N(E and F)</span><span>N(E)</span></span><br>
+AT LEAST ONE: &nbsp;P(at least 1) = 1 − P(none)<br>
+Independent? &nbsp;check P(F | E) = P(F). Equal → independent; different → dependent</div>
+<ul class="small">
+<li><span class="d"><b>Why subtract in OR:</b> adding P(E) + P(F) counts the overlap twice, so take it out once.</span></li>
+<li><span class="d"><b>Why "given" changes things:</b> knowing E shrinks the world to only the cases where E happened, so you divide by E's total, not the grand total.</span> <span class="e">P(6) = 1/6, but P(6 | even) = 1/3 because only {2, 4, 6} remain.</span></li>
+<li><span class="d"><b>"At least one"</b> has many cases, so compute the one case you don't want (none) and subtract from 1.</span></li>
+<li><span class="d"><b>Independence rule of thumb:</b> sampling without replacement from a big population — if the sample is under 5% of the population, treat the picks as independent.</span></li>
+</ul>
+<div class="ex"><b>Q:</b> "P(speeder pulled over) = 0.8, P(ticket | pulled over) = 0.9. P(pulled over AND ticket)?" <b>A:</b> 0.8 × 0.9 = <b>0.72</b><br>
+<b>Q:</b> "P(24-yr-old male survives the year) = 0.9986. P(two both survive)? P(at least one of 1000 dies)?" <b>A:</b> 0.9986² = <b>0.9972</b>; 1 − 0.9986<sup>1000</sup> = 1 − 0.2464 = <b>0.7536</b><br>
+<b>Q:</b> "One card: P(king or diamond)?" <b>A:</b> 4/52 + 13/52 − 1/52 = 16/52 = <b>0.3077</b> (the king of diamonds was counted twice). "P(king or queen)?" disjoint → 4/52 + 4/52 = 0.1538<br>
+<b>Q:</b> "52% played the lottery; P(has not)?" <b>A:</b> 1 − 0.52 = <b>0.48</b><br>
+<b>Q:</b> "Pick 2 of 4 friends (A, B, S, D): P(A and B)? P(B goes)?" <b>A:</b> S = {AB, AS, AD, BS, BD, SD} → 1/6; 3/6 = 0.5<br>
+<b>Q:</b> "Are 'widowed' and 'female' independent? P(widowed) = 0.0552, P(widowed | female) = 11.5/138.1 = 0.0833." <b>A:</b> 0.0833 ≠ 0.0552 → <b>dependent</b></div>
+
+<h3>Two-way (contingency) table ★Q1</h3>
+<p class="d">A table of counts split two ways (status × gender). Probabilities are just cells or totals divided by the right denominator.</p>
 <ol>
 <li>Add row totals and column totals; grand total = N.</li>
-<li>"is A" → (A's total) ÷ N.</li>
-<li>"A <b>or</b> B" → P(A) + P(B) − P(both) (subtract the overlapping cell).</li>
+<li>"is A" → A's total ÷ N.</li>
+<li>"A <b>or</b> B" → P(A) + P(B) − P(both) (the overlap cell).</li>
 <li>"A <b>and</b> B" → the one cell ÷ N.</li>
-<li>"A <b>given</b> B" → cell ÷ (B's row or column total). Divide by the GIVEN group only.</li>
+<li>"A <b>given</b> B" → cell ÷ B's total (divide by the GIVEN group only).</li>
 </ol>
 <div class="ex"><b>Q:</b> "Employment status of 78 residents: Full-time M 22 / F 18; Part-time M 6 / F 10; Unemployed M 3 / F 2; Not in labor force M 5 / F 12. Males = 36, Females = 42."<br>
 Row totals: full-time 40, part-time 16, unemployed 5, not in labor force 17.<br>
@@ -80,52 +131,52 @@ Row totals: full-time 40, part-time 16, unemployed 5, not in labor force 17.<br>
 <b>(b)</b> P(part-time) = 16/78 = <b>0.2051</b><br>
 <b>(c)</b> P(male OR unemployed) = 36/78 + 5/78 − 3/78 = 38/78 = <b>0.4872</b><br>
 <b>(d)</b> P(female AND not in labor force) = 12/78 = <b>0.1538</b><br>
-<b>(e)</b> P(part-time | female) = 10/42 = <b>0.2381</b> (divide by females only)</div>
-<div class="ex"><b>Q:</b> "P(speeder pulled over) = 0.8; P(ticket | pulled over) = 0.9. P(pulled over AND ticket)?" <b>A:</b> 0.8 × 0.9 = <b>0.72</b><br>
-<b>Q:</b> "P(24-yr-old male survives the year) = 0.9986. P(at least one of 1000 dies)?" <b>A:</b> 1 − 0.9986<sup>1000</sup> = 1 − 0.2464 = <b>0.7536</b><br>
-<b>Q:</b> "One card: P(king or diamond)?" <b>A:</b> 4/52 + 13/52 − 1/52 = 16/52 = <b>0.3077</b></div>
-<div class="ex"><b>Q:</b> "Coin flipped twice: sample space? P(two heads)? P(at least one tail)?" <b>A:</b> S = {HH, HT, TH, TT}; 1/4 = 0.25; 3/4 = 0.75.<br>
-<b>Q:</b> "Pick 2 of 4 friends (A, B, S, D): P(A and B)? P(B goes)?" <b>A:</b> S = {AB, AS, AD, BS, BD, SD} → 1/6; 3/6 = 0.5.<br>
-<b>Q:</b> "Is {A 0.40, B 0.20} a valid probability model?" <b>A:</b> No — sum 0.60 ≠ 1. "{A −0.10, …}" → No — negative.<br>
-<b>Q:</b> "200 people: 22 carpool, 5 walk. P(carpool)? Unusual to walk?" <b>A:</b> 22/200 = 0.11; walk 5/200 = 0.025 &lt; 0.05 → <b>unusual</b>.<br>
-<b>Q:</b> "Die: P(6)? P(6 | even)?" <b>A:</b> 1/6; given even → {2,4,6} → 1/3 (changed → dependent).<br>
-<b>Q:</b> "Are 'widowed' and 'female' independent? P(widowed) = 15.0/271.7 = 0.0552, P(widowed | female) = 11.5/138.1 = 0.0833." <b>A:</b> 0.0833 ≠ 0.0552 → <b>dependent</b>.<br>
-<b>Q:</b> "Two 24-yr-old males both survive (0.9986 each)?" <b>A:</b> independent → 0.9986² = <b>0.9972</b>. Rule of thumb: sample &lt; 5% of population → treat as independent.</div>
+<b>(e)</b> P(part-time | female) = 10/42 = <b>0.2381</b></div>
 
-<h3>Counting</h3>
-<div class="box">Sequence of choices: multiply p·q·r…<br>
-n! = n(n−1)(n−2)···1, &nbsp;0! = 1<br>
-Order matters: <sub>n</sub>P<sub>r</sub> = <span class='fr'><span class='n'>n!</span><span>(n − r)!</span></span> &nbsp;&nbsp; Order doesn't: <sub>n</sub>C<sub>r</sub> = <span class='fr'><span class='n'>n!</span><span>r!(n − r)!</span></span></div>
-<div class="ex">3-letter codes: 26·26·26 = 17,576 · chair/vice/sec from 14: 14·13·12 = 2,184 · <sub>7</sub>P<sub>5</sub> = 7!/2! = 2,520 · <sub>10</sub>P<sub>3</sub> = 10·9·8 = 720 · <sub>4</sub>C<sub>2</sub> = 24/(2·2) = 6 · <sub>20</sub>C<sub>4</sub> = (20·19·18·17)/24 = 4,845<br>P(4 cards all match) = 13 / <sub>52</sub>C<sub>4</sub> = 13/270,725 ≈ 0.00005</div>
+<h3>Counting — "how many ways"</h3>
+<ul class="small">
+<li><span class="d">A <b>sequence of choices</b> (first this, then that): multiply the number of options at each step.</span> <span class="e">3-letter airport codes: 26·26·26 = 17,576; chair, vice-chair, secretary from 14 people: 14·13·12 = 2,184.</span></li>
+<li><span class="d"><b>Permutation</b> = picking r of n where ORDER MATTERS (1st/2nd/3rd place, arranging in a line).</span> <span class="f"><sub>n</sub>P<sub>r</sub> = <span class='fr'><span class='n'>n!</span><span>(n − r)!</span></span></span> <span class="e"><sub>7</sub>P<sub>5</sub> = 7!/2! = 2,520; 10 runners, top 3: <sub>10</sub>P<sub>3</sub> = 10·9·8 = 720; 7 schools in order: 7! = 5,040.</span></li>
+<li><span class="d"><b>Combination</b> = picking r of n where order DOESN'T matter (a committee, a hand of cards, a sample).</span> <span class="f"><sub>n</sub>C<sub>r</sub> = <span class='fr'><span class='n'>n!</span><span>r!(n − r)!</span></span></span> <span class="e"><sub>4</sub>C<sub>2</sub> = 24/(2·2) = 6; samples of 4 from 20: <sub>20</sub>C<sub>4</sub> = (20·19·18·17)/24 = 4,845; P(4 cards all same rank) = 13/<sub>52</sub>C<sub>4</sub> = 13/270,725 ≈ 0.00005.</span></li>
+</ul>
 
 <h2>CH 5 — DISCRETE RANDOM VARIABLES</h2>
-<h3>Probability distribution ★Q2, Q3</h3>
 <ul>
-<li><b>Discrete</b> <span class="d">= countable values (0, 1, 2 …)</span>; <b>continuous</b> <span class="d">= any value in an interval (measured)</span>.</li>
-<li><b>Probability distribution</b> <span class="d">= every value of X with its P(x) (table, graph, or formula)</span>.</li>
+<li><b>Random variable X</b> <span class="d">= the number that comes out of a chance experiment (games in a series, profit from a bet, # who say yes).</span> <b>Discrete</b> <span class="d">= you count it (0, 1, 2, …: pieces, people, colors)</span>; <b>continuous</b> <span class="d">= you measure it (time, mass, temperature — any decimal)</span>.</li>
+<li><b>Probability distribution</b> <span class="d">= a table of every value X can take with its probability (or a graph / formula).</span></li>
 </ul>
-<div class="box">VALID if: (1) each 0 ≤ P(x) ≤ 1 &nbsp;and&nbsp; (2) Σ P(x) = 1<br>
-μ<sub>X</sub> = Σ [ x · P(x) ] &nbsp;&nbsp;&nbsp; σ<sub>X</sub> = √( Σ [ (x − μ)² · P(x) ] )<br>
-shortcut: σ<sub>X</sub> = √( Σ [ x² · P(x) ] − μ² )</div>
+<div class="box">VALID only if (1) every P(x) is between 0 and 1 AND (2) Σ P(x) = 1<br>
+Mean (expected value): μ<sub>X</sub> = E(X) = Σ [ x · P(x) ]<br>
+SD: σ<sub>X</sub> = √( Σ [ (x − μ)² · P(x) ] ) &nbsp;&nbsp; shortcut √( Σ [ x² · P(x) ] − μ² )</div>
+<ul class="small">
+<li><span class="d"><b>Mean of a distribution</b> = a weighted average: each value counts as much as its probability. It's the long-run average per trial ("over many games you lose 8¢ a game on average").</span></li>
+<li><span class="d"><b>SD of a distribution</b> = same idea as before (typical distance from the mean) but each squared gap is weighted by its probability instead of averaged.</span></li>
+</ul>
 <ol>
-<li>P(x) = frequency ÷ total (if given counts).</li>
-<li>Mean: multiply each x by P(x), add.</li>
-<li>SD: (x − μ)², times P(x), add, square root.</li>
+<li>From counts: P(x) = count ÷ total. Check the P(x) add to 1.</li>
+<li>Mean: multiply each x by its P(x); add.</li>
+<li>SD: (x − μ)² for each x; times P(x); add; √.</li>
 <li>Graph: probability histogram — one bar centered on each x, height = P(x).</li>
 </ol>
-<div class="ex"><b>Q:</b> "Is this a valid discrete probability distribution? x: 0,1,2,3,4 with P(x): 0.34, 0.21, 0.13, 0.04, 0.01."<br><b>A:</b> each P(x) is between 0 and 1 ✓, but 0.34+0.21+0.13+0.04+0.01 = 0.73 ≠ 1 → <b>NOT valid</b> (probabilities must add to 1).</div>
-<div class="ex"><b>Q:</b> "Games played in the Stanley Cup, X: x = 4 (freq 20), 5 (20), 6 (26), 7 (17). (a) Construct the probability distribution. (b) Graph it. (c) Compute and interpret the mean. (d) Compute the SD."<br>
-<b>(a)</b> total = 20+20+26+17 = 83 → P(4) = 20/83 = 0.2410, P(5) = 0.2410, P(6) = 26/83 = 0.3133, P(7) = 17/83 = 0.2048 (sum ≈ 1 ✓)<br>
-<b>(b)</b> bars at x = 4, 5, 6, 7 with heights 0.2410, 0.2410, 0.3133, 0.2048<br>
-<b>(c)</b> μ = 4(0.2410) + 5(0.2410) + 6(0.3133) + 7(0.2048)<br>&nbsp;&nbsp;= 0.9640 + 1.2050 + 1.8798 + 1.4336 = <b>5.48 games</b><br>&nbsp;&nbsp;→ over many series, the Cup lasts about 5.48 games on average<br>
-<b>(d)</b> (4−5.48)²(0.2410) = 2.1904(0.2410) = 0.5279<br>&nbsp;&nbsp;(5−5.48)²(0.2410) = 0.2304(0.2410) = 0.0555<br>&nbsp;&nbsp;(6−5.48)²(0.3133) = 0.2704(0.3133) = 0.0847<br>&nbsp;&nbsp;(7−5.48)²(0.2048) = 2.3104(0.2048) = 0.4732<br>&nbsp;&nbsp;σ² = 1.1413 → σ = √1.1413 ≈ <b>1.07 games</b></div>
-<div class="ex"><b>Q:</b> "Chuck-a-Luck profit: −$1 (0.5787), $1 (0.3472), $2 (0.0695), $3 (0.0046). Mean?" <b>A:</b> −0.5787 + 0.3472 + 0.1390 + 0.0138 = <b>−$0.08</b> → lose 8¢ per game on average. <b>Insurance:</b> $100(0.9986) + (−$9,900)(0.0014) = 99.86 − 13.86 = <b>$86</b> expected profit.</div>
+<div class="ex"><b>Q:</b> "Is this a valid discrete probability distribution? x: 0, 1, 2, 3, 4 with P(x): 0.34, 0.21, 0.13, 0.04, 0.01." <b>A:</b> each P(x) is 0–1 ✓, but 0.34 + 0.21 + 0.13 + 0.04 + 0.01 = 0.73 ≠ 1 → <b>NOT valid</b>.</div>
+<div class="ex"><b>Q:</b> "Games played in the Stanley Cup: x = 4 (20 times), 5 (20), 6 (26), 7 (17). (a) Build the distribution. (b) Graph it. (c) Mean and interpret. (d) SD."<br>
+<b>(a)</b> total 83 → P(4) = 20/83 = 0.2410, P(5) = 0.2410, P(6) = 26/83 = 0.3133, P(7) = 17/83 = 0.2048 (sum ≈ 1 ✓)<br>
+<b>(b)</b> bars at 4, 5, 6, 7 with heights 0.2410, 0.2410, 0.3133, 0.2048<br>
+<b>(c)</b> μ = 4(0.2410) + 5(0.2410) + 6(0.3133) + 7(0.2048) = 0.9640 + 1.2050 + 1.8798 + 1.4336 = <b>5.48 games</b> → over many series the Cup lasts about 5.48 games on average<br>
+<b>(d)</b> (4 − 5.48)²(0.2410) = 2.1904(0.2410) = 0.5279 · (5 − 5.48)²(0.2410) = 0.2304(0.2410) = 0.0555 · (6 − 5.48)²(0.3133) = 0.2704(0.3133) = 0.0847 · (7 − 5.48)²(0.2048) = 2.3104(0.2048) = 0.4732 → σ² = 1.1413 → σ = √1.1413 = <b>1.07 games</b></div>
+<div class="ex"><b>Q:</b> "Chuck-a-Luck profit: −$1 (0.5787), $1 (0.3472), $2 (0.0695), $3 (0.0046). Mean? SD?" <b>A:</b> μ = −0.5787 + 0.3472 + 0.1390 + 0.0138 = <b>−$0.08</b> (lose 8¢/game); σ² = 0.4912 + 0.4040 + 0.3003 + 0.0436 = 1.2391 → σ = <b>$1.11</b>.<br>
+<b>Q:</b> "Insurance: +$100 with 0.9986, −$9,900 with 0.0014. Expected profit?" <b>A:</b> 99.86 − 13.86 = <b>$86</b> per policy → keep selling (positive).</div>
 
-<h3>Binomial ★Q4</h3>
-<p><b>Binomial experiment</b> <span class="d">= (1) fixed n trials, (2) independent, (3) two outcomes (success/failure), (4) same p every trial. X = # of successes.</span></p>
+</div>
+
+<div class="side s2">
+<h1>STA2023 Exam 2 — Ch 4–6 — SIDE 2 <span class="legend"><span class="d">■ BLUE = what it means</span> &nbsp; <span class="f">■ RED = formula / rule</span> &nbsp; <span class="e">■ GREEN = worked question</span> &nbsp; ■ BLACK = steps</span></h1>
+
+<h2>CH 5 (cont.) — BINOMIAL</h2>
+<p><b>Binomial experiment</b> <span class="d">= the same yes/no trial repeated: (1) a FIXED number of trials n, (2) trials independent, (3) only two outcomes each time (success / failure), (4) the SAME p every trial. X = how many successes. Not binomial if n isn't fixed ("keep going until…") or picks are without replacement from a small group (p changes).</span></p>
 <div class="box">P(x) = <sub>n</sub>C<sub>x</sub> · p<sup>x</sup> · (1 − p)<sup>n − x</sup> &nbsp;&nbsp; <sub>n</sub>C<sub>x</sub> = <span class='fr'><span class='n'>n!</span><span>x!(n − x)!</span></span><br>
-μ = n·p &nbsp;&nbsp;&nbsp; σ = √( n·p·(1 − p) )<br>
-Excel: =BINOM.DIST(x, n, p, FALSE) exactly x · TRUE = P(X ≤ x)</div>
+μ = n·p &nbsp;&nbsp;&nbsp; σ = √( n·p·(1 − p) ) &nbsp;&nbsp;&nbsp; Excel =BINOM.DIST(x, n, p, FALSE) exactly; TRUE = P(X ≤ x)</div>
+<p class="small d">Read the formula as: (number of ways to place the x successes among the n trials) × (probability of the x successes) × (probability of the n − x failures).</p>
 <table>
 <tr><th>Words</th><th>Compute</th></tr>
 <tr><td>exactly x</td><td>P(x)</td></tr>
@@ -135,132 +186,105 @@ Excel: =BINOM.DIST(x, n, p, FALSE) exactly x · TRUE = P(X ≤ x)</div>
 <tr><td>at least k / ≥ k</td><td>1 − [P(0) + … + P(k − 1)]</td></tr>
 <tr><td>between a and b (inclusive)</td><td>P(a) + … + P(b)</td></tr>
 </table>
-<div class="ex"><b>Q:</b> "60% of U.S. women say the minimum driving age should be 18. Random sample of 10 women. (a) Exactly 3? (b) Fewer than 3? (c) Between 1 and 3 inclusive? (d) For a sample of 200, expected number and SD?"<br>
+<div class="ex"><b>Q:</b> "60% of U.S. women say the minimum driving age should be 18. Random sample of 10. (a) Exactly 3? (b) Fewer than 3? (c) Between 1 and 3 inclusive? (d) Sample of 200: expected number and SD?"<br>
 n = 10, p = 0.60, 1 − p = 0.40<br>
 <b>(a)</b> P(3) = <sub>10</sub>C<sub>3</sub>(0.6)<sup>3</sup>(0.4)<sup>7</sup> = 120 · 0.216 · 0.0016384 = <b>0.0425</b><br>
-<b>(b)</b> P(X &lt; 3) = P(0) + P(1) + P(2)<br>&nbsp;&nbsp;P(0) = (0.4)<sup>10</sup> = 0.0001 · P(1) = 10(0.6)(0.4)<sup>9</sup> = 0.0016 · P(2) = 45(0.36)(0.4)<sup>8</sup> = 0.0106<br>&nbsp;&nbsp;= 0.0001 + 0.0016 + 0.0106 = <b>0.0123</b><br>
-<b>(c)</b> P(1 ≤ X ≤ 3) = P(1) + P(2) + P(3) = 0.0016 + 0.0106 + 0.0425 = <b>0.0547</b><br>
-<b>(d)</b> n = 200: μ = 200(0.60) = <b>120</b>; σ = √(200·0.60·0.40) = √48 = <b>6.93</b></div>
-<div class="ex"><b>Q:</b> "Binomial or not? (1) Roll a pair of dice 10 times, count 7s. (2) Select flights until 10 late ones are found. (3) Pick 4 of 30 students, count females."<br><b>A:</b> (1) YES: n = 10, p = 6/36 = 1/6, x = 0…10. (2) NO: n not fixed. (3) NO: without replacement from 30, trials not independent (4/30 = 13% &gt; 5%).</div>
-<div class="ex"><b>Q:</b> "On-time rate 0.70, 4 flights. Build the distribution." <b>A:</b> P(0) = (0.3)⁴ = 0.0081 · P(1) = 4(0.7)(0.3)³ = 0.0756 · P(2) = 6(0.49)(0.09) = 0.2646 · P(3) = 4(0.343)(0.3) = 0.4116 · P(4) = (0.7)⁴ = 0.2401 (sum 1 ✓).<br>
-<b>Q:</b> "Free throws 95%, 3 shots: P(all 3)? P(less than 3)? mean &amp; SD?" <b>A:</b> 0.95³ = <b>0.8574</b>; 1 − 0.8574 = <b>0.1426</b>; μ = 3(0.95) = <b>2.85</b>; σ = √(3·0.95·0.05) = √0.1425 = <b>0.38</b>.<br>
-<b>Q:</b> "72% prefer chocolate, n = 10: exactly 8? fewer than 3? at least 3?" <b>A:</b> 45(0.72)⁸(0.28)² = 0.2548; P(0)+P(1)+P(2) = 0.0010; 1 − 0.0010 = 0.9990.<br>
-<b>Q:</b> "Chuck-a-Luck SD?" <b>A:</b> μ = −0.0787; Σ(x − μ)²P(x) = 0.4912 + 0.4040 + 0.3003 + 0.0436 = 1.2391 → σ = <b>$1.11</b>.</div>
-<ul class="small"><li><b>Discrete vs continuous:</b> number of pieces / colors / people → discrete; mass, diameter, time, temperature → continuous.</li><li><b>Expected value</b> E(X) = μ<sub>X</sub>: "in the long run, average of X per trial."</li></ul>
-</div>
-
-<div class="side s2">
-<h1>STA2023 Exam 2 — Ch 4–6 — SIDE 2 <span class="legend"><span class="d">■ BLUE = definition</span> &nbsp; <span class="f">■ RED = formula / rule</span> &nbsp; <span class="e">■ GREEN = example</span> &nbsp; ■ BLACK = steps</span></h1>
+<b>(b)</b> P(0) = (0.4)<sup>10</sup> = 0.0001; P(1) = 10(0.6)(0.4)<sup>9</sup> = 0.0016; P(2) = 45(0.36)(0.4)<sup>8</sup> = 0.0106 → P(X &lt; 3) = <b>0.0123</b><br>
+<b>(c)</b> P(1) + P(2) + P(3) = 0.0016 + 0.0106 + 0.0425 = <b>0.0547</b><br>
+<b>(d)</b> μ = 200(0.60) = <b>120</b>; σ = √(200 · 0.60 · 0.40) = √48 = <b>6.93</b></div>
+<div class="ex"><b>Q:</b> "Binomial or not? (1) Roll a pair of dice 10 times, count 7s. (2) Select flights until 10 late ones are found. (3) Pick 4 of 30 students, count females." <b>A:</b> (1) YES: n = 10, p = 6/36 = 1/6. (2) NO: n not fixed. (3) NO: without replacement from 30 (4/30 = 13% &gt; 5%) → not independent.<br>
+<b>Q:</b> "On-time rate 0.70, 4 flights: distribution?" <b>A:</b> P(0) = (0.3)⁴ = 0.0081 · P(1) = 4(0.7)(0.3)³ = 0.0756 · P(2) = 6(0.49)(0.09) = 0.2646 · P(3) = 4(0.343)(0.3) = 0.4116 · P(4) = (0.7)⁴ = 0.2401<br>
+<b>Q:</b> "Free throws 95%, 3 shots: P(all 3)? P(less than 3)? mean &amp; SD?" <b>A:</b> 0.95³ = <b>0.8574</b>; 1 − 0.8574 = <b>0.1426</b>; μ = 3(0.95) = <b>2.85</b>; σ = √(3·0.95·0.05) = <b>0.38</b><br>
+<b>Q:</b> "72% prefer chocolate, n = 10: exactly 8? fewer than 3? at least 3?" <b>A:</b> 45(0.72)⁸(0.28)² = <b>0.2548</b>; P(0)+P(1)+P(2) = <b>0.0010</b>; 1 − 0.0010 = <b>0.9990</b></div>
 
 <h2>CH 6 — CONTINUOUS &amp; NORMAL</h2>
-<h3>Density curves &amp; uniform ★Q5</h3>
+<h3>Area = probability</h3>
 <ul>
-<li><b>Probability density function (pdf)</b> <span class="d">= a curve where the AREA under it over an interval = the probability X is in that interval; total area = 1; curve ≥ 0</span>.</li>
-<li><span class="f">P(X = one exact value) = 0</span>, so P(a &lt; X &lt; b) = P(a ≤ X ≤ b).</li>
-<li><b>Uniform on [a, b]</b> <span class="d">= flat rectangle: every interval of the same length is equally likely</span>.</li>
+<li><span class="d">A continuous variable has infinitely many values, so you can't list them. Instead, probability = <b>AREA under a curve</b> over an interval. The curve is the <b>probability density function (pdf)</b>: never below 0, total area = 1.</span></li>
+<li><span class="f">P(X = one exact value) = 0</span> <span class="d">(a single point has no width), so P(a &lt; X &lt; b) = P(a ≤ X ≤ b).</span></li>
 </ul>
-<div class="box">Uniform height = <span class='fr'><span class='n'>1</span><span>b − a</span></span> &nbsp;&nbsp; P(c ≤ X ≤ d) = <span class='fr'><span class='n'>d − c</span><span>b − a</span></span> = (length of piece) × height<br>
-"P% within the next t" → t = P × (b − a)</div>
+<h3>Uniform distribution ★Q5</h3>
+<p><b>Uniform on [a, b]</b> <span class="d">= a flat rectangle: every stretch of the same length is equally likely (friend is as likely to be 3–4 min late as 25–26 min late). Height = 1/(b − a) so the rectangle's area is 1. Probability of an interval = its share of the total width.</span></p>
+<div class="box">height = <span class='fr'><span class='n'>1</span><span>b − a</span></span> &nbsp;&nbsp;&nbsp; P(c ≤ X ≤ d) = <span class='fr'><span class='n'>d − c</span><span>b − a</span></span> &nbsp;&nbsp;&nbsp; "P% within the next t" → t = P × (b − a)</div>
 <div class="ex"><b>Q:</b> "Daytime temperature X is uniformly distributed between 70°F and 100°F. (a) Sketch/describe the pdf. (b) P(75 ≤ X ≤ 85)? (c) P(X &lt; 80)?"<br>
-<b>(a)</b> rectangle from 70 to 100, height 1/(100 − 70) = 1/30 (area = 30 × 1/30 = 1)<br>
-<b>(b)</b> (85 − 75)/30 = 10/30 = <b>0.3333</b><br>
-<b>(c)</b> (80 − 70)/30 = 10/30 = <b>0.3333</b></div>
-<div class="ex"><b>Q:</b> "Friend is 0 to 30 min late, uniform. P(10 to 20 min late)? There is a 20% chance they arrive within the next ___ min." <b>A:</b> 10/30 = 0.3333; 0.20 × 30 = <b>6 min</b>. "Random number 0–10: P(exactly 4.35)?" <b>A:</b> 0. "P(between 2 and 5)?" <b>A:</b> 3/10 = 0.3.</div>
+<b>(a)</b> rectangle from 70 to 100, height 1/(100 − 70) = 1/30 (area 30 × 1/30 = 1)<br>
+<b>(b)</b> (85 − 75)/30 = 10/30 = <b>0.3333</b> &nbsp;&nbsp; <b>(c)</b> (80 − 70)/30 = 10/30 = <b>0.3333</b></div>
+<div class="ex"><b>Q:</b> "Friend is 0–30 min late, uniform. P(10 to 20 min late)? 20% chance they arrive within the next ___ min?" <b>A:</b> 10/30 = 0.3333; 0.20 × 30 = <b>6 min</b>. "Random number 0–10: P(between 2 and 5)? P(exactly 4.35)?" <b>A:</b> 3/10 = 0.3; <b>0</b>.</div>
 
 <h3>Normal distribution</h3>
-<p><b>Normal</b> <span class="d">= bell-shaped, symmetric, described by μ and σ. Properties: (1) symmetric about μ; (2) mean = median = mode = μ (highest point); (3) inflection points at μ ± σ; (4) total area = 1; (5) tails approach the axis but never touch; (6) Empirical Rule: 68% within 1σ, 95% within 2σ, 99.7% within 3σ; (7) area over an interval = proportion of the population in it = probability one random value is in it.</span></p>
-<p><b>Standard normal Z</b> <span class="d">= normal with μ = 0, σ = 1. Table V gives the area to the LEFT of z.</span></p>
-<p class="small"><b>"Sketch the curve":</b> draw a bell, write μ under the peak, tick marks at μ ± σ, μ ± 2σ, μ ± 3σ; mark the x value(s), shade the asked region, write the area in the shaded part.</p>
-<div class="box">z = <span class='fr'><span class='n'>x − μ</span><span>σ</span></span> &nbsp;(round z to 2 decimals) &nbsp;&nbsp;&nbsp; x = μ + z·σ<br>
-LEFT of z: read table &nbsp;·&nbsp; RIGHT of z: 1 − (left) &nbsp;·&nbsp; BETWEEN: (left of z₂) − (left of z₁)<br>
-Negative z: area left of −z = 1 − (area left of +z)</div>
+<p><b>Normal</b> <span class="d">= the bell curve: symmetric around μ, most values near the middle, fewer far out. Every normal curve has the same shape — μ slides it left/right, σ makes it wider (big σ) or narrower (small σ).</span></p>
+<p class="small d"><b>Properties:</b> (1) symmetric about μ; (2) mean = median = mode = μ, the highest point; (3) inflection points at μ ± σ; (4) total area = 1; (5) tails get closer to the axis but never touch; (6) Empirical Rule: 68% within 1σ, 95% within 2σ, 99.7% within 3σ; (7) the area over an interval = the proportion of the population in it = the probability one random value lands in it.</p>
+<p><b>Standard normal Z</b> <span class="d">= the normal curve with μ = 0, σ = 1. <b>The trick of the chapter:</b> you can't have a table for every μ and σ, so convert your value to a z-score and use ONE table (Table V), which gives the area to the LEFT of z.</span></p>
+<div class="box">z = <span class='fr'><span class='n'>x − μ</span><span>σ</span></span> &nbsp;(round z to 2 decimals) &nbsp;&nbsp;&nbsp;&nbsp; x = μ + z·σ<br>
+LEFT of x ("less than / below / shorter"): table value<br>
+RIGHT of x ("more than / above / at least"): 1 − table value<br>
+BETWEEN x₁ and x₂: (left of z₂) − (left of z₁) &nbsp;&nbsp;(bigger area − smaller area)<br>
+Negative z: left of −z = 1 − (left of +z)</div>
 <ol>
-<li>Draw the curve, mark μ, shade the region asked.</li>
-<li>Convert each x to z (2 decimals).</li>
-<li>Look up the area to the LEFT of each z (table below).</li>
+<li>Draw a bell, write μ under the peak, mark the x value(s), shade the region asked.</li>
+<li>z = (x − μ)/σ for each x, 2 decimals.</li>
+<li>Table: row = first two digits (1.6), column = last digit (.07) → area to the LEFT.</li>
 <li>Left → done. Right → 1 − area. Between → subtract the two lefts.</li>
 </ol>
-<div class="ex"><b>Q:</b> "(a) Area to the left of z = −1.10. (b) Area between z = −0.60 and z = 1.45. (c) X normal with μ = 80, σ = 10; find P(70 &lt; X &lt; 95)."<br>
-<b>(a)</b> table: <b>0.1357</b><br>
+<div class="ex"><b>Q:</b> "(a) Area to the left of z = −1.10. (b) Area between z = −0.60 and z = 1.45. (c) X normal, μ = 80, σ = 10; P(70 &lt; X &lt; 95)?"<br>
+<b>(a)</b> table → <b>0.1357</b><br>
 <b>(b)</b> left of 1.45 = 0.9265; left of −0.60 = 0.2743 → 0.9265 − 0.2743 = <b>0.6522</b><br>
-<b>(c)</b> z = (70 − 80)/10 = −1.00; z = (95 − 80)/10 = 1.50 → 0.9332 − 0.1587 = <b>0.7745</b></div>
-<div class="ex"><b>Q:</b> "Wechsler IQ: μ = 100, σ = 15. (a) P(score above 125)? (b) P(below 90)? (c) Proportion between 110 and 140? (d) What score is the 98th percentile?"<br>
-<b>(a)</b> z = (125 − 100)/15 = 1.67 → left = 0.9525 → right = 1 − 0.9525 = <b>0.0475</b><br>
+<b>(c)</b> z = (70 − 80)/10 = −1.00 → 0.1587; z = (95 − 80)/10 = 1.50 → 0.9332 → 0.9332 − 0.1587 = <b>0.7745</b></div>
+<div class="ex"><b>Q:</b> "Wechsler IQ: μ = 100, σ = 15. (a) P(above 125)? (b) P(below 90)? (c) Proportion between 110 and 140? (d) Score at the 98th percentile?"<br>
+<b>(a)</b> z = (125 − 100)/15 = 1.67 → left 0.9525 → right = 1 − 0.9525 = <b>0.0475</b><br>
 <b>(b)</b> z = (90 − 100)/15 = −0.67 → <b>0.2514</b><br>
-<b>(c)</b> z = (110−100)/15 = 0.67 → 0.7486; z = (140−100)/15 = 2.67 → 0.9962 → 0.9962 − 0.7486 = <b>0.2476</b><br>
-<b>(d)</b> area to the left = 0.98 → closest table value 0.9798 → z = 2.05 → x = 100 + 2.05(15) = <b>130.75 ≈ 131</b></div>
-<div class="ex"><b>Q:</b> "SAT math: μ = 516, σ = 116. P(less than 500)? P(more than 600)? P(between 525 and 550)?"<br>z = −0.14 → <b>0.4443</b> · z = 0.72 → 1 − 0.7642 = <b>0.2358</b> · z = 0.08 and 0.29 → 0.6141 − 0.5319 = <b>0.0822</b></div>
-<div class="ex"><b>Q:</b> "Cholesterol μ = 180, σ = 36.2; P(above 200)?" <b>A:</b> z = (200 − 180)/36.2 = 0.55 → 1 − 0.7088 = <b>0.2912</b> (≈ 0.2903 with unrounded z).<br>
-<b>Q:</b> "Pregnancy μ = 266, σ = 16; P(259 days or less)?" <b>A:</b> z = (259 − 266)/16 = −0.44 → <b>0.3300</b>.<br>
-<b>Q:</b> "IQ μ = 100, σ = 15: P(outside 70 to 130)?" <b>A:</b> z = ±2.00 → 0.0228 + 0.0228 = <b>0.0455</b>. "P(exactly 100)?" → 0.</div>
+<b>(c)</b> z = 0.67 → 0.7486; z = (140 − 100)/15 = 2.67 → 0.9962 → 0.9962 − 0.7486 = <b>0.2476</b><br>
+<b>(d)</b> area to the left = 0.98 → closest in table 0.9798 → z = 2.05 → x = 100 + 2.05(15) = <b>130.75 ≈ 131</b></div>
+<div class="ex"><b>Q:</b> "SAT math μ = 516, σ = 116: P(less than 500)? P(more than 600)? P(between 525 and 550)?" <b>A:</b> z = −0.14 → <b>0.4443</b>; z = 0.72 → 1 − 0.7642 = <b>0.2358</b>; z = 0.08 and 0.29 → 0.6141 − 0.5319 = <b>0.0822</b><br>
+<b>Q:</b> "Cholesterol μ = 180, σ = 36.2: P(above 200)?" <b>A:</b> z = 0.55 → 1 − 0.7088 = <b>0.2912</b><br>
+<b>Q:</b> "Pregnancy μ = 266, σ = 16: P(259 days or less)?" <b>A:</b> z = −0.44 → <b>0.3300</b><br>
+<b>Q:</b> "Heights μ = 38.72, σ = 3.17: P(shorter than 35)?" <b>A:</b> z = −1.17 → <b>0.1210</b><br>
+<b>Q:</b> "IQ: P(outside 70 to 130)?" <b>A:</b> z = ±2.00 → 0.0228 + 0.0228 = <b>0.0455</b></div>
 
-<h3>Find x from a percent / percentile ("backwards")</h3>
+<h3>Backwards — find x from a percent / percentile</h3>
+<p class="d">Now the area is GIVEN and you want the value. Reverse the steps: area → z (from inside the table) → x = μ + zσ. "k-th percentile" = the value with k% of the data below it, so area to the left = 0.k.</p>
 <ol>
-<li>Draw &amp; shade. Turn the question into an area to the LEFT (k-th percentile → 0.k; "top 10%" → left area 0.90; "middle 80%" → 0.10 and 0.90).</li>
-<li>Find that area INSIDE the table (closest value); read z from the edges.</li>
+<li>Draw &amp; shade; turn the words into an area to the LEFT ("top 10%" → left area 0.90; "bottom 5%" → 0.05; "middle 80%" → 0.10 and 0.90).</li>
+<li>Find that area INSIDE the table (closest value); read z from the row and column.</li>
 <li>x = μ + z·σ.</li>
 </ol>
 <table>
 <tr><th>Percentile</th><th>z</th><th>Percentile</th><th>z</th></tr>
+<tr><td>1st</td><td>−2.33</td><td>99th</td><td>2.33</td></tr>
+<tr><td>2nd</td><td>−2.05</td><td>98th</td><td>2.05</td></tr>
+<tr><td>2.5th</td><td>−1.96</td><td>97.5th</td><td>1.96</td></tr>
 <tr><td>5th</td><td>−1.645</td><td>95th</td><td>1.645</td></tr>
 <tr><td>10th</td><td>−1.28</td><td>90th</td><td>1.28</td></tr>
 <tr><td>20th</td><td>−0.84</td><td>80th</td><td>0.84</td></tr>
 <tr><td>25th</td><td>−0.67</td><td>75th</td><td>0.67</td></tr>
-<tr><td>2.5th</td><td>−1.96</td><td>97.5th</td><td>1.96</td></tr>
-<tr><td>1st</td><td>−2.33</td><td>99th</td><td>2.33</td></tr>
-<tr><td>2nd</td><td>−2.05</td><td>98th</td><td>2.05</td></tr>
 </table>
 <p class="small">Middle 80% ↔ z = ±1.28 · middle 90% ↔ ±1.645 · middle 95% ↔ ±1.96 · middle 99% ↔ ±2.575</p>
-<div class="ex"><b>Q:</b> "Heights of 3-yr-old girls: μ = 38.72 in, σ = 3.17. (a) Height at the 20th percentile? (b) Heights that separate the middle 80%?"<br>
+<div class="ex"><b>Q:</b> "Heights of 3-yr-old girls μ = 38.72, σ = 3.17. (a) Height at the 20th percentile? (b) Heights that separate the middle 80%?"<br>
 <b>(a)</b> area 0.20 → z = −0.84 → x = 38.72 + (−0.84)(3.17) = <b>36.06 in</b><br>
 <b>(b)</b> z = ±1.28 → 38.72 − 1.28(3.17) = <b>34.66</b> and 38.72 + 1.28(3.17) = <b>42.78 in</b><br>
-<b>Q:</b> "P(shorter than 35 in)?" z = (35 − 38.72)/3.17 = −1.17 → <b>0.1210</b></div>
-<div class="ex"><b>Q:</b> "IQ μ = 100, σ = 15: score for the top 10%? bottom 5%? middle 90%?" <b>A:</b> top 10% → left area 0.90 → z = 1.28 → 100 + 1.28(15) = <b>119.2</b> · bottom 5% → z = −1.645 → <b>75.3</b> · middle 90% → z = ±1.645 → <b>75.3 to 124.7</b>.</div>
+<b>Q:</b> "IQ μ = 100, σ = 15: top 10%? bottom 5%? middle 90%?" <b>A:</b> left area 0.90 → z = 1.28 → <b>119.2</b>; z = −1.645 → <b>75.3</b>; z = ±1.645 → <b>75.3 to 124.7</b></div>
 
-<h3>Interpreting an area; assessing normality</h3>
+<h3>Interpreting an area · Is it normal?</h3>
 <ul class="small">
-<li>"Area to the right of 200 is 0.2903" means: (1) the <b>proportion</b> of the population above 200 is 0.2903, and (2) the <b>probability</b> a randomly selected person is above 200 is 0.2903.</li>
-<li><b>Normal?</b> Histogram: bell-shaped, one peak, roughly symmetric, few outliers. <b>Normal probability plot:</b> points close to a straight line → approximately normal.</li>
-<li class="e"><b>Q:</b> "Restaurant A wait times: tall on the left, long right tail. Restaurant B: symmetric hump. Which is normal?" <b>A:</b> B (bell-shaped); A is skewed right → not normal. "Greyhound times: plot points roughly on a line?" → approximately normal.</li>
+<li><span class="d">"Area to the right of 200 is 0.2903" means BOTH: the <b>proportion</b> of the population above 200 is 0.2903, AND the <b>probability</b> that one randomly chosen person is above 200 is 0.2903.</span></li>
+<li><span class="d"><b>Sketch:</b> bell, μ at the peak, ticks at μ ± σ, μ ± 2σ, μ ± 3σ, mark x, shade, write the area in the shaded part.</span></li>
+<li><span class="d"><b>Assessing normality:</b> histogram should be bell-shaped, one peak, roughly symmetric, few outliers; a <b>normal probability plot</b> should be close to a straight line.</span> <span class="e">Restaurant A (tall on the left, long right tail) → skewed, not normal; Restaurant B (symmetric hump) → normal. Greyhound times near a line → approximately normal.</span></li>
 </ul>
 
-<h3>Standard normal table — area to the LEFT of z (entries are 0.xxxx; positive z; negative z → 1 − value)</h3>
+<h3>Standard normal table — area to the LEFT of z (entries 0.xxxx; negative z → 1 − value)</h3>
 <table class='zt'><tr><th>z</th><th>.00</th><th>.01</th><th>.02</th><th>.03</th><th>.04</th><th>.05</th><th>.06</th><th>.07</th><th>.08</th><th>.09</th></tr><tr><th>0.0</th><td>5000</td><td>5040</td><td>5080</td><td>5120</td><td>5160</td><td>5199</td><td>5239</td><td>5279</td><td>5319</td><td>5359</td></tr><tr><th>0.1</th><td>5398</td><td>5438</td><td>5478</td><td>5517</td><td>5557</td><td>5596</td><td>5636</td><td>5675</td><td>5714</td><td>5753</td></tr><tr><th>0.2</th><td>5793</td><td>5832</td><td>5871</td><td>5910</td><td>5948</td><td>5987</td><td>6026</td><td>6064</td><td>6103</td><td>6141</td></tr><tr><th>0.3</th><td>6179</td><td>6217</td><td>6255</td><td>6293</td><td>6331</td><td>6368</td><td>6406</td><td>6443</td><td>6480</td><td>6517</td></tr><tr><th>0.4</th><td>6554</td><td>6591</td><td>6628</td><td>6664</td><td>6700</td><td>6736</td><td>6772</td><td>6808</td><td>6844</td><td>6879</td></tr><tr><th>0.5</th><td>6915</td><td>6950</td><td>6985</td><td>7019</td><td>7054</td><td>7088</td><td>7123</td><td>7157</td><td>7190</td><td>7224</td></tr><tr><th>0.6</th><td>7257</td><td>7291</td><td>7324</td><td>7357</td><td>7389</td><td>7422</td><td>7454</td><td>7486</td><td>7517</td><td>7549</td></tr><tr><th>0.7</th><td>7580</td><td>7611</td><td>7642</td><td>7673</td><td>7704</td><td>7734</td><td>7764</td><td>7794</td><td>7823</td><td>7852</td></tr><tr><th>0.8</th><td>7881</td><td>7910</td><td>7939</td><td>7967</td><td>7995</td><td>8023</td><td>8051</td><td>8078</td><td>8106</td><td>8133</td></tr><tr><th>0.9</th><td>8159</td><td>8186</td><td>8212</td><td>8238</td><td>8264</td><td>8289</td><td>8315</td><td>8340</td><td>8365</td><td>8389</td></tr><tr><th>1.0</th><td>8413</td><td>8438</td><td>8461</td><td>8485</td><td>8508</td><td>8531</td><td>8554</td><td>8577</td><td>8599</td><td>8621</td></tr><tr><th>1.1</th><td>8643</td><td>8665</td><td>8686</td><td>8708</td><td>8729</td><td>8749</td><td>8770</td><td>8790</td><td>8810</td><td>8830</td></tr><tr><th>1.2</th><td>8849</td><td>8869</td><td>8888</td><td>8907</td><td>8925</td><td>8944</td><td>8962</td><td>8980</td><td>8997</td><td>9015</td></tr><tr><th>1.3</th><td>9032</td><td>9049</td><td>9066</td><td>9082</td><td>9099</td><td>9115</td><td>9131</td><td>9147</td><td>9162</td><td>9177</td></tr><tr><th>1.4</th><td>9192</td><td>9207</td><td>9222</td><td>9236</td><td>9251</td><td>9265</td><td>9279</td><td>9292</td><td>9306</td><td>9319</td></tr><tr><th>1.5</th><td>9332</td><td>9345</td><td>9357</td><td>9370</td><td>9382</td><td>9394</td><td>9406</td><td>9418</td><td>9429</td><td>9441</td></tr><tr><th>1.6</th><td>9452</td><td>9463</td><td>9474</td><td>9484</td><td>9495</td><td>9505</td><td>9515</td><td>9525</td><td>9535</td><td>9545</td></tr><tr><th>1.7</th><td>9554</td><td>9564</td><td>9573</td><td>9582</td><td>9591</td><td>9599</td><td>9608</td><td>9616</td><td>9625</td><td>9633</td></tr><tr><th>1.8</th><td>9641</td><td>9649</td><td>9656</td><td>9664</td><td>9671</td><td>9678</td><td>9686</td><td>9693</td><td>9699</td><td>9706</td></tr><tr><th>1.9</th><td>9713</td><td>9719</td><td>9726</td><td>9732</td><td>9738</td><td>9744</td><td>9750</td><td>9756</td><td>9761</td><td>9767</td></tr><tr><th>2.0</th><td>9772</td><td>9778</td><td>9783</td><td>9788</td><td>9793</td><td>9798</td><td>9803</td><td>9808</td><td>9812</td><td>9817</td></tr><tr><th>2.1</th><td>9821</td><td>9826</td><td>9830</td><td>9834</td><td>9838</td><td>9842</td><td>9846</td><td>9850</td><td>9854</td><td>9857</td></tr><tr><th>2.2</th><td>9861</td><td>9864</td><td>9868</td><td>9871</td><td>9875</td><td>9878</td><td>9881</td><td>9884</td><td>9887</td><td>9890</td></tr><tr><th>2.3</th><td>9893</td><td>9896</td><td>9898</td><td>9901</td><td>9904</td><td>9906</td><td>9909</td><td>9911</td><td>9913</td><td>9916</td></tr><tr><th>2.4</th><td>9918</td><td>9920</td><td>9922</td><td>9925</td><td>9927</td><td>9929</td><td>9931</td><td>9932</td><td>9934</td><td>9936</td></tr><tr><th>2.5</th><td>9938</td><td>9940</td><td>9941</td><td>9943</td><td>9945</td><td>9946</td><td>9948</td><td>9949</td><td>9951</td><td>9952</td></tr><tr><th>2.6</th><td>9953</td><td>9955</td><td>9956</td><td>9957</td><td>9959</td><td>9960</td><td>9961</td><td>9962</td><td>9963</td><td>9964</td></tr><tr><th>2.7</th><td>9965</td><td>9966</td><td>9967</td><td>9968</td><td>9969</td><td>9970</td><td>9971</td><td>9972</td><td>9973</td><td>9974</td></tr><tr><th>2.8</th><td>9974</td><td>9975</td><td>9976</td><td>9977</td><td>9977</td><td>9978</td><td>9979</td><td>9979</td><td>9980</td><td>9981</td></tr><tr><th>2.9</th><td>9981</td><td>9982</td><td>9982</td><td>9983</td><td>9984</td><td>9984</td><td>9985</td><td>9985</td><td>9986</td><td>9986</td></tr><tr><th>3.0</th><td>9987</td><td>9987</td><td>9987</td><td>9988</td><td>9988</td><td>9989</td><td>9989</td><td>9989</td><td>9990</td><td>9990</td></tr><tr><th>3.1</th><td>9990</td><td>9991</td><td>9991</td><td>9991</td><td>9992</td><td>9992</td><td>9992</td><td>9992</td><td>9993</td><td>9993</td></tr><tr><th>3.2</th><td>9993</td><td>9993</td><td>9994</td><td>9994</td><td>9994</td><td>9994</td><td>9994</td><td>9995</td><td>9995</td><td>9995</td></tr><tr><th>3.3</th><td>9995</td><td>9995</td><td>9995</td><td>9996</td><td>9996</td><td>9996</td><td>9996</td><td>9996</td><td>9996</td><td>9997</td></tr><tr><th>3.4</th><td>9997</td><td>9997</td><td>9997</td><td>9997</td><td>9997</td><td>9997</td><td>9997</td><td>9997</td><td>9997</td><td>9998</td></tr></table>
-<p class="small"><b>Reading the table:</b> z = 1.67 → row <b>1.6</b>, column <b>.07</b> → 0.9525. Negative z: left of −1.67 = 1 − 0.9525 = 0.0475. <b>Backwards:</b> find the area inside the table (0.98 → 0.9798 is closest) → read z from the edges (row 2.0, column .05 → z = 2.05).</p>
-
-<h2>EXAM 1 SKILLS YOU STILL NEED</h2>
-<div class="box">Mean: μ = Σx ÷ N (population) &nbsp;·&nbsp; x̄ = Σx ÷ n (sample)<br>
-Median = middle of SORTED data (even n → average the two middles) · Mode = most frequent (none if no repeats)<br>
-Variance: σ² = Σ(x − μ)² ÷ N &nbsp;·&nbsp; s² = Σ(x − x̄)² ÷ (n − 1) &nbsp;·&nbsp; SD = √variance<br>
-z = <span class='fr'><span class='n'>x − μ</span><span>σ</span></span> &nbsp;(bigger z = relatively higher) &nbsp;·&nbsp; Relative frequency = count ÷ total (= empirical probability) · % = RF × 100<br>
-Quartiles: Q₂ = median; Q₁/Q₃ = medians of the halves (odd n → leave the median out) · IQR = Q₃ − Q₁ · fences Q₁ − 1.5·IQR, Q₃ + 1.5·IQR → outside = outlier<br>
-Empirical Rule (bell-shaped): 68% within 1σ, 95% within 2σ, 99.7% within 3σ; bands 34 | 13.5 | 2.35 | 0.15 each side (IQ 85–130 → 34+34+13.5 = 81.5%)</div>
-<ol>
-<li>SD by hand: mean → each (x − mean) → square → add → ÷ N or ÷ (n − 1) → √.</li>
-<li>Calculator 1-Var Stats: σx = population SD, Sx = sample SD; variance = (unrounded SD)².</li>
-</ol>
-<div class="ex"><b>Q:</b> "Sample 18, 22, 25, 28, 30: mean and sample variance?" <b>A:</b> x̄ = 123/5 = 24.6; squares 43.56 + 6.76 + 0.16 + 11.56 + 29.16 = 91.20 → s² = 91.20/4 = <b>22.8</b>, s = <b>4.77</b>.<br>
-<b>Q:</b> "ACT 27 (μ 18, σ 6) vs SAT 1200 (μ 1000, σ 200) — who did better?" <b>A:</b> z = 1.50 vs z = 1.00 → <b>ACT</b>.<br>
-<b>Q:</b> "Bell-shaped, μ = 29.8, σ = 6.4: 95% lie between?" <b>A:</b> 29.8 ± 2(6.4) → <b>17.0 to 42.6</b>; between μ+1σ and μ+2σ → 13.5%.</div>
+<p class="small"><b>Reading it:</b> z = 1.67 → row <b>1.6</b>, column <b>.07</b> → 0.9525. z = −1.67 → 1 − 0.9525 = 0.0475. <b>Backwards:</b> area 0.98 → closest entry 0.9798 → row 2.0, column .05 → z = 2.05.</p>
 
 <h2>DON'T LOSE POINTS</h2>
 <ul class="warn">
-<li>"Or" → subtract the overlap once. "And" → the cell. "Given" → divide by the given group, not the grand total.</li>
-<li>Check Σ P(x) = 1 before calling a distribution valid.</li>
-<li>Sample vs. whole: binomial μ = np, σ = √(np(1−p)) — don't forget the √.</li>
+<li>"Or" → subtract the overlap once. "And" → the one cell. "Given" → divide by the given group, not the grand total.</li>
+<li>Check Σ P(x) = 1 before calling a distribution valid; probabilities must be 0–1.</li>
+<li>Binomial μ = np, σ = √(np(1−p)) — don't forget the √. Mean of a distribution is Σ x·P(x), not the average of the x's.</li>
 <li>"Fewer than 3" stops at 2; "at least 3" = 1 − P(≤ 2); "at most" includes the number.</li>
-<li>Uniform: probability = (length ÷ total width); never use z here.</li>
-<li>Normal: ALWAYS convert to z (2 decimals) first; table = area to the LEFT.</li>
-<li>"Above / more than" → 1 − left. "Between" → big area minus small area.</li>
-<li>Percentile question → area → z (from inside the table) → x = μ + zσ.</li>
-<li>Round probabilities to 4 decimals; show the formula every time.</li>
-</ul>
-<h3>Which rule? (Ch 4)</h3>
-<ul class="small">
-<li>One event, equally likely → N(E)/N(S); from data → freq/total.</li>
-<li>"<b>OR</b>" → add, subtract overlap. "<b>AND</b>" → multiply (P(F | E) if dependent).</li>
-<li>"<b>GIVEN</b> / of those who…" → cell ÷ given group. "<b>AT LEAST ONE</b>" → 1 − P(none).</li>
-<li>Counting: sequence → multiply; order matters → <sub>n</sub>P<sub>r</sub>; doesn't → <sub>n</sub>C<sub>r</sub>.</li>
+<li>Uniform: probability = length ÷ total width; never use z. Normal: ALWAYS convert to z (2 decimals); table = area to the LEFT.</li>
+<li>"Above / more than" → 1 − left. "Between" → big area minus small area. Negative z → 1 − (positive entry).</li>
+<li>Percentile → area → z (from inside the table) → x = μ + zσ. "Top 10%" means left area 0.90.</li>
+<li>Round probabilities to 4 decimals; write the formula every time.</li>
 </ul>
 </div>
 </body></html>
