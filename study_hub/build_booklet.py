@@ -169,10 +169,10 @@ card("two residents, at least one male", "\"At least one\" = 1 − P(none). None
       ("Subtract from 1", "", r"P(\text{at least one male})=1-0.2867=0.7133")],
      "0.7133", why="Keep full decimals until the end; rounding each fraction first gives 0.7132.")
 card("two residents, exactly one male", "Male-then-female OR female-then-male: two orders, add them.",
-     [("Order 1: M then F", "", r"\frac{36}{78}\cdot\frac{42}{77}=0.2517"),
-      ("Order 2: F then M", "", r"\frac{42}{78}\cdot\frac{36}{77}=0.2517"),
-      ("Add", "", r"P(\text{exactly one male})=0.2517+0.2517=0.5035")],
-     "0.5035")
+     [("Order 1: M then F", "", r"\frac{36}{78}\cdot\frac{42}{77}=\frac{1512}{6006}=0.2517"),
+      ("Order 2: F then M", "", r"\frac{42}{78}\cdot\frac{36}{77}=\frac{1512}{6006}=0.2517"),
+      ("Add (keep the fractions so no rounding creeps in)", "", r"P(\text{exactly one male})=\frac{1512}{6006}+\frac{1512}{6006}=\frac{3024}{6006}=0.5035")],
+     "0.5035", why="Adding the rounded 0.2517 + 0.2517 gives 0.5034; the exact fractions give 0.5035. Either is accepted, but keep fractions when you can.")
 
 # =====================================================================
 # Q2
@@ -236,12 +236,13 @@ def q3(phrase, ask, xs, why=None):
     terms = "+".join(f"{P3[x]:.4f}" for x in inc)
     total = round(sum(P3[x] for x in inc), 4)
     steps = [("Words → list", f"The x values that fit: <b>{', '.join(map(str, inc))}</b>." + ('<div class="dots">x = ' + " ".join((f"<b>{k}</b>" if k in inc else str(k)) for k in [4, 5, 6, 7]) + '</div>'), None),
-             ("Write each P(x)", "", r"\qquad ".join(rf"P({x})=\frac{{{FREQ[x]}}}{{83}}={P3[x]:.4f}" for x in inc))]
+             ("Write each P(x) (frequency ÷ 83)", "", [rf"P({x})=\frac{{{FREQ[x]}}}{{83}}={P3[x]:.4f}" for x in inc])]
     if len(inc) > 1:
         steps.append(("Add", "", rf"P={terms}={total:.4f}"))
     if len(inc) == 3:
         other = [x for x in [4, 5, 6, 7] if x not in inc][0]
-        steps.append(("Shortcut (same answer)", f"The list is everything except {other}:", rf"P=1-P({other})=1-{P3[other]:.4f}={round(1-P3[other],4):.4f}"))
+        sc = round(1 - P3[other], 4)
+        steps.append(("Shortcut (also accepted)", f"The list is everything except {other}, so you can also do 1 − P({other}):" + (f" the answers differ by {abs(sc-total):.4f} only because each P(x) was rounded to 4 decimals — either one is accepted." if abs(sc - total) > 1e-9 else ""), rf"P=1-P({other})=1-{P3[other]:.4f}={sc:.4f}"))
     card(phrase, ask, steps, f"{total:.4f}", why=why, gfx=BAR(inc))
 q3("exactly 6", "Just one value.", [6])
 q3("at least 6 (6 or more)", "6 is IN → 6 and 7.", [6, 7])
