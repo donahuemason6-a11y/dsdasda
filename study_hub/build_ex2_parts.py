@@ -6,6 +6,7 @@ FS2 = float(sys.argv[2]) if len(sys.argv) > 2 else 6.4
 KATEX = sys.argv[3] if len(sys.argv) > 3 else "file:///tmp/claude-0/-home-user-dsdasda/bdc32f87-6f2d-5f62-952a-43c9c6f6142d/scratchpad/ex2/katex/node_modules/katex/dist"
 OUT = sys.argv[4] if len(sys.argv) > 4 else "/home/user/dsdasda/STA2023_Exam2_CHEAT_SHEET_FINAL.html"
 FIG = {k: f() for k, f in figs.ALL.items()}
+FIG["discrete"] = FIG["discrete"].replace("Label both axes (x across, P(x) up). Heights = the P(x) values from (a); tallest bar = most likely x.", "bar heights = the P(x) from (a); tallest bar = the mode")
 Phi = lambda z: 0.5 * (1 + erf(z / sqrt(2)))
 L = lambda z: round(Phi(z), 4)
 
@@ -93,7 +94,7 @@ A.append(quote('"Determine whether the following distribution represents a valid
 A.append(recipe(["<b>Rule 1:</b> every P(x) between 0 and 1 (0 and 1 allowed). <b>Rule 2:</b> the P(x) add to exactly 1 (fractions or percents → decimals first; 0.9999 from rounding counts).", "Write BOTH checks and a sentence: valid, or NOT valid and which rule fails."]))
 A.append(part("(a)", "the exam's table", wd("rule 1: 0.34, 0.21, 0.13, 0.04, 0.01 are all between 0 and 1 ✓ · rule 2: add them") + last(r"0.34+0.21+0.13+0.04+0.01=0.73\neq 1", "NOT valid — adds to 0.73, not 1")))
 A.append(part("(b)", "if the sum is more than 1 (e.g. 0.15, 0.25, 0.30, 0.20, 0.12)", wd("rule 1 ✓ · rule 2:") + last(r"0.15+0.25+0.30+0.20+0.12=1.02\neq 1", "NOT valid — adds to 1.02")))
-A.append(part("(c)", "if one entry is negative (e.g. 0.5, 0.4, 0.2, −0.1)", wd("rule 1 fails: −0.1 &lt; 0, even though the sum is 1") + last(r"0.5+0.4+0.2+(-0.1)=1\ \text{but}\ P(4)=-0.1<0", "NOT valid — a probability can't be negative")))
+A.append(part("(c)", "if one entry is negative (e.g. 0.5, 0.4, 0.2, −0.1)", wd("rule 1 fails: −0.1 &lt; 0, even though the sum is 1") + last(r"0.5+0.4+0.2+(-0.1)=1\ \text{but the last entry }-0.1<0", "NOT valid — a probability can't be negative")))
 A.append(part("(d)", "if everything checks out (e.g. 0.2, 0.4, 0.3, 0.1)", wd("rule 1 ✓ · rule 2:") + last(r"0.2+0.4+0.3+0.1=1", "valid — each P(x) is 0–1 and they add to 1")))
 A.append(part("(e)", "find the missing probability (0.34, 0.21, 0.13, 0.04, ?)", wd("the blank must make the total exactly 1") + last(r"P(4)=1-(0.34+0.21+0.13+0.04)=1-0.72=0.28", "0.28")))
 
@@ -206,7 +207,7 @@ B.append(FIG["back"].replace('class="fig"', 'class="fig s70"'))
 B.append(part("(a)", "probability a test taker scores above 125", wd("ABOVE → 1 − (left of z)") + D(r"z=\frac{125-100}{15}=1.67\ \to\ \text{hint: left of }1.67=0.9525") + last(r"P(X>125)=1-0.9525=0.0475", "0.0475") + '<div class="watch"><b>Watch out:</b> 0.9525 is the #1 wrong answer — fewer than half score above 125, so the answer must be below 0.5.</div>'))
 B.append(part("(b)", "probability a test taker scores below 90", wd("BELOW → the hint itself") + last(r"z=\frac{90-100}{15}=-0.67\ \to\ P(X<90)=0.2514", "0.2514")))
 B.append(part("(c)", "proportion scoring between 110 and 140", wd("BETWEEN → two z's, bigger left − smaller left") + D(r"z=\frac{110-100}{15}=0.67\to 0.7486\qquad z=\frac{140-100}{15}=2.67\to 0.9962") + last(r"P(110<X<140)=0.9962-0.7486=0.2476", "0.2476")))
-B.append(part("(d)", "score at the 98th percentile", wd("98% below it → area to the LEFT = 0.98 → hint z = 2.05 → x = μ + zσ") + last(r"x=100+2.05(15)=100+30.75=130.75", "≈ 131") + '<div class="watch"><b>Watch out:</b> never put 0.98 into the z formula — it is an area, not a score.</div>'))
+B.append(part("(d)", "score at the 98th percentile", wd("98% below it → area to the LEFT = 0.98 → hint z = 2.05 → x = μ + zσ") + last(r"x=100+2.05(15)=100+30.75=130.75", "130.75 ≈ 131") + '<div class="watch"><b>Watch out:</b> never put 0.98 into the z formula — it is an area, not a score.</div>'))
 B.append(part("(e)", "outside 70 to 130 (below 70 OR above 130)", wd("two tails → add them") + D(r"z=\frac{70-100}{15}=-2.00\to 0.0228\qquad z=\frac{130-100}{15}=2.00\to 0.9772") + last(r"0.0228+(1-0.9772)=0.0456", "0.0456")))
 B.append(part("(f)", "exactly 100 · at most 100 · above 100", wd("one value has no area → 0 · z = 0 → left of 0 = 0.5000 either way") + last(r"P(X=100)=0\qquad P(X\le 100)=P(X>100)=0.5000", "0 · 0.5000")))
 B.append(part("(g)", "the top 5% cutoff (minimum score for the top 5%)", wd("95% below → left area 0.95 → z = 1.645") + last(r"x=100+1.645(15)=124.675\approx 124.7", "124.7")))
