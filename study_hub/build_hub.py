@@ -58,6 +58,11 @@ for k in ORDER:
         t = dict(by_key[k], key=k)
         t["title"] = f"Quiz {QUIZ_NO[k]} · " + t["title"].replace("MINI TEST", "").replace("Mini Test", "").lstrip(" 0123456789—–-:·")
         mini_tests.append(t)
+import os
+EXB = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "examB_q4to7.json")))
+OFFICIAL["questions"][3:7] = EXB
+OFFICIAL["title"] = "Full Practice Exam 2 — Q1–Q3 as posted, Q4–Q7 switched up"
+OFFICIAL["intro"] = "Same format and point values as the posted practice exam. Q1–Q3 are the posted questions; Q4–Q7 use new contexts and numbers (the posted Q4–Q7 are solved on your cheat sheet and in the Practice exam explained tab). Do it timed (50 minutes) with only your cheat sheet and calculator, then grade yourself."
 big_tests = [dict(OFFICIAL, key="official")]
 import os
 M2 = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "mirror2.json")))
