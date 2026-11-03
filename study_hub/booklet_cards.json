@@ -1,0 +1,2799 @@
+[
+ {
+  "section": "Question 1",
+  "phrase": "is male",
+  "ask": "Out of everybody, what fraction are male? One category → its total ÷ grand total.",
+  "steps": [
+   {
+    "label": "Find the numbers",
+    "text": "Male is a column; its total is 36. Grand total 78.",
+    "math": []
+   },
+   {
+    "label": "Rule",
+    "text": "P(A) = (number in A) ÷ (total).",
+    "math": [
+     "P(\\text{male})=\\frac{\\text{males}}{\\text{total}}"
+    ]
+   },
+   {
+    "label": "Plug in and compute",
+    "text": "",
+    "math": [
+     "P(\\text{male})=\\frac{36}{78}=0.4615"
+    ]
+   }
+  ],
+  "answer": "0.4615",
+  "write": "P(male) = 36/78 = 0.4615.",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 1",
+  "phrase": "is part-time",
+  "ask": "A row: add both cells of the row, then ÷ 78.",
+  "steps": [
+   {
+    "label": "Find the numbers",
+    "text": "Part-time row: 6 males + 10 females.",
+    "math": [
+     "6+10=16"
+    ]
+   },
+   {
+    "label": "Rule",
+    "text": "",
+    "math": [
+     "P(\\text{part-time})=\\frac{\\text{part-time total}}{\\text{total}}"
+    ]
+   },
+   {
+    "label": "Plug in and compute",
+    "text": "",
+    "math": [
+     "P(\\text{part-time})=\\frac{16}{78}=0.2051"
+    ]
+   }
+  ],
+  "answer": "0.2051",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 1",
+  "phrase": "is NOT male",
+  "ask": "The complement: everything except male.",
+  "steps": [
+   {
+    "label": "Find the numbers",
+    "text": "Males 36, total 78.",
+    "math": []
+   },
+   {
+    "label": "Rule",
+    "text": "P(not A) = 1 − P(A).",
+    "math": [
+     "P(\\text{not male})=1-P(\\text{male})"
+    ]
+   },
+   {
+    "label": "Plug in and compute",
+    "text": "",
+    "math": [
+     "P(\\text{not male})=1-\\frac{36}{78}=\\frac{42}{78}=0.5385"
+    ]
+   }
+  ],
+  "answer": "0.5385",
+  "write": "",
+  "watch_out": "Same thing as counting the females directly: 42 ÷ 78."
+ },
+ {
+  "section": "Question 1",
+  "phrase": "male OR unemployed",
+  "ask": "Either group, or both. Adding the two totals counts the overlap (male AND unemployed) twice, so subtract it once.",
+  "steps": [
+   {
+    "label": "Find the numbers",
+    "text": "Males 36. Unemployed 5. Overlap (unemployed males) 3.",
+    "math": []
+   },
+   {
+    "label": "Rule",
+    "text": "",
+    "math": [
+     "P(A\\text{ or }B)=P(A)+P(B)-P(A\\text{ and }B)"
+    ]
+   },
+   {
+    "label": "Plug in",
+    "text": "",
+    "math": [
+     "P(\\text{M or U})=\\frac{36}{78}+\\frac{5}{78}-\\frac{3}{78}"
+    ]
+   },
+   {
+    "label": "Compute",
+    "text": "",
+    "math": [
+     "=\\frac{36+5-3}{78}=\\frac{38}{78}=0.4872"
+    ]
+   }
+  ],
+  "answer": "0.4872",
+  "write": "P(M or U) = 36/78 + 5/78 − 3/78 = 38/78 = 0.4872.",
+  "watch_out": "Forgetting the overlap gives 41/78 = 0.5256 ✗. Check: 36 males + the 2 unemployed women = 38 people ✓"
+ },
+ {
+  "section": "Question 1",
+  "phrase": "full-time OR part-time (two rows of the same variable)",
+  "ask": "They can't both happen at once (nobody is in two rows), so the overlap is 0: just add.",
+  "steps": [
+   {
+    "label": "Find the numbers",
+    "text": "Row totals 40 and 16. Overlap 0.",
+    "math": []
+   },
+   {
+    "label": "Rule",
+    "text": "",
+    "math": [
+     "P(A\\text{ or }B)=P(A)+P(B)-0"
+    ]
+   },
+   {
+    "label": "Plug in and compute",
+    "text": "",
+    "math": [
+     "P(\\text{FT or PT})=\\frac{40}{78}+\\frac{16}{78}=\\frac{56}{78}=0.7179"
+    ]
+   }
+  ],
+  "answer": "0.7179",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 1",
+  "phrase": "female AND not in the labor force",
+  "ask": "Both at once → the single cell where the row and the column meet.",
+  "steps": [
+   {
+    "label": "Find the numbers",
+    "text": "Female column, Not-in-labor-force row: 12.",
+    "math": []
+   },
+   {
+    "label": "Rule",
+    "text": "",
+    "math": [
+     "P(A\\text{ and }B)=\\frac{\\text{the one cell}}{\\text{total}}"
+    ]
+   },
+   {
+    "label": "Plug in and compute",
+    "text": "",
+    "math": [
+     "P(\\text{F and NLF})=\\frac{12}{78}=0.1538"
+    ]
+   }
+  ],
+  "answer": "0.1538",
+  "write": "",
+  "watch_out": "\"and\" never adds anything — it is one cell."
+ },
+ {
+  "section": "Question 1",
+  "phrase": "part-time GIVEN female",
+  "ask": "You already know she is female, so the world shrinks to the 42 females. Divide by 42, not 78.",
+  "steps": [
+   {
+    "label": "Find the numbers",
+    "text": "Part-time females: 10. All females: 42.",
+    "math": []
+   },
+   {
+    "label": "Rule",
+    "text": "",
+    "math": [
+     "P(A\\mid B)=\\frac{\\text{cell}}{\\text{total of the given group }B}"
+    ]
+   },
+   {
+    "label": "Plug in and compute",
+    "text": "",
+    "math": [
+     "P(\\text{PT}\\mid\\text{F})=\\frac{10}{42}=0.2381"
+    ]
+   }
+  ],
+  "answer": "0.2381",
+  "write": "P(PT | F) = 10/42 = 0.2381.",
+  "watch_out": "10/78 = 0.1282 is the classic error. The word after \"given\" tells you the denominator."
+ },
+ {
+  "section": "Question 1",
+  "phrase": "female GIVEN part-time",
+  "ask": "Other direction: now the given group is the 16 part-timers.",
+  "steps": [
+   {
+    "label": "Find the numbers",
+    "text": "Part-time females: 10. All part-timers: 16.",
+    "math": []
+   },
+   {
+    "label": "Rule",
+    "text": "",
+    "math": [
+     "P(\\text{F}\\mid\\text{PT})=\\frac{\\text{cell}}{\\text{part-time total}}"
+    ]
+   },
+   {
+    "label": "Plug in and compute",
+    "text": "",
+    "math": [
+     "P(\\text{F}\\mid\\text{PT})=\\frac{10}{16}=0.6250"
+    ]
+   }
+  ],
+  "answer": "0.6250",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 1",
+  "phrase": "unemployed GIVEN male",
+  "ask": "Given group = the 36 males.",
+  "steps": [
+   {
+    "label": "Find the numbers",
+    "text": "Unemployed males: 3. All males: 36.",
+    "math": []
+   },
+   {
+    "label": "Rule and compute",
+    "text": "",
+    "math": [
+     "P(\\text{U}\\mid\\text{M})=\\frac{3}{36}=0.0833"
+    ]
+   }
+  ],
+  "answer": "0.0833",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 1",
+  "phrase": "are \"part-time\" and \"female\" independent?",
+  "ask": "Independent = knowing one does not change the other. Test: is P(PT | F) the same number as P(PT)?",
+  "steps": [
+   {
+    "label": "Compute the conditional",
+    "text": "",
+    "math": [
+     "P(\\text{PT}\\mid\\text{F})=\\frac{10}{42}=0.2381"
+    ]
+   },
+   {
+    "label": "Compute the plain probability",
+    "text": "",
+    "math": [
+     "P(\\text{PT})=\\frac{16}{78}=0.2051"
+    ]
+   },
+   {
+    "label": "Compare",
+    "text": "",
+    "math": [
+     "0.2381\\neq 0.2051\\ \\Rightarrow\\ \\text{dependent}"
+    ]
+   }
+  ],
+  "answer": "dependent (not independent)",
+  "write": "P(PT | F) = 0.2381 ≠ P(PT) = 0.2051, so the events are not independent.",
+  "watch_out": "Equal → independent. Either direction (P(F | PT) vs P(F)) gives the same verdict."
+ },
+ {
+  "section": "Question 1",
+  "phrase": "two residents picked WITHOUT replacement: both male",
+  "ask": "\"Both\" = AND for two picks → multiply. The second pick has one fewer male and one fewer person.",
+  "steps": [
+   {
+    "label": "First pick",
+    "text": "",
+    "math": [
+     "P(\\text{1st male})=\\frac{36}{78}"
+    ]
+   },
+   {
+    "label": "Second pick, given the first was male",
+    "text": "35 males left out of 77 people.",
+    "math": [
+     "P(\\text{2nd male}\\mid\\text{1st male})=\\frac{35}{77}"
+    ]
+   },
+   {
+    "label": "Multiply",
+    "text": "",
+    "math": [
+     "P(\\text{both male})=\\frac{36}{78}\\cdot\\frac{35}{77}=0.2098"
+    ]
+   }
+  ],
+  "answer": "0.2098",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 1",
+  "phrase": "two residents picked WITH replacement (or a tiny sample from a huge population): both male",
+  "ask": "Independent picks: the same probability twice.",
+  "steps": [
+   {
+    "label": "Rule",
+    "text": "",
+    "math": [
+     "P(\\text{both})=P(\\text{male})\\cdot P(\\text{male})"
+    ]
+   },
+   {
+    "label": "Plug in and compute",
+    "text": "",
+    "math": [
+     "P(\\text{both male})=\\frac{36}{78}\\cdot\\frac{36}{78}=0.2130"
+    ]
+   }
+  ],
+  "answer": "0.2130",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 1",
+  "phrase": "two residents, at least one male",
+  "ask": "\"At least one\" = 1 − P(none). None male = both female.",
+  "steps": [
+   {
+    "label": "P(none) = both female (without replacement)",
+    "text": "",
+    "math": [
+     "P(\\text{both F})=\\frac{42}{78}\\cdot\\frac{41}{77}=0.2867"
+    ]
+   },
+   {
+    "label": "Subtract from 1",
+    "text": "",
+    "math": [
+     "P(\\text{at least one male})=1-0.2867=0.7133"
+    ]
+   }
+  ],
+  "answer": "0.7133",
+  "write": "",
+  "watch_out": "Keep full decimals until the end; rounding each fraction first gives 0.7132."
+ },
+ {
+  "section": "Question 1",
+  "phrase": "two residents, exactly one male",
+  "ask": "Male-then-female OR female-then-male: two orders, add them.",
+  "steps": [
+   {
+    "label": "Order 1: M then F",
+    "text": "",
+    "math": [
+     "\\frac{36}{78}\\cdot\\frac{42}{77}=0.2517"
+    ]
+   },
+   {
+    "label": "Order 2: F then M",
+    "text": "",
+    "math": [
+     "\\frac{42}{78}\\cdot\\frac{36}{77}=0.2517"
+    ]
+   },
+   {
+    "label": "Add",
+    "text": "",
+    "math": [
+     "P(\\text{exactly one male})=0.2517+0.2517=0.5035"
+    ]
+   }
+  ],
+  "answer": "0.5035",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 2",
+  "phrase": "the probabilities add to less than 1 (the practice exam)",
+  "ask": "x: 0, 1, 2, 3, 4 with P(x): 0.34, 0.21, 0.13, 0.04, 0.01.",
+  "steps": [
+   {
+    "label": "Rule 1",
+    "text": "Every P(x) is between 0 and 1 ✓",
+    "math": []
+   },
+   {
+    "label": "Rule 2: add",
+    "text": "",
+    "math": [
+     "0.34+0.21+0.13+0.04+0.01=0.73"
+    ]
+   },
+   {
+    "label": "Compare with 1",
+    "text": "",
+    "math": [
+     "0.73\\neq 1\\ \\Rightarrow\\ \\text{rule 2 fails}"
+    ]
+   }
+  ],
+  "answer": "NOT valid — the probabilities add to 0.73, not 1",
+  "write": "Not a valid distribution: ΣP(x) = 0.73 ≠ 1.",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 2",
+  "phrase": "the probabilities add to more than 1",
+  "ask": "x: 1–5 with P(x): 0.15, 0.25, 0.30, 0.20, 0.12.",
+  "steps": [
+   {
+    "label": "Rule 1",
+    "text": "All between 0 and 1 ✓",
+    "math": []
+   },
+   {
+    "label": "Rule 2: add",
+    "text": "",
+    "math": [
+     "0.15+0.25+0.30+0.20+0.12=1.02"
+    ]
+   },
+   {
+    "label": "Compare with 1",
+    "text": "",
+    "math": [
+     "1.02\\neq 1\\ \\Rightarrow\\ \\text{rule 2 fails}"
+    ]
+   }
+  ],
+  "answer": "NOT valid — they add to 1.02, not 1",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 2",
+  "phrase": "one probability is negative (or above 1)",
+  "ask": "x: 1–4 with P(x): 0.5, 0.4, 0.2, −0.1 (notice they add to 1).",
+  "steps": [
+   {
+    "label": "Rule 1",
+    "text": "P(4) = −0.1 is below 0 ✗ — rule 1 fails.",
+    "math": []
+   },
+   {
+    "label": "Rule 2: add",
+    "text": "",
+    "math": [
+     "0.5+0.4+0.2+(-0.1)=1\\ \\text{✓ (passes, but rule 1 already failed)}"
+    ]
+   }
+  ],
+  "answer": "NOT valid — a probability can never be negative",
+  "write": "",
+  "watch_out": "A sum of 1 does not rescue a negative entry (and an entry like 1.3 fails rule 1 the same way)."
+ },
+ {
+  "section": "Question 2",
+  "phrase": "everything checks out",
+  "ask": "x: 1–4 with P(x): 0.2, 0.4, 0.3, 0.1.",
+  "steps": [
+   {
+    "label": "Rule 1",
+    "text": "All between 0 and 1 ✓",
+    "math": []
+   },
+   {
+    "label": "Rule 2: add",
+    "text": "",
+    "math": [
+     "0.2+0.4+0.3+0.1=1\\ \\text{✓}"
+    ]
+   }
+  ],
+  "answer": "valid — each P(x) is between 0 and 1 and they add to 1",
+  "write": "Valid: 0 ≤ P(x) ≤ 1 for every x and ΣP(x) = 1.",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 2",
+  "phrase": "find the missing probability",
+  "ask": "x: 0–4 with P(x): 0.34, 0.21, 0.13, 0.04, ? — the blank must make the total exactly 1.",
+  "steps": [
+   {
+    "label": "Add the known ones",
+    "text": "",
+    "math": [
+     "0.34+0.21+0.13+0.04=0.72"
+    ]
+   },
+   {
+    "label": "Subtract from 1",
+    "text": "",
+    "math": [
+     "P(4)=1-0.72=0.28"
+    ]
+   },
+   {
+    "label": "Check rule 1",
+    "text": "0.28 is between 0 and 1 ✓",
+    "math": []
+   }
+  ],
+  "answer": "0.28",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 3",
+  "phrase": "build the probability distribution (part a)",
+  "ask": "Each probability = how often it happened ÷ total.",
+  "steps": [
+   {
+    "label": "Rule",
+    "text": "",
+    "math": [
+     "P(x)=\\frac{\\text{frequency}}{\\text{total}}=\\frac{\\text{frequency}}{83}"
+    ]
+   },
+   {
+    "label": "Each x",
+    "text": "",
+    "math": [
+     "P(4)=\\frac{20}{83}=0.2410\\qquad P(5)=\\frac{20}{83}=0.2410",
+     "P(6)=\\frac{26}{83}=0.3133\\qquad P(7)=\\frac{17}{83}=0.2048"
+    ]
+   },
+   {
+    "label": "Check",
+    "text": "",
+    "math": [
+     "0.2410+0.2410+0.3133+0.2048=1.0001\\approx 1\\ \\text{(rounding)}"
+    ]
+   }
+  ],
+  "answer": "the table of x and P(x) above",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 3",
+  "phrase": "the graph (part b)",
+  "ask": "x across, P(x) up, one bar above each x with height P(x); label both axes. The tallest bar is the mode.",
+  "steps": [
+   {
+    "label": "Draw",
+    "text": "Axis x: 4, 5, 6, 7. Axis P(x): 0 to 0.35. Bars of height 0.2410, 0.2410, 0.3133, 0.2048.",
+    "math": []
+   }
+  ],
+  "answer": "a bar for each x, labels on both axes",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 3",
+  "phrase": "exactly 6",
+  "ask": "Just one value.",
+  "steps": [
+   {
+    "label": "Words → list",
+    "text": "The x values that fit:  6 . x = 4 5  6  7",
+    "math": []
+   },
+   {
+    "label": "Write each P(x)",
+    "text": "",
+    "math": [
+     "P(6)=\\frac{26}{83}=0.3133"
+    ]
+   }
+  ],
+  "answer": "0.3133",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 3",
+  "phrase": "at least 6 (6 or more)",
+  "ask": "6 is IN → 6 and 7.",
+  "steps": [
+   {
+    "label": "Words → list",
+    "text": "The x values that fit:  6, 7 . x = 4 5  6   7",
+    "math": []
+   },
+   {
+    "label": "Write each P(x)",
+    "text": "",
+    "math": [
+     "P(6)=\\frac{26}{83}=0.3133\\qquad P(7)=\\frac{17}{83}=0.2048"
+    ]
+   },
+   {
+    "label": "Add",
+    "text": "",
+    "math": [
+     "P=0.3133+0.2048=0.5181"
+    ]
+   }
+  ],
+  "answer": "0.5181",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 3",
+  "phrase": "more than 6 (over 6)",
+  "ask": "6 is OUT → only 7.",
+  "steps": [
+   {
+    "label": "Words → list",
+    "text": "The x values that fit:  7 . x = 4 5 6  7",
+    "math": []
+   },
+   {
+    "label": "Write each P(x)",
+    "text": "",
+    "math": [
+     "P(7)=\\frac{17}{83}=0.2048"
+    ]
+   }
+  ],
+  "answer": "0.2048",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 3",
+  "phrase": "fewer than 6 (under 6, less than 6)",
+  "ask": "6 is OUT → 4 and 5.",
+  "steps": [
+   {
+    "label": "Words → list",
+    "text": "The x values that fit:  4, 5 . x =  4   5  6 7",
+    "math": []
+   },
+   {
+    "label": "Write each P(x)",
+    "text": "",
+    "math": [
+     "P(4)=\\frac{20}{83}=0.2410\\qquad P(5)=\\frac{20}{83}=0.2410"
+    ]
+   },
+   {
+    "label": "Add",
+    "text": "",
+    "math": [
+     "P=0.2410+0.2410=0.4820"
+    ]
+   }
+  ],
+  "answer": "0.4820",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 3",
+  "phrase": "at most 5 (5 or fewer, no more than 5)",
+  "ask": "5 is IN → 4 and 5 (same list as \"fewer than 6\").",
+  "steps": [
+   {
+    "label": "Words → list",
+    "text": "The x values that fit:  4, 5 . x =  4   5  6 7",
+    "math": []
+   },
+   {
+    "label": "Write each P(x)",
+    "text": "",
+    "math": [
+     "P(4)=\\frac{20}{83}=0.2410\\qquad P(5)=\\frac{20}{83}=0.2410"
+    ]
+   },
+   {
+    "label": "Add",
+    "text": "",
+    "math": [
+     "P=0.2410+0.2410=0.4820"
+    ]
+   }
+  ],
+  "answer": "0.4820",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 3",
+  "phrase": "at most 6 (= fewer than 7 = not 7)",
+  "ask": "6 is IN → 4, 5, 6.",
+  "steps": [
+   {
+    "label": "Words → list",
+    "text": "The x values that fit:  4, 5, 6 . x =  4   5   6  7",
+    "math": []
+   },
+   {
+    "label": "Write each P(x)",
+    "text": "",
+    "math": [
+     "P(4)=\\frac{20}{83}=0.2410\\qquad P(5)=\\frac{20}{83}=0.2410\\qquad P(6)=\\frac{26}{83}=0.3133"
+    ]
+   },
+   {
+    "label": "Add",
+    "text": "",
+    "math": [
+     "P=0.2410+0.2410+0.3133=0.7953"
+    ]
+   },
+   {
+    "label": "Shortcut (same answer)",
+    "text": "The list is everything except 7:",
+    "math": [
+     "P=1-P(7)=1-0.2048=0.7952"
+    ]
+   }
+  ],
+  "answer": "0.7953",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 3",
+  "phrase": "at least 5 (= more than 4 = not 4)",
+  "ask": "5 is IN → 5, 6, 7.",
+  "steps": [
+   {
+    "label": "Words → list",
+    "text": "The x values that fit:  5, 6, 7 . x = 4  5   6   7",
+    "math": []
+   },
+   {
+    "label": "Write each P(x)",
+    "text": "",
+    "math": [
+     "P(5)=\\frac{20}{83}=0.2410\\qquad P(6)=\\frac{26}{83}=0.3133\\qquad P(7)=\\frac{17}{83}=0.2048"
+    ]
+   },
+   {
+    "label": "Add",
+    "text": "",
+    "math": [
+     "P=0.2410+0.3133+0.2048=0.7591"
+    ]
+   },
+   {
+    "label": "Shortcut (same answer)",
+    "text": "The list is everything except 4:",
+    "math": [
+     "P=1-P(4)=1-0.2410=0.7590"
+    ]
+   }
+  ],
+  "answer": "0.7591",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 3",
+  "phrase": "between 5 and 6 inclusive",
+  "ask": "Both ends count → 5 and 6.",
+  "steps": [
+   {
+    "label": "Words → list",
+    "text": "The x values that fit:  5, 6 . x = 4  5   6  7",
+    "math": []
+   },
+   {
+    "label": "Write each P(x)",
+    "text": "",
+    "math": [
+     "P(5)=\\frac{20}{83}=0.2410\\qquad P(6)=\\frac{26}{83}=0.3133"
+    ]
+   },
+   {
+    "label": "Add",
+    "text": "",
+    "math": [
+     "P=0.2410+0.3133=0.5543"
+    ]
+   }
+  ],
+  "answer": "0.5543",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 3",
+  "phrase": "between 4 and 7 NOT inclusive (strictly between)",
+  "ask": "Ends are out → 5 and 6.",
+  "steps": [
+   {
+    "label": "Words → list",
+    "text": "The x values that fit:  5, 6 . x = 4  5   6  7",
+    "math": []
+   },
+   {
+    "label": "Write each P(x)",
+    "text": "",
+    "math": [
+     "P(5)=\\frac{20}{83}=0.2410\\qquad P(6)=\\frac{26}{83}=0.3133"
+    ]
+   },
+   {
+    "label": "Add",
+    "text": "",
+    "math": [
+     "P=0.2410+0.3133=0.5543"
+    ]
+   }
+  ],
+  "answer": "0.5543",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 3",
+  "phrase": "5 or 7",
+  "ask": "Two separate values → add them.",
+  "steps": [
+   {
+    "label": "Words → list",
+    "text": "The x values that fit:  5, 7 . x = 4  5  6  7",
+    "math": []
+   },
+   {
+    "label": "Write each P(x)",
+    "text": "",
+    "math": [
+     "P(5)=\\frac{20}{83}=0.2410\\qquad P(7)=\\frac{17}{83}=0.2048"
+    ]
+   },
+   {
+    "label": "Add",
+    "text": "",
+    "math": [
+     "P=0.2410+0.2048=0.4458"
+    ]
+   }
+  ],
+  "answer": "0.4458",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 3",
+  "phrase": "mean / expected value E(X) (part c)",
+  "ask": "Weighted average: each x times its probability, then add.",
+  "steps": [
+   {
+    "label": "Rule",
+    "text": "",
+    "math": [
+     "\\mu=E(X)=\\sum x\\cdot P(x)"
+    ]
+   },
+   {
+    "label": "Plug in",
+    "text": "",
+    "math": [
+     "\\mu=4(0.2410)+5(0.2410)+6(0.3133)+7(0.2048)"
+    ]
+   },
+   {
+    "label": "Multiply each",
+    "text": "",
+    "math": [
+     "=0.9640+1.2050+1.8798+1.4336"
+    ]
+   },
+   {
+    "label": "Add",
+    "text": "",
+    "math": [
+     "\\mu=5.48"
+    ]
+   }
+  ],
+  "answer": "μ = E(X) = 5.48 games",
+  "write": "Over many series, the average length is about 5.48 games.",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 3",
+  "phrase": "variance and standard deviation (part d)",
+  "ask": "Subtract the mean, square, multiply by P(x), add (= variance), take √ (= SD).",
+  "steps": [
+   {
+    "label": "Rule",
+    "text": "",
+    "math": [
+     "\\sigma^2=\\sum (x-\\mu)^2\\cdot P(x)\\qquad \\sigma=\\sqrt{\\sigma^2}"
+    ]
+   },
+   {
+    "label": "Each term (μ = 5.48)",
+    "text": "",
+    "math": [
+     "(4-5.48)^2(0.2410)=(-1.48)^2(0.2410)=2.1904(0.2410)=0.5279",
+     "(5-5.48)^2(0.2410)=(-0.48)^2(0.2410)=0.2304(0.2410)=0.0555",
+     "(6-5.48)^2(0.3133)=(0.52)^2(0.3133)=0.2704(0.3133)=0.0847",
+     "(7-5.48)^2(0.2048)=(1.52)^2(0.2048)=2.3104(0.2048)=0.4732"
+    ]
+   },
+   {
+    "label": "Add → variance",
+    "text": "",
+    "math": [
+     "\\sigma^2=0.5279+0.0555+0.0847+0.4732=1.1413"
+    ]
+   },
+   {
+    "label": "Square root → SD",
+    "text": "",
+    "math": [
+     "\\sigma=\\sqrt{1.1413}=1.07"
+    ]
+   }
+  ],
+  "answer": "σ² = 1.1413, σ = 1.07 games",
+  "write": "",
+  "watch_out": "If the question says variance, stop before the √. No ÷ 4 and no ÷ 83 here — the P(x) do the averaging."
+ },
+ {
+  "section": "Question 3",
+  "phrase": "most likely number of games (the mode)",
+  "ask": "The x with the biggest P(x).",
+  "steps": [
+   {
+    "label": "Compare the P(x)",
+    "text": "0.2410, 0.2410, 0.3133, 0.2048 → the biggest is 0.3133 at x = 6.",
+    "math": []
+   }
+  ],
+  "answer": "6 games",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 3",
+  "phrase": "is a 7-game series unusual?",
+  "ask": "Two accepted tests: probability below 0.05, or x outside μ ± 2σ.",
+  "steps": [
+   {
+    "label": "Probability test",
+    "text": "",
+    "math": [
+     "P(7)=0.2048\\ \\text{ is not below }0.05"
+    ]
+   },
+   {
+    "label": "Range test",
+    "text": "",
+    "math": [
+     "\\mu\\pm 2\\sigma=5.48\\pm 2(1.07)=3.34\\ \\text{to}\\ 7.62"
+    ]
+   },
+   {
+    "label": "Decide",
+    "text": "7 is inside 3.34 to 7.62 and 0.2048 ≥ 0.05.",
+    "math": []
+   }
+  ],
+  "answer": "not unusual",
+  "write": "P(7) = 0.2048 > 0.05, so a 7-game series is not unusual.",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 4",
+  "phrase": "exactly 3",
+  "ask": "One value.",
+  "steps": [
+   {
+    "label": "Words → list",
+    "text": "One value. The x values that fit:  3 . x = 0 1 2  3  4 5 6 7 8 9 10",
+    "math": []
+   },
+   {
+    "label": "Short or long?",
+    "text": "1 value — just compute it with the formula.",
+    "math": []
+   },
+   {
+    "label": "Set up",
+    "text": "",
+    "math": [
+     "n=10,\\quad p=0.6,\\quad 1-p=0.4,\\qquad P(x)={}_{n}C_{x}\\,p^{x}(1-p)^{n-x}"
+    ]
+   },
+   {
+    "label": "Compute P(3)",
+    "text": "",
+    "math": [
+     "\\begin{aligned}P(3)&={}_{10}C_{3}\\,(0.6)^{3}\\,(0.4)^{7}\\\\{}_{10}C_{3}&=\\frac{10!}{3!\\,7!}=\\frac{10\\cdot 9\\cdot 8}{3\\cdot 2\\cdot 1}=120\\\\(0.6)^{3}&=0.216\\qquad (0.4)^{7}=0.0016384\\\\P(3)&=120\\times 0.216\\times 0.0016384=0.0425\\end{aligned}"
+    ]
+   }
+  ],
+  "answer": "0.0425",
+  "write": "P(3) = ₁₀C₃(0.6)³(0.4)⁷ = 0.0425.",
+  "watch_out": "The power on 0.4 is n − x = 7, not 3. Calculator check: nCr(10,3) × 0.6^3 × 0.4^7."
+ },
+ {
+  "section": "Question 4",
+  "phrase": "fewer than 3 (under 3, less than 3)",
+  "ask": "3 is OUT.",
+  "steps": [
+   {
+    "label": "Words → list",
+    "text": "3 is OUT. The x values that fit:  0, 1, 2 . x =  0   1   2  3 4 5 6 7 8 9 10",
+    "math": []
+   },
+   {
+    "label": "Short or long?",
+    "text": "3 values — short list: compute each one and add.",
+    "math": []
+   },
+   {
+    "label": "Set up",
+    "text": "",
+    "math": [
+     "n=10,\\quad p=0.6,\\quad 1-p=0.4,\\qquad P(x)={}_{n}C_{x}\\,p^{x}(1-p)^{n-x}"
+    ]
+   },
+   {
+    "label": "Compute P(0)",
+    "text": "",
+    "math": [
+     "\\begin{aligned}P(0)&={}_{10}C_{0}\\,(0.6)^{0}\\,(0.4)^{10}\\\\{}_{10}C_{0}&=\\frac{10!}{0!\\,10!}=1\\\\(0.6)^{0}&=1\\qquad (0.4)^{10}=0.0001048576\\\\P(0)&=1\\times 1\\times 0.0001048576=0.0001\\end{aligned}"
+    ]
+   },
+   {
+    "label": "Compute P(1)",
+    "text": "",
+    "math": [
+     "\\begin{aligned}P(1)&={}_{10}C_{1}\\,(0.6)^{1}\\,(0.4)^{9}\\\\{}_{10}C_{1}&=\\frac{10!}{1!\\,9!}=\\frac{10}{1}=10\\\\(0.6)^{1}&=0.6\\qquad (0.4)^{9}=0.000262144\\\\P(1)&=10\\times 0.6\\times 0.000262144=0.0016\\end{aligned}"
+    ]
+   },
+   {
+    "label": "Compute P(2)",
+    "text": "",
+    "math": [
+     "\\begin{aligned}P(2)&={}_{10}C_{2}\\,(0.6)^{2}\\,(0.4)^{8}\\\\{}_{10}C_{2}&=\\frac{10!}{2!\\,8!}=\\frac{10\\cdot 9}{2\\cdot 1}=45\\\\(0.6)^{2}&=0.36\\qquad (0.4)^{8}=0.00065536\\\\P(2)&=45\\times 0.36\\times 0.00065536=0.0106\\end{aligned}"
+    ]
+   },
+   {
+    "label": "Add",
+    "text": "",
+    "math": [
+     "P(X<3)=0.0001+0.0016+0.0106=0.0123"
+    ]
+   }
+  ],
+  "answer": "0.0123",
+  "write": "P(X < 3) = P(0) + P(1) + P(2) = 0.0123.",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 4",
+  "phrase": "at most 3 (3 or fewer, no more than 3, up to 3)",
+  "ask": "3 is IN.",
+  "steps": [
+   {
+    "label": "Words → list",
+    "text": "3 is IN. The x values that fit:  0, 1, 2, 3 . x =  0   1   2   3  4 5 6 7 8 9 10",
+    "math": []
+   },
+   {
+    "label": "Short or long?",
+    "text": "4 values — short list: compute each one and add.",
+    "math": []
+   },
+   {
+    "label": "Set up",
+    "text": "",
+    "math": [
+     "n=10,\\quad p=0.6,\\quad 1-p=0.4,\\qquad P(x)={}_{n}C_{x}\\,p^{x}(1-p)^{n-x}"
+    ]
+   },
+   {
+    "label": "Compute P(0)",
+    "text": "",
+    "math": [
+     "\\begin{aligned}P(0)&={}_{10}C_{0}\\,(0.6)^{0}\\,(0.4)^{10}\\\\{}_{10}C_{0}&=\\frac{10!}{0!\\,10!}=1\\\\(0.6)^{0}&=1\\qquad (0.4)^{10}=0.0001048576\\\\P(0)&=1\\times 1\\times 0.0001048576=0.0001\\end{aligned}"
+    ]
+   },
+   {
+    "label": "Compute P(1)",
+    "text": "",
+    "math": [
+     "\\begin{aligned}P(1)&={}_{10}C_{1}\\,(0.6)^{1}\\,(0.4)^{9}\\\\{}_{10}C_{1}&=\\frac{10!}{1!\\,9!}=\\frac{10}{1}=10\\\\(0.6)^{1}&=0.6\\qquad (0.4)^{9}=0.000262144\\\\P(1)&=10\\times 0.6\\times 0.000262144=0.0016\\end{aligned}"
+    ]
+   },
+   {
+    "label": "Compute P(2)",
+    "text": "",
+    "math": [
+     "\\begin{aligned}P(2)&={}_{10}C_{2}\\,(0.6)^{2}\\,(0.4)^{8}\\\\{}_{10}C_{2}&=\\frac{10!}{2!\\,8!}=\\frac{10\\cdot 9}{2\\cdot 1}=45\\\\(0.6)^{2}&=0.36\\qquad (0.4)^{8}=0.00065536\\\\P(2)&=45\\times 0.36\\times 0.00065536=0.0106\\end{aligned}"
+    ]
+   },
+   {
+    "label": "Compute P(3)",
+    "text": "",
+    "math": [
+     "\\begin{aligned}P(3)&={}_{10}C_{3}\\,(0.6)^{3}\\,(0.4)^{7}\\\\{}_{10}C_{3}&=\\frac{10!}{3!\\,7!}=\\frac{10\\cdot 9\\cdot 8}{3\\cdot 2\\cdot 1}=120\\\\(0.6)^{3}&=0.216\\qquad (0.4)^{7}=0.0016384\\\\P(3)&=120\\times 0.216\\times 0.0016384=0.0425\\end{aligned}"
+    ]
+   },
+   {
+    "label": "Add",
+    "text": "",
+    "math": [
+     "P(X\\le 3)=0.0001+0.0016+0.0106+0.0425=0.0548"
+    ]
+   }
+  ],
+  "answer": "0.0548",
+  "write": "P(X ≤ 3) = P(0) + P(1) + P(2) + P(3) = 0.0548.",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 4",
+  "phrase": "more than 3 (over 3)",
+  "ask": "3 is OUT, so the list is 4 through 10.",
+  "steps": [
+   {
+    "label": "Words → list",
+    "text": "3 is OUT, so the list is 4 through 10. The x values that fit:  4, 5, 6, 7, 8, 9, 10 . x = 0 1 2 3  4   5   6   7   8   9   10",
+    "math": []
+   },
+   {
+    "label": "Short or long?",
+    "text": "7 values is a long list. Compute the other side (x = 0, 1, 2, 3) and subtract from 1.",
+    "math": []
+   },
+   {
+    "label": "Set up",
+    "text": "",
+    "math": [
+     "n=10,\\quad p=0.6,\\quad 1-p=0.4,\\qquad P(x)={}_{n}C_{x}\\,p^{x}(1-p)^{n-x}"
+    ]
+   },
+   {
+    "label": "Compute P(0)",
+    "text": "",
+    "math": [
+     "\\begin{aligned}P(0)&={}_{10}C_{0}\\,(0.6)^{0}\\,(0.4)^{10}\\\\{}_{10}C_{0}&=\\frac{10!}{0!\\,10!}=1\\\\(0.6)^{0}&=1\\qquad (0.4)^{10}=0.0001048576\\\\P(0)&=1\\times 1\\times 0.0001048576=0.0001\\end{aligned}"
+    ]
+   },
+   {
+    "label": "Compute P(1)",
+    "text": "",
+    "math": [
+     "\\begin{aligned}P(1)&={}_{10}C_{1}\\,(0.6)^{1}\\,(0.4)^{9}\\\\{}_{10}C_{1}&=\\frac{10!}{1!\\,9!}=\\frac{10}{1}=10\\\\(0.6)^{1}&=0.6\\qquad (0.4)^{9}=0.000262144\\\\P(1)&=10\\times 0.6\\times 0.000262144=0.0016\\end{aligned}"
+    ]
+   },
+   {
+    "label": "Compute P(2)",
+    "text": "",
+    "math": [
+     "\\begin{aligned}P(2)&={}_{10}C_{2}\\,(0.6)^{2}\\,(0.4)^{8}\\\\{}_{10}C_{2}&=\\frac{10!}{2!\\,8!}=\\frac{10\\cdot 9}{2\\cdot 1}=45\\\\(0.6)^{2}&=0.36\\qquad (0.4)^{8}=0.00065536\\\\P(2)&=45\\times 0.36\\times 0.00065536=0.0106\\end{aligned}"
+    ]
+   },
+   {
+    "label": "Compute P(3)",
+    "text": "",
+    "math": [
+     "\\begin{aligned}P(3)&={}_{10}C_{3}\\,(0.6)^{3}\\,(0.4)^{7}\\\\{}_{10}C_{3}&=\\frac{10!}{3!\\,7!}=\\frac{10\\cdot 9\\cdot 8}{3\\cdot 2\\cdot 1}=120\\\\(0.6)^{3}&=0.216\\qquad (0.4)^{7}=0.0016384\\\\P(3)&=120\\times 0.216\\times 0.0016384=0.0425\\end{aligned}"
+    ]
+   },
+   {
+    "label": "Add",
+    "text": "",
+    "math": [
+     "0.0001+0.0016+0.0106+0.0425=0.0548"
+    ]
+   },
+   {
+    "label": "Subtract from 1",
+    "text": "",
+    "math": [
+     "P(X>3)=1-0.0548=0.9452"
+    ]
+   }
+  ],
+  "answer": "0.9452",
+  "write": "P(X > 3) = 1 − P(X ≤ 3) = 1 − 0.0548 = 0.9452.",
+  "watch_out": "1 − 0.0123 would be \"at least 3\". Decide IN or OUT first."
+ },
+ {
+  "section": "Question 4",
+  "phrase": "at least 3 (3 or more, no fewer than 3)",
+  "ask": "3 is IN, so the list is 3 through 10.",
+  "steps": [
+   {
+    "label": "Words → list",
+    "text": "3 is IN, so the list is 3 through 10. The x values that fit:  3, 4, 5, 6, 7, 8, 9, 10 . x = 0 1 2  3   4   5   6   7   8   9   10",
+    "math": []
+   },
+   {
+    "label": "Short or long?",
+    "text": "8 values is a long list. Compute the other side (x = 0, 1, 2) and subtract from 1.",
+    "math": []
+   },
+   {
+    "label": "Set up",
+    "text": "",
+    "math": [
+     "n=10,\\quad p=0.6,\\quad 1-p=0.4,\\qquad P(x)={}_{n}C_{x}\\,p^{x}(1-p)^{n-x}"
+    ]
+   },
+   {
+    "label": "Compute P(0)",
+    "text": "",
+    "math": [
+     "\\begin{aligned}P(0)&={}_{10}C_{0}\\,(0.6)^{0}\\,(0.4)^{10}\\\\{}_{10}C_{0}&=\\frac{10!}{0!\\,10!}=1\\\\(0.6)^{0}&=1\\qquad (0.4)^{10}=0.0001048576\\\\P(0)&=1\\times 1\\times 0.0001048576=0.0001\\end{aligned}"
+    ]
+   },
+   {
+    "label": "Compute P(1)",
+    "text": "",
+    "math": [
+     "\\begin{aligned}P(1)&={}_{10}C_{1}\\,(0.6)^{1}\\,(0.4)^{9}\\\\{}_{10}C_{1}&=\\frac{10!}{1!\\,9!}=\\frac{10}{1}=10\\\\(0.6)^{1}&=0.6\\qquad (0.4)^{9}=0.000262144\\\\P(1)&=10\\times 0.6\\times 0.000262144=0.0016\\end{aligned}"
+    ]
+   },
+   {
+    "label": "Compute P(2)",
+    "text": "",
+    "math": [
+     "\\begin{aligned}P(2)&={}_{10}C_{2}\\,(0.6)^{2}\\,(0.4)^{8}\\\\{}_{10}C_{2}&=\\frac{10!}{2!\\,8!}=\\frac{10\\cdot 9}{2\\cdot 1}=45\\\\(0.6)^{2}&=0.36\\qquad (0.4)^{8}=0.00065536\\\\P(2)&=45\\times 0.36\\times 0.00065536=0.0106\\end{aligned}"
+    ]
+   },
+   {
+    "label": "Add",
+    "text": "",
+    "math": [
+     "0.0001+0.0016+0.0106=0.0123"
+    ]
+   },
+   {
+    "label": "Subtract from 1",
+    "text": "",
+    "math": [
+     "P(X\\ge 3)=1-0.0123=0.9877"
+    ]
+   }
+  ],
+  "answer": "0.9877",
+  "write": "P(X ≥ 3) = 1 − P(X ≤ 2) = 1 − 0.0123 = 0.9877.",
+  "watch_out": "The other side of \"at least 3\" is 0, 1, 2 — it does NOT include 3."
+ },
+ {
+  "section": "Question 4",
+  "phrase": "between 1 and 3 inclusive (from 1 to 3)",
+  "ask": "Both ends count.",
+  "steps": [
+   {
+    "label": "Words → list",
+    "text": "Both ends count. The x values that fit:  1, 2, 3 . x = 0  1   2   3  4 5 6 7 8 9 10",
+    "math": []
+   },
+   {
+    "label": "Short or long?",
+    "text": "3 values — short list: compute each one and add.",
+    "math": []
+   },
+   {
+    "label": "Set up",
+    "text": "",
+    "math": [
+     "n=10,\\quad p=0.6,\\quad 1-p=0.4,\\qquad P(x)={}_{n}C_{x}\\,p^{x}(1-p)^{n-x}"
+    ]
+   },
+   {
+    "label": "Compute P(1)",
+    "text": "",
+    "math": [
+     "\\begin{aligned}P(1)&={}_{10}C_{1}\\,(0.6)^{1}\\,(0.4)^{9}\\\\{}_{10}C_{1}&=\\frac{10!}{1!\\,9!}=\\frac{10}{1}=10\\\\(0.6)^{1}&=0.6\\qquad (0.4)^{9}=0.000262144\\\\P(1)&=10\\times 0.6\\times 0.000262144=0.0016\\end{aligned}"
+    ]
+   },
+   {
+    "label": "Compute P(2)",
+    "text": "",
+    "math": [
+     "\\begin{aligned}P(2)&={}_{10}C_{2}\\,(0.6)^{2}\\,(0.4)^{8}\\\\{}_{10}C_{2}&=\\frac{10!}{2!\\,8!}=\\frac{10\\cdot 9}{2\\cdot 1}=45\\\\(0.6)^{2}&=0.36\\qquad (0.4)^{8}=0.00065536\\\\P(2)&=45\\times 0.36\\times 0.00065536=0.0106\\end{aligned}"
+    ]
+   },
+   {
+    "label": "Compute P(3)",
+    "text": "",
+    "math": [
+     "\\begin{aligned}P(3)&={}_{10}C_{3}\\,(0.6)^{3}\\,(0.4)^{7}\\\\{}_{10}C_{3}&=\\frac{10!}{3!\\,7!}=\\frac{10\\cdot 9\\cdot 8}{3\\cdot 2\\cdot 1}=120\\\\(0.6)^{3}&=0.216\\qquad (0.4)^{7}=0.0016384\\\\P(3)&=120\\times 0.216\\times 0.0016384=0.0425\\end{aligned}"
+    ]
+   },
+   {
+    "label": "Add",
+    "text": "",
+    "math": [
+     "P(1\\le X\\le 3)=0.0016+0.0106+0.0425=0.0547"
+    ]
+   }
+  ],
+  "answer": "0.0547",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 4",
+  "phrase": "between 1 and 3 NOT inclusive (strictly between)",
+  "ask": "Ends are out.",
+  "steps": [
+   {
+    "label": "Words → list",
+    "text": "Ends are out. The x values that fit:  2 . x = 0 1  2  3 4 5 6 7 8 9 10",
+    "math": []
+   },
+   {
+    "label": "Short or long?",
+    "text": "1 value — just compute it with the formula.",
+    "math": []
+   },
+   {
+    "label": "Set up",
+    "text": "",
+    "math": [
+     "n=10,\\quad p=0.6,\\quad 1-p=0.4,\\qquad P(x)={}_{n}C_{x}\\,p^{x}(1-p)^{n-x}"
+    ]
+   },
+   {
+    "label": "Compute P(2)",
+    "text": "",
+    "math": [
+     "\\begin{aligned}P(2)&={}_{10}C_{2}\\,(0.6)^{2}\\,(0.4)^{8}\\\\{}_{10}C_{2}&=\\frac{10!}{2!\\,8!}=\\frac{10\\cdot 9}{2\\cdot 1}=45\\\\(0.6)^{2}&=0.36\\qquad (0.4)^{8}=0.00065536\\\\P(2)&=45\\times 0.36\\times 0.00065536=0.0106\\end{aligned}"
+    ]
+   }
+  ],
+  "answer": "0.0106",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 4",
+  "phrase": "at least 1 (at least one says yes)",
+  "ask": "1 is IN, so the list is 1 through 10 — the other side is just x = 0.",
+  "steps": [
+   {
+    "label": "Words → list",
+    "text": "1 is IN, so the list is 1 through 10 — the other side is just x = 0. The x values that fit:  1, 2, 3, 4, 5, 6, 7, 8, 9, 10 . x = 0  1   2   3   4   5   6   7   8   9   10",
+    "math": []
+   },
+   {
+    "label": "Short or long?",
+    "text": "10 values is a long list. Compute the other side (x = 0) and subtract from 1.",
+    "math": []
+   },
+   {
+    "label": "Set up",
+    "text": "",
+    "math": [
+     "n=10,\\quad p=0.6,\\quad 1-p=0.4,\\qquad P(x)={}_{n}C_{x}\\,p^{x}(1-p)^{n-x}"
+    ]
+   },
+   {
+    "label": "Compute P(0)",
+    "text": "",
+    "math": [
+     "\\begin{aligned}P(0)&={}_{10}C_{0}\\,(0.6)^{0}\\,(0.4)^{10}\\\\{}_{10}C_{0}&=\\frac{10!}{0!\\,10!}=1\\\\(0.6)^{0}&=1\\qquad (0.4)^{10}=0.0001048576\\\\P(0)&=1\\times 1\\times 0.0001048576=0.0001\\end{aligned}"
+    ]
+   },
+   {
+    "label": "Subtract from 1",
+    "text": "",
+    "math": [
+     "P(X\\ge 1)=1-0.0001=0.9999"
+    ]
+   }
+  ],
+  "answer": "0.9999",
+  "write": "P(X ≥ 1) = 1 − P(0) = 1 − 0.0001 = 0.9999.",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 4",
+  "phrase": "none (nobody says yes, zero)",
+  "ask": "Just x = 0.",
+  "steps": [
+   {
+    "label": "Words → list",
+    "text": "Just x = 0. The x values that fit:  0 . x =  0  1 2 3 4 5 6 7 8 9 10",
+    "math": []
+   },
+   {
+    "label": "Short or long?",
+    "text": "1 value — just compute it with the formula.",
+    "math": []
+   },
+   {
+    "label": "Set up",
+    "text": "",
+    "math": [
+     "n=10,\\quad p=0.6,\\quad 1-p=0.4,\\qquad P(x)={}_{n}C_{x}\\,p^{x}(1-p)^{n-x}"
+    ]
+   },
+   {
+    "label": "Compute P(0)",
+    "text": "",
+    "math": [
+     "\\begin{aligned}P(0)&={}_{10}C_{0}\\,(0.6)^{0}\\,(0.4)^{10}\\\\{}_{10}C_{0}&=\\frac{10!}{0!\\,10!}=1\\\\(0.6)^{0}&=1\\qquad (0.4)^{10}=0.0001048576\\\\P(0)&=1\\times 1\\times 0.0001048576=0.0001\\end{aligned}"
+    ]
+   }
+  ],
+  "answer": "0.0001",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 4",
+  "phrase": "all 10 say yes",
+  "ask": "Just x = 10.",
+  "steps": [
+   {
+    "label": "Words → list",
+    "text": "Just x = 10. The x values that fit:  10 . x = 0 1 2 3 4 5 6 7 8 9  10",
+    "math": []
+   },
+   {
+    "label": "Short or long?",
+    "text": "1 value — just compute it with the formula.",
+    "math": []
+   },
+   {
+    "label": "Set up",
+    "text": "",
+    "math": [
+     "n=10,\\quad p=0.6,\\quad 1-p=0.4,\\qquad P(x)={}_{n}C_{x}\\,p^{x}(1-p)^{n-x}"
+    ]
+   },
+   {
+    "label": "Compute P(10)",
+    "text": "",
+    "math": [
+     "\\begin{aligned}P(10)&={}_{10}C_{10}\\,(0.6)^{10}\\,(0.4)^{0}\\\\{}_{10}C_{10}&=\\frac{10!}{10!\\,0!}=1\\\\(0.6)^{10}&=0.0060466176\\qquad (0.4)^{0}=1\\\\P(10)&=1\\times 0.0060466176\\times 1=0.0060\\end{aligned}"
+    ]
+   }
+  ],
+  "answer": "0.0060",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 4",
+  "phrase": "at most 8 (a long list on the low side)",
+  "ask": "8 is IN, so the list is 0 through 8 — the other side is 9 and 10.",
+  "steps": [
+   {
+    "label": "Words → list",
+    "text": "8 is IN, so the list is 0 through 8 — the other side is 9 and 10. The x values that fit:  0, 1, 2, 3, 4, 5, 6, 7, 8 . x =  0   1   2   3   4   5   6   7   8  9 10",
+    "math": []
+   },
+   {
+    "label": "Short or long?",
+    "text": "9 values is a long list. Compute the other side (x = 9, 10) and subtract from 1.",
+    "math": []
+   },
+   {
+    "label": "Set up",
+    "text": "",
+    "math": [
+     "n=10,\\quad p=0.6,\\quad 1-p=0.4,\\qquad P(x)={}_{n}C_{x}\\,p^{x}(1-p)^{n-x}"
+    ]
+   },
+   {
+    "label": "Compute P(9)",
+    "text": "",
+    "math": [
+     "\\begin{aligned}P(9)&={}_{10}C_{9}\\,(0.6)^{9}\\,(0.4)^{1}\\\\{}_{10}C_{9}&=\\frac{10!}{9!\\,1!}=\\frac{10}{1}=10\\\\(0.6)^{9}&=0.010077696\\qquad (0.4)^{1}=0.4\\\\P(9)&=10\\times 0.010077696\\times 0.4=0.0403\\end{aligned}"
+    ]
+   },
+   {
+    "label": "Compute P(10)",
+    "text": "",
+    "math": [
+     "\\begin{aligned}P(10)&={}_{10}C_{10}\\,(0.6)^{10}\\,(0.4)^{0}\\\\{}_{10}C_{10}&=\\frac{10!}{10!\\,0!}=1\\\\(0.6)^{10}&=0.0060466176\\qquad (0.4)^{0}=1\\\\P(10)&=1\\times 0.0060466176\\times 1=0.0060\\end{aligned}"
+    ]
+   },
+   {
+    "label": "Add",
+    "text": "",
+    "math": [
+     "0.0403+0.0060=0.0463"
+    ]
+   },
+   {
+    "label": "Subtract from 1",
+    "text": "",
+    "math": [
+     "P(X\\le 8)=1-0.0463=0.9537"
+    ]
+   }
+  ],
+  "answer": "0.9537",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 4",
+  "phrase": "more than 8",
+  "ask": "8 is OUT → 9 and 10.",
+  "steps": [
+   {
+    "label": "Words → list",
+    "text": "8 is OUT → 9 and 10. The x values that fit:  9, 10 . x = 0 1 2 3 4 5 6 7 8  9   10",
+    "math": []
+   },
+   {
+    "label": "Short or long?",
+    "text": "2 values — short list: compute each one and add.",
+    "math": []
+   },
+   {
+    "label": "Set up",
+    "text": "",
+    "math": [
+     "n=10,\\quad p=0.6,\\quad 1-p=0.4,\\qquad P(x)={}_{n}C_{x}\\,p^{x}(1-p)^{n-x}"
+    ]
+   },
+   {
+    "label": "Compute P(9)",
+    "text": "",
+    "math": [
+     "\\begin{aligned}P(9)&={}_{10}C_{9}\\,(0.6)^{9}\\,(0.4)^{1}\\\\{}_{10}C_{9}&=\\frac{10!}{9!\\,1!}=\\frac{10}{1}=10\\\\(0.6)^{9}&=0.010077696\\qquad (0.4)^{1}=0.4\\\\P(9)&=10\\times 0.010077696\\times 0.4=0.0403\\end{aligned}"
+    ]
+   },
+   {
+    "label": "Compute P(10)",
+    "text": "",
+    "math": [
+     "\\begin{aligned}P(10)&={}_{10}C_{10}\\,(0.6)^{10}\\,(0.4)^{0}\\\\{}_{10}C_{10}&=\\frac{10!}{10!\\,0!}=1\\\\(0.6)^{10}&=0.0060466176\\qquad (0.4)^{0}=1\\\\P(10)&=1\\times 0.0060466176\\times 1=0.0060\\end{aligned}"
+    ]
+   },
+   {
+    "label": "Add",
+    "text": "",
+    "math": [
+     "P(X>8)=0.0403+0.0060=0.0463"
+    ]
+   }
+  ],
+  "answer": "0.0463",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 4",
+  "phrase": "expected number (mean) and standard deviation for the sample of 10",
+  "ask": "Binomial shortcuts — no table needed.",
+  "steps": [
+   {
+    "label": "Rule",
+    "text": "",
+    "math": [
+     "\\mu=np\\qquad \\sigma=\\sqrt{np(1-p)}"
+    ]
+   },
+   {
+    "label": "Plug in",
+    "text": "",
+    "math": [
+     "\\mu=10(0.6)=6\\qquad \\sigma=\\sqrt{10(0.6)(0.4)}=\\sqrt{2.4}"
+    ]
+   },
+   {
+    "label": "Compute",
+    "text": "",
+    "math": [
+     "\\sigma=1.55"
+    ]
+   }
+  ],
+  "answer": "μ = 6, σ = 1.55",
+  "write": "We expect 6 of the 10 to say yes, give or take about 1.55.",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 4",
+  "phrase": "expected number and SD for a sample of 200",
+  "ask": "Same shortcuts with n = 200.",
+  "steps": [
+   {
+    "label": "Rule",
+    "text": "",
+    "math": [
+     "\\mu=np\\qquad \\sigma=\\sqrt{np(1-p)}"
+    ]
+   },
+   {
+    "label": "Plug in",
+    "text": "",
+    "math": [
+     "\\mu=200(0.6)=120\\qquad \\sigma=\\sqrt{200(0.6)(0.4)}=\\sqrt{48}"
+    ]
+   },
+   {
+    "label": "Compute",
+    "text": "",
+    "math": [
+     "\\sigma=6.93"
+    ]
+   }
+  ],
+  "answer": "μ = 120, σ = 6.93",
+  "write": "",
+  "watch_out": "48 is the variance — take the square root for σ."
+ },
+ {
+  "section": "Question 4",
+  "phrase": "would 130 of 200 be unusual?",
+  "ask": "Usual range = μ ± 2σ (allowed when np(1 − p) ≥ 10).",
+  "steps": [
+   {
+    "label": "Check the condition",
+    "text": "",
+    "math": [
+     "np(1-p)=200(0.6)(0.4)=48\\ge 10\\ \\text{✓}"
+    ]
+   },
+   {
+    "label": "Usual range",
+    "text": "",
+    "math": [
+     "\\mu\\pm 2\\sigma=120\\pm 2(6.93)=120\\pm 13.86=106.14\\ \\text{to}\\ 133.86"
+    ]
+   },
+   {
+    "label": "Decide",
+    "text": "130 is inside the range.",
+    "math": []
+   }
+  ],
+  "answer": "not unusual",
+  "write": "130 is inside μ ± 2σ = 106.1 to 133.9, so it is not unusual.",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 4",
+  "phrase": "would only 2 of the 10 saying yes be unusual?",
+  "ask": "Unusual = the probability of that or something more extreme is below 0.05. \"2 or fewer\" = x = 0, 1, 2.",
+  "steps": [
+   {
+    "label": "Words → list",
+    "text": "2 or fewer → 0, 1, 2. x =  0   1   2  3 4 5 6 7 8 9 10",
+    "math": []
+   },
+   {
+    "label": "Add their probabilities (each worked in the \"fewer than 3\" box)",
+    "text": "",
+    "math": [
+     "P(X\\le 2)=0.0001+0.0016+0.0106=0.0123"
+    ]
+   },
+   {
+    "label": "Compare with 0.05",
+    "text": "",
+    "math": [
+     "0.0123<0.05"
+    ]
+   }
+  ],
+  "answer": "yes, unusual",
+  "write": "P(X ≤ 2) = 0.0123 < 0.05, so it would be unusual.",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 4",
+  "phrase": "is this a binomial experiment? (why the formula is allowed)",
+  "ask": "Four conditions — write all four.",
+  "steps": [
+   {
+    "label": "Fixed number of trials",
+    "text": "n = 10 women.",
+    "math": []
+   },
+   {
+    "label": "Each trial has two outcomes",
+    "text": "yes / no.",
+    "math": []
+   },
+   {
+    "label": "Same probability every trial",
+    "text": "p = 0.60 for each woman.",
+    "math": []
+   },
+   {
+    "label": "Independent trials",
+    "text": "one woman's answer does not change another's (random sample).",
+    "math": []
+   }
+  ],
+  "answer": "yes — all four conditions hold",
+  "write": "",
+  "watch_out": "A \"not binomial\" example: drawing cards without replacement from a small deck (p changes each draw)."
+ },
+ {
+  "section": "Question 5",
+  "phrase": "sketch / describe the pdf and give its height",
+  "ask": "A flat line from 70 to 100; zero everywhere else.",
+  "steps": [
+   {
+    "label": "Set up",
+    "text": "",
+    "math": [
+     "a=70,\\quad b=100,\\quad b-a=30"
+    ]
+   },
+   {
+    "label": "Height",
+    "text": "",
+    "math": [
+     "\\text{height}=\\frac{1}{b-a}=\\frac{1}{100-70}=\\frac{1}{30}=0.0333"
+    ]
+   },
+   {
+    "label": "Check the area",
+    "text": "",
+    "math": [
+     "\\text{area}=\\text{width}\\times\\text{height}=30\\times\\frac{1}{30}=1\\ \\text{✓}"
+    ]
+   }
+  ],
+  "answer": "rectangle from 70 to 100 with height 1/30",
+  "write": "f(x) = 1/30 for 70 ≤ x ≤ 100, and 0 otherwise.",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 5",
+  "phrase": "between 75 and 85",
+  "ask": "A piece in the middle.",
+  "steps": [
+   {
+    "label": "Set up",
+    "text": "",
+    "math": [
+     "a=70,\\quad b=100,\\quad b-a=30"
+    ]
+   },
+   {
+    "label": "Words → piece",
+    "text": "From  75  to  85 ; its length is 85 − 75 = 10.",
+    "math": []
+   },
+   {
+    "label": "Rule",
+    "text": "",
+    "math": [
+     "P(c\\le X\\le d)=\\frac{d-c}{b-a}"
+    ]
+   },
+   {
+    "label": "Plug in and compute",
+    "text": "",
+    "math": [
+     "P(75\\le X\\le 85)=\\frac{85-75}{100-70}=\\frac{10}{30}=0.3333"
+    ]
+   }
+  ],
+  "answer": "0.3333",
+  "write": "P(75 ≤ X ≤ 85) = (85 − 75)/(100 − 70) = 10/30 = 0.3333.",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 5",
+  "phrase": "below 80 (less than 80, at most 80, cooler than 80)",
+  "ask": "From the left end 70 up to 80.",
+  "steps": [
+   {
+    "label": "Set up",
+    "text": "",
+    "math": [
+     "a=70,\\quad b=100,\\quad b-a=30"
+    ]
+   },
+   {
+    "label": "Words → piece",
+    "text": "From  70  to  80 ; its length is 80 − 70 = 10.",
+    "math": []
+   },
+   {
+    "label": "Rule",
+    "text": "",
+    "math": [
+     "P(c\\le X\\le d)=\\frac{d-c}{b-a}"
+    ]
+   },
+   {
+    "label": "Plug in and compute",
+    "text": "",
+    "math": [
+     "P(70\\le X\\le 80)=\\frac{80-70}{100-70}=\\frac{10}{30}=0.3333"
+    ]
+   }
+  ],
+  "answer": "0.3333",
+  "write": "",
+  "watch_out": "P(X ≤ 80) is the identical number — one single point has no width, so P(X = 80) = 0."
+ },
+ {
+  "section": "Question 5",
+  "phrase": "above 90 (more than 90, at least 90, hotter than 90)",
+  "ask": "From 90 up to the right end 100.",
+  "steps": [
+   {
+    "label": "Set up",
+    "text": "",
+    "math": [
+     "a=70,\\quad b=100,\\quad b-a=30"
+    ]
+   },
+   {
+    "label": "Words → piece",
+    "text": "From  90  to  100 ; its length is 100 − 90 = 10.",
+    "math": []
+   },
+   {
+    "label": "Rule",
+    "text": "",
+    "math": [
+     "P(c\\le X\\le d)=\\frac{d-c}{b-a}"
+    ]
+   },
+   {
+    "label": "Plug in and compute",
+    "text": "",
+    "math": [
+     "P(90\\le X\\le 100)=\\frac{100-90}{100-70}=\\frac{10}{30}=0.3333"
+    ]
+   }
+  ],
+  "answer": "0.3333",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 5",
+  "phrase": "at least 95",
+  "ask": "From 95 to 100.",
+  "steps": [
+   {
+    "label": "Set up",
+    "text": "",
+    "math": [
+     "a=70,\\quad b=100,\\quad b-a=30"
+    ]
+   },
+   {
+    "label": "Words → piece",
+    "text": "From  95  to  100 ; its length is 100 − 95 = 5.",
+    "math": []
+   },
+   {
+    "label": "Rule",
+    "text": "",
+    "math": [
+     "P(c\\le X\\le d)=\\frac{d-c}{b-a}"
+    ]
+   },
+   {
+    "label": "Plug in and compute",
+    "text": "",
+    "math": [
+     "P(95\\le X\\le 100)=\\frac{100-95}{100-70}=\\frac{5}{30}=0.1667"
+    ]
+   }
+  ],
+  "answer": "0.1667",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 5",
+  "phrase": "between 60 and 75 (60 is outside the range)",
+  "ask": "Only the part inside 70–100 counts, so the piece is 70 to 75.",
+  "steps": [
+   {
+    "label": "Set up",
+    "text": "",
+    "math": [
+     "a=70,\\quad b=100,\\quad b-a=30"
+    ]
+   },
+   {
+    "label": "Words → piece",
+    "text": "From  70  to  75 ; its length is 75 − 70 = 5.",
+    "math": []
+   },
+   {
+    "label": "Rule",
+    "text": "",
+    "math": [
+     "P(c\\le X\\le d)=\\frac{d-c}{b-a}"
+    ]
+   },
+   {
+    "label": "Plug in and compute",
+    "text": "",
+    "math": [
+     "P(70\\le X\\le 75)=\\frac{75-70}{100-70}=\\frac{5}{30}=0.1667"
+    ]
+   }
+  ],
+  "answer": "0.1667",
+  "write": "",
+  "watch_out": "Using 75 − 60 = 15 is wrong: nothing lives below 70."
+ },
+ {
+  "section": "Question 5",
+  "phrase": "exactly 80",
+  "ask": "A single point has no width, so no area.",
+  "steps": [
+   {
+    "label": "Rule",
+    "text": "",
+    "math": [
+     "P(X=\\text{one value})=\\frac{80-80}{30}=\\frac{0}{30}=0"
+    ]
+   }
+  ],
+  "answer": "0",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 5",
+  "phrase": "20% of days are cooler than what temperature?",
+  "ask": "Backwards: the area to the LEFT is given (0.20); find the cut x.",
+  "steps": [
+   {
+    "label": "Set up",
+    "text": "",
+    "math": [
+     "a=70,\\quad b=100,\\quad b-a=30,\\quad \\text{area to the left}=0.20"
+    ]
+   },
+   {
+    "label": "Rule (area = length ÷ 30, so length = area × 30)",
+    "text": "",
+    "math": [
+     "x=a+(\\text{area})(b-a)"
+    ]
+   },
+   {
+    "label": "Plug in and compute",
+    "text": "",
+    "math": [
+     "x=70+0.20(30)=70+6=76"
+    ]
+   },
+   {
+    "label": "Check",
+    "text": "",
+    "math": [
+     "P(X<76)=\\frac{76-70}{30}=\\frac{6}{30}=0.20\\ \\text{✓}"
+    ]
+   }
+  ],
+  "answer": "76°F",
+  "write": "",
+  "watch_out": "The 20% goes in as 0.20 — no z, no table, no hint."
+ },
+ {
+  "section": "Question 5",
+  "phrase": "the hottest 10% of days start at what temperature?",
+  "ask": "Top 10% means 90% are below it → area to the LEFT = 0.90.",
+  "steps": [
+   {
+    "label": "Set up",
+    "text": "",
+    "math": [
+     "\\text{area to the left}=1-0.10=0.90"
+    ]
+   },
+   {
+    "label": "Rule",
+    "text": "",
+    "math": [
+     "x=a+(\\text{area})(b-a)"
+    ]
+   },
+   {
+    "label": "Plug in and compute",
+    "text": "",
+    "math": [
+     "x=70+0.90(30)=70+27=97"
+    ]
+   },
+   {
+    "label": "Check",
+    "text": "",
+    "math": [
+     "P(X>97)=\\frac{100-97}{30}=\\frac{3}{30}=0.10\\ \\text{✓}"
+    ]
+   }
+  ],
+  "answer": "97°F",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 5",
+  "phrase": "the mean and standard deviation of the uniform (if asked)",
+  "ask": "Mean = the midpoint. SD = width ÷ √12.",
+  "steps": [
+   {
+    "label": "Rule",
+    "text": "",
+    "math": [
+     "\\mu=\\frac{a+b}{2}\\qquad \\sigma=\\frac{b-a}{\\sqrt{12}}"
+    ]
+   },
+   {
+    "label": "Plug in and compute",
+    "text": "",
+    "math": [
+     "\\mu=\\frac{70+100}{2}=85\\qquad \\sigma=\\frac{30}{\\sqrt{12}}=8.66"
+    ]
+   }
+  ],
+  "answer": "μ = 85, σ = 8.66",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 6",
+  "phrase": "area to the LEFT of z = −1.10 (below −1.10)",
+  "ask": "Exactly what a hint gives.",
+  "steps": [
+   {
+    "label": "Words → area",
+    "text": "\"left of\" → the hint is the answer.",
+    "math": []
+   },
+   {
+    "label": "Read the hint",
+    "text": "",
+    "math": [
+     "\\text{left of }-1.10=0.1357"
+    ]
+   },
+   {
+    "label": "Rule and answer",
+    "text": "",
+    "math": [
+     "P(Z<-1.10)=0.1357"
+    ]
+   }
+  ],
+  "answer": "0.1357",
+  "write": "",
+  "watch_out": "A hint for a negative z is already the left area — do not subtract it from 1."
+ },
+ {
+  "section": "Question 6",
+  "phrase": "area to the RIGHT of z = −1.10 (above −1.10)",
+  "ask": "Right = 1 − left.",
+  "steps": [
+   {
+    "label": "Words → area",
+    "text": "\"right of\" → 1 − hint.",
+    "math": []
+   },
+   {
+    "label": "Read the hint",
+    "text": "",
+    "math": [
+     "\\text{left of }-1.10=0.1357"
+    ]
+   },
+   {
+    "label": "Rule and compute",
+    "text": "",
+    "math": [
+     "P(Z>-1.10)=1-0.1357=0.8643"
+    ]
+   }
+  ],
+  "answer": "0.8643",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 6",
+  "phrase": "area to the RIGHT of z = 1.45",
+  "ask": "Right = 1 − left.",
+  "steps": [
+   {
+    "label": "Words → area",
+    "text": "\"right of\" → 1 − hint.",
+    "math": []
+   },
+   {
+    "label": "Read the hint",
+    "text": "",
+    "math": [
+     "\\text{left of }1.45=0.9265"
+    ]
+   },
+   {
+    "label": "Rule and compute",
+    "text": "",
+    "math": [
+     "P(Z>1.45)=1-0.9265=0.0735"
+    ]
+   }
+  ],
+  "answer": "0.0735",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 6",
+  "phrase": "area BETWEEN z = −0.60 and z = 1.45",
+  "ask": "Bigger left area minus smaller left area.",
+  "steps": [
+   {
+    "label": "Words → area",
+    "text": "\"between\" → (left of the bigger z) − (left of the smaller z). Bigger z = 1.45, smaller z = −0.60.",
+    "math": []
+   },
+   {
+    "label": "Read both hints",
+    "text": "",
+    "math": [
+     "\\text{left of }1.45=0.9265\\qquad \\text{left of }-0.60=0.2743"
+    ]
+   },
+   {
+    "label": "Rule and compute",
+    "text": "",
+    "math": [
+     "P(-0.60<Z<1.45)=0.9265-0.2743=0.6522"
+    ]
+   }
+  ],
+  "answer": "0.6522",
+  "write": "",
+  "watch_out": "Subtract the areas, never the z-values."
+ },
+ {
+  "section": "Question 6",
+  "phrase": "between z = −1.10 and z = −0.60 (both negative)",
+  "ask": "Same rule; the bigger z is −0.60 (further right).",
+  "steps": [
+   {
+    "label": "Read both hints",
+    "text": "",
+    "math": [
+     "\\text{left of }-0.60=0.2743\\qquad \\text{left of }-1.10=0.1357"
+    ]
+   },
+   {
+    "label": "Rule and compute",
+    "text": "",
+    "math": [
+     "P(-1.10<Z<-0.60)=0.2743-0.1357=0.1386"
+    ]
+   }
+  ],
+  "answer": "0.1386",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 6",
+  "phrase": "between z = 0.60 and z = 1.45 (both positive)",
+  "ask": "Same rule.",
+  "steps": [
+   {
+    "label": "Read both hints",
+    "text": "",
+    "math": [
+     "\\text{left of }1.45=0.9265\\qquad \\text{left of }0.60=0.7257"
+    ]
+   },
+   {
+    "label": "Rule and compute",
+    "text": "",
+    "math": [
+     "P(0.60<Z<1.45)=0.9265-0.7257=0.2008"
+    ]
+   }
+  ],
+  "answer": "0.2008",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 6",
+  "phrase": "OUTSIDE z = −1.10 and z = 1.45 (less than −1.10 OR more than 1.45; the two tails)",
+  "ask": "Left tail + right tail.",
+  "steps": [
+   {
+    "label": "Left tail",
+    "text": "",
+    "math": [
+     "P(Z<-1.10)=0.1357"
+    ]
+   },
+   {
+    "label": "Right tail",
+    "text": "",
+    "math": [
+     "P(Z>1.45)=1-0.9265=0.0735"
+    ]
+   },
+   {
+    "label": "Add",
+    "text": "",
+    "math": [
+     "P(\\text{outside})=0.1357+0.0735=0.2092"
+    ]
+   },
+   {
+    "label": "Same answer the other way",
+    "text": "",
+    "math": [
+     "1-P(\\text{between})=1-(0.9265-0.1357)=1-0.7908=0.2092"
+    ]
+   }
+  ],
+  "answer": "0.2092",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 6",
+  "phrase": "find the z with area 0.10 to its LEFT (the 10th percentile of z)",
+  "ask": "Backwards: the area is given; find the hint/table entry closest to 0.10 and read its z.",
+  "steps": [
+   {
+    "label": "Words → left area",
+    "text": "",
+    "math": [
+     "\\text{area to the left}=0.10"
+    ]
+   },
+   {
+    "label": "Find the closest entry",
+    "text": "0.1003 is the closest (0.0985 is further).",
+    "math": [
+     "0.1003\\ \\to\\ z=-1.28"
+    ]
+   }
+  ],
+  "answer": "z = −1.28",
+  "write": "",
+  "watch_out": "Left area below 0.5 → z is negative."
+ },
+ {
+  "section": "Question 6",
+  "phrase": "find the z with area 0.025 to its RIGHT",
+  "ask": "Convert to a LEFT area first.",
+  "steps": [
+   {
+    "label": "Words → left area",
+    "text": "",
+    "math": [
+     "\\text{area to the left}=1-0.025=0.975"
+    ]
+   },
+   {
+    "label": "Find the entry",
+    "text": "",
+    "math": [
+     "0.9750\\ \\to\\ z=1.96"
+    ]
+   }
+  ],
+  "answer": "z = 1.96",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 6",
+  "phrase": "the two z's that cut off the middle 90%",
+  "ask": "0.05 left over in each tail.",
+  "steps": [
+   {
+    "label": "Words → left areas",
+    "text": "",
+    "math": [
+     "\\text{tails}=\\frac{1-0.90}{2}=0.05\\ \\text{each}\\quad\\Rightarrow\\quad \\text{left areas }0.05\\text{ and }0.95"
+    ]
+   },
+   {
+    "label": "Find the entries",
+    "text": "0.95 sits exactly halfway between 0.9495 (z = 1.64) and 0.9505 (z = 1.65) → average 1.645; symmetry gives the other.",
+    "math": [
+     "z=-1.645\\ \\text{and}\\ z=1.645"
+    ]
+   }
+  ],
+  "answer": "z = ±1.645",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 6",
+  "phrase": "X ~ N(μ = 80, σ = 10): P(70 < X < 95)",
+  "ask": "Not standard: convert each x to z first, then BETWEEN.",
+  "steps": [
+   {
+    "label": "Words → area",
+    "text": "\"between\" → bigger left − smaller left.",
+    "math": []
+   },
+   {
+    "label": "z for each end",
+    "text": "",
+    "math": [
+     "z_1=\\frac{x-\\mu}{\\sigma}=\\frac{70-80}{10}=-1.00\\qquad z_2=\\frac{95-80}{10}=1.50"
+    ]
+   },
+   {
+    "label": "Read the hints",
+    "text": "",
+    "math": [
+     "\\text{left of }-1.00=0.1587\\qquad \\text{left of }1.50=0.9332"
+    ]
+   },
+   {
+    "label": "Rule and compute",
+    "text": "",
+    "math": [
+     "P(70<X<95)=0.9332-0.1587=0.7745"
+    ]
+   }
+  ],
+  "answer": "0.7745",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 6",
+  "phrase": "X ~ N(80, 10): P(X > 95)",
+  "ask": "Convert, then RIGHT = 1 − left.",
+  "steps": [
+   {
+    "label": "z",
+    "text": "",
+    "math": [
+     "z=\\frac{95-80}{10}=1.50"
+    ]
+   },
+   {
+    "label": "Read the hint",
+    "text": "",
+    "math": [
+     "\\text{left of }1.50=0.9332"
+    ]
+   },
+   {
+    "label": "Rule and compute",
+    "text": "",
+    "math": [
+     "P(X>95)=1-0.9332=0.0668"
+    ]
+   }
+  ],
+  "answer": "0.0668",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 6",
+  "phrase": "X ~ N(80, 10): P(X ≤ 70)",
+  "ask": "Convert, then LEFT = the hint.",
+  "steps": [
+   {
+    "label": "z",
+    "text": "",
+    "math": [
+     "z=\\frac{70-80}{10}=-1.00"
+    ]
+   },
+   {
+    "label": "Read the hint",
+    "text": "",
+    "math": [
+     "\\text{left of }-1.00=0.1587"
+    ]
+   },
+   {
+    "label": "Rule and answer",
+    "text": "",
+    "math": [
+     "P(X\\le 70)=0.1587"
+    ]
+   }
+  ],
+  "answer": "0.1587",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 7",
+  "phrase": "above 125 (more than 125, at least 125, higher than 125)",
+  "ask": "Right tail.",
+  "steps": [
+   {
+    "label": "Words → area",
+    "text": "\"above\" → 1 − (left of z).",
+    "math": []
+   },
+   {
+    "label": "z-score",
+    "text": "",
+    "math": [
+     "z=\\frac{x-\\mu}{\\sigma}=\\frac{125-100}{15}=\\frac{25}{15}=1.67"
+    ]
+   },
+   {
+    "label": "Read the hint",
+    "text": "",
+    "math": [
+     "\\text{left of }1.67=0.9525"
+    ]
+   },
+   {
+    "label": "Rule and compute",
+    "text": "",
+    "math": [
+     "P(X>125)=1-0.9525=0.0475"
+    ]
+   }
+  ],
+  "answer": "0.0475",
+  "write": "About 4.75% of children have an IQ above 125.",
+  "watch_out": "0.9525 is the number-one wrong answer. Fewer than half score above 125, so the answer must be below 0.5."
+ },
+ {
+  "section": "Question 7",
+  "phrase": "below 90 (less than 90, at most 90, under 90)",
+  "ask": "Left area = the hint.",
+  "steps": [
+   {
+    "label": "Words → area",
+    "text": "\"below\" → the hint itself.",
+    "math": []
+   },
+   {
+    "label": "z-score",
+    "text": "",
+    "math": [
+     "z=\\frac{90-100}{15}=\\frac{-10}{15}=-0.67"
+    ]
+   },
+   {
+    "label": "Read the hint",
+    "text": "",
+    "math": [
+     "\\text{left of }-0.67=0.2514"
+    ]
+   },
+   {
+    "label": "Rule and answer",
+    "text": "",
+    "math": [
+     "P(X<90)=0.2514"
+    ]
+   }
+  ],
+  "answer": "0.2514",
+  "write": "About 25.14% of children have an IQ below 90.",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 7",
+  "phrase": "between 110 and 140",
+  "ask": "Two z's, two left areas, bigger minus smaller.",
+  "steps": [
+   {
+    "label": "Words → area",
+    "text": "\"between\" → (left of bigger z) − (left of smaller z).",
+    "math": []
+   },
+   {
+    "label": "z for each end",
+    "text": "",
+    "math": [
+     "z_1=\\frac{110-100}{15}=0.67\\qquad z_2=\\frac{140-100}{15}=2.67"
+    ]
+   },
+   {
+    "label": "Read the hints",
+    "text": "",
+    "math": [
+     "\\text{left of }0.67=0.7486\\qquad \\text{left of }2.67=0.9962"
+    ]
+   },
+   {
+    "label": "Rule and compute",
+    "text": "",
+    "math": [
+     "P(110<X<140)=0.9962-0.7486=0.2476"
+    ]
+   }
+  ],
+  "answer": "0.2476",
+  "write": "About 24.76% of children score between 110 and 140.",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 7",
+  "phrase": "outside 70 to 130 (below 70 OR above 130)",
+  "ask": "Two tails: left tail + right tail.",
+  "steps": [
+   {
+    "label": "z for each end",
+    "text": "",
+    "math": [
+     "z_1=\\frac{70-100}{15}=-2.00\\qquad z_2=\\frac{130-100}{15}=2.00"
+    ]
+   },
+   {
+    "label": "Read the hints",
+    "text": "",
+    "math": [
+     "\\text{left of }-2.00=0.0228\\qquad \\text{left of }2.00=0.9772"
+    ]
+   },
+   {
+    "label": "Left tail + right tail",
+    "text": "",
+    "math": [
+     "P=0.0228+(1-0.9772)=0.0228+0.0228=0.0456"
+    ]
+   }
+  ],
+  "answer": "0.0456",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 7",
+  "phrase": "exactly 100",
+  "ask": "One single value has no area under a curve.",
+  "steps": [
+   {
+    "label": "Rule",
+    "text": "",
+    "math": [
+     "P(X=100)=0"
+    ]
+   }
+  ],
+  "answer": "0",
+  "write": "",
+  "watch_out": "Any \"exactly\" with a continuous variable is 0; \"at most 100\" would be 0.5000."
+ },
+ {
+  "section": "Question 7",
+  "phrase": "the 98th percentile (98% score below it)",
+  "ask": "Backwards: left area 0.98 → the hint gives z → x = μ + zσ.",
+  "steps": [
+   {
+    "label": "Words → left area",
+    "text": "",
+    "math": [
+     "\\text{area to the left}=0.98"
+    ]
+   },
+   {
+    "label": "Hint → z",
+    "text": "closest entry 0.9798",
+    "math": [
+     "z=2.05"
+    ]
+   },
+   {
+    "label": "Rule",
+    "text": "",
+    "math": [
+     "x=\\mu+z\\sigma"
+    ]
+   },
+   {
+    "label": "Plug in and compute",
+    "text": "",
+    "math": [
+     "x=100+2.05(15)=100+30.75=130.75"
+    ]
+   }
+  ],
+  "answer": "130.75 ≈ 131",
+  "write": "An IQ of about 131 is the 98th percentile.",
+  "watch_out": "Never put 0.98 into the z formula — it is an area, not a score."
+ },
+ {
+  "section": "Question 7",
+  "phrase": "the top 5% cutoff (minimum score to be in the top 5%)",
+  "ask": "Top 5% → 95% below it → left area 0.95.",
+  "steps": [
+   {
+    "label": "Words → left area",
+    "text": "",
+    "math": [
+     "\\text{area to the left}=1-0.05=0.95"
+    ]
+   },
+   {
+    "label": "Hint → z",
+    "text": "0.95 is halfway between 1.64 and 1.65",
+    "math": [
+     "z=1.645"
+    ]
+   },
+   {
+    "label": "Rule, plug in, compute",
+    "text": "",
+    "math": [
+     "x=100+1.645(15)=100+24.675=124.675\\approx 124.7"
+    ]
+   }
+  ],
+  "answer": "124.7",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 7",
+  "phrase": "the bottom 10% cutoff (10th percentile)",
+  "ask": "Left area 0.10 → z is negative.",
+  "steps": [
+   {
+    "label": "Words → left area",
+    "text": "",
+    "math": [
+     "\\text{area to the left}=0.10"
+    ]
+   },
+   {
+    "label": "Hint → z",
+    "text": "closest entry 0.1003",
+    "math": [
+     "z=-1.28"
+    ]
+   },
+   {
+    "label": "Rule, plug in, compute",
+    "text": "",
+    "math": [
+     "x=100+(-1.28)(15)=100-19.2=80.8"
+    ]
+   }
+  ],
+  "answer": "80.8",
+  "write": "",
+  "watch_out": "Keep the minus sign: the answer must be below the mean."
+ },
+ {
+  "section": "Question 7",
+  "phrase": "the two scores holding the middle 95%",
+  "ask": "2.5% in each tail → left areas 0.025 and 0.975.",
+  "steps": [
+   {
+    "label": "Words → left areas",
+    "text": "",
+    "math": [
+     "\\text{tails}=\\frac{1-0.95}{2}=0.025\\quad\\Rightarrow\\quad 0.025\\ \\text{and}\\ 0.975"
+    ]
+   },
+   {
+    "label": "Hints → z",
+    "text": "",
+    "math": [
+     "z=-1.96\\ \\text{and}\\ z=1.96"
+    ]
+   },
+   {
+    "label": "Rule, plug in, compute",
+    "text": "",
+    "math": [
+     "x=100\\pm 1.96(15)=100\\pm 29.4\\quad\\Rightarrow\\quad 70.6\\ \\text{and}\\ 129.4"
+    ]
+   }
+  ],
+  "answer": "70.6 to 129.4",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 7",
+  "phrase": "the score with 30% above it (70th percentile)",
+  "ask": "30% above → 70% below → left area 0.70.",
+  "steps": [
+   {
+    "label": "Words → left area",
+    "text": "",
+    "math": [
+     "\\text{area to the left}=1-0.30=0.70"
+    ]
+   },
+   {
+    "label": "Hint → z",
+    "text": "closest entry 0.6985",
+    "math": [
+     "z=0.52"
+    ]
+   },
+   {
+    "label": "Rule, plug in, compute",
+    "text": "",
+    "math": [
+     "x=100+0.52(15)=100+7.8=107.8"
+    ]
+   }
+  ],
+  "answer": "107.8",
+  "write": "",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 7",
+  "phrase": "is a score of 65 unusual?",
+  "ask": "Unusual = probability below 0.05 (or z beyond ±2).",
+  "steps": [
+   {
+    "label": "z-score",
+    "text": "",
+    "math": [
+     "z=\\frac{65-100}{15}=\\frac{-35}{15}=-2.33"
+    ]
+   },
+   {
+    "label": "Read the hint",
+    "text": "",
+    "math": [
+     "\\text{left of }-2.33=0.0099"
+    ]
+   },
+   {
+    "label": "Compare",
+    "text": "",
+    "math": [
+     "0.0099<0.05\\ \\text{(and }|{-2.33}|>2\\text{)}"
+    ]
+   }
+  ],
+  "answer": "yes, unusual",
+  "write": "P(X ≤ 65) = 0.0099 < 0.05, so a score of 65 is unusual.",
+  "watch_out": ""
+ },
+ {
+  "section": "Question 7",
+  "phrase": "interpret \"the area above 125 is 0.0475\" (two ways)",
+  "ask": "An area under the curve is both a proportion and a probability.",
+  "steps": [
+   {
+    "label": "Proportion",
+    "text": "4.75% of all children score above 125.",
+    "math": []
+   },
+   {
+    "label": "Probability",
+    "text": "A randomly selected child has a 0.0475 chance of scoring above 125.",
+    "math": []
+   }
+  ],
+  "answer": "write both sentences",
+  "write": "",
+  "watch_out": ""
+ }
+]
