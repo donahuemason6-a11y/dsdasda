@@ -21,7 +21,7 @@ OFFICIAL = {
    "parts": [{"label": "", "question": "Valid or not?", "answer": "NOT valid — the probabilities add to 0.73, not 1.", "solution": "Rule 1: each P(x) is between 0 and 1 ✓\nRule 2: 0.34 + 0.21 + 0.13 + 0.04 + 0.01 = 0.73 ≠ 1 ✗\nNot a valid distribution (the probabilities must sum to 1)."}]},
   {"points": 8, "prompt": "Stanley Cup: number of games played, X, before a champion was determined.\nx: 4, 5, 6, 7\nFrequency: 20, 20, 26, 17",
    "parts": [
-    {"label": "(a)", "question": "Construct a probability distribution for X.", "answer": "P(4) = 0.2410, P(5) = 0.2410, P(6) = 0.3133, P(7) = 0.2048", "solution": "Total = 20 + 20 + 26 + 17 = 83\nP(4) = 20/83 = 0.2410\nP(5) = 20/83 = 0.2410\nP(6) = 26/83 = 0.3133\nP(7) = 17/83 = 0.2048\nCheck: sum ≈ 1.0001 ≈ 1 ✓"},
+    {"label": "(a)", "question": "Construct a probability distribution for X.", "answer": "P(4) = 0.2410, P(5) = 0.2410, P(6) = 0.3133, P(7) = 0.2048", "check": {"type":"numbers","fields":[{"label":"P(4)","value":0.2410,"tol":0.0002},{"label":"P(5)","value":0.2410,"tol":0.0002},{"label":"P(6)","value":0.3133,"tol":0.0002},{"label":"P(7)","value":0.2048,"tol":0.0002}]}, "solution": "Total = 20 + 20 + 26 + 17 = 83\nP(4) = 20/83 = 0.2410\nP(5) = 20/83 = 0.2410\nP(6) = 26/83 = 0.3133\nP(7) = 17/83 = 0.2048\nCheck: sum ≈ 1.0001 ≈ 1 ✓"},
     {"label": "(b)", "question": "Graph the discrete probability distribution.", "answer": "Vertical lines/bars at x = 4, 5, 6, 7 with heights 0.2410, 0.2410, 0.3133, 0.2048", "solution": "Horizontal axis: x (4, 5, 6, 7). Vertical axis: P(x).\nDraw a vertical line (or bar) above each x with height equal to its probability. The tallest is at x = 6."},
     {"label": "(c)", "question": "Compute and interpret the mean of X.", "answer": "μ = 5.48 games", "solution": "μ = Σ x·P(x)\n= 4(0.2410) + 5(0.2410) + 6(0.3133) + 7(0.2048)\n= 0.9640 + 1.2050 + 1.8798 + 1.4336\n= 5.48 games\nInterpretation: over many Stanley Cup series, the series lasts about 5.48 games on average."},
     {"label": "(d)", "question": "Compute the standard deviation of X.", "answer": "σ ≈ 1.07 games", "solution": "σ = sqrt( Σ (x − μ)²·P(x) ), μ = 5.48\n(4 − 5.48)²(0.2410) = 2.1904(0.2410) = 0.5279\n(5 − 5.48)²(0.2410) = 0.2304(0.2410) = 0.0555\n(6 − 5.48)²(0.3133) = 0.2704(0.3133) = 0.0847\n(7 − 5.48)²(0.2048) = 2.3104(0.2048) = 0.4732\nσ² = 0.5279 + 0.0555 + 0.0847 + 0.4732 = 1.1413\nσ = sqrt(1.1413) ≈ 1.07 games"}]},
@@ -30,7 +30,7 @@ OFFICIAL = {
     {"label": "(a)", "question": "Exactly 3 believe the minimum driving age should be 18.", "answer": "0.0425", "solution": "Binomial: n = 10, p = 0.60, 1 − p = 0.40\nP(3) = C(10,3) (0.60)^3 (0.40)^7\n= 120 · 0.216 · 0.0016384\n= 0.0425"},
     {"label": "(b)", "question": "Fewer than 3 believe the minimum driving age should be 18.", "answer": "0.0123", "solution": "Fewer than 3 → P(0) + P(1) + P(2)\nP(0) = C(10,0)(0.6)^0(0.4)^10 = 1 · 1 · 0.0001049 = 0.0001\nP(1) = C(10,1)(0.6)^1(0.4)^9 = 10 · 0.6 · 0.0002621 = 0.0016\nP(2) = C(10,2)(0.6)^2(0.4)^8 = 45 · 0.36 · 0.0006554 = 0.0106\nP(X < 3) = 0.0001 + 0.0016 + 0.0106 = 0.0123"},
     {"label": "(c)", "question": "Between 1 and 3 (inclusive) believe the minimum driving age should be 18.", "answer": "0.0547", "solution": "P(1 ≤ X ≤ 3) = P(1) + P(2) + P(3)\n= 0.0016 + 0.0106 + 0.0425\n= 0.0547"},
-    {"label": "(d)", "question": "For a random sample of 200 U.S. women 18 years or older, find the expected number and standard deviation of those who believe the minimum driving age should be 18.", "answer": "μ = 120, σ ≈ 6.93", "solution": "μ = n·p = 200(0.60) = 120\nσ = sqrt(n·p·(1 − p)) = sqrt(200 · 0.60 · 0.40) = sqrt(48) ≈ 6.93"}]},
+    {"label": "(d)", "question": "For a random sample of 200 U.S. women 18 years or older, find the expected number and standard deviation of those who believe the minimum driving age should be 18.", "answer": "μ = 120, σ ≈ 6.93", "check": {"type":"numbers","fields":[{"label":"μ","value":120,"tol":0.011},{"label":"σ","value":6.93,"tol":0.011}]}, "solution": "μ = n·p = 200(0.60) = 120\nσ = sqrt(n·p·(1 − p)) = sqrt(200 · 0.60 · 0.40) = sqrt(48) ≈ 6.93"}]},
   {"points": 5, "prompt": "Suppose the daytime temperature X (°F) in a coastal city during summer is uniformly distributed between 70°F and 100°F.",
    "parts": [
     {"label": "(a)", "question": "Sketch or describe the graph of the uniform probability density function (pdf).", "answer": "A flat rectangle from 70 to 100 with height 1/30", "solution": "Height = 1/(b − a) = 1/(100 − 70) = 1/30\nThe pdf is a horizontal line at 1/30 from x = 70 to x = 100 (and 0 elsewhere). Area = 30 · (1/30) = 1 ✓"},
@@ -46,7 +46,7 @@ OFFICIAL = {
     {"label": "(a)", "question": "What is the probability that a randomly selected test taker will score above 125?", "answer": "0.0475", "solution": "z = (125 − 100)/15 = 1.67\nArea left of 1.67 = 0.9525\nP(X > 125) = 1 − 0.9525 = 0.0475"},
     {"label": "(b)", "question": "What is the probability that a randomly selected test taker will score below 90?", "answer": "0.2514", "solution": "z = (90 − 100)/15 = −0.67\nP(X < 90) = area left of −0.67 = 0.2514"},
     {"label": "(c)", "question": "What proportion of test takers will score between 110 and 140?", "answer": "0.2476", "solution": "z₁ = (110 − 100)/15 = 0.67 → 0.7486\nz₂ = (140 − 100)/15 = 2.67 → 0.9962\nP(110 < X < 140) = 0.9962 − 0.7486 = 0.2476"},
-    {"label": "(d)", "question": "What intelligence score will place a child in the 98th percentile?", "answer": "≈ 131 (130.75)", "solution": "98th percentile → area to the left = 0.98\nClosest table entry 0.9798 → z = 2.05\nx = μ + z·σ = 100 + 2.05(15) = 130.75 ≈ 131"}]}
+    {"label": "(d)", "question": "What intelligence score will place a child in the 98th percentile?", "answer": "≈ 131 (130.75)", "check": {"type":"number","value":130.75,"tol":0.5,"label":"score"}, "solution": "98th percentile → area to the left = 0.98\nClosest table entry 0.9798 → z = 2.05\nx = μ + z·σ = 100 + 2.05(15) = 130.75 ≈ 131"}]}
  ]
 }
 
@@ -160,8 +160,19 @@ kbd{font-family:var(--mono); font-size:.85em; background:var(--bg); border:1px s
 .fig{margin:10px 0 12px; max-width:440px} .fig svg{width:100%; height:auto; display:block; color:var(--fg)} .fig figcaption{font-size:.85rem; color:var(--muted); margin-top:4px}
 @media (prefers-reduced-motion: no-preference){ .bar i{transition:width .25s} }
 @media (max-width:480px){ body{font-size:15px} .q .pts{float:none; display:block} }
-.chkrow{display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin:6px 0}
-.chkrow label{font-size:.9rem; color:var(--muted)}
+.chkrow{display:flex; flex-direction:column; gap:8px; align-items:flex-start; margin:6px 0}
+.fields{display:flex; flex-wrap:wrap; gap:8px; align-items:center}
+.fields.labeled{display:grid; grid-template-columns:minmax(0,max-content) minmax(8em,14em); gap:8px 10px; align-items:center}
+.fields.labeled label{justify-self:end; text-align:right}
+.fields.labeled .inp{width:100%}
+.chkrow label{font-size:.9rem; color:var(--muted); max-width:11em; overflow-wrap:anywhere}
+.inp::placeholder{color:var(--muted); opacity:1}
+.inp.good{box-shadow:inset 0 0 0 1px var(--ok); background:color-mix(in srgb, var(--ok) 12%, var(--bg))}
+.inp.wrong{box-shadow:inset 0 0 0 1px var(--bad); background:color-mix(in srgb, var(--bad) 10%, var(--bg))}
+button.b.ok[aria-pressed="true"], button.b.bad[aria-pressed="true"]{color:var(--bg)}
+.q .prompt .tscroll{overflow-x:auto}
+@media (pointer:coarse), (max-width:480px){ button.b{min-height:44px; padding:8px 12px} .inp{min-height:44px; padding:8px 10px} .btns, .fields{gap:10px 8px} }
+@media (max-width:480px){ header.top{position:static} nav.tabs{position:sticky; top:0; z-index:5; background:var(--bg); flex-wrap:wrap; gap:4px; padding-bottom:4px} }
 .inp{font-family:var(--mono); font-size:1rem; padding:6px 10px; border:1px solid var(--line); border-radius:6px; background:var(--bg); color:var(--fg); width:9.5em; max-width:100%}
 .inp:focus{outline:2px solid var(--accent); outline-offset:1px}
 .inp.good{border-color:var(--ok)} .inp.wrong{border-color:var(--bad)}
@@ -170,7 +181,7 @@ kbd{font-family:var(--mono); font-size:.85em; background:var(--bg); border:1px s
 .b.choice[aria-pressed=true]{outline:2px solid var(--accent)}
 .timer{display:inline-flex; gap:10px; align-items:center; flex-wrap:wrap; font-family:var(--mono); font-weight:700; font-size:1.05rem; padding:6px 10px; border:1px solid var(--line); border-radius:8px; margin:6px 0 10px}
 .timer.over{color:var(--bad); border-color:var(--bad)}
-.ptable{border-collapse:collapse; margin:6px 0 8px; font-size:.95rem} .ptable td, .ptable th{border:1px solid var(--line); padding:3px 10px; text-align:center} .ptable th{background:var(--paper)}
+.ptable{border-collapse:collapse; margin:6px 0 8px; font-size:.95rem} .ptable td, .ptable th{border:1px solid color-mix(in srgb, var(--line) 70%, var(--fg)); padding:3px 10px; text-align:center} .ptable th{background:var(--bg)}
 .prompt{white-space:normal}
 </style>
 
@@ -521,23 +532,28 @@ Empirical Rule 68 / 95 / 99.7     IQR = Q₃ − Q₁, fences Q₁ − 1.5·IQR,
 
   /* tests */
   function numsIn(str){ var out=[]; var t=String(str||'').replace(/[−–]/g,'-'); var re=/-?\d*\.?\d+/g; var m; while((m=re.exec(t))){ var v=parseFloat(m[0]); if(!isNaN(v)) out.push(v); } return out; }
-  function parseUser(str){ if(str==null) return NaN; var t=String(str).trim().replace(/[−–]/g,'-').replace(/\s+/g,'').replace(/^[≈~=]+/,''); if(!t) return NaN; var pct=/%$/.test(t); t=t.replace(/%$/,''); var v; var f=t.match(/^(-?\d*\.?\d+)\/(-?\d*\.?\d+)$/); if(f){ v=parseFloat(f[1])/parseFloat(f[2]); } else { v=parseFloat(t); } if(pct) v=v/100; return v; }
+  function parseUser(str){ if(str==null) return NaN; var t=String(str).trim().replace(/[−–]/g,'-').replace(/\$/g,'').replace(/(\d),(?=\d{3}(?!\d))/g,'$1').replace(/\s+/g,'').replace(/^[≈~=]+/,'').replace(/[a-zA-Z°]+$/,''); if(!t) return NaN; var pct=/%$/.test(t); t=t.replace(/%$/,''); var v; var f=t.match(/^(-?\d*\.?\d+)\/(-?\d*\.?\d+)$/); if(f){ v=parseFloat(f[1])/parseFloat(f[2]); } else { v=parseFloat(t); } if(pct) v=v/100; return v; }
   function deriveCheck(p){
     if(p.check) return p.check;
-    var a=String(p.answer||'');
+    var a=String(p.answer||'').replace(/(\d),(\d{3})\b/g,'$1$2');
     if(/\bnot valid\b/i.test(a)) return {type:'choice', options:['Valid','Not valid'], correct:'Not valid'};
     if(/\bvalid\b/i.test(a)) return {type:'choice', options:['Valid','Not valid'], correct:'Valid'};
-    if(/\b(bar|bars|sketch|rectangle|graph|axis|axes|flat line|line\/bar|lines\/bars)\b/i.test(a)) return {type:'self'};
-    var segs=a.split(/[;,]|\sand\s/); var fields=[];
-    segs.forEach(function(sg){ var ns=numsIn(sg); if(ns.length>=1){ var lab=sg.replace(/-?\d*\.?\d+[\s\S]*$/,'').replace(/[=≈:]\s*$/,'').replace(/[−–]/g,'').trim(); fields.push({label:lab, value:ns[0]}); } });
+    if(/^\s*(not\s+binomial|binomial)\b/i.test(a)) return {type:'choice', options:['Binomial','Not binomial'], correct: /^\s*not/i.test(a)?'Not binomial':'Binomial'};
+    if(/^\s*(discrete|continuous)\b/i.test(a)) return {type:'choice', options:['Discrete','Continuous'], correct: /^\s*discrete/i.test(a)?'Discrete':'Continuous'};
+    if(/\bnot independent\b/i.test(a)) return {type:'choice', options:['Independent','Not independent'], correct:'Not independent'};
+    if(/\bindependent\b/i.test(a) && !/\bdependent\b/i.test(a.replace(/independent/ig,''))) return {type:'choice', options:['Independent','Not independent'], correct:'Independent'};
+    if(/^\s*(yes|no)\b/i.test(a) && !/\d\.\d{3,4}/.test(a)) return {type:'choice', options:['Yes','No'], correct: /^\s*yes/i.test(a)?'Yes':'No'};
+    if(/\b(bar|bars|sketch|rectangle|graph|axis|axes|flat line|line\/bar|lines\/bars|interpretation)\b/i.test(a)) return {type:'self'};
+    var segs=a.split(/;|\sand\s/); var fields=[];
+    segs.forEach(function(sg){ var ns=numsIn(sg); if(ns.length>=1){ var lab=''; var eq=sg.search(/[=≈:]/); if(eq>0){ lab=sg.slice(0,eq).trim(); if(lab.length>22) lab=''; } fields.push({label:lab, value:ns[ns.length-1]}); } });
     if(fields.length===0 || fields.length>4) return {type:'self'};
-    fields.forEach(function(f){ f.tol = Math.abs(f.value)<1 ? 0.0006 : Math.max(0.011, Math.abs(f.value)*0.003); });
+    fields.forEach(function(f){ var v=f.value; f.tol = Number.isInteger(v) ? 0.5 : (Math.abs(v)<1 ? 0.0006 : 0.011); });
     if(fields.length===1) return {type:'number', value:fields[0].value, tol:fields[0].tol, label:fields[0].label};
     return {type:'numbers', fields:fields};
   }
   function fmt(v){ return (Math.abs(v)<1 && v!==0) ? v.toFixed(4) : String(v); }
   function renderPrompt(txt){ var lines=String(txt).split('\n'); var html=''; var rows=[];
-    function flush(){ if(!rows.length) return; html+='<table class="ptable">'+rows.map(function(r,i){ var cells=r.split('|').map(function(c){return c.trim();}); return '<tr>'+cells.map(function(c){ return i===0?'<th>'+esc(c)+'</th>':'<td>'+esc(c)+'</td>'; }).join('')+'</tr>'; }).join('')+'</table>'; rows=[]; }
+    function flush(){ if(!rows.length) return; var counts={}; rows.forEach(function(r){ counts[r.split('|').length]=1; }); if(rows.length<2 || Object.keys(counts).length>1){ rows.forEach(function(r){ html+='<div>'+esc(r)+'</div>'; }); rows=[]; return; } html+='<div class="tscroll"><table class="ptable">'+rows.map(function(r,i){ var cells=r.split('|').map(function(c){return c.trim();}); return '<tr>'+cells.map(function(c){ return i===0?'<th>'+esc(c)+'</th>':'<td>'+esc(c)+'</td>'; }).join('')+'</tr>'; }).join('')+'</table></div>'; rows=[]; }
     lines.forEach(function(ln){ if(ln.indexOf('|')>=0){ rows.push(ln); } else { flush(); if(ln.trim()) html+='<div>'+esc(ln)+'</div>'; } }); flush(); return html; }
   function renderTest(t, root, kind){
     var box = document.createElement('div'); box.id = 'quiz-'+t.key;
@@ -552,7 +568,7 @@ Empirical Rule 68 / 95 / 99.7     IQR = Q₃ − Q₁, fences Q₁ − 1.5·IQR,
       var tkey='timer-'+t.key;
       function tick(){ var end=parseInt(store(tkey)||'0',10); var v=document.getElementById('tmv-'+t.key); if(!v) return; if(!end){ v.textContent='50:00'; tm.classList.remove('over'); return; } var rem=Math.round((end-Date.now())/1000); if(rem<=0){ v.textContent='Time!'; tm.classList.add('over'); return; } tm.classList.remove('over'); var m=Math.floor(rem/60), sc=rem%60; v.textContent=(m<10?'0':'')+m+':'+(sc<10?'0':'')+sc; }
       tm.addEventListener('click', function(ev){ var b=ev.target.closest('button'); if(!b) return; if(b.dataset.act==='start'){ store(tkey, String(Date.now()+50*60*1000)); } else { store(tkey, '0'); } tick(); });
-      setInterval(tick, 1000); tick();
+      setInterval(tick, 1000); box._tick = tick;
     }
     var state = {}; try{ state = JSON.parse(store('test-'+t.key)||'{}'); }catch(e){}
     function save(){ store('test-'+t.key, JSON.stringify(state)); var got=0, missed=0; Object.keys(state).forEach(function(k){ if(state[k]==='ok') got++; else if(state[k]==='bad') missed++; }); document.getElementById('pill-'+t.key).textContent = got+' / '+total; document.getElementById('score-'+t.key).textContent = got+' right, '+missed+' missed, '+(total-got-missed)+' not yet checked'; }
@@ -564,8 +580,10 @@ Empirical Rule 68 / 95 / 99.7     IQR = Q₃ − Q₁, fences Q₁ − 1.5·IQR,
         var id = t.key+'-'+qi+'-'+pi; var chk = deriveCheck(p);
         var pd = document.createElement('div'); pd.className='part';
         var ctl='';
-        if(chk.type==='number'){ ctl='<div class="chkrow">'+(chk.label?'<label>'+esc(chk.label)+' =</label>':'')+'<input class="inp" inputmode="decimal" autocomplete="off" placeholder="your answer" id="in-'+id+'-0" aria-label="your answer"><button class="b primary" data-act="check">Check answer</button><button class="b" data-act="show">Show solution</button></div>'; }
-        else if(chk.type==='numbers'){ ctl='<div class="chkrow">'+chk.fields.map(function(f,i){ return '<label>'+esc(f.label||('value '+(i+1)))+' =</label><input class="inp" inputmode="decimal" autocomplete="off" id="in-'+id+'-'+i+'" aria-label="'+esc(f.label||('value '+(i+1)))+'">'; }).join('')+'<button class="b primary" data-act="check">Check answer</button><button class="b" data-act="show">Show solution</button></div>'; }
+        var flds = chk.type==='number' ? [{label:chk.label, value:chk.value}] : (chk.type==='numbers' ? chk.fields : []);
+        var im = flds.every(function(f){ return f.value>=0; }) ? ' inputmode="decimal"' : ' inputmode="text"';
+        var inputsHtml = flds.map(function(f,i){ var lab = f.label || (flds.length>1 ? 'value '+(i+1) : ''); return (lab?'<label for="in-'+id+'-'+i+'">'+esc(lab)+' =</label>':'')+'<input class="inp"'+im+' enterkeyhint="go" autocomplete="off" placeholder="your answer" id="in-'+id+'-'+i+'" aria-label="'+esc(lab||'your answer')+'">'; }).join('');
+        if(chk.type==='number' || chk.type==='numbers'){ ctl='<div class="chkrow"><div class="fields'+(flds.some(function(f){return f.label;})||flds.length>1?' labeled':'')+'">'+inputsHtml+'</div><div class="btns"><button class="b primary" data-act="check">Check answer</button><button class="b" data-act="show">Show solution</button></div></div>'; }
         else if(chk.type==='choice'){ ctl='<div class="chkrow">'+chk.options.map(function(o){ return '<button class="b choice" data-act="choose" data-val="'+esc(o)+'" aria-pressed="false">'+esc(o)+'</button>'; }).join('')+'<button class="b" data-act="show">Show solution</button></div>'; }
         else { ctl='<div class="btns"><button class="b primary" data-act="show">Show answer</button><button class="b ok" data-act="ok" aria-pressed="'+(state[id]==='ok')+'">Got it</button><button class="b bad" data-act="bad" aria-pressed="'+(state[id]==='bad')+'">Missed it</button></div>'; }
         pd.innerHTML = '<p class="qt"><span class="lab">'+esc(p.label)+'</span>'+esc(p.question)+'</p>' + ctl + '<div class="fb" id="fb-'+id+'"></div>'
@@ -573,15 +591,15 @@ Empirical Rule 68 / 95 / 99.7     IQR = Q₃ − Q₁, fences Q₁ − 1.5·IQR,
         var fb = pd.querySelector('#fb-'+CSS.escape(id));
         if(chk.type!=='self' && state[id]==='ok'){ fb.className='fb ok'; fb.textContent='✓ Checked earlier: correct'; }
         if(chk.type!=='self' && state[id]==='bad'){ fb.className='fb bad'; fb.textContent='✗ Checked earlier: missed — try again'; }
-        function setResult(ok, correctText){ state[id]= ok?'ok':'bad'; fb.className='fb '+(ok?'ok':'bad'); fb.textContent = ok ? '✓ Correct' : ('✗ Not quite. Correct answer: '+correctText+' — read the solution, then redo it on paper.'); var a=pd.querySelector('.ans'); if(!ok){ a.hidden=false; pd.querySelector('[data-act=show]').textContent='Hide solution'; } save(); }
+        function setResult(ok, correctText){ state[id]= ok?'ok':'bad'; fb.className='fb '+(ok?'ok':'bad'); fb.textContent = ok ? '✓ Correct' : ('✗ Not quite — correct: '+correctText+'. Read the solution, then redo it on paper.'); var a=pd.querySelector('.ans'); if(!ok){ a.hidden=false; pd.querySelector('[data-act=show]').textContent='Hide solution'; } save(); }
         pd.addEventListener('click', function(ev){
           var b = ev.target.closest('button'); if(!b) return; var act=b.dataset.act;
           if(act==='show'){ var a=pd.querySelector('.ans'); a.hidden=!a.hidden; b.textContent = a.hidden ? (chk.type==='self'?'Show answer':'Show solution') : (chk.type==='self'?'Hide answer':'Hide solution'); }
           else if(act==='check'){
             var fields = chk.type==='number' ? [{value:chk.value, tol:chk.tol}] : chk.fields; var allok=true, any=false;
-            fields.forEach(function(f,i){ var inp=pd.querySelector('#in-'+CSS.escape(id+'-'+i)); var v=parseUser(inp.value); if(inp.value.trim()) any=true; var ok = !isNaN(v) && Math.abs(v-f.value)<=f.tol; inp.className='inp '+(ok?'good':'wrong'); if(!ok) allok=false; });
+            fields.forEach(function(f,i){ var inp=pd.querySelector('#in-'+CSS.escape(id+'-'+i)); var v=parseUser(inp.value); if(inp.value.trim()) any=true; var ok = !isNaN(v) && (Math.abs(v-f.value)<=f.tol || (/%\s*$/.test(inp.value) && Math.abs(v*100-f.value)<=f.tol)); inp.className='inp '+(ok?'good':'wrong'); if(!ok) allok=false; });
             if(!any){ fb.className='fb bad'; fb.textContent='Type your answer first.'; return; }
-            setResult(allok, fields.map(function(f){ return fmt(f.value); }).join(', '));
+            setResult(allok, fields.map(function(f){ return (f.label? f.label+' = ' : '') + fmt(f.value); }).join(', '));
           }
           else if(act==='choose'){ pd.querySelectorAll('[data-act=choose]').forEach(function(x){ x.setAttribute('aria-pressed', x===b); }); setResult(b.dataset.val===chk.correct, chk.correct); }
           else { state[id] = (state[id]===act) ? '' : act; pd.querySelector('[data-act=ok]').setAttribute('aria-pressed', state[id]==='ok'); pd.querySelector('[data-act=bad]').setAttribute('aria-pressed', state[id]==='bad'); save(); }
@@ -599,7 +617,7 @@ Empirical Rule 68 / 95 / 99.7     IQR = Q₃ − Q₁, fences Q₁ − 1.5·IQR,
     });
     box.appendChild(tools);
     root.appendChild(box);
-    save();
+    save(); if(box._tick) box._tick();
   }
   document.querySelectorAll('[data-quiz]').forEach(function(a){ a.addEventListener('click', function(ev){ ev.preventDefault(); show('mini'); var el=document.getElementById('quiz-'+a.dataset.quiz); if(el){ el.scrollIntoView(); } else { window.scrollTo({top:0}); } }); });
   var mr = document.getElementById('mini-root'); DATA.mini.forEach(function(t){ renderTest(t, mr, 'mini'); });
