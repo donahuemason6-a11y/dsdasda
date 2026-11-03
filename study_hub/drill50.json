@@ -1,0 +1,885 @@
+{
+ "key": "drill50",
+ "test": {
+  "key": "drill50",
+  "title": "50-question drill · every type, new numbers",
+  "intro": "Fifty random questions covering Q1–Q7 (tables, validity, discrete, binomial, uniform, z, normal). Each stands alone: read it, solve on paper, type the answer, Check. Probabilities to 4 decimals; μ, σ to 2; x values to 1. z hints are printed like the real exam.",
+  "questions": [
+   {
+    "points": 1,
+    "prompt": "Q1. Standard normal. Hint: area to the left of z = 0.57 is 0.7157.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find the area to the right of z = 0.57.",
+      "answer": "0.2843",
+      "check": {
+       "type": "number",
+       "value": 0.2843,
+       "tol": 0.0006
+      },
+      "solution": "RIGHT → 1 − (left area) = 1 − 0.7157 = 0.2843"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q2. The number of overtime periods in a game (x) was recorded for 89 cases:\n| x | 0 | 1 | 2 | 3 |\n| frequency | 8 | 25 | 28 | 28 |\nFirst build the probability distribution: P(x) = frequency ÷ 89 (4 decimals): P(0) = 0.0899, P(1) = 0.2809, P(2) = 0.3146, P(3) = 0.3146.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find the probability that X is at most 2.",
+      "answer": "0.6854",
+      "check": {
+       "type": "number",
+       "value": 0.6854,
+       "tol": 0.0006
+      },
+      "solution": "at most 2 → 2 is IN → x = 0, 1, 2\nP = 0.0899 + 0.2809 + 0.3146 = 0.6854"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q3. Standard normal. Hints: area to the left of z = 1.96 is 0.9750; area to the left of z = −1.96 is 0.0250.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find the z-score that has area 0.0250 to its RIGHT.",
+      "answer": "1.96",
+      "check": {
+       "type": "number",
+       "value": 1.96,
+       "tol": 0.011
+      },
+      "solution": "RIGHT area given → convert: left area = 1 − 0.0250 = 0.9750 → the hint says z = 1.96"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q4. Monthly cell-phone bills ($) are approximately normally distributed with mean μ = 72 and standard deviation σ = 11. Hint: the z-score with area 0.8 to its left is 0.84.",
+    "parts": [
+     {
+      "label": "",
+      "question": "What is the minimum value needed to be in the top 20%? Round to 1 decimal.",
+      "answer": "81.2",
+      "check": {
+       "type": "number",
+       "value": 81.2,
+       "tol": 0.06
+      },
+      "solution": "top 20% → 80% below → left area 0.8 → z = 0.84\nx = μ + zσ = 72 + 0.84(11) = 81.2"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q5. The waiting time (minutes) for a bus is uniformly distributed between 5 and 25 minutes.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find the probability that the value is exactly 9 minutes.",
+      "answer": "0",
+      "check": {
+       "type": "number",
+       "value": 0.0,
+       "tol": 0.0001
+      },
+      "solution": "A single value has no width under a continuous curve → P(X = one value) = 0"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q6. Coffee and shift. The table below summarizes 102 people.\n| Shift | Day | Night | Total |\n| Coffee | 20 | 7 | 27 |\n| Tea | 26 | 16 | 42 |\n| Neither | 7 | 26 | 33 |\n| Total | 53 | 49 | 102 |",
+    "parts": [
+     {
+      "label": "",
+      "question": "What is the probability that a randomly selected person is \"Neither\" OR \"Day\"?",
+      "answer": "0.7745",
+      "check": {
+       "type": "number",
+       "value": 0.7745,
+       "tol": 0.0006
+      },
+      "solution": "OR → add both totals, subtract the overlap cell (Neither and Day = 7) once\nP = 33/102 + 53/102 − 7/102 = 79/102 = 0.7745"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q7. The number of goals in a soccer match (x) was recorded for 123 cases:\n| x | 0 | 1 | 2 | 3 | 4 |\n| frequency | 5 | 31 | 17 | 37 | 33 |\nFirst build the probability distribution: P(x) = frequency ÷ 123 (4 decimals): P(0) = 0.0407, P(1) = 0.2520, P(2) = 0.1382, P(3) = 0.3008, P(4) = 0.2683.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find the probability that X is between 1 and 4, inclusive.",
+      "answer": "0.9593",
+      "check": {
+       "type": "number",
+       "value": 0.9593,
+       "tol": 0.0006
+      },
+      "solution": "inclusive → both ends IN → x = 1, 2, 3, 4\nP = 0.2520 + 0.1382 + 0.3008 + 0.2683 = 0.9593"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q8. According to a survey, 25% of students who commute by bus. A random sample of 8 is selected. Let X = the number in the sample who do.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find the probability that between 3 and 5 (inclusive) do.",
+      "answer": "0.3172",
+      "check": {
+       "type": "number",
+       "value": 0.3172,
+       "tol": 0.0006
+      },
+      "solution": "inclusive → x = 3, 4, 5 → add\nP(3) = 8C3·(0.25)^3·(0.75)^5 = 56(0.015625)(0.237305) = 0.2076\nP(4) = 8C4·(0.25)^4·(0.75)^4 = 70(0.00390625)(0.316406) = 0.0865\nP(5) = 8C5·(0.25)^5·(0.75)^3 = 56(0.000976562)(0.421875) = 0.0231\nP(3 ≤ X ≤ 5) = 0.2076 + 0.0865 + 0.0231 = 0.3172"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q9. Pet ownership and housing. The table below summarizes 132 people.\n| Housing | Apartment | House | Total |\n| Dog | 24 | 29 | 53 |\n| Cat | 22 | 29 | 51 |\n| No pet | 19 | 9 | 28 |\n| Total | 65 | 67 | 132 |",
+    "parts": [
+     {
+      "label": "",
+      "question": "Two people are selected without replacement. What is the probability that at least one is \"Apartment\"?",
+      "answer": "0.7443",
+      "check": {
+       "type": "number",
+       "value": 0.7443,
+       "tol": 0.0006
+      },
+      "solution": "at least one → 1 − P(none) = 1 − P(both NOT Apartment)\nP = 1 − 67/132 · 66/131 = 1 − 0.2557 = 0.7443"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q10. Major and class standing. The table below summarizes 117 people.\n| Standing | Underclass | Upperclass | Total |\n| Business | 18 | 27 | 45 |\n| Science | 30 | 14 | 44 |\n| Arts | 18 | 10 | 28 |\n| Total | 66 | 51 | 117 |",
+    "parts": [
+     {
+      "label": "",
+      "question": "What is the probability that a randomly selected person is \"Business\" AND \"Underclass\"?",
+      "answer": "0.1538",
+      "check": {
+       "type": "number",
+       "value": 0.1538,
+       "tol": 0.0006
+      },
+      "solution": "AND → the one cell ÷ grand total\nP = 18/117 = 0.1538"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q11. The number of overtime periods in a game (x) was recorded for 71 cases:\n| x | 0 | 1 | 2 | 3 |\n| frequency | 9 | 39 | 11 | 12 |\nFirst build the probability distribution: P(x) = frequency ÷ 71 (4 decimals): P(0) = 0.1268, P(1) = 0.5493, P(2) = 0.1549, P(3) = 0.1690.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find P(X = 2).",
+      "answer": "0.1549",
+      "check": {
+       "type": "number",
+       "value": 0.1549,
+       "tol": 0.0006
+      },
+      "solution": "one value → P(2) = 11/71 = 0.1549"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q12. The daytime temperature (°F) in a desert town in July is uniformly distributed between 85 and 115 °F.",
+    "parts": [
+     {
+      "label": "",
+      "question": "What is the height of the probability density function (the rectangle)?",
+      "answer": "1/30 = 0.0333",
+      "check": {
+       "type": "number",
+       "value": 0.0333,
+       "tol": 0.0006
+      },
+      "solution": "height = 1/(b − a) = 1/(115 − 85) = 1/30 = 0.0333 (so the area is 30 × 1/30 = 1)"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q13. The length (cm) of a machine-cut rod is uniformly distributed between 20 and 32 cm.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find the probability that the value is less than 23 cm.",
+      "answer": "0.2500",
+      "check": {
+       "type": "number",
+       "value": 0.25,
+       "tol": 0.0006
+      },
+      "solution": "\"less than 23\" → the piece from 20 to 23\nP(X < 23) = (23 − 20)/(32 − 20) = 3/12 = 0.2500"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q14. X is normal with μ = 80 and σ = 5. Hints: area to the left of z = −0.60 is 0.2743; area to the left of z = 2.40 is 0.9918.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find P(77 < X < 92).",
+      "answer": "0.7175",
+      "check": {
+       "type": "number",
+       "value": 0.7175,
+       "tol": 0.0006
+      },
+      "solution": "z = (77 − 80)/5 = −0.60 → 0.2743;  z = (92 − 80)/5 = 2.40 → 0.9918\nBETWEEN → 0.9918 − 0.2743 = 0.7175"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q15. The number of siblings a student has (x) was recorded for 108 cases:\n| x | 0 | 1 | 2 | 3 |\n| frequency | 36 | 12 | 22 | 38 |\nFirst build the probability distribution: P(x) = frequency ÷ 108 (4 decimals): P(0) = 0.3333, P(1) = 0.1111, P(2) = 0.2037, P(3) = 0.3519.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Compute the mean (expected value) of X. Round to 2 decimals.",
+      "answer": "1.57",
+      "check": {
+       "type": "number",
+       "value": 1.57,
+       "tol": 0.011
+      },
+      "solution": "μ = Σ x·P(x) = 0(0.3333) + 1(0.1111) + 2(0.2037) + 3(0.3519) = 0.0000 + 0.1111 + 0.4074 + 1.0557 = 1.57"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q16. Coffee and shift. The table below summarizes 114 people.\n| Shift | Day | Night | Total |\n| Coffee | 18 | 28 | 46 |\n| Tea | 10 | 14 | 24 |\n| Neither | 24 | 20 | 44 |\n| Total | 52 | 62 | 114 |",
+    "parts": [
+     {
+      "label": "",
+      "question": "What is the probability that a randomly selected person is in the \"Coffee\" row?",
+      "answer": "0.4035",
+      "check": {
+       "type": "number",
+       "value": 0.4035,
+       "tol": 0.0006
+      },
+      "solution": "one category → its total ÷ grand total\nP(Coffee) = 46/114 = 0.4035"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q17. According to a survey, 35% of adults who own a smart speaker. A random sample of 8 is selected. Let X = the number in the sample who do.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find the probability that fewer than 3 do.",
+      "answer": "0.4279",
+      "check": {
+       "type": "number",
+       "value": 0.4279,
+       "tol": 0.0006
+      },
+      "solution": "fewer than 3 → 3 is OUT → x = 0, 1, 2 → add\nP(0) = 8C0·(0.35)^0·(0.65)^8 = 1(1)(0.0318645) = 0.0319\nP(1) = 8C1·(0.35)^1·(0.65)^7 = 8(0.35)(0.0490223) = 0.1373\nP(2) = 8C2·(0.35)^2·(0.65)^6 = 28(0.1225)(0.0754189) = 0.2587\nP(X < 3) = 0.0319 + 0.1373 + 0.2587 = 0.4279"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q18. Consider the following table.\n| x | 0 | 1 | 2 | 3 | 4 |\n| P(x) | 0.22 | 0.31 | 0.19 | ? | 0.08 |",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find the value of P(3) that makes this a valid probability distribution.",
+      "answer": "0.20",
+      "check": {
+       "type": "number",
+       "value": 0.2,
+       "tol": 0.0006
+      },
+      "solution": "The probabilities must add to exactly 1\nP(3) = 1 − (0.22 + 0.31 + 0.19 + 0.08) = 1 − 0.80 = 0.20"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q19. Pet ownership and housing. The table below summarizes 79 people.\n| Housing | Apartment | House | Total |\n| Dog | 6 | 13 | 19 |\n| Cat | 10 | 20 | 30 |\n| No pet | 19 | 11 | 30 |\n| Total | 35 | 44 | 79 |",
+    "parts": [
+     {
+      "label": "",
+      "question": "Of the people in the \"Dog\" row, what proportion are \"House\"? (This is a GIVEN question.)",
+      "answer": "0.6842",
+      "check": {
+       "type": "number",
+       "value": 0.6842,
+       "tol": 0.0006
+      },
+      "solution": "\"of the Dog people\" = GIVEN Dog → divide by that row's total 19\nP(House | Dog) = 13/19 = 0.6842"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q20. According to a survey, 40% of customers who use a coupon. A random sample of 10 is selected. Let X = the number in the sample who do.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find the probability that at least 4 do.",
+      "answer": "0.6178",
+      "check": {
+       "type": "number",
+       "value": 0.6178,
+       "tol": 0.0006
+      },
+      "solution": "at least 4 → 4 is IN → x = 4 … 10 is a long list → 1 − P(X ≤ 3)\nP(0) = 10C0·(0.4)^0·(0.6)^10 = 1(1)(0.00604662) = 0.0060\nP(1) = 10C1·(0.4)^1·(0.6)^9 = 10(0.4)(0.0100777) = 0.0403\nP(2) = 10C2·(0.4)^2·(0.6)^8 = 45(0.16)(0.0167962) = 0.1209\nP(3) = 10C3·(0.4)^3·(0.6)^7 = 120(0.064)(0.0279936) = 0.2150\nP(X ≤ 3) = 0.0060 + 0.0403 + 0.1209 + 0.2150 = 0.3822\nP(X ≥ 4) = 1 − 0.3822 = 0.6178"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q21. SAT math scores are approximately normally distributed with mean μ = 520 and standard deviation σ = 110. Hint: area to the left of z = 1.30 is 0.9032.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Is a value of 663 unusual? (Unusual = tail probability below 0.05, or |z| > 2.)",
+      "answer": "Not unusual",
+      "check": {
+       "type": "choice",
+       "options": [
+        "Unusual",
+        "Not unusual"
+       ],
+       "correct": "Not unusual"
+      },
+      "solution": "z = (663 − 520)/110 = 1.30 → tail area 0.0968 ≥ 0.05 → not unusual"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q22. Consider the following table.\n| x | 1 | 2 | 3 | 4 | 5 |\n| P(x) | 0.10 | 0.25 | 0.30 | 0.25 | 0.15 |",
+    "parts": [
+     {
+      "label": "",
+      "question": "Is this a valid discrete probability distribution?",
+      "answer": "Not valid",
+      "check": {
+       "type": "choice",
+       "options": [
+        "Valid",
+        "Not valid"
+       ],
+       "correct": "Not valid"
+      },
+      "solution": "Rule 1 ✓ · Rule 2: 0.10 + 0.25 + 0.30 + 0.25 + 0.15 = 1.05 ≠ 1 → NOT valid (the probabilities add to 1.05)"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q23. Consider the following table.\n| x | 0 | 1 | 2 | 3 |\n| P(x) | 0.15 | 0.35 | 0.30 | 0.20 |",
+    "parts": [
+     {
+      "label": "",
+      "question": "Is this a valid discrete probability distribution?",
+      "answer": "Valid",
+      "check": {
+       "type": "choice",
+       "options": [
+        "Valid",
+        "Not valid"
+       ],
+       "correct": "Valid"
+      },
+      "solution": "Rule 1: every P(x) is between 0 and 1 ✓\nRule 2: 0.15 + 0.35 + 0.30 + 0.20 = 1.00 ✓ → valid"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q24. According to a survey, 70% of teens who prefer texting. A random sample of 250 is selected.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find the expected number (mean) and the standard deviation of the number in the sample who do. (μ exact, σ to 2 decimals)",
+      "answer": "μ = 175, σ = 7.25",
+      "check": {
+       "type": "numbers",
+       "fields": [
+        {
+         "label": "μ",
+         "value": 175.0,
+         "tol": 0.011
+        },
+        {
+         "label": "σ",
+         "value": 7.25,
+         "tol": 0.011
+        }
+       ]
+      },
+      "solution": "μ = np = 250(0.7) = 175\nσ = √(np(1 − p)) = √(250(0.7)(0.3)) = √52.5 = 7.25"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q25. The number of goals in a soccer match (x) was recorded for 128 cases:\n| x | 0 | 1 | 2 | 3 | 4 |\n| frequency | 22 | 16 | 26 | 31 | 33 |\nFirst build the probability distribution: P(x) = frequency ÷ 128 (4 decimals): P(0) = 0.1719, P(1) = 0.1250, P(2) = 0.2031, P(3) = 0.2422, P(4) = 0.2578.",
+    "parts": [
+     {
+      "label": "",
+      "question": "The mean is μ = 2.29. Compute the standard deviation of X. Round to 2 decimals.",
+      "answer": "1.42",
+      "check": {
+       "type": "number",
+       "value": 1.42,
+       "tol": 0.011
+      },
+      "solution": "σ² = Σ (x − μ)²·P(x) = (0 − 2.29)²(0.1719) + (1 − 2.29)²(0.1250) + (2 − 2.29)²(0.2031) + (3 − 2.29)²(0.2422) + (4 − 2.29)²(0.2578)\n= 0.9015 + 0.2080 + 0.0171 + 0.1221 + 0.7538 = 2.0025\nσ = √2.0025 = 1.42"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q26. According to a survey, 45% of drivers who speed. A random sample of 10 is selected. Let X = the number in the sample who do.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find the probability that exactly 2 do.",
+      "answer": "0.0763",
+      "check": {
+       "type": "number",
+       "value": 0.0763,
+       "tol": 0.0006
+      },
+      "solution": "Binomial: n = 10, p = 0.45, 1 − p = 0.55\nP(2) = 10C2·(0.45)^2·(0.55)^8 = 45(0.2025)(0.00837339) = 0.0763"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q27. According to a survey, 55% of voters who support the measure. A random sample of 10 is selected. Let X = the number in the sample who do.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find the probability that more than 2 do.",
+      "answer": "0.9726",
+      "check": {
+       "type": "number",
+       "value": 0.9726,
+       "tol": 0.0006
+      },
+      "solution": "more than 2 → 2 is OUT → x = 3 … 10 is a long list → 1 − P(X ≤ 2)\nP(0) = 10C0·(0.55)^0·(0.45)^10 = 1(1)(0.000340506) = 0.0003\nP(1) = 10C1·(0.55)^1·(0.45)^9 = 10(0.55)(0.000756681) = 0.0042\nP(2) = 10C2·(0.55)^2·(0.45)^8 = 45(0.3025)(0.00168151) = 0.0229\nP(X ≤ 2) = 0.0003 + 0.0042 + 0.0229 = 0.0274\nP(X > 2) = 1 − 0.0274 = 0.9726"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q28. Standard normal. Hints: area to the left of z = −1.41 is 0.0793; area to the left of z = 0.50 is 0.6915.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find the area between z = −1.41 and z = 0.50.",
+      "answer": "0.6122",
+      "check": {
+       "type": "number",
+       "value": 0.6122,
+       "tol": 0.0006
+      },
+      "solution": "BETWEEN → (left of the bigger z) − (left of the smaller z) = 0.6915 − 0.0793 = 0.6122"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q29. The number of goals in a soccer match (x) was recorded for 152 cases:\n| x | 0 | 1 | 2 | 3 | 4 |\n| frequency | 25 | 33 | 36 | 27 | 31 |\nFirst build the probability distribution: P(x) = frequency ÷ 152 (4 decimals): P(0) = 0.1645, P(1) = 0.2171, P(2) = 0.2368, P(3) = 0.1776, P(4) = 0.2039.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find the probability that X is more than 1.",
+      "answer": "0.6183",
+      "check": {
+       "type": "number",
+       "value": 0.6183,
+       "tol": 0.0006
+      },
+      "solution": "more than 1 → 1 is OUT → x = 2, 3, 4\nP = 0.2368 + 0.1776 + 0.2039 = 0.6183"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q30. The amount of soda (oz) dispensed by a machine is uniformly distributed between 10 and 16 oz.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find the probability that the value is between 12 and 15 oz.",
+      "answer": "0.5000",
+      "check": {
+       "type": "number",
+       "value": 0.5,
+       "tol": 0.0006
+      },
+      "solution": "P(12 ≤ X ≤ 15) = (d − c)/(b − a) = (15 − 12)/(16 − 10) = 3/6 = 0.5000"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q31. Standard normal. Hints: area to the left of z = 1.96 is 0.9750; area to the left of z = 2.06 is 0.9803; area to the left of z = 1.86 is 0.9686.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find the z-score that has area 0.9750 to its LEFT.",
+      "answer": "1.96",
+      "check": {
+       "type": "number",
+       "value": 1.96,
+       "tol": 0.011
+      },
+      "solution": "backwards: the area is given → find the hint closest to 0.9750 → z = 1.96"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q32. Systolic blood pressure of adults (mmHg) are approximately normally distributed with mean μ = 122 and standard deviation σ = 14. Hint: area to the left of z = −0.51 is 0.3050.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find the probability that a randomly selected value is below 114.8.",
+      "answer": "0.3050",
+      "check": {
+       "type": "number",
+       "value": 0.305,
+       "tol": 0.0006
+      },
+      "solution": "z = (114.8 − 122)/14 = −0.51 → left area 0.3050\nBELOW → the hint itself = 0.3050"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q33. According to a survey, 10% of people who are left-handed. A random sample of 12 is selected. Let X = the number in the sample who do.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find the probability that none do.",
+      "answer": "0.2824",
+      "check": {
+       "type": "number",
+       "value": 0.2824,
+       "tol": 0.0006
+      },
+      "solution": "none → P(0) = (0.9)^12\nP(0) = 12C0·(0.1)^0·(0.9)^12 = 1(1)(0.28243) = 0.2824"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q34. Major and class standing. The table below summarizes 97 people.\n| Standing | Underclass | Upperclass | Total |\n| Business | 5 | 6 | 11 |\n| Science | 19 | 8 | 27 |\n| Arts | 30 | 29 | 59 |\n| Total | 54 | 43 | 97 |",
+    "parts": [
+     {
+      "label": "",
+      "question": "What is the probability that a randomly selected person is NOT \"Upperclass\"?",
+      "answer": "0.5567",
+      "check": {
+       "type": "number",
+       "value": 0.5567,
+       "tol": 0.0006
+      },
+      "solution": "NOT → 1 − P(Upperclass)\nP(not Upperclass) = 1 − 43/97 = 54/97 = 0.5567"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q35. Battery life of a laptop (hours) are approximately normally distributed with mean μ = 9.2 and standard deviation σ = 1.4. Hint: the z-score with area 0.05 to its left is −1.645.",
+    "parts": [
+     {
+      "label": "",
+      "question": "What value separates the bottom 5% from the rest? Round to 1 decimal.",
+      "answer": "6.9",
+      "check": {
+       "type": "number",
+       "value": 6.9,
+       "tol": 0.06
+      },
+      "solution": "bottom 5% → left area 0.05 → z = −1.645 (negative: below the mean)\nx = μ + zσ = 9.2 + (−1.645)(1.4) = 6.9"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q36. Major and class standing. The table below summarizes 75 people.\n| Standing | Underclass | Upperclass | Total |\n| Business | 5 | 22 | 27 |\n| Science | 7 | 14 | 21 |\n| Arts | 10 | 17 | 27 |\n| Total | 22 | 53 | 75 |",
+    "parts": [
+     {
+      "label": "",
+      "question": "Two people are selected without replacement. What is the probability that both are \"Upperclass\"?",
+      "answer": "0.4966",
+      "check": {
+       "type": "number",
+       "value": 0.4966,
+       "tol": 0.0006
+      },
+      "solution": "AND for two picks → multiply; the 2nd pick has one fewer Upperclass and one fewer person\nP(both) = 53/75 · 52/74 = 0.4966"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q37. The time (seconds) a traffic light stays red is uniformly distributed between 30 and 90 seconds.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find the probability that the value is more than 87 seconds.",
+      "answer": "0.0500",
+      "check": {
+       "type": "number",
+       "value": 0.05,
+       "tol": 0.0006
+      },
+      "solution": "\"more than 87\" → the piece from 87 to 90\nP(X > 87) = (90 − 87)/(90 − 30) = 3/60 = 0.0500"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q38. Standard normal. Hint: area to the left of z = −1.96 is 0.0250.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find the area to the left of z = −1.96.",
+      "answer": "0.0250",
+      "check": {
+       "type": "number",
+       "value": 0.025,
+       "tol": 0.0006
+      },
+      "solution": "LEFT → the hint is the answer: P(Z < −1.96) = 0.0250"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q39. Consider the following table.\n| x | 0 | 1 | 2 | 3 |\n| P(x) | 0.45 | 0.40 | 0.25 | −0.10 |",
+    "parts": [
+     {
+      "label": "",
+      "question": "Is this a valid discrete probability distribution?",
+      "answer": "Not valid",
+      "check": {
+       "type": "choice",
+       "options": [
+        "Valid",
+        "Not valid"
+       ],
+       "correct": "Not valid"
+      },
+      "solution": "Rule 1 fails: P(3) = −0.10 is below 0 → NOT valid (a probability can never be negative), even though the sum is 1"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q40. The number of goals in a soccer match (x) was recorded for 120 cases:\n| x | 0 | 1 | 2 | 3 | 4 |\n| frequency | 16 | 37 | 32 | 8 | 27 |\nFirst build the probability distribution: P(x) = frequency ÷ 120 (4 decimals): P(0) = 0.1333, P(1) = 0.3083, P(2) = 0.2667, P(3) = 0.0667, P(4) = 0.2250.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find the probability that X is fewer than 2.",
+      "answer": "0.4416",
+      "check": {
+       "type": "number",
+       "value": 0.4416,
+       "tol": 0.0006
+      },
+      "solution": "fewer than 2 → 2 is OUT → x = 0, 1\nP = 0.1333 + 0.3083 = 0.4416"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q41. According to a survey, 60% of households with a pet. A random sample of 9 is selected. Let X = the number in the sample who do.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find the probability that at least one does.",
+      "answer": "0.9997",
+      "check": {
+       "type": "number",
+       "value": 0.9997,
+       "tol": 0.0006
+      },
+      "solution": "at least one → 1 − P(0)\nP(0) = 9C0·(0.6)^0·(0.4)^9 = 1(1)(0.000262144) = 0.0003\nP(X ≥ 1) = 1 − 0.0003 = 0.9997"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q42. The number of goals in a soccer match (x) was recorded for 125 cases:\n| x | 0 | 1 | 2 | 3 | 4 |\n| frequency | 5 | 27 | 27 | 39 | 27 |\nFirst build the probability distribution: P(x) = frequency ÷ 125 (4 decimals): P(0) = 0.0400, P(1) = 0.2160, P(2) = 0.2160, P(3) = 0.3120, P(4) = 0.2160.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find the probability that X is at least 1.",
+      "answer": "0.9600",
+      "check": {
+       "type": "number",
+       "value": 0.96,
+       "tol": 0.0006
+      },
+      "solution": "at least 1 → 1 is IN → x = 1, 2, 3, 4\nP = 0.2160 + 0.2160 + 0.3120 + 0.2160 = 0.9600"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q43. According to a survey, 20% of flights that arrive late. A random sample of 6 is selected. Let X = the number in the sample who do.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find the probability that at most 3 do.",
+      "answer": "0.9830",
+      "check": {
+       "type": "number",
+       "value": 0.983,
+       "tol": 0.0006
+      },
+      "solution": "at most 3 → 3 is IN → x = 0, 1, 2, 3 → add\nP(0) = 6C0·(0.2)^0·(0.8)^6 = 1(1)(0.262144) = 0.2621\nP(1) = 6C1·(0.2)^1·(0.8)^5 = 6(0.2)(0.32768) = 0.3932\nP(2) = 6C2·(0.2)^2·(0.8)^4 = 15(0.04)(0.4096) = 0.2458\nP(3) = 6C3·(0.2)^3·(0.8)^3 = 20(0.008)(0.512) = 0.0819\nP(X ≤ 3) = 0.2621 + 0.3932 + 0.2458 + 0.0819 = 0.9830"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q44. Finish times in a 5K race (minutes) are approximately normally distributed with mean μ = 28 and standard deviation σ = 4.5. Hints: area to the left of z = −1.40 is 0.0808; area to the left of z = 0.53 is 0.7019.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find the proportion of values between 21.7 and 30.4.",
+      "answer": "0.6211",
+      "check": {
+       "type": "number",
+       "value": 0.6211,
+       "tol": 0.0006
+      },
+      "solution": "z = (21.7 − 28)/4.5 = −1.40 → 0.0808;  z = (30.4 − 28)/4.5 = 0.53 → 0.7019\nBETWEEN → 0.7019 − 0.0808 = 0.6211"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q45. Pet ownership and housing. The table below summarizes 130 people.\n| Housing | Apartment | House | Total |\n| Dog | 20 | 12 | 32 |\n| Cat | 20 | 27 | 47 |\n| No pet | 25 | 26 | 51 |\n| Total | 65 | 65 | 130 |",
+    "parts": [
+     {
+      "label": "",
+      "question": "What is the probability that a person is \"No pet\" GIVEN that the person is \"Apartment\"?",
+      "answer": "0.3846",
+      "check": {
+       "type": "number",
+       "value": 0.3846,
+       "tol": 0.0006
+      },
+      "solution": "GIVEN → divide by the given group's total (Apartment = 65), not 130\nP(No pet | Apartment) = 25/65 = 0.3846"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q46. The weight (lb) of a bag of apples is uniformly distributed between 2 and 6 lb.",
+    "parts": [
+     {
+      "label": "",
+      "question": "75% of the values are below what number? (Backwards: the area to the left is given.)",
+      "answer": "5",
+      "check": {
+       "type": "number",
+       "value": 5.0,
+       "tol": 0.06
+      },
+      "solution": "x = a + (area to the left)(b − a) = 2 + 0.75(4) = 2 + 3 = 5 lb"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q47. Adult male heights (inches) are approximately normally distributed with mean μ = 69.5 and standard deviation σ = 2.8. Hint: area to the left of z = 1.25 is 0.8944.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find the probability that a randomly selected value is above 73.",
+      "answer": "0.1056",
+      "check": {
+       "type": "number",
+       "value": 0.1056,
+       "tol": 0.0006
+      },
+      "solution": "z = (73 − 69.5)/2.8 = 1.25 → left area 0.8944\nABOVE → 1 − 0.8944 = 0.1056"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q48. Weights of newborns (lb) are approximately normally distributed with mean μ = 7.5 and standard deviation σ = 1.1. Hint: the z-score for the 98th percentile is 2.05.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find the value at the 98th percentile. Round to 1 decimal.",
+      "answer": "9.8",
+      "check": {
+       "type": "number",
+       "value": 9.8,
+       "tol": 0.06
+      },
+      "solution": "98% below it → left area 0.98 → z = 2.05\nx = μ + zσ = 7.5 + (2.05)(1.1) = 9.8"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q49. Standard normal. Hints: area to the left of z = −0.32 is 0.3745; area to the left of z = 0.76 is 0.7764.",
+    "parts": [
+     {
+      "label": "",
+      "question": "Find the area to the left of z = −0.32 OR to the right of z = 0.76 (the two tails).",
+      "answer": "0.5981",
+      "check": {
+       "type": "number",
+       "value": 0.5981,
+       "tol": 0.0006
+      },
+      "solution": "two tails → left tail + right tail = 0.3745 + (1 − 0.7764) = 0.3745 + 0.2236 = 0.5981"
+     }
+    ]
+   },
+   {
+    "points": 1,
+    "prompt": "Q50. According to a survey, 30% of employees who work remotely. A random sample of 400 is selected. (μ = 120, σ = 9.17, and np(1 − p) = 84 ≥ 10.)",
+    "parts": [
+     {
+      "label": "",
+      "question": "Would it be unusual to find 118 in the sample who do?",
+      "answer": "Not unusual",
+      "check": {
+       "type": "choice",
+       "options": [
+        "Unusual",
+        "Not unusual"
+       ],
+       "correct": "Not unusual"
+      },
+      "solution": "usual range = μ ± 2σ = 120 ± 2(9.17) = 101.66 to 138.34\n118 is inside the range → not unusual"
+     }
+    ]
+   }
+  ]
+ }
+}

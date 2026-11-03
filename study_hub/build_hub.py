@@ -62,7 +62,9 @@ big_tests = [dict(OFFICIAL, key="official")]
 import os
 M2 = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "mirror2.json")))
 mirror_tests = [dict(M2["test"], key="mirror2")]
-DATA = json.dumps({"mini": mini_tests, "big": big_tests, "mirror": mirror_tests}, ensure_ascii=False)
+D50 = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "drill50.json")))
+drill_tests = [dict(D50["test"], key="drill50")]
+DATA = json.dumps({"mini": mini_tests, "big": big_tests, "mirror": mirror_tests, "drill": drill_tests}, ensure_ascii=False)
 
 PAGE = r"""<title>Exam 2 Study Hub</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -196,6 +198,7 @@ button.b.ok[aria-pressed="true"], button.b.bad[aria-pressed="true"]{color:var(--
 <button role="tab" aria-selected="false" data-tab="explained">Practice exam explained</button>
 <button role="tab" aria-selected="false" data-tab="ref">Formulas</button>
 <button role="tab" aria-selected="false" data-tab="mirror">Mirror exam</button>
+<button role="tab" aria-selected="false" data-tab="drill">50 drill</button>
 </nav></div></header>
 
 <main class="wrap">
@@ -498,6 +501,13 @@ Empirical Rule 68 / 95 / 99.7     IQR = Q₃ − Q₁, fences Q₁ − 1.5·IQR,
 <tr><td>7</td><td>Normal in context</td><td>a LOW percentile (negative z)</td></tr></table></div>
 <div id="mirror-root"></div>
 </section>
+
+<!-- ================= 50 DRILL ================= -->
+<section class="view" id="view-drill" hidden>
+<h2>50-question drill — every type, new numbers</h2>
+<p class="small">Fifty random questions mixed across all seven types (table, valid?, discrete, binomial, uniform, z, normal). Each one stands alone. Solve on paper with only the cheat sheet and calculator, type the answer, press <b>Check answer</b>. Wrong → the worked solution opens. Probabilities to 4 decimals; μ, σ to 2; x values to 1 decimal. z hints are printed in the question like the real exam.</p>
+<div id="drill-root"></div>
+</section>
 </main>
 
 <script id="data" type="application/json">__DATA__</script>
@@ -517,8 +527,8 @@ Empirical Rule 68 / 95 / 99.7     IQR = Q₃ − Q₁, fences Q₁ − 1.5·IQR,
   }
   tabs.forEach(function(b){ b.addEventListener('click', function(){ show(b.dataset.tab); }); });
   var h = (location.hash||'').replace('#',''); var saved = store('tab');
-  show(['plan','learn','mini','exam','explained','ref','mirror'].indexOf(h)>=0 ? h : (saved || 'plan'));
-  window.addEventListener('hashchange', function(){ var x=(location.hash||'').replace('#',''); if(['plan','learn','mini','exam','explained','ref','mirror'].indexOf(x)>=0) show(x); });
+  show(['plan','learn','mini','exam','explained','ref','mirror','drill'].indexOf(h)>=0 ? h : (saved || 'plan'));
+  window.addEventListener('hashchange', function(){ var x=(location.hash||'').replace('#',''); if(['plan','learn','mini','exam','explained','ref','mirror','drill'].indexOf(x)>=0) show(x); });
 
   /* plan checkboxes */
   document.querySelectorAll('ol.plan').forEach(function(ol){
@@ -623,6 +633,7 @@ Empirical Rule 68 / 95 / 99.7     IQR = Q₃ − Q₁, fences Q₁ − 1.5·IQR,
   var mr = document.getElementById('mini-root'); DATA.mini.forEach(function(t){ renderTest(t, mr, 'mini'); });
   var er = document.getElementById('exam-root'); DATA.big.forEach(function(t){ renderTest(t, er, 'big'); });
   var xr = document.getElementById('mirror-root'); (DATA.mirror||[]).forEach(function(t){ renderTest(t, xr, 'big'); });
+  var dr = document.getElementById('drill-root'); (DATA.drill||[]).forEach(function(t){ renderTest(t, dr, 'mini'); });
 })();
 </script>
 """
