@@ -2,15 +2,15 @@
 @page { size: letter; margin: 0; }
 * { box-sizing: border-box; }
 html, body { margin:0; padding:0; background:#fff; color:#000; }
-body { font-family: KaTeX_Main, "Latin Modern Roman", "Times New Roman", serif; font-size: 11.2pt; line-height: 1.28; }
-.page { width: 8.5in; height: 11in; padding: 0.85in 1.15in 0.75in 1.15in; display:flex; flex-direction:column; break-after: page; page-break-after: always; overflow: hidden; position: relative; }
+body { font-family: KaTeX_Main, "Latin Modern Roman", "Times New Roman", serif; font-size: 12pt; line-height: 1.22; }
+.page { width: 8.5in; height: 11in; padding: 1.2in 1.5in 0.9in 1.5in; display:flex; flex-direction:column; break-after: page; page-break-after: always; position: relative; }
 .page:last-child { break-after: auto; page-break-after: auto; }
-.hdr { display:flex; justify-content:space-between; border-bottom: 0.6pt solid #000; padding-bottom: 2pt; margin-bottom: 14pt; font-size: 11pt; }
-.ftr { margin-top:auto; text-align:center; font-size: 11pt; padding-top: 10pt; }
-.box { border: 0.7pt solid #000; padding: 10pt 14pt 8pt 14pt; margin: 4pt 0 30pt 0; }
-.box ul { margin:0; padding-left: 14pt; } .box li { margin: 0 0 5pt 0; }
+.hdr { display:flex; justify-content:space-between; border-bottom: 0.6pt solid #000; padding-bottom: 2pt; margin-bottom: 16pt; font-size: 12pt; }
+.ftr { margin-top:auto; text-align:center; font-size: 12pt; padding-top: 10pt; }
+.box { border: 0.7pt solid #000; padding: 10pt 14pt 6pt 14pt; margin: 2pt 0 26pt 0; font-size: 11.5pt; }
+.box ul { margin:0; padding-left: 14pt; } .box li { margin: 0 0 4pt 0; }
 .red { color:#b00000; font-weight:bold; }
-h1 { font-size: 16.5pt; margin: 14pt 0 8pt 0; font-weight: bold; line-height:1.2; }
+h1 { font-size: 17pt; margin: 14pt 0 8pt 0; font-weight: bold; line-height:1.2; }
 h2 { font-size: 11.5pt; margin: 6pt 0 2pt 0; font-weight: bold; }
 p { margin: 0 0 6pt 0; }
 .parts { margin: 6pt 0 0 0; padding: 0; list-style: none; }
@@ -26,7 +26,7 @@ table.vl th { border-bottom: 0.6pt solid #000; padding: 0 8pt; font-weight: norm
 table.vl td { padding: 0 8pt; text-align:center; }
 table.vl th.l, table.vl td.l { border-right: 0.6pt solid #000; }
 .center { text-align:center; }
-.line { display:inline-block; border-bottom: 0.6pt solid #000; width: 3.4in; vertical-align: baseline; }
+.sig { display:flex; align-items:baseline; margin: 0 0 11pt 0; } .sig b { white-space:nowrap; margin-right: 6pt; } .line { flex:1; border-bottom: 0.6pt solid #000; height: 0.9em; }
 .ack { margin: 6pt 0 10pt 28pt; width: 4.6in; }
 .hint { margin: 4pt 0 8pt 0; font-size: 10.6pt; }
 .katex { font-size: 1.0em; white-space: nowrap; }
@@ -36,8 +36,8 @@ table.vl th.l, table.vl td.l { border-right: 0.6pt solid #000; }
 .why { color:#333; font-style: italic; }
 </style></head><body><div class="page"><div class="hdr"><span>STA2023</span><span>Practice Exam 2 (Mirror)</span><span>2 November 26</span></div>
 <div class="box"><ul>
-<li>This is a <b>Mirror Exam</b>: the same seven question types as the posted Practice Exam 2, with new numbers. Time yourself: <b>50 minutes</b>.</li>
-<li>The exam covers Chapters 4–6.</li>
+<li>The <b>Mid Term Exam 2</b> for <b>STA 2023</b> will be held in class on <b>November 3, 2026</b> (this mirror: time yourself, <b>50 minutes</b>).</li>
+<li>The exam will cover Chapters 4-6.</li>
 <li>The exam is <b>closed-book and closed-notes</b>.</li>
 <li>You may use a <b>calculator</b> and <b>one double-page cheat sheet</b>.</li>
 <li class="red">You must bring your physical UCF ID card. Your exam will not be graded if you fail to present your physical UCF ID card.</li>
@@ -52,9 +52,9 @@ table.vl th.l, table.vl td.l { border-right: 0.6pt solid #000; }
 <p>As your first task, please <b>handwrite the acknowledgment statement below</b> on your answer sheet. Then write your <b>full name</b>, <b>signature</b>, and <b>UCF ID number (in digits)</b> below it.</p><div class="ftr">Page 1 of 6</div></div><div class="page"><div class="hdr"><span>STA2023</span><span>Practice Exam 2 (Mirror)</span><span>2 November 26</span></div>
 <p><i>Acknowledgment Statement:</i></p>
 <p class="ack">“I acknowledge that I have read and understood all exam instructions and that I have fully complied, and will continue to comply, with the university’s policies on Academic Integrity in completing and submitting this exam.”</p>
-<p><b>Name (print clearly):</b> <span class="line"></span></p>
-<p><b>Signature:</b> <span class="line"></span></p>
-<p><b>UCF ID Number:</b> <span class="line"></span></p>
+<div class="sig"><b>Name (print clearly):</b> <span class="line"></span></div>
+<div class="sig"><b>Signature:</b> <span class="line"></span></div>
+<div class="sig"><b>UCF ID Number:</b> <span class="line"></span></div>
 <h1>Question 1 (6 points)</h1>
 <h2>Commuting and Housing</h2>
 <p style="margin-left:12pt">The table below summarizes how 110 students at a university commute and where they live.</p>
@@ -74,40 +74,40 @@ table.vl th.l, table.vl td.l { border-right: 0.6pt solid #000; }
 <table class="vl"><tr><th class="l">\(x\)</th><th>\(P(x)\)</th></tr>
 <tr><td class="l">1</td><td>0.15</td></tr><tr><td class="l">2</td><td>0.25</td></tr><tr><td class="l">3</td><td>0.30</td></tr><tr><td class="l">4</td><td>0.20</td></tr><tr><td class="l">5</td><td>0.12</td></tr></table><div class="ftr">Page 3 of 6</div></div><div class="page"><div class="hdr"><span>STA2023</span><span>Practice Exam 2 (Mirror)</span><span>2 November 26</span></div>
 <h1>Question 3 (8 points): Cars per Household</h1>
-<p>A city planner records the number of cars, \(X\), owned by each household in a random sample of 80 households in one neighborhood. The following data represent the number of cars per household. <i>Note: no household in the sample owned more than 3 cars.</i></p>
+<p>A city planner records the number of cars, \(X\), owned by each household in a random sample of 85 households in one neighborhood. The following data represent the number of cars per household. <i>Note: no household in the sample owned more than 3 cars.</i></p>
 <table class="vl"><tr><th class="l">\(x\)</th><th>Frequency</th></tr>
-<tr><td class="l">0</td><td>12</td></tr><tr><td class="l">1</td><td>28</td></tr><tr><td class="l">2</td><td>32</td></tr><tr><td class="l">3</td><td>8</td></tr></table>
+<tr><td class="l">0</td><td>13</td></tr><tr><td class="l">1</td><td>29</td></tr><tr><td class="l">2</td><td>33</td></tr><tr><td class="l">3</td><td>10</td></tr></table>
 <ul class="parts" style="--gap:12pt">
-<li>(a) <b>(2 pt)</b> Construct a probability distribution for the random variable \(X\), the number of cars per household.</li>
-<li>(b) <b>(2 pt)</b> Graph the discrete probability distribution.</li>
-<li>(c) <b>(2 pt)</b> Compute and interpret the mean of \(X\).</li>
-<li>(d) <b>(2 pt)</b> Compute the standard deviation of \(X\).</li></ul>
+<li><b>(a)</b> (2 pt) Construct a probability distribution for the random variable \(X\), the number of cars per household.</li>
+<li><b>(b)</b> (2 pt) Graph the discrete probability distribution.</li>
+<li><b>(c)</b> (2 pt) Compute and interpret the mean of \(X\).</li>
+<li><b>(d)</b> (2 pt) Compute the standard deviation of \(X\).</li></ul>
 <h1>Question 4 (8 points): Reading Habits</h1>
 <p>According to a national survey, 35% of U.S. adults read at least one book last month. In a random sample of 8 U.S. adults, find the probability that:</p>
 <ul class="parts" style="--gap:12pt">
-<li>(a) <b>(2 pt)</b> Exactly 2 read at least one book last month.</li>
-<li>(b) <b>(2 pt)</b> At most 2 read at least one book last month.</li>
-<li>(c) <b>(2 pt)</b> At least 1 read at least one book last month.</li>
-<li>(d) <b>(2 pt)</b> For a random sample of 300 U.S. adults, find the expected number and standard deviation of those who read at least one book last month.</li></ul><div class="ftr">Page 4 of 6</div></div><div class="page"><div class="hdr"><span>STA2023</span><span>Practice Exam 2 (Mirror)</span><span>2 November 26</span></div>
+<li><b>(a)</b> (2 pt) Exactly 2 read at least one book last month.</li>
+<li><b>(b)</b> (2 pt) At most 2 read at least one book last month.</li>
+<li><b>(c)</b> (2 pt) At least 1 read at least one book last month.</li>
+<li><b>(d)</b> (2 pt) For a random sample of 300 U.S. adults, find the expected number and standard deviation of those who read at least one book last month.</li></ul><div class="ftr">Page 4 of 6</div></div><div class="page"><div class="hdr"><span>STA2023</span><span>Practice Exam 2 (Mirror)</span><span>2 November 26</span></div>
 <h1>Question 5 (5 points): Shuttle Wait Time</h1>
 <p>Suppose the waiting time \(X\) (in minutes) for a campus shuttle is uniformly distributed between 0 and 25 minutes.</p>
 <ul class="parts" style="--gap:12pt">
-<li>(a) <b>(1 pt)</b> Sketch or describe the graph of the uniform probability density function (pdf).</li>
-<li>(b) <b>(2 pt)</b> Find the probability that the wait is between 5 and 15 minutes, i.e., \(P(5 \le X \le 15)\).</li>
-<li>(c) <b>(2 pt)</b> Find the probability that the wait is more than 18 minutes, i.e., \(P(X &gt; 18)\).</li></ul>
+<li><b>(a)</b> (1 pt) Sketch or describe the graph of the uniform probability density function (pdf).</li>
+<li><b>(b)</b> (2 pt) Find the probability that the wait is between 5 and 15 minutes, i.e., \(P(5 \le X \le 15)\).</li>
+<li><b>(c)</b> (2 pt) Find the probability that the wait is more than 18 minutes, i.e., \(P(X &gt; 18)\).</li></ul>
 <h1>Question 6 (6 points): Normal Distribution and z‑Scores</h1>
 <p><b>Instructions:</b> Use the hints below (or the standard normal table) to find each probability. Show work and round final answers to four decimal places.</p>
-<p class="hint"><b>Hints: <span style='white-space:nowrap'>P(Z &lt; 0.85) = 0.8023,</span> &nbsp; <span style='white-space:nowrap'>P(Z &lt; −1.30) = 0.0968,</span> &nbsp; <span style='white-space:nowrap'>P(Z &lt; −0.25) = 0.4013,</span> &nbsp; <span style='white-space:nowrap'>P(Z &lt; 1.25) = 0.8944.</span></b></p>
+<p class="hint"><b>Hints: <span style='white-space:nowrap'>P(Z &lt; −0.85) = 0.1977,</span> &nbsp; <span style='white-space:nowrap'>P(Z &lt; −1.30) = 0.0968,</span> &nbsp; <span style='white-space:nowrap'>P(Z &lt; −0.25) = 0.4013,</span> &nbsp; <span style='white-space:nowrap'>P(Z &lt; 1.25) = 0.8944.</span></b></p>
 <ul class="parts" style="--gap:12pt">
-<li>(a) Find the area to the right of \(z = 0.85\).</li>
-<li>(b) Find the area between \(z = -1.30\) and \(z = -0.25\).</li>
-<li>(c) The random variable \(X\) is normally distributed with \(\mu = 250\) and \(\sigma = 40\). Find \(P(X &gt; 300)\).</li></ul>
+<li><b>(a)</b> Find the area to the left of \(z = -0.85\).</li>
+<li><b>(b)</b> Find the area between \(z = -1.30\) and \(z = -0.25\).</li>
+<li><b>(c)</b> The random variable \(X\) is normally distributed with \(\mu = 250\) and \(\sigma = 40\). Find \(P(X &gt; 300)\).</li></ul>
 <h1>Question 7 (8 points): Heights of Adult Men</h1>
 <p>The heights of adult men in the U.S. are approximately normally distributed with mean \(\mu = 69\) inches and standard deviation \(\sigma = 2.8\) inches.</p>
 <p class="hint"><b>Hints: <span style='white-space:nowrap'>P(Z &lt; 1.79) = 0.9633,</span> &nbsp; <span style='white-space:nowrap'>P(Z &lt; −1.43) = 0.0764,</span> &nbsp; <span style='white-space:nowrap'>P(Z &lt; −1.07) = 0.1423,</span> &nbsp; <span style='white-space:nowrap'>P(Z &lt; 1.07) = 0.8577;</span> &nbsp; <span style='white-space:nowrap'>the 10th percentile corresponds to z = −1.28.</span></b></p>
 <ul class="parts" style="--gap:12pt">
-<li>(a) <b>(2 pt)</b> What is the probability that a randomly selected man is taller than 74 inches?</li></ul><div class="ftr">Page 5 of 6</div></div><div class="page"><div class="hdr"><span>STA2023</span><span>Practice Exam 2 (Mirror)</span><span>2 November 26</span></div>
+<li><b>(a)</b> (2 pt) What is the probability that a randomly selected man is taller than 74 inches?</li></ul><div class="ftr">Page 5 of 6</div></div><div class="page"><div class="hdr"><span>STA2023</span><span>Practice Exam 2 (Mirror)</span><span>2 November 26</span></div>
 <ul class="parts">
-<li>(b) <b>(2 pt)</b> What is the probability that a randomly selected man is shorter than 65 inches?</li>
-<li>(c) <b>(2 pt)</b> What proportion of men are between 66 and 72 inches tall?</li>
-<li>(d) <b>(2 pt)</b> What height places a man at the 10th percentile?</li></ul><div class="ftr">Page 6 of 6</div></div><script>renderMathInElement(document.body,{delimiters:[{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}],throwOnError:false});</script></body></html>
+<li><b>(b)</b> (2 pt) What is the probability that a randomly selected man is shorter than 65 inches?</li>
+<li><b>(c)</b> (2 pt) What proportion of men are between 66 and 72 inches tall?</li>
+<li><b>(d)</b> (2 pt) What height places a man at the 10th percentile?</li></ul><div class="ftr">Page 6 of 6</div></div><script>renderMathInElement(document.body,{delimiters:[{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}],throwOnError:false});</script></body></html>
