@@ -1,0 +1,321 @@
+<section class="view exp" id="view-explained" hidden>
+<h2>The official practice exam, worked and explained</h2>
+<p>Each part below has four pieces: <span class="def">what the question is really asking</span>, <span class="rule-inline">which rule to use and why</span>, the numbered steps with every line of arithmetic, and the mistake that usually costs the point. Read a part, close it, then redo it on paper from the question alone.</p>
+<div class="note"><b>How points are earned:</b> write the formula, substitute the numbers, show the arithmetic, box the answer. Round probabilities to four decimal places. A correct number with no work can lose credit; a wrong number with correct work can keep most of it.</div>
+
+<!-- ============ Q1 ============ -->
+<h3 class="qhead">Question 1 — Employment status and gender (6 points)</h3>
+<div class="tscroll"><table class="t"><tr><th>Status</th><th>Males</th><th>Females</th><th>Row total</th></tr>
+<tr><td>Full-time</td><td>22</td><td>18</td><td>40</td></tr><tr><td>Part-time</td><td>6</td><td>10</td><td>16</td></tr>
+<tr><td>Unemployed</td><td>3</td><td>2</td><td>5</td></tr><tr><td>Not in labor force</td><td>5</td><td>12</td><td>17</td></tr>
+<tr><th>Column total</th><th>36</th><th>42</th><th>78</th></tr></table></div>
+<p class="def">What this table is: 78 people, sorted two ways at once. Each inside cell counts the people who are <i>both</i> things (22 people are male AND full-time). The first thing to do on any table question, before reading part (a): write the row totals and the column totals in the margins. Every answer is then "a count ÷ the group you are picking from."</p>
+
+<div class="part">
+<p><b>(a)</b> What is the probability that a randomly selected resident is male? <i>(1 pt)</i></p>
+<p class="ask">Asking: out of everybody, what fraction are male?</p>
+<p class="why">Rule: single category → its total ÷ grand total.</p>
+<ol class="steps"><li>"Male" is the whole Males column, so the count is the column total, 36.</li><li>The group you are picking from is all 78 residents.</li><li>Divide.</li></ol>
+<pre class="work">P(male) = 36 / 78 = 0.4615</pre>
+<p class="final">Answer: 0.4615</p>
+<p class="watch">Watch out: 22 is only the <i>full-time</i> males. "Male" means the entire column.</p>
+</div>
+
+<div class="part">
+<p><b>(b)</b> What is the probability that a randomly selected resident is part-time? <i>(1 pt)</i></p>
+<p class="ask">Asking: out of everybody, what fraction work part-time (men and women together)?</p>
+<p class="why">Rule: single category → its total ÷ grand total.</p>
+<ol class="steps"><li>Part-time is a row: 6 males + 10 females = 16.</li><li>Divide by 78.</li></ol>
+<pre class="work">Part-time total = 6 + 10 = 16
+P(part-time) = 16 / 78 = 0.2051</pre>
+<p class="final">Answer: 0.2051</p>
+<p class="watch">Watch out: add both cells in the row; using 6 or 10 alone answers a different question.</p>
+</div>
+
+<div class="part">
+<p><b>(c)</b> What is the probability that a randomly selected resident is male OR unemployed? <i>(1 pt)</i></p>
+<p class="ask">Asking: what fraction are in <i>either</i> group — male, unemployed, or both?</p>
+<p class="why">Rule: OR → P(A) + P(B) − P(A and B). Adding the two groups counts the overlap twice, so subtract it once.</p>
+<ol class="steps"><li>P(male) = 36/78.</li><li>P(unemployed) = row total 5 → 5/78.</li><li>Overlap = people who are both: the male-unemployed cell = 3 → 3/78.</li><li>Add the first two, subtract the overlap.</li></ol>
+<pre class="work">P(male or unemployed) = P(male) + P(unemployed) − P(male and unemployed)
+= 36/78 + 5/78 − 3/78
+= 38/78
+= 0.4872</pre>
+<p class="final">Answer: 0.4872</p>
+<p class="watch">Watch out: forgetting to subtract the overlap gives 41/78 = 0.5256, which is wrong. Sanity check: count directly — all 36 males plus the 2 unemployed females = 38 people. Same answer.</p>
+</div>
+
+<div class="part">
+<p><b>(d)</b> What is the probability that a randomly selected resident is female AND not in the labor force? <i>(1 pt)</i></p>
+<p class="ask">Asking: what fraction are <i>both</i> female and not in the labor force?</p>
+<p class="why">Rule: AND in a table → the single cell where the row and column meet, ÷ grand total.</p>
+<ol class="steps"><li>Find the cell: Females column, Not-in-labor-force row = 12.</li><li>Divide by 78.</li></ol>
+<pre class="work">P(female and not in labor force) = 12 / 78 = 0.1538</pre>
+<p class="final">Answer: 0.1538</p>
+<p class="watch">Watch out: "and" never adds anything. It is one cell.</p>
+</div>
+
+<div class="part">
+<p><b>(e)</b> What is the probability that a randomly selected resident is part-time given that the resident is female? <i>(2 pts)</i></p>
+<p class="ask">Asking: you already know the person is a woman. Among the women only, what fraction are part-time?</p>
+<p class="why">Rule: GIVEN → divide by the given group's total, not by 78. "Given female" shrinks the world to the 42 females.</p>
+<ol class="steps"><li>The given group is Females: total 42.</li><li>Inside that group, the part-time count is the part-time-female cell: 10.</li><li>Divide 10 by 42.</li></ol>
+<pre class="work">P(part-time | female) = N(part-time and female) / N(female)
+= 10 / 42
+= 0.2381</pre>
+<p class="final">Answer: 0.2381</p>
+<p class="watch">Watch out: 10/78 = 0.1282 is the classic error. Also notice the direction matters: P(female | part-time) would be 10/16 = 0.625, a different question. The word after "given" tells you the denominator.</p>
+</div>
+
+<!-- ============ Q2 ============ -->
+<h3 class="qhead">Question 2 — Valid discrete probability distribution? (2 points)</h3>
+<p class="def">x: 0, 1, 2, 3, 4 with P(x): 0.34, 0.21, 0.13, 0.04, 0.01. A probability distribution lists every value X can take and how likely each is. For it to be legitimate, two things must hold: no probability can be negative or above 1, and the probabilities must account for 100% of what can happen.</p>
+<div class="part">
+<p><b>Is it valid? If not, why?</b></p>
+<p class="why">Rule: (1) each 0 ≤ P(x) ≤ 1, and (2) Σ P(x) = 1. Check both and say which fails.</p>
+<ol class="steps"><li>Rule 1: scan the list — 0.34, 0.21, 0.13, 0.04, 0.01 are all between 0 and 1. ✓</li><li>Rule 2: add them.</li></ol>
+<pre class="work">0.34 + 0.21 + 0.13 + 0.04 + 0.01 = 0.73
+0.73 ≠ 1</pre>
+<p class="final">Answer: NOT a valid probability distribution — the probabilities add to 0.73, not 1 (27% of the outcomes are unaccounted for).</p>
+<p class="watch">Watch out: a sum <i>over</i> 1 is just as invalid as a sum under 1, and a single negative entry makes a distribution invalid even if the sum is 1. Always write both checks; the question says "explain why."</p>
+</div>
+
+<!-- ============ Q3 ============ -->
+<h3 class="qhead">Question 3 — Stanley Cup games (8 points)</h3>
+<p class="def">x = number of games in the series: 4, 5, 6, 7 with frequencies 20, 20, 26, 17. These are counts of how many series ended in 4 games, 5 games, and so on. The question asks you to turn the counts into probabilities, picture them, and then describe the "typical" series (mean) and how much series vary (standard deviation).</p>
+
+<div class="part">
+<p><b>(a)</b> Construct a probability distribution for X. <i>(2 pts)</i></p>
+<p class="ask">Asking: what is the probability a series lasts 4 games? 5? 6? 7?</p>
+<p class="why">Rule: P(x) = count ÷ total (the empirical method from Chapter 4).</p>
+<ol class="steps"><li>Total number of series = 20 + 20 + 26 + 17 = 83.</li><li>Divide each count by 83; round to 4 decimals.</li><li>Check they add to about 1.</li></ol>
+<pre class="work">Total = 20 + 20 + 26 + 17 = 83
+P(4) = 20/83 = 0.2410
+P(5) = 20/83 = 0.2410
+P(6) = 26/83 = 0.3133
+P(7) = 17/83 = 0.2048
+Check: 0.2410 + 0.2410 + 0.3133 + 0.2048 = 1.0001 ≈ 1 ✓ (rounding)</pre>
+<p class="final">Answer: the table x = 4, 5, 6, 7 with P(x) = 0.2410, 0.2410, 0.3133, 0.2048</p>
+<p class="watch">Watch out: the probabilities are counts ÷ 83, not counts ÷ 100 and not the counts themselves. A sum of 1.0001 is fine — it is rounding, not an error.</p>
+</div>
+
+<div class="part">
+<p><b>(b)</b> Graph the discrete probability distribution. <i>(2 pts)</i></p>
+<p class="ask">Asking: draw the picture of part (a).</p>
+<p class="why">Rule: x on the horizontal axis, P(x) on the vertical axis; a vertical line (or bar) above each x whose height is its probability.</p>
+<ol class="steps"><li>Horizontal axis: mark 4, 5, 6, 7.</li><li>Vertical axis: P(x), scaled from 0 to about 0.35.</li><li>Above x = 4 draw a line up to 0.2410; above 5 up to 0.2410; above 6 up to 0.3133 (the tallest); above 7 up to 0.2048.</li><li>Label both axes.</li></ol>
+<pre class="work">x:     4        5        6        7
+P(x):  0.2410   0.2410   0.3133   0.2048   ← heights of the lines</pre>
+<p class="final">Answer: four vertical lines/bars at 4, 5, 6, 7 with those heights; the tallest is at x = 6.</p>
+<p class="watch">Watch out: the heights are the probabilities, not the frequencies (20, 20, 26, 17). Label the axes — that is part of the credit.</p>
+</div>
+
+<div class="part">
+<p><b>(c)</b> Compute and interpret the mean of X. <i>(2 pts)</i></p>
+<p class="ask">Asking: on average, how many games does a series last? And say what that number means in words.</p>
+<p class="why">Rule: μ = Σ x·P(x). It is a weighted average: each value counts as much as its probability.</p>
+<ol class="steps"><li>Multiply each x by its P(x).</li><li>Add the four products.</li><li>Interpret: "over many series, the average is about ___ games."</li></ol>
+<pre class="work">μ = Σ x·P(x)
+  = 4(0.2410) + 5(0.2410) + 6(0.3133) + 7(0.2048)
+  = 0.9640 + 1.2050 + 1.8798 + 1.4336
+  = 5.4824 ≈ 5.48 games</pre>
+<p class="final">Answer: μ ≈ 5.48 games. Interpretation: if we looked at many Stanley Cup series, the average length would be about 5.48 games.</p>
+<p class="watch">Watch out: the mean is NOT (4 + 5 + 6 + 7)/4 = 5.5. The probabilities are the weights; 6-game series happen more often, so they pull the mean. Write the interpretation sentence — it is part of the 2 points.</p>
+</div>
+
+<div class="part">
+<p><b>(d)</b> Compute the standard deviation of X. <i>(2 pts)</i></p>
+<p class="ask">Asking: how far from 5.48 does a typical series land?</p>
+<p class="why">Rule: σ = √( Σ (x − μ)²·P(x) ). For each x: subtract the mean, square it, multiply by its probability; add; square root.</p>
+<ol class="steps"><li>Use μ = 5.48 from part (c).</li><li>For each x compute (x − 5.48)², then multiply by P(x).</li><li>Add the four results = the variance σ².</li><li>Take the square root.</li></ol>
+<pre class="work">x = 4:  (4 − 5.48)² = (−1.48)² = 2.1904;  2.1904 × 0.2410 = 0.5279
+x = 5:  (5 − 5.48)² = (−0.48)² = 0.2304;  0.2304 × 0.2410 = 0.0555
+x = 6:  (6 − 5.48)² = ( 0.52)² = 0.2704;  0.2704 × 0.3133 = 0.0847
+x = 7:  (7 − 5.48)² = ( 1.52)² = 2.3104;  2.3104 × 0.2048 = 0.4732
+σ² = 0.5279 + 0.0555 + 0.0847 + 0.4732 = 1.1413
+σ  = √1.1413 = 1.0683 ≈ 1.07 games</pre>
+<p class="final">Answer: σ ≈ 1.07 games</p>
+<p class="watch">Watch out: (1) don't stop at the variance 1.1413 — the question says standard deviation, so take the square root; (2) there is no "divide by n" here, the probabilities already do the averaging; (3) square the deviation <i>before</i> multiplying by P(x).</p>
+</div>
+
+<!-- ============ Q4 ============ -->
+<h3 class="qhead">Question 4 — Driving age poll (8 points)</h3>
+<p class="def">60% of U.S. women say the minimum driving age should be 18. Sample 10 women. Why this is binomial: a fixed number of trials (n = 10 women), each either says yes (success) or no, the women are chosen at random from a huge population so the trials are independent, and the chance of a yes is the same each time (p = 0.60). X = the number who say yes.</p>
+<p class="why">Set up once, use for every part: n = 10, p = 0.60, 1 − p = 0.40.&nbsp; P(x) = ₁₀Cₓ (0.60)ˣ (0.40)¹⁰⁻ˣ</p>
+
+<div class="part">
+<p><b>(a)</b> Exactly 3 believe the minimum driving age should be 18. <i>(2 pts)</i></p>
+<p class="ask">Asking: probability that the count of yes-sayers is exactly 3 (and the other 7 say no).</p>
+<p class="why">Rule: binomial formula with x = 3. The three factors mean: (ways to choose which 3 say yes) × (those 3 say yes) × (the other 7 say no).</p>
+<ol class="steps"><li>₁₀C₃ = 10! / (3!·7!) = (10·9·8)/(3·2·1) = 120.</li><li>(0.60)³ = 0.216.</li><li>(0.40)⁷ = 0.0016384.</li><li>Multiply.</li></ol>
+<pre class="work">P(3) = ₁₀C₃ (0.60)³ (0.40)⁷
+     = 120 × 0.216 × 0.0016384
+     = 0.0425</pre>
+<p class="final">Answer: 0.0425</p>
+<p class="watch">Watch out: the exponent on 0.40 is n − x = 7, not 3. Keep the full decimals of 0.40⁷ until the end.</p>
+</div>
+
+<div class="part">
+<p><b>(b)</b> Fewer than 3 believe the minimum driving age should be 18. <i>(2 pts)</i></p>
+<p class="ask">Asking: the count is 0, 1, or 2. "Fewer than 3" does not include 3.</p>
+<p class="why">Rule: add the separate probabilities P(0) + P(1) + P(2), each from the binomial formula.</p>
+<ol class="steps"><li>P(0): ₁₀C₀ = 1, (0.6)⁰ = 1, (0.4)¹⁰ = 0.0001049.</li><li>P(1): ₁₀C₁ = 10, (0.6)¹ = 0.6, (0.4)⁹ = 0.0002621.</li><li>P(2): ₁₀C₂ = 45, (0.6)² = 0.36, (0.4)⁸ = 0.0006554.</li><li>Add.</li></ol>
+<pre class="work">P(0) = 1 × 1 × 0.0001049      = 0.0001
+P(1) = 10 × 0.6 × 0.0002621   = 0.0016
+P(2) = 45 × 0.36 × 0.0006554  = 0.0106
+P(X < 3) = 0.0001 + 0.0016 + 0.0106 = 0.0123</pre>
+<p class="final">Answer: 0.0123</p>
+<p class="watch">Watch out: "fewer than 3" stops at 2. "At most 3" or "3 or fewer" would include P(3) too. Read the inequality word twice.</p>
+</div>
+
+<div class="part">
+<p><b>(c)</b> Between 1 and 3 (inclusive) believe the minimum driving age should be 18. <i>(2 pts)</i></p>
+<p class="ask">Asking: the count is 1, 2, or 3. "Inclusive" means both ends count.</p>
+<p class="why">Rule: add P(1) + P(2) + P(3). You already have all three from parts (a) and (b).</p>
+<ol class="steps"><li>P(1) = 0.0016 and P(2) = 0.0106 from (b).</li><li>P(3) = 0.0425 from (a).</li><li>Add.</li></ol>
+<pre class="work">P(1 ≤ X ≤ 3) = P(1) + P(2) + P(3)
+             = 0.0016 + 0.0106 + 0.0425
+             = 0.0547</pre>
+<p class="final">Answer: 0.0547</p>
+<p class="watch">Watch out: don't include P(0). On the exam, reuse numbers you already computed — write "from part (a)" next to them.</p>
+</div>
+
+<div class="part">
+<p><b>(d)</b> For a random sample of 200 U.S. women, find the expected number and standard deviation of those who believe the minimum driving age should be 18. <i>(2 pts)</i></p>
+<p class="ask">Asking: with a bigger sample, how many yes-sayers should we expect, and how much would that count typically vary?</p>
+<p class="why">Rule: binomial shortcuts μ = n·p and σ = √(n·p·(1 − p)). No formula table needed.</p>
+<ol class="steps"><li>n is now 200; p is still 0.60.</li><li>μ = 200 × 0.60.</li><li>σ = √(200 × 0.60 × 0.40).</li></ol>
+<pre class="work">μ = n·p = 200(0.60) = 120
+σ = √(n·p·(1 − p)) = √(200 × 0.60 × 0.40) = √48 = 6.9282 ≈ 6.93</pre>
+<p class="final">Answer: expected number 120, standard deviation ≈ 6.93</p>
+<p class="watch">Watch out: the square root. Leaving the answer as 48 is the variance, not the SD. (Bonus sense check: counts between 120 ± 2(6.93) = 106 and 134 are "usual.")</p>
+</div>
+
+<!-- ============ Q5 ============ -->
+<h3 class="qhead">Question 5 — Daily temperature, uniform (5 points)</h3>
+<p class="def">Temperature is uniform between 70°F and 100°F: every temperature in that range is equally likely, so the probability curve is a flat rectangle. For a continuous variable, probability is <i>area</i>. The rectangle's total area must be 1, which fixes its height.</p>
+<p class="why">Set up once: a = 70, b = 100, width b − a = 30, height = 1/30. Probability of a piece = (length of the piece) ÷ 30.</p>
+
+<div class="part">
+<p><b>(a)</b> Sketch or describe the graph of the uniform pdf. <i>(1 pt)</i></p>
+<p class="ask">Asking: what does the probability curve look like, with numbers?</p>
+<ol class="steps"><li>Horizontal axis from 70 to 100.</li><li>A flat line at height 1/(100 − 70) = 1/30 ≈ 0.0333 across that whole interval, 0 outside it.</li><li>Check: area = width × height = 30 × 1/30 = 1.</li></ol>
+<pre class="work">height = 1/(b − a) = 1/(100 − 70) = 1/30
+area = 30 × (1/30) = 1 ✓</pre>
+<p class="final">Answer: a rectangle from 70 to 100 with height 1/30.</p>
+<p class="watch">Watch out: state the height; "a flat line" alone is not a full answer.</p>
+</div>
+
+<div class="part">
+<p><b>(b)</b> Find P(75 ≤ X ≤ 85). <i>(2 pts)</i></p>
+<p class="ask">Asking: what fraction of the rectangle sits between 75 and 85?</p>
+<p class="why">Rule: P(c ≤ X ≤ d) = (d − c) ÷ (b − a) — the piece's share of the total width.</p>
+<pre class="work">P(75 ≤ X ≤ 85) = (85 − 75)/(100 − 70) = 10/30 = 0.3333</pre>
+<p class="final">Answer: 0.3333</p>
+<p class="watch">Watch out: no z-scores here — that is for the normal curve. The uniform is just length ÷ total width.</p>
+</div>
+
+<div class="part">
+<p><b>(c)</b> Find P(X &lt; 80). <i>(2 pts)</i></p>
+<p class="ask">Asking: what fraction of the rectangle is below 80?</p>
+<p class="why">Rule: same formula; the piece runs from the left end (70) up to 80.</p>
+<pre class="work">P(X < 80) = (80 − 70)/(100 − 70) = 10/30 = 0.3333</pre>
+<p class="final">Answer: 0.3333</p>
+<p class="watch">Watch out: P(X ≤ 80) is the same number — a single point has zero width, so "less than" and "less than or equal" give the same area.</p>
+</div>
+
+<!-- ============ Q6 ============ -->
+<h3 class="qhead">Question 6 — Normal distribution and z-scores (6 points)</h3>
+<p class="def">The standard normal table (Table V) gives the <b>area to the LEFT</b> of a z value: the row is z to one decimal place, the column is the hundredths digit. The entry is the probability of being below that z. Everything else (right of, between) is built from "left of."</p>
+
+<div class="part">
+<p><b>(a)</b> Find the area to the left of z = −1.10. <i>(2 pts)</i></p>
+<p class="ask">Asking: exactly what the table gives.</p>
+<ol class="steps"><li>Row −1.1, column .00.</li><li>Read the entry.</li></ol>
+<pre class="work">Area left of z = −1.10 → table (row −1.1, column .00) = 0.1357</pre>
+<p class="final">Answer: 0.1357</p>
+<p class="watch">Watch out: if your table only has positive z, use symmetry: left of −1.10 = 1 − (left of +1.10) = 1 − 0.8643 = 0.1357.</p>
+</div>
+
+<div class="part">
+<p><b>(b)</b> Find the area between z = −0.60 and z = 1.45. <i>(2 pts)</i></p>
+<p class="ask">Asking: the strip of area between two z values.</p>
+<p class="why">Rule: BETWEEN = (left of the bigger z) − (left of the smaller z). The big left-area includes the strip; subtracting the small left-area removes everything below the strip.</p>
+<ol class="steps"><li>Left of 1.45: row 1.4, column .05 → 0.9265.</li><li>Left of −0.60: row −0.6, column .00 → 0.2743.</li><li>Subtract.</li></ol>
+<pre class="work">left of  1.45 = 0.9265
+left of −0.60 = 0.2743
+between = 0.9265 − 0.2743 = 0.6522</pre>
+<p class="final">Answer: 0.6522</p>
+<p class="watch">Watch out: subtract the areas, never the z values. And it is bigger-left minus smaller-left; if you get a negative number you subtracted the wrong way.</p>
+</div>
+
+<div class="part">
+<p><b>(c)</b> X is normally distributed with μ = 80 and σ = 10. Find P(70 &lt; X &lt; 95). <i>(2 pts)</i></p>
+<p class="ask">Asking: same as (b), but first the x values must be turned into z values.</p>
+<p class="why">Rule: z = (x − μ)/σ for each endpoint, then BETWEEN as above.</p>
+<ol class="steps"><li>z for 70: (70 − 80)/10 = −1.00.</li><li>z for 95: (95 − 80)/10 = 1.50.</li><li>Table: left of −1.00 = 0.1587; left of 1.50 = 0.9332.</li><li>Subtract.</li></ol>
+<pre class="work">z₁ = (70 − 80)/10 = −1.00 → area left = 0.1587
+z₂ = (95 − 80)/10 =  1.50 → area left = 0.9332
+P(70 < X < 95) = 0.9332 − 0.1587 = 0.7745</pre>
+<p class="final">Answer: 0.7745</p>
+<p class="watch">Watch out: compute both z's and show both table values on paper. Sanity check: 70 to 95 covers the middle of the curve (μ = 80), so a big probability like 0.77 makes sense.</p>
+</div>
+
+<!-- ============ Q7 ============ -->
+<h3 class="qhead">Question 7 — Wechsler IQ scores (8 points)</h3>
+<p class="def">IQ scores are normal with μ = 100, σ = 15. Three of the four parts are "forward": start from a score, convert to z, read the table. Part (d) is "backward": start from a percentage, find z inside the table, convert back to a score.</p>
+<p class="why">Forward: z = (x − 100)/15, round to 2 decimals → table → left / 1 − left / subtract.&nbsp; Backward: area → z → x = 100 + z(15).</p>
+
+<div class="part">
+<p><b>(a)</b> Probability that a randomly selected test taker scores above 125. <i>(2 pts)</i></p>
+<p class="ask">Asking: the area to the RIGHT of 125.</p>
+<p class="why">Rule: convert to z; the table gives the LEFT area; right = 1 − left.</p>
+<ol class="steps"><li>z = (125 − 100)/15 = 25/15 = 1.6667 → round to 1.67.</li><li>Table: left of 1.67 (row 1.6, column .07) = 0.9525.</li><li>Right = 1 − 0.9525.</li></ol>
+<pre class="work">z = (125 − 100)/15 = 1.67
+area left of 1.67 = 0.9525
+P(X > 125) = 1 − 0.9525 = 0.0475</pre>
+<p class="final">Answer: 0.0475</p>
+<p class="watch">Watch out: the single most common error on the exam is writing 0.9525. Sanity check: 125 is above average, so fewer than half score above it — the answer must be under 0.5.</p>
+</div>
+
+<div class="part">
+<p><b>(b)</b> Probability that a randomly selected test taker scores below 90. <i>(2 pts)</i></p>
+<p class="ask">Asking: the area to the LEFT of 90 — exactly what the table gives.</p>
+<ol class="steps"><li>z = (90 − 100)/15 = −10/15 = −0.6667 → −0.67.</li><li>Table: left of −0.67 (row −0.6, column .07) = 0.2514.</li></ol>
+<pre class="work">z = (90 − 100)/15 = −0.67
+P(X < 90) = area left of −0.67 = 0.2514</pre>
+<p class="final">Answer: 0.2514</p>
+<p class="watch">Watch out: keep the negative sign on z. Sanity check: 90 is below average, so the answer must be under 0.5. ✓</p>
+</div>
+
+<div class="part">
+<p><b>(c)</b> Proportion of test takers who score between 110 and 140. <i>(2 pts)</i></p>
+<p class="ask">Asking: the strip of area between two scores.</p>
+<p class="why">Rule: two z's, two left-areas, bigger minus smaller.</p>
+<ol class="steps"><li>z for 110: (110 − 100)/15 = 0.67 → left = 0.7486.</li><li>z for 140: (140 − 100)/15 = 2.67 → left = 0.9962.</li><li>Subtract.</li></ol>
+<pre class="work">z₁ = (110 − 100)/15 = 0.67 → 0.7486
+z₂ = (140 − 100)/15 = 2.67 → 0.9962
+P(110 < X < 140) = 0.9962 − 0.7486 = 0.2476</pre>
+<p class="final">Answer: 0.2476 (about 24.8% of test takers)</p>
+<p class="watch">Watch out: "proportion" and "probability" are the same number here; write it as a decimal to 4 places.</p>
+</div>
+
+<div class="part">
+<p><b>(d)</b> What intelligence score places a child in the 98th percentile? <i>(2 pts)</i></p>
+<p class="ask">Asking: the score that 98% of children are BELOW. You are given the area and must find the score — the reverse of (a)–(c).</p>
+<p class="why">Rule (backward): area to the left → find it INSIDE the table → read z off the edges → x = μ + z·σ.</p>
+<ol class="steps"><li>98th percentile → area to the left = 0.98.</li><li>Look inside the table for 0.98. The entries near it are 0.9798 (z = 2.05) and 0.9803 (z = 2.06); 0.9798 is closer, so z = 2.05.</li><li>Convert back: x = 100 + 2.05 × 15.</li></ol>
+<pre class="work">area to the left = 0.98 → closest table entry 0.9798 → z = 2.05
+x = μ + z·σ = 100 + 2.05(15) = 100 + 30.75 = 130.75 ≈ 131</pre>
+<p class="final">Answer: about 131 (130.75)</p>
+<p class="watch">Watch out: do not put 0.98 into the z formula — 0.98 is an area, not a score. Backward problems use the table in reverse: find the area in the body, read z from the margins, then x = μ + zσ. Sanity check: the 98th percentile must be well above 100. ✓</p>
+</div>
+
+<h3 class="qhead">The pattern across the whole exam</h3>
+<ul>
+<li>Q1 is the only "words → rule" question: or / and / given. The rest are "set up → formula → arithmetic."</li>
+<li>Q3 and Q4 are long but mechanical; the points are in showing each product and each sum.</li>
+<li>Q5 has no z-scores. Q6 and Q7 are nothing but z-scores and table reads; (d) is the only backward step.</li>
+<li>Every numeric answer: four decimals, boxed, with the formula written above it.</li>
+</ul>
+</section>

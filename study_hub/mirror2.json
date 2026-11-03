@@ -1,0 +1,358 @@
+{
+ "key": "mirror2",
+ "test": {
+  "key": "mirror2",
+  "title": "Mirror Exam 2 — the same seven question types, new numbers (matches the Mirror Exam PDF)",
+  "intro": "Work each part on paper exactly as you would on the exam, type your final answer, then press Check answer. Probabilities to 4 decimals; means and SDs to 2. Start the 50-minute timer first if you want the real feel.",
+  "questions": [
+   {
+    "points": 6,
+    "prompt": "Commuting and Housing. The table below summarizes how 110 students at a university commute and where they live.\nCommute | Lives on campus | Lives off campus\nDrive | 8 | 34\nBus | 10 | 16\nWalk | 22 | 4\nBike | 9 | 7\nTotal on campus = 49, Total off campus = 61, Overall Total = 110.",
+    "parts": [
+     {
+      "label": "(a) 1 pt",
+      "question": "What is the probability that a randomly selected student lives off campus?",
+      "answer": "0.5545",
+      "check": {
+       "type": "number",
+       "value": 0.5545,
+       "tol": 0.0002
+      },
+      "solution": "one category → its total ÷ grand total\nP(off campus) = 61/110 = 0.5545"
+     },
+     {
+      "label": "(b) 1 pt",
+      "question": "What is the probability that a randomly selected student walks to campus?",
+      "answer": "0.2364",
+      "check": {
+       "type": "number",
+       "value": 0.2364,
+       "tol": 0.0002
+      },
+      "solution": "a row → add its cells, ÷ 110\nP(walk) = (22 + 4)/110 = 26/110 = 0.2364"
+     },
+     {
+      "label": "(c) 1 pt",
+      "question": "What is the probability that a randomly selected student drives OR lives on campus?",
+      "answer": "0.7545",
+      "check": {
+       "type": "number",
+       "value": 0.7545,
+       "tol": 0.0002
+      },
+      "solution": "OR → add, then subtract the overlap (drive AND on campus = 8) once\nP(drive or on) = 42/110 + 49/110 − 8/110 = 83/110 = 0.7545\nForgetting the overlap gives 91/110 = 0.8273 ✗"
+     },
+     {
+      "label": "(d) 1 pt",
+      "question": "What is the probability that a randomly selected student bikes AND lives off campus?",
+      "answer": "0.0636",
+      "check": {
+       "type": "number",
+       "value": 0.0636,
+       "tol": 0.0002
+      },
+      "solution": "AND → the one cell ÷ 110\nP(bike and off) = 7/110 = 0.0636"
+     },
+     {
+      "label": "(e) 2 pt",
+      "question": "What is the probability that a randomly selected student takes the bus given that the student lives off campus?",
+      "answer": "0.2623",
+      "check": {
+       "type": "number",
+       "value": 0.2623,
+       "tol": 0.0002
+      },
+      "solution": "GIVEN off campus → divide by the off-campus total (61), not 110\nP(bus | off) = 16/61 = 0.2623\n16/110 = 0.1455 is the classic wrong denominator ✗"
+     }
+    ]
+   },
+   {
+    "points": 2,
+    "prompt": "Discrete Probability Distribution. Determine whether the following distribution represents a valid discrete probability distribution. If not, explain why.\nx | P(x)\n1 | 0.15\n2 | 0.25\n3 | 0.30\n4 | 0.20\n5 | 0.12",
+    "parts": [
+     {
+      "label": "(i)",
+      "question": "Add the probabilities. What do they sum to?",
+      "answer": "1.02",
+      "check": {
+       "type": "number",
+       "value": 1.02,
+       "tol": 0.001
+      },
+      "solution": "0.15 + 0.25 + 0.30 + 0.20 + 0.12 = 1.02"
+     },
+     {
+      "label": "(ii)",
+      "question": "Valid or not valid?",
+      "answer": "NOT valid — each P(x) is between 0 and 1, but the probabilities add to 1.02, not 1.",
+      "check": {
+       "type": "choice",
+       "options": [
+        "Valid",
+        "Not valid"
+       ],
+       "correct": "Not valid"
+      },
+      "solution": "Rule 1: every P(x) is between 0 and 1 ✓\nRule 2: Σ P(x) = 1.02 ≠ 1 ✗\nNot a valid probability distribution (write both checks — the question says explain why)."
+     }
+    ]
+   },
+   {
+    "points": 8,
+    "prompt": "Cars per Household. A city planner records the number of cars, X, owned by each household in a random sample of 85 households. No household owned more than 3 cars.\nx | Frequency\n0 | 13\n1 | 29\n2 | 33\n3 | 10",
+    "parts": [
+     {
+      "label": "(a) 2 pt",
+      "question": "Construct a probability distribution for X (give P(0), P(1), P(2), P(3) to 4 decimals).",
+      "answer": "P(0) = 0.1529, P(1) = 0.3412, P(2) = 0.3882, P(3) = 0.1176",
+      "check": {
+       "type": "numbers",
+       "fields": [
+        {
+         "label": "P(0)",
+         "value": 0.1529,
+         "tol": 0.0002
+        },
+        {
+         "label": "P(1)",
+         "value": 0.3412,
+         "tol": 0.0002
+        },
+        {
+         "label": "P(2)",
+         "value": 0.3882,
+         "tol": 0.0002
+        },
+        {
+         "label": "P(3)",
+         "value": 0.1176,
+         "tol": 0.0002
+        }
+       ]
+      },
+      "solution": "total = 13 + 29 + 33 + 10 = 85\nP(0) = 13/85 = 0.1529\nP(1) = 29/85 = 0.3412\nP(2) = 33/85 = 0.3882\nP(3) = 10/85 = 0.1176\nCheck: sum = 0.9999 ≈ 1 ✓ (rounding)"
+     },
+     {
+      "label": "(b) 2 pt",
+      "question": "Graph the discrete probability distribution (describe it in words).",
+      "answer": "x across (0, 1, 2, 3), P(x) up; a vertical bar above each x with heights 0.1529, 0.3412, 0.3882, 0.1176; tallest at x = 2; label both axes.",
+      "check": {
+       "type": "self"
+      },
+      "solution": "Horizontal axis: x = 0, 1, 2, 3. Vertical axis: P(x), 0 to about 0.4.\nA vertical bar (or line) above each x with height equal to its probability; the tallest is at x = 2.\nLabel both axes — part of the credit."
+     },
+     {
+      "label": "(c) 2 pt",
+      "question": "Compute the mean of X (2 decimals). Then write the interpretation sentence on paper.",
+      "answer": "μ ≈ 1.47 cars",
+      "check": {
+       "type": "number",
+       "value": 1.47,
+       "tol": 0.011
+      },
+      "solution": "μ = Σ x·P(x) = 0(0.1529) + 1(0.3412) + 2(0.3882) + 3(0.1176)\n= 0 + 0.3412 + 0.7764 + 0.3528 = 1.4704 ≈ 1.47 cars\nInterpretation: over many households in this neighborhood, the average number of cars per household is about 1.47."
+     },
+     {
+      "label": "(d) 2 pt",
+      "question": "Compute the standard deviation of X (2 decimals).",
+      "answer": "σ ≈ 0.89 cars",
+      "check": {
+       "type": "number",
+       "value": 0.89,
+       "tol": 0.011
+      },
+      "solution": "σ = √Σ(x − μ)²·P(x) with μ = 1.47\n(0 − 1.47)²(0.1529) = 2.1609(0.1529) = 0.3304\n(1 − 1.47)²(0.3412) = 0.2209(0.3412) = 0.0754\n(2 − 1.47)²(0.3882) = 0.2809(0.3882) = 0.1090\n(3 − 1.47)²(0.1176) = 2.3409(0.1176) = 0.2753\nσ² = 0.7901\nσ = √0.7901 = 0.89 cars"
+     }
+    ]
+   },
+   {
+    "points": 8,
+    "prompt": "Reading Habits. According to a national survey, 35% of U.S. adults read at least one book last month. In a random sample of 8 U.S. adults, find the probability that:",
+    "parts": [
+     {
+      "label": "(a) 2 pt",
+      "question": "Exactly 2 read at least one book last month.",
+      "answer": "0.2587",
+      "check": {
+       "type": "number",
+       "value": 0.2587,
+       "tol": 0.0002
+      },
+      "solution": "Binomial: n = 8, p = 0.35, 1 − p = 0.65\n₈C₂ = (8·7)/(2·1) = 28\nP(2) = 28(0.35)²(0.65)⁶ = 28(0.1225)(0.075419) = 0.2587"
+     },
+     {
+      "label": "(b) 2 pt",
+      "question": "At most 2 read at least one book last month.",
+      "answer": "0.4278 (0.4279 if you add the rounded terms — both accepted)",
+      "check": {
+       "type": "number",
+       "value": 0.4278,
+       "tol": 0.00025
+      },
+      "solution": "at most 2 → x = 0, 1, 2 (the 2 is IN)\nP(0) = (0.65)⁸ = 0.0319\nP(1) = 8(0.35)(0.65)⁷ = 0.1373\nP(2) = 0.2587\nP(X ≤ 2) = 0.0319 + 0.1373 + 0.2587 = 0.4278"
+     },
+     {
+      "label": "(c) 2 pt",
+      "question": "At least 1 read at least one book last month.",
+      "answer": "0.9681",
+      "check": {
+       "type": "number",
+       "value": 0.9681,
+       "tol": 0.0002
+      },
+      "solution": "at least 1 → 1 − P(0)\nP(X ≥ 1) = 1 − (0.65)⁸ = 1 − 0.0319 = 0.9681"
+     },
+     {
+      "label": "(d) 2 pt",
+      "question": "For a random sample of 300 U.S. adults, find the expected number and the standard deviation of those who read at least one book last month.",
+      "answer": "μ = 105, σ ≈ 8.26",
+      "check": {
+       "type": "numbers",
+       "fields": [
+        {
+         "label": "μ",
+         "value": 105,
+         "tol": 0.01
+        },
+        {
+         "label": "σ",
+         "value": 8.26,
+         "tol": 0.011
+        }
+       ]
+      },
+      "solution": "μ = np = 300(0.35) = 105\nσ = √(np(1 − p)) = √(300 · 0.35 · 0.65) = √68.25 = 8.26"
+     }
+    ]
+   },
+   {
+    "points": 5,
+    "prompt": "Shuttle Wait Time. Suppose the waiting time X (in minutes) for a campus shuttle is uniformly distributed between 0 and 25 minutes.",
+    "parts": [
+     {
+      "label": "(a) 1 pt",
+      "question": "Sketch or describe the graph of the uniform pdf. Type the height of the rectangle (4 decimals).",
+      "answer": "height = 1/25 = 0.0400; a flat line (rectangle) from 0 to 25, 0 elsewhere; area = 1",
+      "check": {
+       "type": "number",
+       "value": 0.04,
+       "tol": 0.0002
+      },
+      "solution": "height = 1/(b − a) = 1/(25 − 0) = 1/25 = 0.04\nA flat line at 0.04 from x = 0 to x = 25 (and 0 outside); area = 25 × 0.04 = 1 ✓"
+     },
+     {
+      "label": "(b) 2 pt",
+      "question": "Find P(5 ≤ X ≤ 15).",
+      "answer": "0.4000",
+      "check": {
+       "type": "number",
+       "value": 0.4,
+       "tol": 0.0002
+      },
+      "solution": "P(5 ≤ X ≤ 15) = (15 − 5)/(25 − 0) = 10/25 = 0.4000"
+     },
+     {
+      "label": "(c) 2 pt",
+      "question": "Find P(X > 18).",
+      "answer": "0.2800",
+      "check": {
+       "type": "number",
+       "value": 0.28,
+       "tol": 0.0002
+      },
+      "solution": "“more than 18” → from 18 up to the top end 25\nP(X > 18) = (25 − 18)/(25 − 0) = 7/25 = 0.2800"
+     }
+    ]
+   },
+   {
+    "points": 6,
+    "prompt": "Normal Distribution and z-Scores. Hints (as printed on the exam): P(Z < −0.85) = 0.1977, P(Z < −1.30) = 0.0968, P(Z < −0.25) = 0.4013, P(Z < 1.25) = 0.8944.",
+    "parts": [
+     {
+      "label": "(a) 2 pt",
+      "question": "Find the area to the left of z = −0.85.",
+      "answer": "0.1977",
+      "check": {
+       "type": "number",
+       "value": 0.1977,
+       "tol": 0.0002
+      },
+      "solution": "Area to the LEFT of a negative z: the hint P(Z < −0.85) = 0.1977 is already the answer (no 1 − needed)."
+     },
+     {
+      "label": "(b) 2 pt",
+      "question": "Find the area between z = −1.30 and z = −0.25.",
+      "answer": "0.3045",
+      "check": {
+       "type": "number",
+       "value": 0.3045,
+       "tol": 0.0002
+      },
+      "solution": "between = (left of the bigger z) − (left of the smaller z); −0.25 is bigger than −1.30\n0.4013 − 0.0968 = 0.3045"
+     },
+     {
+      "label": "(c) 2 pt",
+      "question": "X is normally distributed with μ = 250 and σ = 40. Find P(X > 300).",
+      "answer": "0.1056",
+      "check": {
+       "type": "number",
+       "value": 0.1056,
+       "tol": 0.0002
+      },
+      "solution": "z = (300 − 250)/40 = 1.25 → left = 0.8944\nP(X > 300) = 1 − 0.8944 = 0.1056"
+     }
+    ]
+   },
+   {
+    "points": 8,
+    "prompt": "Heights of Adult Men. Heights of adult men in the U.S. are approximately normally distributed with mean μ = 69 inches and standard deviation σ = 2.8 inches. Hints (as printed on the exam): P(Z < 1.79) = 0.9633, P(Z < −1.43) = 0.0764, P(Z < −1.07) = 0.1423, P(Z < 1.07) = 0.8577; the 10th percentile corresponds to z = −1.28.",
+    "parts": [
+     {
+      "label": "(a) 2 pt",
+      "question": "What is the probability that a randomly selected man is taller than 74 inches?",
+      "answer": "0.0367",
+      "check": {
+       "type": "number",
+       "value": 0.0367,
+       "tol": 0.0002
+      },
+      "solution": "z = (74 − 69)/2.8 = 1.79 → left = 0.9633\nP(X > 74) = 1 − 0.9633 = 0.0367"
+     },
+     {
+      "label": "(b) 2 pt",
+      "question": "What is the probability that a randomly selected man is shorter than 65 inches?",
+      "answer": "0.0764",
+      "check": {
+       "type": "number",
+       "value": 0.0764,
+       "tol": 0.0002
+      },
+      "solution": "z = (65 − 69)/2.8 = −1.43\nP(X < 65) = left of −1.43 = 0.0764 (the hint is already the left area)"
+     },
+     {
+      "label": "(c) 2 pt",
+      "question": "What proportion of men are between 66 and 72 inches tall?",
+      "answer": "0.7154",
+      "check": {
+       "type": "number",
+       "value": 0.7154,
+       "tol": 0.0002
+      },
+      "solution": "z₁ = (66 − 69)/2.8 = −1.07 → 0.1423\nz₂ = (72 − 69)/2.8 = 1.07 → 0.8577\nP(66 < X < 72) = 0.8577 − 0.1423 = 0.7154"
+     },
+     {
+      "label": "(d) 2 pt",
+      "question": "What height places a man at the 10th percentile? (1 decimal)",
+      "answer": "≈ 65.4 inches",
+      "check": {
+       "type": "number",
+       "value": 65.4,
+       "tol": 0.11
+      },
+      "solution": "10th percentile → area to the LEFT = 0.10 → hint z = −1.28 (negative: lower tail)\nx = μ + zσ = 69 + (−1.28)(2.8) = 69 − 3.584 = 65.416 ≈ 65.4 inches"
+     }
+    ]
+   }
+  ]
+ }
+}
