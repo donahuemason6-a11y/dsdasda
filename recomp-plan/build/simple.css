@@ -1,0 +1,21 @@
+@page { size: Letter; margin: 0.55in 0.6in 0.65in 0.6in; }
+* { box-sizing: border-box; }
+html { font-family: 'Inter', 'DejaVu Sans', sans-serif; font-size: 9.6pt; line-height: 1.38; color: #16191d; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin: 0; }
+h1 { font-size: 21pt; line-height: 1.1; margin: 0 0 0.05in; letter-spacing: -0.02em; font-weight: 800; }
+h2 { font-size: 13pt; line-height: 1.15; margin: 0.14in 0 0.06in; padding-bottom: 3pt; border-bottom: 2pt solid #16191d; font-weight: 800; break-after: avoid; }
+p { margin: 0 0 0.07in; }
+ul, ol { margin: 0 0 0.07in; padding-left: 1.5em; }
+li { margin: 0 0 0.03in; }
+strong { font-weight: 700; }
+table { border-collapse: collapse; width: 100%; margin: 0.05in 0 0.09in; font-size: 9.2pt; line-height: 1.28; }
+thead { display: table-header-group; }
+tr { break-inside: avoid; }
+th { background: #16191d; color: #fff; text-align: left; font-weight: 600; padding: 3.4pt 7pt; border: 0.5pt solid #16191d; }
+td { padding: 2.7pt 7pt; border: 0.5pt solid #b9c0c8; vertical-align: top; }
+tbody tr:nth-child(even) td { background: #f3f5f7; }
+.pb { break-after: page; height: 0; }
+table.weeks { font-size: 9.4pt; line-height: 1.25; table-layout: fixed; margin-top: 0.03in; }
+table.weeks td { padding: 3.7pt 7pt; white-space: nowrap; }
+table.weeks th { padding: 4.4pt 7pt; }
+table.weeks tr.brk td { background: #dbe7f0; }
