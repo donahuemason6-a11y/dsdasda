@@ -16,6 +16,6 @@ td { padding: 2.7pt 7pt; border: 0.5pt solid #b9c0c8; vertical-align: top; }
 tbody tr:nth-child(even) td { background: #f3f5f7; }
 .pb { break-after: page; height: 0; }
 table.weeks { font-size: 9.4pt; line-height: 1.25; table-layout: fixed; margin-top: 0.03in; }
-table.weeks td { padding: 3.7pt 7pt; white-space: nowrap; }
+table.weeks td { padding: 3.3pt 7pt; white-space: nowrap; }
 table.weeks th { padding: 4.4pt 7pt; }
 table.weeks tr.brk td { background: #dbe7f0; }

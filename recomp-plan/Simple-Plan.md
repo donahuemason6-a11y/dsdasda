@@ -4,7 +4,7 @@ Starts Mon Nov 16, 2026. On plan you are about 225 lb on May 9 and 200 lb around
 
 ## 1. Your week
 
-| Day | Lift | Walk, right after lifting |
+| Day | Lift | Walk, right after lifting (minutes: Section 4) |
 |---|---|---|
 | Mon | **Push** | Incline walk |
 | Tue | **Pull** | Incline walk |
@@ -28,19 +28,17 @@ Weigh every morning. Use the average of the week, never one day.
 
 - Switch lines the Monday after your weekly average reaches the next weight. Early or late, the scale decides, not the date.
 - Never eat under 2,000. The last line goes back up 100 on purpose: the final 10 lb come off slower.
-- **Break weeks** (Weeks 6, 13, 20, 26 and 33): eat your normal calories plus 600, protein 200 g. No incline. Lift light: 2 sets per exercise, well short of failure. They are planned. Do not skip them.
+- **Break weeks** (Weeks 6, 13, 20, 26 and 33): eat your normal calories plus 600, protein 200 g. No incline. Lift easy: same weights, 2 sets per exercise, well short of failure. They are planned. Do not skip them.
 
 ## 3. Walking
 
 Speed 3.0. Hands off the rails. The incline is the number on the treadmill, 0 to 15.
 
-**Incline walk.** The goal is incline 15, but your first walk finds where you start:
+**Incline walk.** The goal is incline 15. You work up to it in steps: incline **6**, **8**, **10**, **12**, then **15 at speed 2.7**, then **15 at speed 3.0**. Your first walk finds your step:
 
-1. Walk 4 minutes at incline 8.
-2. Still able to talk in full sentences (heart rate under 150 if you can see it)? Go up one step and walk 4 more minutes.
-3. The first step where you cannot talk in full sentences: go back down one step. That is your incline for now.
-
-The steps, easiest to hardest: incline **6**, **8**, **10**, **12**, then **15 at speed 2.7**, then **15 at speed 3.0**. If 8 is already too hard, use 6.
+1. Walk 4 minutes at incline 8. If that is already too hard, use 6.
+2. Still able to talk in full sentences (heart rate under 150 if you can see it)? Go up one step for 4 more minutes.
+3. The first step where you cannot, or heart rate tops 150: go back down one step. That is your incline for now. Finish the walk there. The test minutes count.
 
 - Go up one step after 2 walks in a row that felt fine. One new step a week at most.
 - Cannot talk, need the rails, or heart rate over 160? Go down a step. Lower and hands-free beats 15 holding on.
@@ -54,7 +52,7 @@ The steps, easiest to hardest: incline **6**, **8**, **10**, **12**, then **15 a
 
 ## 4. Week by week: Nov 16 to May 9
 
-Find your week and read across. Incline walks are Mon, Tue, Thu and Fri. Flat walks are Wed and Sat. Shaded rows are break weeks.
+Find your week and read across. Incline walks are Mon, Tue, Thu and Fri. Flat walks are Wed and Sat. Shaded rows are break weeks: flat walk Mon to Fri, none needed on Sat.
 
 | Week | Dates | Calories | Protein | Incline walk | Flat walk | Goal weight |
 |---|---|---|---|---|---|---|
@@ -84,7 +82,7 @@ Find your week and read across. Incline walks are Mon, Tue, Thu and Fri. Flat wa
 | 24 | Apr 26 – May 2 | 2,100 | 210 g | 40 min | 20 min | 226.5 |
 | 25 | May 3 – May 9 | 2,100 | 210 g | 40 min | 20 min | 224.5 |
 
-Goal weight is where your weekly average should be at the end of that week. A pound or two off is fine. If the scale gets to 255, 240, 225 or 210 lb early or late, switch calories and incline minutes then (Section 2).
+Goal weight is where your weekly average should be at the end of that week. A few pounds off is fine: do not eat less or walk more to catch up. If your weekly average hits 255, 240, 225 or 210 lb early or late, switch to that line in Section 2 the Monday after.
 
 <div style="page-break-after: always;"></div>
 
@@ -113,15 +111,16 @@ Goal weight is where your weekly average should be at the end of that week. A po
 
 | If this happens | Do this |
 |---|---|
-| Your weekly average hits 255, 240, 225 or 210 lb before or after the table says | Switch calories and incline minutes when the scale gets there, not on the date |
+| Weekly average hits 255, 240, 225 or 210 lb early or late | Switch calories and incline minutes the Monday after, not by date |
+| Still above 204 lb when Week 39 ends | Make Week 40 a break week, then carry on |
 | You lose more than 1% of your weight a week (about 2.5 lb), 2 weeks in a row | Add 200 calories a day for 2 weeks |
 | You lose less than 1 lb a week, 2 weeks in a row | Weigh all your food for a week. Still slow: drop 100 calories. Never under 2,000 |
-| Bad sleep, no energy or lifts dropping for 2 weeks in a row, or two of those in the same week | Add 200 calories a day for 2 weeks. Still wrecked after that: take a break week early |
-| Calf, Achilles, heel or shin pain 4 out of 10 or worse on a walk, or stiff for more than 15 minutes the next morning | Incline 5 or lower for 7 days (flat if you were at incline 8 or lower), then build back up one step at a time |
+| Bad sleep, no energy, starving most days or lifts dropping for 2 weeks in a row, or two of those in the same week | Add 200 calories a day for 2 weeks. Still wrecked after that: take a break week early |
+| Calf, Achilles, shin, foot, knee or lower-back pain 4 out of 10 or worse on a walk, or stiff over 15 minutes next morning | Incline 5 or lower for 7 days (flat if you were at incline 8 or lower), then build back up one step at a time |
 | Chest pain, fainting, or a pop or sharp pain in a tendon | Stop. Get it checked |
 
 ## 6. The finish
 
 You are done when your weekly average is 200 lb, or sooner if your waist at the belly button is 35.5 in or less two Mondays in a row and you like how you look. Do not go straight back to eating freely. Raise calories 150 a week for 4 weeks: 2,250, then 2,400, then 2,550, then 2,700, with protein at 200 g. Then hold there.
 
-Get your blood pressure checked before Week 1. The reasons behind every number, and what to do in any case not listed here, are in the full manual.
+Get your blood pressure checked before Week 1. Anything not covered here is in the full manual.
