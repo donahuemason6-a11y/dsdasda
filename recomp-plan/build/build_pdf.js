@@ -3,9 +3,11 @@ const fs = require('fs'); const path = require('path'); const { execFileSync } =
 // column widths (percent) for the widest tables, keyed by the start of their header row
 const WIDTHS = [
   { sig: ['Wk', 'Dates', 'Incline walk', 'Flat walk', 'Lifting focus'], w: [5, 10, 19, 15, 51], cls: 'dense' },
-  { sig: ['Wk', 'Dates (Mon–Sun)', 'Mode', 'Target 7-day avg'], w: [5, 16, 26, 15, 16, 10, 12] },
+  { sig: ['Wk', 'Dates (Mon–Sun)', 'Mode', 'Target 7-day avg'], w: [5, 16, 24, 15, 16, 10, 14] },
   { sig: ['Wk', 'Dates (Mon–Sun, 2027)', 'Mode', 'kcal'], w: [5, 17, 25, 7, 15, 18, 13] },
   { sig: ['Flag', 'Trips when', 'Tripped?'], w: [15, 69, 16] },
+  { sig: ['Date', 'Week', 'What happens'], w: [16, 7, 77] },
+  { sig: ['Day', 'Weight (lb)', 'kcal', 'Protein (g)', 'Steps'], w: [9, 10, 10, 10, 10, 8, 9, 9, 10, 15], cls: 'form' },
   { sig: ['#', 'Exercise', 'Sets × Reps', 'RIR', 'Rest', 'Key cue', 'PF substitute'], w: [3, 29, 11, 6, 9, 22, 20] },
 ];
 const strip = s => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();

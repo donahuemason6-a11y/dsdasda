@@ -14,7 +14,7 @@
 | Starting intake | 2,300 kcal: 210 g protein, 212 g carbs, 68 g fat |
 | Calorie floor | 2,000 kcal. Nothing in this plan goes lower |
 | Lifting | 6 days per week, double progression, deload every 6–7 weeks |
-| Cardio | Incline walking at 3.0 mph, hands-free, at your Incline Ladder level (target 15%, Section 1.4), building from 3 × 20 to 4 × 40 minutes; flat walks after leg days |
+| Cardio | Incline walking at 3.0 mph, hands-free, at your Incline Ladder level (target 15%, Section 1.4), building from 3 × 20 to 4 × 40 minutes; flat walks on leg days |
 | After the finish line | 4-week reverse diet to maintenance, starting the following Monday |
 
 ### The Honest Target
@@ -30,10 +30,10 @@ You have said you are not stopping until you reach 200 lb or your stomach is fla
 | When | Go to | What you do there |
 |---|---|---|
 | Once, before Nov 16 | Sections 1 and 3 | Read the strategy, the safety rules and the milestone triggers |
-| Sunday Nov 15 | Sections 5.6 and 5.7 | Buy the kit and the groceries, then run the 2-hour prep so Monday's meals are packed |
-| Every day | Sections 2.3 and 5 | Hit the calorie and macro targets for the current week |
+| Sunday Nov 15 | Sections 5.6, 5.7, 6.1 and 6.2 | Buy the kit and the groceries, then run the 2-hour prep so Monday's meals are packed. Read how to measure and print the Week 1 check-in sheet |
+| Every day | Sections 2.3, 5 and 6.2 | Weigh in on waking, hit the calorie and macro targets for the current week and fill in the Daily Log |
 | Every gym day | Sections 2.4 and 4 | Run that day's workout, then that week's cardio prescription |
-| Every Sunday | Sections 6 and 1.5 | Run the 10-minute check-in and set next week's numbers |
+| Every Sunday | Sections 6, 1.5 and 5.7 | Run the 10-minute check-in and set next week's numbers, then shop and run the 2-hour prep |
 | When the 7-day average crosses 255, 240, 225 or 210 lb | Section 3 | Switch tier the following Monday |
 | When something hurts, stalls or drags | Sections 1.4 and 1.5 | Apply the Tendon Protocol or the flag rules |
 | After May 9 | Section 7 | Continue Phase 2 to the finish line, then run the 4-week reverse diet |
@@ -60,6 +60,8 @@ You have said you are not stopping until you reach 200 lb or your stomach is fla
 5. High-Protein Meal Plan & Food Playbook
 6. Weekly Check-In & Tracking Sheet
 7. After May 9: Phase 2 to 200 lb and the 4-Week Reverse Diet
+
+Appendix: Quick Reference Card (one page for the gym bag)
 
 This document is training and nutrition education, not medical care. Section 1.8 lists what to get checked before you start and the signs that mean stop and see a doctor.
 
@@ -110,7 +112,7 @@ Lifts steady or up, waist down, average down: you are losing fat and keeping mus
 | Lever | Setting | Why |
 |---|---|---|
 | Deficit | About 1,000–1,100 kcal/day. Start at 2,300 kcal; −100 kcal at each 15 lb milestone; floor 2,000 kcal | About 2.0–2.2 lb/week, the fastest pace that stays inside the guardrail |
-| Protein | 210 g/day at every tier (215 g in Tier 5), within ±10 g | About 1.0 g per lb of a 210 lb goal weight. The main dietary defense of muscle |
+| Protein | 210 g/day at every tier (215 g in Tier 5), within ±10 g | About 1.05 g per lb at the 200 lb finish line. The main dietary defense of muscle |
 | Lifting | 6-day Push/Pull/Legs, double progression, 6 indicator lifts | The signal to keep muscle while fat leaves, and your measuring stick |
 | Incline cardio | 15%, 3.0 mph, hands off the rails, or your Incline Ladder level until you can hold that under the heart-rate ceiling (Section 1.4). 3 × 20 min in Week 1, building to 4 × 40 min. Hard cap 40 min | About 9.5 METs. Past the cap it costs more in Achilles load, recovery and hunger than it returns |
 | Step floor | 8,000 steps/day, treadmill steps included | Stops daily movement from quietly shrinking as you diet |
@@ -151,7 +153,7 @@ The equation cannot see body composition. A lean-mass-based estimate lands lower
 |---|---|---|---|---|---|---|
 | 270 lb | 2,267 | 3,425 | 2,300 | 1,125 | 2.25 lb/wk | 0.83% |
 | 255 lb | 2,199 | 3,325 | 2,200 | 1,125 | 2.25 lb/wk | 0.88% |
-| 240 lb | 2,131 | 3,220 | 2,100 | 1,120 | 2.24 lb/wk | 0.94% |
+| 240 lb | 2,131 | 3,220 | 2,100 | 1,120 | 2.24 lb/wk | 0.93% |
 | 225 lb | 2,063 | 3,075 | 2,000 | 1,075 | 2.15 lb/wk | 0.96% |
 | 210 lb | 1,995 | 2,915 | 2,100 | 815 | 1.63 lb/wk | 0.78% |
 
@@ -232,29 +234,21 @@ Losing faster does not mean losing more fat. Past the guardrail the extra pounds
 
 **What the scale does.** Expect it to rise 1–3 lb during the week from glycogen, water and food volume. It is not fat, and it comes off within 5–10 days of resuming the deficit. The on-track range in Section 2.3 already carries 2 lb of headroom for break weeks, and the too-fast check ignores the first week back.
 
-The evidence that maintenance weeks reverse adaptation itself is mixed. The dependable returns are better training, lower hunger and fatigue, and an unloaded Achilles. Those are reason enough to keep all three.
+The evidence that maintenance weeks reverse adaptation itself is mixed. The dependable returns are better training, lower hunger and fatigue, and an unloaded Achilles. Those are reason enough to keep every one of them.
 
 ### 1.4 Incline Walking Without Wrecking Your Achilles, Calves or Lower Back
 
-> **Rule:** An incline walk in this plan is 15% grade at 3.0 mph with your hands off the rails, for the minutes in Section 2.4 and never more than 40 in one session. If you cannot do it hands-free and under the heart-rate ceiling, work at a lower level of the Incline Ladder and keep the minutes.
+> **Rule:** An incline walk in this plan is 15% grade at 3.0 mph with your hands off the rails, for the minutes in Section 2.4 and never more than 40 in one session. If you cannot do it hands-free and under the heart-rate ceiling, work at a lower level of the Incline Ladder and keep the minutes. Your first session is the level test (Starting point, below), not 15%.
 
 Incline walking is your main cardio tool and the most likely source of an overuse injury in this plan. Heart and lungs adapt in weeks; tendons take months. The schedule sets the dose, not how fresh you feel.
 
 #### Why 15% at 3.0 mph is a serious load at 270 lb
 
-| Factor | At 15% and 3.0 mph | What it means |
-|---|---|---|
-| Intensity | About 9.5 METs (about 33 ml/kg/min of oxygen) | Vigorous work, close to jogging intensity |
-| Energy cost | About 15.5 kcal/min at 270 lb | Flat walking at 3.0 mph costs about 4–5 kcal/min |
-| Ankle | More dorsiflexion (shin closing toward the toes) on every step | Calf and Achilles work at a longer length under load |
-| Lower back | Sustained forward lean | The erectors (the muscles along your spine) hold your trunk all session and fatigue |
-| Rails | Holding on cuts the cost by roughly a quarter or more | It also wrecks your posture |
-
-The kcal figures are planning estimates, set deliberately below the standard walking equation. The treadmill console reads high; ignore it.
+Intensity and energy cost are in Section 1.2: about 9.5 METs and about 15.5 kcal/min at 270 lb. The load on your ankles and lower back is what this section manages.
 
 **Ankle, calf and Achilles.** A 15% grade tilts the belt about 8.5°. With your heel down, the ankle bends roughly that much further than on flat ground, so the calf and Achilles are stretched longer while they carry your weight and push it uphill. A 30-minute session is roughly 3,000 of those steps (estimate). Load per step scales with body weight: about 11% less at 240 lb and about 17% less at 225 lb than at 270 lb. That is why the minutes rise as your weight falls.
 
-**Lower back.** You lean forward to stay balanced on the slope, and your lower-back muscles hold that lean all session. Lean from the ankles and they cope. Fold at the hips and they fatigue fast.
+**Lower back.** You lean forward to stay balanced on the slope, and the erectors (the muscles along your spine) hold that lean all session. Lean from the ankles and they cope. Fold at the hips and they fatigue fast.
 
 **Rails.** Hang back on the rails and your body ends up square to the belt: the hill is gone and the console still counts it. Your arms carry part of your weight, and your spine sits arched and locked while it tires.
 
@@ -292,10 +286,11 @@ Cue 3 matters most for the Achilles: toe-walking keeps the calf loaded with no r
 
 **Which way to step down:**
 
-- Breathing or heart rate is the limit: drop to Level 4 first.
-- Calf, Achilles or lower back is the limit: skip Level 4 and drop the grade (Level 3, 2, 1 or 0). A slower belt does not change the ankle angle.
+- From Level 5, breathing or heart rate is the limit: drop to Level 4 first.
+- From Level 5, calf, Achilles or lower back is the limit: skip Level 4 and go to Level 3. A slower belt does not change the ankle angle.
+- From Level 4 or below, whatever the limit: go down one level at a time (4 → 3 → 2 → 1 → 0). Never move to a higher level number to fix a limit.
 
-**Below Level 0.** Still over a limit at Level 0: drop to 4% at 3.0 mph, keep the minutes and write the grade in the Ladder level column (Section 6.2). Raise it at your doctor's visit (Section 1.8).
+**Below Level 0.** Still over a limit at Level 0: drop to 4% at 3.0 mph, keep the minutes and write the grade in the Ladder level column (Section 6.2). Bring it up at your doctor's visit (Section 1.8). Still over a limit at 4%: walk flat for the scheduled minutes and have that visit before any more incline.
 
 After a step-down, start the next session at the lower level.
 
@@ -308,9 +303,9 @@ After a step-down, start the next session at the lower level.
 1. Walk 4 min at Level 1 (8%, 3.0 mph), hands-free. Read your heart rate and run the talk test.
 2. Under 150 bpm and speaking in full sentences: go up one level and repeat.
 3. Stop climbing at the first level that takes you past 150 bpm or breaks the talk test. Your working level is the one below it. Finish the session there; the test minutes count.
-4. If Level 1 itself takes you past 150 bpm or breaks the talk test, work at Level 0. If Level 0 still puts you over the 160 bpm ceiling, slow it to 2.7 mph and raise it at your doctor's visit (Section 1.8).
+4. If Level 1 itself takes you past 150 bpm or breaks the talk test, work at Level 0. If Level 0 still puts you over the 160 bpm ceiling or breaks the talk test, use the Below Level 0 rule above: 4% at 3.0 mph, same minutes.
 
-Expect to land around Level 0–2 at this weight (estimate). That is the plan working: the heart-rate ceiling sets the level, and the level rises as you get fitter and lighter. Level 5 may take months to reach.
+The test stops at 150 bpm, not the 160 ceiling, because heart rate drifts up over a full session. Expect to land around Level 0–2 at this weight (estimate). That is the plan working: the heart-rate ceiling sets the level, and the level rises as you get fitter and lighter. Level 5 may take months to reach.
 
 **Starting minutes.** If you currently do less incline than Week 1 prescribes, start at what you do now and add 5 min per session each week until you catch the table. If you do more, you still follow the table.
 
@@ -349,12 +344,12 @@ Week-by-week minutes are in Section 2.4. How cardio sits around each workout is 
 
 #### Pain scale
 
-Score calf, Achilles, heel, foot, shin, knee and lower-back pain 0–10 during the walk, an hour after and the next morning. Log it on the Section 6.2 sheet. Score it with no painkillers on board: do not take ibuprofen or naproxen to get through a session, because they hide the signal this scale runs on.
+Score calf, Achilles, heel, foot, shin, knee and lower-back pain 0–10 during the walk, an hour after and the next morning. Log it on the Section 6.2 sheet. Score it with no painkillers on board: do not take ibuprofen or naproxen to get through a session, because they hide the signal this scale runs on. Ordinary muscle soreness is not scored here: a dull ache in the belly of a muscle, about the same on both sides, that starts a day or two after a new or harder session and fades within 5 days. Log that as Soreness (Section 6.1). Pain on one side only, in a tendon, the heel, a joint or a bone, or pain that builds as you walk, is scored here, and so is anything you cannot place. The Achilles morning check (Section 6.1) reads the tendon, not the calf muscle.
 
 | Level | What it looks like | Action |
 |---|---|---|
 | Green | 0–2/10 during, gone within an hour, nothing next morning | Train as written |
-| Amber | 3/10 during that settles within 24 hours; OR any pain still there an hour after; OR next-morning stiffness or pain of 15 minutes or less | No added minutes that week; drop grade by one or more ladder levels for the next 2 sessions |
+| Amber | 3/10 during that settles within 24 hours; OR any pain still there an hour after; OR next-morning stiffness or pain of 15 minutes or less | No added minutes that week; drop the grade by one or more ladder levels for the next 2 sessions. Level 4 does not count: it keeps the 15% grade |
 | Flag F3 | 4/10 or more during; OR next-morning stiffness or pain lasting more than 15 minutes; OR pain rising across 3 sessions | Tendon Protocol |
 | Stop | 6/10 or more, sharp or pinching pain, a "pop", visible swelling or a thickened tender lump on the tendon, limping, night pain; pinpoint pain on a shin, foot or heel bone that builds as you walk or hurts to press; back pain travelling below the glute, numbness or tingling | Stop incline and loaded leg work; get evaluated by a physician or sports physical therapist |
 
@@ -362,40 +357,34 @@ Score calf, Achilles, heel, foot, shin, knee and lower-back pain 0–10 during t
 
 Run this from the day the Flag F3 row applies. Do not wait for Sunday.
 
-1. For 7 days, walk at 5% grade or less. Keep the scheduled minutes while the walk stays at 3/10 or less. If it reaches 4/10 or more on the flat, or you limp, stop for the day and treat it as the Stop row.
-2. If the pain is in the calf or Achilles, replace calf raises with isometric holds: 5 × 30–45 seconds, mid-range, daily. That includes the calf work on Legs A and Legs B. For knee or lower-back pain, calf work stays as written and the lift that hurts takes a lighter load or its substitute (Section 4.7).
+1. For 7 days, walk at 5% grade or less. If you were working at Level 1 or below, walk flat (0–3%) instead. Keep the scheduled minutes while the walk stays at 3/10 or less. If it reaches 4/10 or more on the flat, or you limp, stop for the day and treat it as the Stop row.
+2. If the pain is in the calf, Achilles, heel, foot or shin, replace calf raises with isometric holds: 5 × 30–45 seconds, mid-range, daily. That includes the calf work on Legs A and Legs B. For knee or lower-back pain, calf work stays as written and the lift that hurts takes a lighter load or its substitute (Section 4.7).
 3. Keep lifting everything that is pain-free.
 4. Make no calorie change. This is a loading problem, not a fuel problem. F3 still counts toward your Sunday flag total (Section 1.5).
-5. Return in steps: Level 2 (10%), then Level 3 (12%), then Level 5 (15%), with 2 pain-free sessions (Green row) at each step. Never go past the level you worked at before the protocol; if that was Level 0 or 1, go straight back to it. Calf raises come back by step 6.
+5. Return in steps: Level 2 (10%), then Level 3 (12%), then Level 4 or 5 (15%), whichever you worked at before, with 2 pain-free sessions (Green row) at each step. Never go past the level you worked at before the protocol; if that was Level 0 or 1, go straight back to it. Calf raises come back by step 6.
 6. Calf raises return in three leg-day steps after the 7 days, each one only while your pain log is Green. First leg day: 2 sets at about half your last load, heel no lower than the forefoot, no pause. Second: full sets at about three-quarters load, same range. Third: full load, full stretch and the 2-s pause. Keep the daily holds until then.
 7. If it is not clearly better after 7–10 days, treat it as the Stop row and get it evaluated.
 
-#### Lower back
-
-| What you feel | What it is | What to do |
-|---|---|---|
-| A muscle "pump" that fades within 10 minutes of stepping off | Fatigue, not injury | Shorten your stride, re-brace, drop a ladder level by grade |
-| 4/10 or more during; stiffness or pain over 15 minutes next morning; or pain rising across 3 sessions | Flag F3 | Tendon Protocol. The grade drop is the part that unloads your back |
-| Pain travelling below the glute, numbness or tingling | Stop | Stop incline and loaded leg work; get evaluated |
+**Lower back.** A muscle "pump" that fades within 10 minutes of stepping off is fatigue, not injury: shorten your stride, re-brace and drop a ladder level by grade. Anything more is scored on the pain scale above. If it reaches Flag F3, the grade drop in the Tendon Protocol is the part that unloads your back.
 
 ### 1.5 Red Flag Biofeedback Checklist
 
 > **Rule:** Score all six flags every Sunday from the week's log. The flag count sets the action. No flag ever lowers your calories.
 
-A deficit of about 1,000–1,100 kcal/day works only while recovery keeps pace. These flags are the earliest measurable signs that it is not, and each has a fixed response. Measurement methods are in Section 6.1; the full Sunday sequence is in Section 6.4.
+A deficit this size works only while recovery keeps pace. These flags are the earliest measurable signs that it is not. Measurement methods are in Section 6.1; the Sunday sequence is in Section 6.4.
 
 #### The six flags
 
 | Flag | Name | Trips when |
 |---|---|---|
 | F1 | Sleep | Average under 6.5 hours/night for the week, OR 3 or more nights with trouble falling or staying asleep (awake more than 30 minutes, or waking hungry) |
-| F2 | Strength | On 2 or more of the 6 indicator lifts: the first working set is 2 or more reps under your best of the previous 3 sessions at that load, 2 sessions in a row. Example: 10, then 8, then 8 trips it. Deload weeks are not scored |
+| F2 | Strength | On 2 or more of the 6 indicator lifts: the first working set is 2 or more reps under your best of the previous 3 sessions at that load, 2 sessions in a row. Example: 10, then 8, then 8 trips it. Deload and re-entry weeks are not scored |
 | F3 | Tendon/joint | Achilles, calf, heel, foot, shin, knee or lower-back pain 4/10 or more during training; OR next-morning stiffness or pain over 15 minutes; OR pain rising across 3 sessions |
 | F4 | Hunger | Hunger 8/10 or higher for most of the day on 4 or more of 7 days, OR any binge or near-binge episode |
 | F5 | Energy/recovery | Daytime energy 4/10 or lower on 4 or more of 7 days, OR morning resting heart rate 8+ bpm above baseline for 5+ days |
 | F6 | Losing too fast | 7-day average dropping more than 1.0% of body weight per week for 2 consecutive weeks (more than about 2.7 lb at 270, 2.5 at 250, 2.3 at 230). Ignore the first week after a diet break |
 
-The 6 indicator lifts are Smith Machine Incline Press, Lat Pulldown, Leg Press, Shoulder Press Machine, Seated Row Machine and Smith Machine Romanian Deadlift. Deload weeks are not scored for F2: compare the week after a deload with the last week before it.
+The 6 indicator lifts are Smith Machine Incline Press, Lat Pulldown, Leg Press, Shoulder Press Machine, Seated Row Machine and Smith Machine Romanian Deadlift. Deload and re-entry weeks (Section 4.5) are not scored for F2: their sets stop further from failure on purpose, so they read low. Score F2 again from the second week after a deload. If your best at that load was set at 1 RIR in a Peak week, take 1 rep off it before you compare.
 
 #### Decision rules
 
@@ -406,7 +395,7 @@ The 6 indicator lifts are Smith Machine Incline Press, Lat Pulldown, Leg Press, 
 | TENDON | F3 (alone or with others) | Tendon Protocol (Section 1.4). A cardio and lifting change, not a calorie change. F3 still counts toward the flag total |
 | ORANGE | 2 flags in the same week; OR the same single flag 2 Sundays in a row; OR F6; OR any binge | **Add 200 kcal/day (+50 g carbs around training) for 14 days** |
 | RED | 3 or more flags in the same week; OR still ORANGE after 14 days at +200; OR F2 tripping on 3 or more indicator lifts | **7-day maintenance diet break + deload starting the next morning** (tier kcal + 600, deload lifting, flat walking only) |
-| MEDICAL STOP | Chest pain or pressure, fainting or near-fainting, palpitations at rest, shortness of breath out of proportion; any Stop row in the pain scale (Section 1.4); persistent dizziness on standing; any other sign on the Section 1.8 list | Stop training and get medical care. Not a diet decision |
+| MEDICAL STOP | Any sign on the Section 1.8 list (chest pain or pressure, fainting, palpitations at rest and the rest); any Stop row in the pain scale (Section 1.4) | Stop training and get medical care. Not a diet decision |
 
 Apply the most severe status that fits: MEDICAL STOP (Section 1.8), then RED, then ORANGE, then YELLOW, then GREEN. TENDON runs alongside any of them whenever F3 is tripped.
 
@@ -419,7 +408,9 @@ Four cases that get misread:
 
 #### ORANGE: the +200 rule
 
-Start Monday. Add 50 g of carbs per day, placed around training (the pre-workout and post-workout meals). Protein and fat do not change. Hold it for 14 days. Score the flags as usual on the Sunday in between: if RED applies, it takes over at once; otherwise carry on to day 14.
+Start Monday. Add 50 g of carbs per day, placed around training (the pre-workout and post-workout meals). Protein and fat do not change. Hold it for 14 days. Score the flags as usual on the Sunday in between: if RED applies, it takes over at once; otherwise carry on to day 14. Food options for the 50 g of carbs are in Section 5.5.
+
+If a scheduled diet-break week falls inside the 14 days, eat the break number that week with nothing added. That week does not count toward the 14 days: return to tier + 200 the Monday after and finish them. At day 14, read the loss rate from the +200 deficit weeks only, leaving out the first week after the break.
 
 | At day 14 | Then |
 |---|---|
@@ -429,6 +420,8 @@ Start Monday. Add 50 g of carbs per day, placed around training (the pre-workout
 
 On Tier 5, read 1.25 lb/week where this table says 1.5.
 
+**A kept +200 travels with you.** At each later milestone you move to the new tier and keep the extra 50 g of carbs: the ORANGE kcal and ORANGE carbs columns of the tier table below are then your normal numbers. Break weeks, scheduled or RED, stay at the numbers printed for your tier, and you return to the kept number afterwards. If ORANGE applies again while you hold a kept +200, add another 200 kcal (50 g carbs) for 14 days, then return to the kept number; if the flags have not cleared by day 14, it is RED. If the plateau rule triggers, its step 2 takes you back to the tier number instead of dropping a tier.
+
 #### RED: the 7-day maintenance diet break
 
 Start the next morning. Eat tier kcal + 600 with protein at 200 g, fat at 80 g and the rest as carbs. Lift on the deload rules in Section 4.5. Walk flat only, as in a scheduled deload week: 30 min Mon–Fri, no incline above 5%.
@@ -436,9 +429,9 @@ Start the next morning. Eat tier kcal + 600 with protein at 200 g, fat at 80 g a
 How an emergency break fits around the scheduled ones (Weeks 6, 13 and 20, then 26 and 33 in Phase 2):
 
 1. After the 7 days, resume the deficit at the same tier, unless that Sunday's flag check gives a status of its own. Score F1, F3, F4 and F5 as usual (F2 and F6 cannot be scored in a deload week). If RED applies again, take a second maintenance week and book a doctor's visit (Section 1.8).
-2. If the emergency break lands within 3 weeks before a scheduled break, it replaces that scheduled break. Run that week as a deficit week.
+2. If the emergency break lands within 3 weeks before a scheduled break, it replaces that scheduled break. Run that week as a deficit week: tier calories, Progression-week lifting (Section 4.5) and the incline minutes of the week before. If it is also your first week back, rule 4 sets the lifting and the incline.
 3. A RED break is never delayed, shortened or skipped, however recent the last break was. Only scheduled breaks move, by rule 2.
-4. Your first week back re-enters incline 5 min shorter than your last peak, as after any deload.
+4. Your first week back is a Re-entry week (Section 4.5), with incline 5 min shorter than your last peak, as after any deload.
 5. A second RED within 8 weeks means the deficit is too large for you right now. After that break, eat your ORANGE number (tier + 200 kcal, table below) until the next scheduled break, and book a doctor's visit (Section 1.8).
 
 #### ORANGE and RED numbers by tier
@@ -467,7 +460,7 @@ Run the fix for 7 days at YELLOW, and keep it running through ORANGE.
 
 #### Too slow: the plateau rule
 
-Trigger: 7-day average loss under 1.0 lb/week for 2 consecutive deficit weeks with 0 flags in both. These weeks do not count: a diet-break week and the week after it; any week with a flag tripped (the flag rules go first, and no flag ever lowers your calories); the first 4 weeks after you start creatine (Section 1.7).
+Trigger: 7-day average loss under 1.0 lb/week for 2 consecutive deficit weeks with 0 flags in both. These weeks do not count: a diet-break week and the week after it; any week with a flag tripped (the flag rules go first, and no flag ever lowers your calories); the first 4 weeks after you start creatine (Section 1.7); any week with 2 or more missed training days (Section 4.6).
 
 1. Run a one-week tracking audit: food scale on everything, including oils, sauces, drinks and weekends.
 2. If loss is still under 1.0 lb/week, drop one tier early: −100 kcal (−16 g carbs, −4 g fat). On Tier 5 that step is 2,000 kcal at 215 / 159 / 56.
@@ -478,15 +471,7 @@ Trigger: 7-day average loss under 1.0 lb/week for 2 consecutive deficit weeks wi
 
 #### On-track band
 
-| 7-day average loss | Reading | Action |
-|---|---|---|
-| Over 1.0% of body weight per week, 2 weeks running | F6 | ORANGE |
-| 1.75–2.25 lb/week | Ideal | None |
-| 1.5–1.75 lb/week | Acceptable | No change |
-| 1.25–1.75 lb/week on Tier 5 | Ideal for Tier 5 | None |
-| Under 1.0 lb/week, 2 consecutive deficit weeks | Plateau | Plateau rule |
-
-Anything else (1.0–1.5 lb/week, a single slow week, a single fast week) trips nothing. Hold the plan and read the next Sunday.
+On the 7-day average, 1.75–2.25 lb/week is ideal and 1.5–1.75 is acceptable; on Tier 5 the ideal is 1.25–1.75. Over 1.0% of body weight per week for 2 weeks running is F6 (ORANGE). Under 1.0 lb/week for 2 consecutive deficit weeks with 0 flags starts the plateau rule. Anything else (1.0–1.5 lb/week, a single slow week, a single fast week) trips nothing: hold the plan and read the next Sunday.
 
 #### Worked examples
 
@@ -502,7 +487,7 @@ Anything else (1.0–1.5 lb/week, a single slow week, a single fast week) trips 
 1. Sunday log: Leg Press and Smith Machine Romanian Deadlift were each 2 reps under their recent best at the same load for the second session running (F2). Energy 4/10 or lower on 5 days (F5). Awake more than 30 minutes on 3 nights (F1).
 2. Count: 3 flags. Status RED.
 3. From Monday morning (Week 12): 7 days at 2,800 kcal (200 g protein, 320 g carbs, 80 g fat), deload lifting, flat walking only.
-4. Sunday of Week 12: the flags have cleared, so Week 13 goes back to 2,200 kcal. The scheduled Week 13 break was within 3 weeks, so the emergency break replaced it. Week 13 runs as a deficit week with incline at 30 min (5 min under the 35-min peak). The Week 20 break stands.
+4. Sunday of Week 12: the flags have cleared, so Week 13 goes back to 2,200 kcal. The scheduled Week 13 break was within 3 weeks, so the emergency break replaced it. Week 13 runs as a deficit week with Re-entry lifting and incline at 30 min (5 min under the 35-min peak). The Week 20 break stands.
 
 ### 1.6 Hydration and Electrolytes
 
@@ -527,7 +512,7 @@ You already drink the water. Sodium needs checking in both directions. Six sweat
 
 | Electrolyte | Daily target | How to hit it |
 |---|---|---|
-| Sodium | 3,000–4,000 mg total (food + added) | Check the app total first. Add an electrolyte serving in training only if you log under 3,000 mg |
+| Sodium | 3,000–4,000 mg total (food + added) | Check the app total first, then follow the logged-sodium table above |
 | Potassium | About 3,400 mg, from food | Potatoes, bananas, beans, yogurt, spinach, tomato products, salmon. No high-dose potassium pills |
 | Magnesium | About 400–420 mg total | If food falls short: 200–350 mg of elemental magnesium (as glycinate) in the evening. 350 mg/day is the upper limit from all supplements combined, so count the multivitamin and the electrolyte mix |
 | Calcium | About 1,000–1,300 mg | 2–3 servings of dairy |
@@ -540,8 +525,8 @@ You already drink the water. Sodium needs checking in both directions. Six sweat
 |---|---|---|
 | On waking | 16–20 oz water | Plain water |
 | Breakfast to lunch | About 32 oz | Sodium comes with the food. Add none to a Section 5 meal |
-| Lunch to pre-workout meal | About 24–32 oz | Sodium comes with the food |
-| Lifting + incline session | 24–32 oz | One zero-sugar electrolyte serving (about 300–500 mg sodium) mixed in, only if your logged sodium is under 3,000 mg |
+| Lunch to the start of training | About 44–48 oz | Sodium comes with the food |
+| Lifting + incline session | 24–32 oz | One zero-sugar electrolyte serving (about 300–500 mg sodium) mixed in, only when the logged-sodium table above calls for one |
 | Post-workout meal, evening | The rest of the gallon | Sodium comes with the food. Magnesium glycinate here, if you use it |
 | Last 2 hours before bed | Taper to sips | Keeps bathroom trips from breaking your sleep |
 
@@ -549,7 +534,7 @@ Checkpoint: 96 oz down by 6 pm. If you train after 6 pm, reach 96 oz before you 
 
 **Low-electrolyte signs:** headache, muscle cramps, light-headedness on standing, unusual fatigue, crystal-clear urine all day.
 
-> **Rule:** Fix low-electrolyte signs with an electrolyte serving. Do not add more plain water.
+> **Rule:** With these signs and logged sodium under 3,000 mg, the fix is an electrolyte serving. More plain water is never the fix.
 
 Check this before you blame the calories: the same signs can trip flag F5 (Section 1.5). If your logged sodium is already over 3,000 mg, they are probably not a sodium problem: score F5 as usual. Dizziness on standing that persists after the fix belongs in Section 1.8.
 
@@ -579,7 +564,9 @@ This manual is education, not medical care. At 18, with a starting BMI near 38 a
 | Under 130 and under 80 | Run the plan as written |
 | 130–139 or 80–89 | 2,300 mg sodium limit (Section 1.6). No pre-training caffeine. Train as written. Visit within 2–3 weeks |
 | 140 or higher, or 90 or higher | 2,300 mg sodium limit. No caffeine. Flat walks only. Every lifting set at 3–4 RIR, breathing out on the effort. Visit within a week |
-| 180 or higher, or 120 or higher; or any high reading with severe headache, chest pain, vision change or breathlessness | Do not train. Get medical care the same day |
+| A high reading under 180 and under 120, with severe headache, chest pain, vision change or breathlessness | Do not train. Get medical care the same day. Chest pain or breathlessness that is severe or does not settle within minutes: call 911 |
+| 180 or higher, or 120 or higher, with no symptoms | Do not train. Sit quietly for 5 minutes and measure again. Still that high: get medical care the same day |
+| 180 or higher, or 120 or higher, with severe headache, chest pain, vision change, breathlessness, or weakness or numbness on one side | Do not train. Call 911 |
 
 | Bring up at the visit | Why it matters here |
 |---|---|
@@ -603,14 +590,14 @@ This manual is education, not medical care. At 18, with a starting BMI near 38 a
 7. Back pain travelling below the glute, or numbness or tingling.
 8. Dark, cola-colored urine, or muscle pain, swelling and weakness far beyond normal soreness, in the 1–3 days after a hard session.
 9. Steady pain in the upper right or upper middle of your abdomen lasting more than 30 minutes, often after a meal, with or without nausea or pain under the right shoulder blade.
-10. One calf swollen, warm, red or tender when the other is not.
+10. One calf swollen, warm or red when the other is not, with or without pain. One-sided soreness or tenderness with none of those three is scored on the pain scale (Section 1.4).
 11. New numbness between your legs, loss of bladder or bowel control, or a leg or foot going weak.
 
 Signs 1–4 need medical care the same day; if one is severe or does not settle within minutes of stopping, treat it as an emergency. Sign 5 needs a medical visit before you train again. Signs 6 and 7 mean no incline and no loaded leg work until a physician or sports physical therapist has evaluated you. Signs 8, 10 and 11 need medical care the same day: do not wait for a clinic slot. Sign 9 needs a visit within a few days, and the same day if it comes with fever, yellow skin or eyes, or lasts more than a few hours.
 
 Everything short of this list is handled by the weekly flags in Section 1.5. Those change calories, cardio or lifting; this list ends the session.
 
-**Sick days.** Illness is the one thing that cancels training. A fever of 100.4°F or more, body aches, a chest cough, vomiting or diarrhea means no gym until you have been fever-free for 24 hours. On those days aim for your diet-break calories, eat what you can and do not make it up later. The full rule, including how to come back, is in Section 4.6. Chest pain, palpitations or unusual breathlessness when you return is on the stop list above.
+**Sick days.** A fever of 100.4°F or more, body aches, a chest cough, vomiting or diarrhea means no gym. The full rule, with the return test and what to eat, is in Section 4.6. Chest pain, palpitations or unusual breathlessness when you return is on the stop list above.
 
 Last point: a plan this strict can start running your head. Signs to take seriously:
 
@@ -646,8 +633,8 @@ Every week from Mon Nov 16, 2026 to Sun May 9, 2027 is listed below: 22 deficit 
 - **Target 7-day avg** is the model's projection for the average of your seven morning weigh-ins that week (Monday to Sunday). The baseline is a 7-day average of 270.0 lb for Nov 9–15. If your baseline is different, shift the whole column by the difference. If you only have a single Nov 16 weigh-in, expect to sit about 1 lb above the column all the way down; judge the weekly change, not the offset.
 - **On-track range** is the corridor between losing 2.25 lb and losing 1.75 lb in every deficit week so far. Inside the corridor, change nothing. It widens over time because small weekly differences add up. Diet-break weeks carry 2 lb of extra headroom because the scale normally rises 1–3 lb from water, glycogen and food volume.
 - **The scale overrides the calendar.** Tier changes happen when your 7-day average actually crosses 255, 240, 225 or 210 lb (Section 3), not on the dates projected here. Cross early and you change early; cross late and you stay on the higher tier until you get there. The three diet-break weeks are fixed by date unless a RED status moves one (Section 1.5).
-- **Incline walk** means 15% grade at 3.0 mph with your hands off the rails. Minutes are minutes at the working grade; add a 3-minute ramp-up and a 3-minute ramp-down. If you cannot hold it hands-free under the 160 bpm ceiling, use the Incline Ladder in Section 1.4. The minutes stay the same at any ladder level.
-- **Flat walk** means 0–3% grade at 3.0 mph, conversational pace. It follows both leg days.
+- **Incline walk** means your current Incline Ladder level with your hands off the rails (Section 1.4). Level 5, 15% grade at 3.0 mph, is the target you build toward, not where you start: the level test in your first session on Mon Nov 16 sets your starting level. Minutes are minutes at the working grade; add a 3-minute ramp-up and a 3-minute ramp-down. The minutes stay the same at any ladder level.
+- **Flat walk** means 0–3% grade at 3.0 mph, conversational pace. It comes after lifting on both leg days (Wed and Sat).
 - **Weekly layout never changes:** Mon Push A, Tue Pull A, Wed Legs A, Thu Push B, Fri Pull B, Sat Legs B, Sun rest. Cardio always comes after lifting. Sunday has no required cardio; an easy 20–30 minute walk is optional. The step floor is 8,000 steps every day.
 - **Lifting focus** uses the week types defined in Section 4.5 (Baseline or Re-entry, Progression, Peak, Deload). RIR is reps in reserve.
 - **P / C / F** is grams of protein, carbohydrate and fat. Every row satisfies kcal = 4 × P + 4 × C + 9 × F.
@@ -689,9 +676,9 @@ Every week from Mon Nov 16, 2026 to Sun May 9, 2027 is listed below: 22 deficit 
 
 ### 2.4 Master Table B: Cardio and Lifting
 
-| Wk | Dates | Incline walk (15%, 3.0 mph, hands-free) | Flat walk (0–3%, 3.0 mph) | Lifting focus |
+| Wk | Dates | Incline walk (your ladder level, hands-free) | Flat walk (0–3%, 3.0 mph) | Lifting focus |
 |---|---|---|---|---|
-| 1 | Nov 16 – Nov 22 | Mon · Tue · Thu × 20 min (60 total) | Wed · Sat × 15 min; Fri × 25 min | Baseline week. Find working loads on every lift: all sets at 3 RIR, strict tempo, log everything. Nothing to failure. |
+| 1 | Nov 16 – Nov 22 | Mon · Tue · Thu × 20 min (60 total). Level test on Mon (Section 1.4) | Wed · Sat × 15 min; Fri × 25 min | Baseline week. Find working loads on every lift: all sets at 3 RIR, strict tempo, log everything. Nothing to failure. |
 | 2 | Nov 23 – Nov 29 | Mon · Tue · Thu × 25 min (75 total) | Wed · Sat × 15 min; Fri × 25 min | Double progression starts. Compounds 2 RIR, isolations 1–2 RIR. Add reps before load. |
 | 3 | Nov 30 – Dec 6 | Mon · Tue · Thu × 30 min (90 total) | Wed · Sat × 15 min; Fri × 25 min | Double progression. Aim to beat the logbook by 1 rep on one set of each lift, at the same RIR. |
 | 4 | Dec 7 – Dec 13 | Mon · Tue · Thu · Fri × 25 min (100 total) | Wed · Sat × 20 min | Double progression. First load jumps on any lift that hit the top of its rep range on all sets. |
@@ -723,7 +710,7 @@ Every week from Mon Nov 16, 2026 to Sun May 9, 2027 is listed below: 22 deficit 
 
 | Date | Week | What happens |
 |---|---|---|
-| Mon Nov 16, 2026 | 1 | Start. Baseline photos, waist measurement, first indicator-lift numbers. |
+| Mon Nov 16, 2026 | 1 | Start. Baseline photos, waist measurement, first indicator-lift numbers. The incline walk opens with the level test: start at Level 1, not at 15% (Section 1.4). |
 | Thu Nov 26, 2026 | 2 | Thanksgiving. Not a diet break: the target stays 2,300 kcal. Build the plate protein-first, log an honest estimate, resume at the next meal. Train early, or make Thursday the rest day and move Push B, Pull B and Legs B one day later. |
 | Sun Dec 6, 2026 | 3 | Calibration checkpoint: compute your real maintenance from three weeks of data (Section 1.2). |
 | Mon Dec 21, 2026 | 6 | Diet Break 1 + Deload begins (2,900 kcal). Covers Christmas. |
@@ -751,7 +738,7 @@ The 7-day average (Section 6.1) filters out water, sodium and food volume, so th
 
 1. **Confirm on Sunday, switch on Monday.** Calories, macros and incline minutes change together (Section 6.4).
 2. **Never during a diet-break week.** Scheduled or emergency: the new tier starts the Monday after the break.
-3. **Never while ORANGE or RED.** Hold the change until the status clears (Sections 1.5 and 6.4).
+3. **Never while ORANGE or RED.** Hold the change until the status clears (Sections 1.5 and 6.4). A kept +200 (Section 1.5) moves with you: on the new tier, eat its numbers plus 200 kcal and 50 g of carbs.
 4. **Never two tier drops within 3 weeks.** A plateau step counts as a drop.
 5. **Data overrides the calendar.** The dates below are projections (Sections 2.3 and 7.3). Cross early, switch early. Cross late, switch late.
 6. **Incline rises 5 min at a time.** If a re-entry week or the Tendon Protocol leaves you more than 5 min short of the new number, add 5 min per session each week.
@@ -764,7 +751,7 @@ What never changes at any milestone:
 | Calorie floor | 2,000 kcal/day. Nothing in this plan goes below it |
 | What a step down removes | 16 g carbs and 4 g fat (100 kcal). Never protein |
 | Lifting | Same six workouts, same 6 indicator lifts, same double progression (Section 4) |
-| Incline standard | 15% at 3.0 mph, hands off the rails. If you need the rails, drop a ladder level (Section 1.4) |
+| Incline target | 15% at 3.0 mph, hands off the rails, or your Incline Ladder level until you can hold that under the heart-rate ceiling (Section 1.4) |
 | Incline limits | 40 min per session, 4 sessions per week, never on a leg day |
 | Step floor | 8,000 steps/day, treadmill steps included |
 
@@ -995,6 +982,7 @@ Cardio by block on the default track (exact minutes for every week: Section 2.4)
 | 14–19 | Mon, Tue, Thu, Fri | 30 rising to 40 | Wed, Sat 20 min |
 | 21–25 | Mon, Tue, Thu, Fri | 35 rising to 40 | Wed, Sat 20 min |
 
+- Week 1 only: find every load with feeler sets before your working sets (Section 4.4), and start Monday's incline walk with the level test (Section 1.4). Read the set-up notes and the Smith machine safety-stop rule (Section 4.8) before your first set.
 - Minutes follow the tier you are actually on (Section 3), not the calendar. 40 min is the cap.
 - Phase 2 (Week 26 onward) keeps this layout. Section 7.3 lists every week.
 - Gym closed on a training day: that day becomes your rest day. Move that session and each later session of the week one day later, ending Sunday. The order never changes and each session keeps its own walk, so incline still never lands on a leg day or runs 3 days in a row. Check your club's holiday hours the week before.
@@ -1027,7 +1015,7 @@ RIR values are the Progression-week defaults (Section 4.5). **INDICATOR** = trac
 | 5 | Cable Curl (bar, low pulley) | 3 × 10–15 | 1 | 75 s | Elbows at sides; no lean | Standing Dumbbell Curl |
 | 6 | Dumbbell Hammer Curl | 2 × 10–15 | 1 | 60–75 s | Thumbs up; elbows still | Cable Rope Hammer Curl |
 
-**Legs A, Wednesday.** Quads from two knee-dominant compounds, then straight-knee calf work. About 65 min.
+**Legs A, Wednesday.** Two quad compounds, straight-knee calf work, then 2 × 15–20 tibialis raises. About 65 min.
 
 | # | Exercise | Sets × Reps | RIR | Rest | Key cue | PF substitute |
 |---|---|---|---|---|---|---|
@@ -1060,7 +1048,7 @@ RIR values are the Progression-week defaults (Section 4.5). **INDICATOR** = trac
 | 5 | Biceps Curl Machine | 3 × 10–15 | 1 | 75 s | Upper arms on pad; full stretch | Incline Dumbbell Curl |
 | 6 | Cable Rope Hammer Curl | 2 × 12–15 | 1 | 60–75 s | Neutral grip; elbows at sides | Dumbbell Hammer Curl |
 
-**Legs B, Saturday.** Hamstrings and glutes from the hinge, then bent-knee (soleus) calf work and trunk stability. About 70 min.
+**Legs B, Saturday.** Hamstrings and glutes from the hinge, then bent-knee (soleus) calf work, trunk stability and 2 × 15–20 tibialis raises. About 70 min.
 
 | # | Exercise | Sets × Reps | RIR | Rest | Key cue | PF substitute |
 |---|---|---|---|---|---|---|
@@ -1083,7 +1071,7 @@ After the last set on both leg days: 2 × 15–20 wall-leaning tibialis raises. 
 3. Next session, add the smallest available load (table below).
 4. Reps fall back toward the bottom of the range. Rebuild.
 5. Big-jump rule: where the next jump is more than about 10%, or the rep range is only 2 reps wide (10–12), first earn the top of the range + 2 reps on every set, then jump.
-6. Split-jump rule: where the next jump is more than about 20% (dumbbells under 30 lb per hand, the lightest cable and machine pins), first earn the top of the range + 4 reps on every set. Then take the new load on set 1 only and keep the old load on the other sets. Move set 2 up once set 1 reaches the bottom of the range, then set 3. If a split jump fails twice, swap that slot at the next block start (Section 4.7).
+6. Split-jump rule: where the next jump is more than about 20% (dumbbells under 30 lb per hand, the lightest cable and machine pins), first earn the top of the range + 4 reps on every set. Then take the new load on set 1 only and keep the old load on the other sets. Move set 2 up once set 1 reaches the bottom of the range, then set 3. If a split jump fails twice, swap that slot at the next block start (Section 4.7). An indicator lift is never swapped: it stays on step 7.
 7. Failed jump: if set 1 at the new load cannot reach the bottom of the range (split jump: 2 reps under the bottom), finish that session at the old load. Stay there until every set is 2 reps higher than it was before the attempt, then try again. Each failed attempt adds 2 more.
 8. After a jump, sets 2 and 3 may land 1–2 reps under the bottom of the range. That is not a failed jump: keep the load and rebuild.
 9. Only full-range, controlled reps count.
@@ -1108,7 +1096,7 @@ Worked example: Lat Pulldown, 3 × 8–12 at RIR 2, 10 lb pins, one session per 
 
 Had set 1 at 130 lb stopped at 7 or fewer, step 7 applies. Late in a block, one added rep on one set is progress.
 
-**Finding your loads in Week 1.** For each exercise, pick a load you are sure you could lift 15 times. Do the bottom number of the rep range. If the last rep was as fast as the first, rest 90 s, add one step (one pin, 10 lb on the Smith machine, 5 lb per hand) and repeat. Stop adding when the last rep is the first clearly slower rep. That is your Week 1 load: do your working sets there. At most 4 feeler sets; if you run out, use the last load and adjust next week. On the Smith machine lifts the first feeler set is the empty bar. Feeler sets are not logged and replace the ramp-up sets in Week 1.
+**Finding your loads in Week 1.** For each exercise, pick a load you are sure you could lift 15 times. Do the bottom number of the rep range. If the last rep was as fast as the first, rest 90 s, add one step and repeat. One step is one pin, 10 lb on the Smith machine or 5 lb per hand; on Leg Press, Smith Machine Squat and Smith Machine Romanian Deadlift it is two pins or 20 lb. Stop adding when the last rep is the first clearly slower rep. That is your Week 1 load: do your working sets there. At most 4 feeler sets per exercise in one session. If the fourth still moved as fast as the first, do your working sets at that load, stop each set at the top of the rep range and write "finding" next to the lift in your log. Next session, start the feeler sets at that load and carry on. Until the slower rep shows up, that lift has no working load and step 3 above does not apply to it. Expect Leg Press, Smith Machine Squat and Smith Machine Romanian Deadlift to take 2–3 weeks. On the Smith machine lifts the very first feeler set is the empty bar. Feeler sets are not logged. They replace the ramp-up sets in Week 1 and on any lift still marked "finding".
 
 ### 4.5 Stalls, Deloads and RIR by Week Type
 
@@ -1153,7 +1141,7 @@ It should feel easy. Do not add sets or test strength. An emergency (RED) break 
 
 Lifting decides how much muscle you keep, and it needs fresh legs and a fresh lower back. Walking does not.
 
-**Incline-day order:** last lifting set, prehab, 3-min ramp-up (1 min each at 5%, 10%, 12%), the prescribed minutes at 15% and 3.0 mph (or your ladder level) hands-free, 3-min ramp-down, calf stretch. Ramps do not count. Form, ladder, heart-rate and tendon rules: Section 1.4.
+**Incline-day order:** last lifting set, prehab, 3-min ramp-up (1 min each at 5%, 10%, 12%; stop at your working grade if it is lower), the prescribed minutes at 15% and 3.0 mph (or your ladder level) hands-free, 3-min ramp-down, calf stretch. Ramps do not count. Form, ladder, heart-rate and tendon rules: Section 1.4.
 
 | Day | Walk | Why it sits there |
 |---|---|---|
@@ -1183,10 +1171,10 @@ Lifting decides how much muscle you keep, and it needs fresh legs and a fresh lo
 | One training day missed, Mon–Sat | That day becomes your rest day. Move that session and each later session of the week one day later, ending Sunday. Order unchanged; each session keeps its own walk |
 | Two or more days missed in a week | Do not catch up. Resume with the session the calendar shows and log the gap |
 | Cold symptoms above the neck only, no fever | Train on the deload prescription (Section 4.5). Flat walk instead of incline |
-| Fever, chest cough, body aches, vomiting or diarrhea | No training. Return after 24 hours with no fever and the other symptoms clearly fading |
+| Fever, chest cough, body aches, vomiting or diarrhea | No training. Return after 24 hours with no fever, without fever-reducing medicine, and with the other symptoms clearly fading |
 | First 2 sessions back after a fever, or the first session back after 3 or more days off | Last loads, 2 sets, 3–4 RIR, flat walk. Then incline restarts 5 min under your last session |
 
-On a fever day, aim for your diet-break calories and eat what you can (Section 1.8). A week with 2 or more missed days does not count toward the plateau rule (Section 1.5).
+On a no-training sick day, aim for your diet-break calories, eat what you can and do not make it up later. The 8,000-step floor is off on any day the table above says no training. On Sunday, leave those days out of the counts for F1, F4 and F5 (sleep, hunger, energy and resting heart rate). A week with 2 or more missed days is not scored for F6 and does not count toward the plateau rule (Section 1.5). Sessions done on the deload prescription or the first-sessions-back row are not scored for F2: write "sick" on the Section 6.2 strength check and compare your next full session with your last one before the illness.
 
 ### 4.7 Accessory Swaps and Busy-Gym Substitutes
 
@@ -1223,7 +1211,7 @@ Swap only for a reason: a stall, a joint that keeps complaining, or missing equi
 
 ### 4.8 Set-Up Notes for the Six Indicator Lifts
 
-> **Rule:** Before every Smith machine set, set the safety stops and test them with the empty bar. Squats, Romanian Deadlift and calf raises: just below the bottom of the rep. Presses: the lowest setting that still holds the bar off your chest and neck when you relax on the bench. Same machine, bench spot and seat number every week. On slanted rails, face the same way every session.
+> **Rule:** Before the first set of every Smith machine lift, set the safety stops and test them with the empty bar. Before each later set, check that the stops have not moved. Squats, Romanian Deadlift and calf raises: just below the bottom of the rep. Presses: the lowest setting that still holds the bar off your chest and neck when you relax on the bench. Same machine, bench spot and seat number every week. On slanted rails, face the same way every session.
 
 **Smith Machine Incline Press (Push A)**
 
@@ -1484,18 +1472,18 @@ For the snack slot, or traded into a meal on a hungry day. Every row is weighed,
 
 Ten meals built only from the rows above. Every one sits inside the plate formula: 470–590 kcal and 45–54.5 g protein. "1 serving" of ranch, burger sauce or spicy mayo is one row of the sauce table.
 
-| Combo | Build | Cook | kcal | P / C / F (g) |
-|---|---|---|---|---|
-| 1. Hot-Honey Chicken Rice Bowl | 6 oz raw chicken breast, 1 cup cooked rice, 2 cups broccoli, 2 tsp hot honey, 2 tbsp Buffalo sauce, 1 serving spicy mayo, 1 tsp house blend, 2-second spray (2 g) | Cube, season, spray; air-fry at 400°F for 10–12 min. Toss in the honey and Buffalo. Broccoli: 6–8 min. | 550 | 47 / 70 / 10 |
-| 2. Buffalo Chicken Wrap | 5 oz cooked rotisserie chicken breast, 1 burrito-size flour tortilla, 2 tbsp Buffalo sauce, 1 serving Greek-yogurt ranch, 2 cups shredded romaine, 1/3 medium avocado (50 g), 2 tbsp pickled jalapeños | No cooking. Toss the chicken in Buffalo, roll tight, toast in a dry pan 2 min per side. | 565 | 53 / 48 / 17.5 |
-| 3. Taco Turkey Bowl | 6 oz raw 99% lean ground turkey, 1/2 cup cooked rice (79 g), 1/2 cup black beans, 1 1/2 cups pepper and onion strips, 1/4 cup salsa, 2 tbsp reduced-fat shredded cheese (14 g), 1 tbsp lime juice, 2 tsp taco blend (6 g), 1-second spray | Brown the turkey with half the blend. Char the peppers and onions on high heat with the rest. | 530 | 53.5 / 61 / 7.5 |
-| 4. Teriyaki Shrimp Bowl | 8 oz raw peeled shrimp, 1 cup cooked rice, 2 cups frozen stir-fry vegetables, 2 tbsp teriyaki sauce, 2 tsp sriracha, 1 tsp toasted sesame oil | Sear the shrimp in the oil 2 min per side; teriyaki for the last 30 seconds. Vegetables on high heat. | 525 | 47 / 64 / 7 |
-| 5. Breakfast Scramble Wrap | 1 burrito-size flour tortilla, 2 eggs, 3/4 cup liquid egg whites, 1/4 cup reduced-fat shredded cheese, 2 cups baby spinach, 1/4 cup salsa, 1 tsp house blend, 1-second spray | Scramble the eggs, whites and spinach. Fill, fold, crisp seam-side down 1–2 min per side. | 575 | 48 / 45.5 / 22 |
-| 6. Nashville Hot Crispy Chicken Sandwich | 6 oz raw chicken breast, 2 tsp mustard, 1/4 cup panko, 1 tsp Nashville hot rub, 2-second spray (2 g), 1 bun, 1 serving spicy mayo, 2 tbsp pickle chips, 1 1/2 cups coleslaw mix | Butterfly; coat in mustard, rub, then panko; spray. Air-fry at 400°F for 10–12 min, flip once. Toast the bun. | 470 | 46.5 / 47 / 10.5 |
-| 7. Smash-Burger Bowl | 6 oz raw 93% lean ground beef, 8 oz raw potato, 1 cheese slice, 1 serving burger sauce, 2 cups shredded romaine, 2 tbsp pickle chips, 1 tsp house blend, 1-second spray | Cube the potato, microwave 3 min, spray, air-fry at 400°F for 12–15 min. Smash the beef thin, 2 min per side. | 585 | 45 / 49.5 / 22 |
-| 8. Garlic-Parm Steak and Potatoes | 6 oz raw top sirloin, 8 oz raw potato, 1 1/2 cups green beans, 2 tbsp grated parmesan, 1 tsp olive oil, 2 tsp house blend (6 g), 1-second spray | Sear the steak 3–4 min per side, rest 5 min. Potatoes as in combo 7, tossed in parmesan. Blister the beans in the oil. | 545 | 48 / 54 / 15.5 |
-| 9. Crispy Chicken Parm Pasta | 6 oz raw chicken breast, 2 tsp Dijon mustard, 1/4 cup panko, 2 oz dry pasta, 1/2 cup marinara, 2 tbsp grated parmesan, 2 cups baby spinach, 1 tsp house blend, 2-second spray (2 g) | Chicken as in combo 6. Slice it over the pasta, marinara and wilted spinach; parmesan on top. | 590 | 54.5 / 67 / 12 |
-| 10. PB and Berry Protein Oats | 1/2 cup dry rolled oats, 1 scoop whey, 3/4 cup plain nonfat Greek yogurt, 1 cup frozen mixed berries, 1 tbsp peanut butter | Microwave the oats in water 2 min. Stir in the whey after cooking. Top with yogurt, berries, peanut butter. | 530 | 50.5 / 56.5 / 13 |
+| Combo | Build | Cook | kcal | P (g) | C (g) | F (g) |
+|---|---|---|---|---|---|---|
+| 1. Hot-Honey Chicken Rice Bowl | 6 oz raw chicken breast, 1 cup cooked rice, 2 cups broccoli, 2 tsp hot honey, 2 tbsp Buffalo sauce, 1 serving spicy mayo, 1 tsp house blend, 2-second spray (2 g) | Cube, season, spray; air-fry at 400°F for 10–12 min. Toss in the honey and Buffalo. Broccoli: 6–8 min. | 550 | 47 | 70 | 10 |
+| 2. Buffalo Chicken Wrap | 5 oz cooked rotisserie chicken breast, 1 burrito-size flour tortilla, 2 tbsp Buffalo sauce, 1 serving Greek-yogurt ranch, 2 cups shredded romaine, 1/3 medium avocado (50 g), 2 tbsp pickled jalapeños | No cooking. Toss the chicken in Buffalo, roll tight, toast in a dry pan 2 min per side. | 565 | 53 | 48 | 17.5 |
+| 3. Taco Turkey Bowl | 6 oz raw 99% lean ground turkey, 1/2 cup cooked rice (79 g), 1/2 cup black beans, 1 1/2 cups pepper and onion strips, 1/4 cup salsa, 2 tbsp reduced-fat shredded cheese (14 g), 1 tbsp lime juice, 2 tsp taco blend (6 g), 1-second spray | Brown the turkey with half the blend. Char the peppers and onions on high heat with the rest. | 530 | 53.5 | 61 | 7.5 |
+| 4. Teriyaki Shrimp Bowl | 8 oz raw peeled shrimp, 1 cup cooked rice, 2 cups frozen stir-fry vegetables, 2 tbsp teriyaki sauce, 2 tsp sriracha, 1 tsp toasted sesame oil | Sear the shrimp in the oil 2 min per side; teriyaki for the last 30 seconds. Vegetables on high heat. | 525 | 47 | 64 | 7 |
+| 5. Breakfast Scramble Wrap | 1 burrito-size flour tortilla, 2 eggs, 3/4 cup liquid egg whites, 1/4 cup reduced-fat shredded cheese, 2 cups baby spinach, 1/4 cup salsa, 1 tsp house blend, 1-second spray | Scramble the eggs, whites and spinach. Fill, fold, crisp seam-side down 1–2 min per side. | 575 | 48 | 45.5 | 22 |
+| 6. Nashville Hot Crispy Chicken Sandwich | 6 oz raw chicken breast, 2 tsp mustard, 1/4 cup panko, 1 tsp Nashville hot rub, 2-second spray (2 g), 1 bun, 1 serving spicy mayo, 2 tbsp pickle chips, 1 1/2 cups coleslaw mix | Butterfly; coat in mustard, rub, then panko; spray. Air-fry at 400°F for 10–12 min, flip once. Toast the bun. | 470 | 46.5 | 47 | 10.5 |
+| 7. Smash-Burger Bowl | 6 oz raw 93% lean ground beef, 8 oz raw potato, 1 cheese slice, 1 serving burger sauce, 2 cups shredded romaine, 2 tbsp pickle chips, 1 tsp house blend, 1-second spray | Cube the potato, microwave 3 min, spray, air-fry at 400°F for 12–15 min. Smash the beef thin, 2 min per side. | 585 | 45 | 49.5 | 22 |
+| 8. Garlic-Parm Steak and Potatoes | 6 oz raw top sirloin, 8 oz raw potato, 1 1/2 cups green beans, 2 tbsp grated parmesan, 1 tsp olive oil, 2 tsp house blend (6 g), 1-second spray | Sear the steak 3–4 min per side, rest 5 min. Potatoes as in combo 7, tossed in parmesan. Blister the beans in the oil. | 545 | 48 | 54 | 15.5 |
+| 9. Crispy Chicken Parm Pasta | 6 oz raw chicken breast, 2 tsp Dijon mustard, 1/4 cup panko, 2 oz dry pasta, 1/2 cup marinara, 2 tbsp grated parmesan, 2 cups baby spinach, 1 tsp house blend, 2-second spray (2 g) | Chicken as in combo 6. Slice it over the pasta, marinara and wilted spinach; parmesan on top. | 590 | 54.5 | 67 | 12 |
+| 10. PB and Berry Protein Oats | 1/2 cup dry rolled oats, 1 scoop whey, 3/4 cup plain nonfat Greek yogurt, 1 cup frozen mixed berries, 1 tbsp peanut butter | Microwave the oats in water 2 min. Stir in the whey after cooking. Top with yogurt, berries, peanut butter. | 530 | 50.5 | 56.5 | 13 |
 
 Cook to temperature, not to time: poultry and ground turkey 165°F, ground beef 160°F, steak and fish 145°F. That takes an instant-read digital thermometer, about $15: buy one before Week 1. Push the tip into the thickest part, sideways into a cutlet or patty, and check the largest piece in every batch. The times in this section are estimates; the thermometer decides. To build your own combo, swap any row for another from the same table and re-total.
 
@@ -1511,11 +1499,11 @@ The pints, smoothies and float are built on milk, whey or Greek yogurt, so the s
 
 One pint is one dessert. Half a pint is half the numbers.
 
-| Pint | Base | Mix-in | kcal | P / C / F (g) |
-|---|---|---|---|---|
-| Chocolate Peanut Butter Pint | 1 1/2 cups (360 ml) ultra-filtered fat-free milk, 1 scoop (31 g) chocolate whey, 1 tbsp (5 g) unsweetened cocoa, 1 tbsp (8 g) sugar-free chocolate pudding mix, 2 tbsp (13 g) powdered peanut butter, pinch of salt | None | 335 | 50.5 / 26 / 3.5 |
-| Cookies and Cream Pint | 1 1/2 cups (360 ml) ultra-filtered fat-free milk, 1 scoop (31 g) vanilla whey, 1 tbsp (8 g) sugar-free vanilla pudding mix, pinch of salt | 2 chocolate sandwich cookies (22 g), crushed | 375 | 44.5 / 34 / 6.5 |
-| Strawberry Cheesecake Pint | 1 1/4 cups (300 ml) ultra-filtered fat-free milk, 1 scoop (31 g) vanilla whey, 1 tbsp (8 g) sugar-free cheesecake pudding mix, 100 g strawberries | 1 full graham cracker sheet (15 g), crumbled | 340 | 42 / 36 / 3 |
+| Pint | Base | Mix-in | kcal | P (g) | C (g) | F (g) |
+|---|---|---|---|---|---|---|
+| Chocolate Peanut Butter Pint | 1 1/2 cups (360 ml) ultra-filtered fat-free milk, 1 scoop (31 g) chocolate whey, 1 tbsp (5 g) unsweetened cocoa, 1 tbsp (8 g) sugar-free chocolate pudding mix, 2 tbsp (13 g) powdered peanut butter, pinch of salt | None | 335 | 50.5 | 26 | 3.5 |
+| Cookies and Cream Pint | 1 1/2 cups (360 ml) ultra-filtered fat-free milk, 1 scoop (31 g) vanilla whey, 1 tbsp (8 g) sugar-free vanilla pudding mix, pinch of salt | 2 chocolate sandwich cookies (22 g), crushed | 375 | 44.5 | 34 | 6.5 |
+| Strawberry Cheesecake Pint | 1 1/4 cups (300 ml) ultra-filtered fat-free milk, 1 scoop (31 g) vanilla whey, 1 tbsp (8 g) sugar-free cheesecake pudding mix, 100 g strawberries | 1 full graham cracker sheet (15 g), crumbled | 340 | 42 | 36 | 3 |
 
 With a Ninja Creami:
 
@@ -1897,7 +1885,7 @@ These are estimates with ordinary supermarket brands. Labels differ, so log sodi
 | Fresh jalapeño slices, not pickled | 300 mg on Day C |
 | No "salt lightly", no salt in the pasta water, no pinch of salt, no pickle brine | 150–350 mg |
 
-The swaps leave calories and protein unchanged. After them the food supplies the 3,000–4,000 mg target by itself: add no table salt, and keep the training electrolyte serving to about 300–500 mg (Section 1.6). On a 2,300 mg limit these days do not fit even with every swap (Section 5.2).
+The swaps leave calories and protein unchanged. After them the food supplies the 3,000–4,000 mg target by itself: add no table salt and take no routine electrolyte serving. Use one (about 300–500 mg sodium) only when a session leaves you drenched (Section 1.6). On a 2,300 mg limit these days do not fit even with every swap (Section 5.2).
 
 ### 5.5 Scaling the Days to Your Tier
 
@@ -2086,7 +2074,7 @@ Scale the default Sunday like the other days. Tier 1: add 1 medium banana to Mea
 
 Sunday also sets up the second half of the week: the Thursday-to-Saturday meat is seasoned raw and frozen flat, and the cooked items that freeze well go in as portions.
 
-**Kit, bought once:** instant-read thermometer, 2 sheet pans, 12 shallow lidded containers, 8 small lidded sauce cups, quart freezer bags and a marker, foil, 2 Creami pints or 3 ice-cube trays, a second cutting board kept for raw meat, an insulated lunch bag and 2 ice packs.
+**Kit, bought once:** digital food scale that reads in grams, bathroom scale, soft tape measure, a notebook for the lifting logbook, instant-read thermometer, 2 sheet pans, 12 shallow lidded containers, 8 small lidded sauce cups, quart freezer bags and a marker, foil, 2 Creami pints or 3 ice-cube trays, a second cutting board kept for raw meat, an insulated lunch bag and 2 ice packs. The timeline assumes an oven, an air fryer, a blender and a rice cooker (no rice cooker: a lidded pot and the package directions).
 
 **Before you start:** shop the day before or that morning, and buy the rotisserie chicken on prep day. Start the clock late in the morning: today's Meal 2 and Meal 3 come out of this session. Air-fry in one layer with space between the pieces. If two cutlets do not lie flat in your basket, give each its own batch and add about 12 minutes for each extra batch. Expect the first two or three Sundays to run closer to 3 hours.
 
@@ -2097,6 +2085,8 @@ Sunday also sets up the second half of the week: the Thursday-to-Saturday meat i
 | Sweet potato wedges, roasted broccoli and green beans, Monday's wrap | Salmon and pasta (Wednesday) | Smoothie, float, hot chocolate |
 
 #### Sunday Timeline
+
+Check your tier before you start the clock: the timeline shows Tier 2 amounts. On Tier 1, cook 1 1/4 cups (230 g) dry rice with 1 3/4 cups (420 ml) broth: the week needs 3.5 cups cooked, so weigh 7 portions, 1 for today, 3 for Tuesday and 3 for Friday. Roast 12 oz of sweet potato in each batch, 6 oz for each day. On Tiers 3 to 5, cook 1/2 cup (92 g) dry rice with 3/4 cup (180 ml) broth: the week needs 1 cup cooked, 1 portion each for Tuesday and Friday (the Tier 3 to 5 Sunday has no rice, Section 5.6). Roast only the sweet potato your Section 5.5 row lists: 4 oz in each batch on Tiers 3 and 5, none on Tier 4.
 
 | Time | Station | Task |
 |---|---|---|
@@ -2123,13 +2113,11 @@ Sunday also sets up the second half of the week: the Thursday-to-Saturday meat i
 | 1:50 | Sink | Wash up. Scrub the raw-chicken board and counter with hot soapy water. |
 | 2:00 | Done | The fridge holds Monday to Wednesday. The freezer holds the Thursday-to-Saturday kit. |
 
-On Tier 1, cook 1 1/4 cups (230 g) dry rice with 1 3/4 cups (420 ml) broth. The week needs 3.5 cups cooked: weigh 7 portions, 1 for today, 3 for Tuesday and 3 for Friday. Roast 12 oz of sweet potato in each batch, 6 oz for each day. On Tiers 3 to 5, cook 1/2 cup (92 g) dry rice with 3/4 cup (180 ml) broth. The week needs 1 cup cooked: 1 portion each for Tuesday and Friday (the Tier 3 to 5 Sunday has no rice, Section 5.6). Roast only the sweet potato your Section 5.5 row lists: 4 oz in each batch on Tiers 3 and 5, none on Tier 4.
-
 #### Container Plan, Monday to Wednesday
 
 | Day | Meal | Packed on Sunday | Add or cook on the day |
 |---|---|---|---|
-| Mon | 1 | Scramble wrap in foil | Microwave 90 s, then crisp in a dry pan; salsa |
+| Mon | 1 | Scramble wrap in foil | Unwrap. Microwave 90 s, then crisp in a dry pan; salsa |
 | Mon | 2 | Taco turkey, black beans, peppers and onions | Reheat; romaine, salsa, avocado, lime |
 | Mon | 3 | Nashville cutlet; slaw mix in a bag; spicy mayo cup | Re-crisp; toast the bun; pickles, hot honey |
 | Mon | 4 | Sweet potato wedges | Sear the sirloin; blister the green beans |
@@ -2205,12 +2193,12 @@ The plan runs on data. Log daily, decide once a week, on Sunday. Print Section 6
 | Weekly change | This week's average minus last week's average. Percent = change ÷ last week's average × 100. | Sunday |
 | Waist | Tape around the navel, before food, standing, relaxed after a normal exhale. Same tape every time, level and snug without denting the skin. Measure twice, record the mean. | Monday morning |
 | Photos | Front, side, back, standing relaxed. Same room, same light, same shorts, phone at chest height. | Weeks 1, 5, 9, 13, 17, 21, 25, then every 4 weeks. Also any Monday the waist reads 35.5 in or less |
-| Strength check | First working set of each of the 6 indicator lifts: load × reps at the prescribed RIR. Deload weeks: write deload, leave Trend blank and do not score F2 from them. Compare the week after a deload with the last week before it. | On that lift's day |
+| Strength check | First working set of each of the 6 indicator lifts: load × reps at the prescribed RIR. Deload and re-entry weeks: write deload or re-entry, leave Trend blank and do not score F2 from them. Score F2 again from the second week after a deload. The Best column is your highest set-1 reps in the previous 3 scored sessions at this load, from the logbook. | On that lift's day |
 | Cardio completed | Minutes done versus prescribed, ladder level used, peak heart rate, pain 0–10. | Each session |
 | Energy, hunger, soreness | One score each, 1–10, every evening. Energy 10 = excellent. Hunger 10 = ravenous all day. Soreness 10 = cannot train. | Daily |
 | Sleep | Hours asleep. Note nights with more than 30 minutes awake or waking hungry. | Daily |
 | Resting heart rate | Beats per minute on waking, lying down (watch or 60-second count). Your baseline is your average over the previous 3 weeks (the Week 1 average until Week 4). | Daily (optional, feeds flag F5) |
-| Achilles morning check | First steps out of bed: minutes of stiffness and pain 0–10 for each side. | Daily |
+| Achilles morning check | First steps out of bed: minutes of stiffness and pain 0–10 for each side. Write any other next-morning pain from the Section 1.4 scale in the same box, with its site (knee, back, shin, foot). | Daily |
 
 > **Rule:** Decisions are made from the 7-day average only. A single weigh-in can swing 2–4 lb on sodium, carbs, soreness and bowel timing. It is data, not a verdict.
 
@@ -2248,14 +2236,14 @@ The plan runs on data. Log daily, decide once a week, on Sunday. Print Section 6
 
 #### Gym Strength Check (6 Indicator Lifts)
 
-| Indicator lift | Day | Last week: load × reps | This week: load × reps | Trend (up / same / down) |
-|---|---|---|---|---|
-| Smith Machine Incline Press | Mon |  |  |  |
-| Lat Pulldown | Tue |  |  |  |
-| Leg Press | Wed |  |  |  |
-| Shoulder Press Machine | Thu |  |  |  |
-| Seated Row Machine | Fri |  |  |  |
-| Smith Machine Romanian Deadlift | Sat |  |  |  |
+| Indicator lift | Day | Best reps, previous 3 sessions at this load | Last week: load × reps | This week: load × reps | Trend (up / same / down) |
+|---|---|---|---|---|---|
+| Smith Machine Incline Press | Mon |  |  |  |  |
+| Lat Pulldown | Tue |  |  |  |  |
+| Leg Press | Wed |  |  |  |  |
+| Shoulder Press Machine | Thu |  |  |  |  |
+| Seated Row Machine | Fri |  |  |  |  |
+| Smith Machine Romanian Deadlift | Sat |  |  |  |  |
 
 #### Cardio Completed
 
@@ -2276,7 +2264,7 @@ Incline sessions completed: ____ of ____  Total incline minutes: ____ of ____  D
 | Flag | Trips when | Tripped? |
 |---|---|---|
 | F1 Sleep | Average under 6.5 h, or 3+ nights with trouble falling or staying asleep | ☐ Yes  ☐ No |
-| F2 Strength | 2+ indicator lifts each 2+ reps under their recent best at the same load, 2 sessions in a row (10, 8, 8 trips it). Deload weeks not scored | ☐ Yes  ☐ No |
+| F2 Strength | 2+ indicator lifts each 2+ reps under their recent best at the same load, 2 sessions in a row (10, 8, 8 trips it). Deload and re-entry weeks not scored | ☐ Yes  ☐ No |
 | F3 Tendon/joint | Pain 4/10+ during, or next-morning stiffness over 15 min, or pain rising across 3 sessions | ☐ Yes  ☐ No |
 | F4 Hunger | 8/10+ most of the day on 4+ days, or any binge or near-binge | ☐ Yes  ☐ No |
 | F5 Energy/recovery | Energy 4/10 or lower on 4+ days, or resting heart rate 8+ bpm above baseline for 5+ days | ☐ Yes  ☐ No |
@@ -2290,10 +2278,10 @@ Flags tripped this week: ____  Same flag as last Sunday? ☐ Yes  ☐ No
 |---|---|---|
 | ☐ | GREEN: run next week as written | 0 flags and no plateau trigger |
 | ☐ | YELLOW: targeted fix for 7 days, no calorie change | Exactly 1 flag (F1, F2, F4 or F5), first week |
-| ☐ | TENDON: Tendon Protocol for 7 days | F3 tripped |
+| ☐ | TENDON: Tendon Protocol for 7 days | F3 tripped. With F3 alone, tick this row only |
 | ☐ | ORANGE: add 200 kcal (+50 g carbs) for 14 days | 2 flags, or the same flag 2 Sundays running, or F6, or any binge |
 | ☐ | RED: 7-day diet break + deload from tomorrow | 3+ flags, or still ORANGE after 14 days, or F2 on 3+ indicator lifts |
-| ☐ | MILESTONE: new tier from Monday | 7-day average at or below 255 / 240 / 225 / 210 lb, and status is GREEN or YELLOW |
+| ☐ | MILESTONE: new tier from Monday | 7-day average at or below 255 / 240 / 225 / 210 lb, and status is not ORANGE or RED |
 | ☐ | PLATEAU: tracking audit, then one tier down | Loss under 1.0 lb/week for 2 deficit weeks in a row, 0 flags in both (Section 1.5) |
 
 **Next week's targets:** ________ kcal · ______ P · ______ C · ______ F  **Incline:** ____ × ____ min at ladder level ____
@@ -2378,7 +2366,7 @@ Ten minutes, same order every Sunday.
 1. **Average.** Compute the 7-day average weight, the change from last week in lb, and the change as a percent of body weight.
 2. **Milestone.** If the average is at or below 255, 240, 225 or 210 lb for the first time, the new tier in Section 3 starts tomorrow, with two exceptions: if tomorrow starts a diet-break week, apply the new tier the Monday after; if today's status comes out ORANGE or RED, hold the tier change until the status clears.
 3. **Flags.** Score F1 to F6 against the week's log (Section 1.5). Count them. Note whether any flag also tripped last Sunday.
-4. **Rate.** Loss above 1.0% of body weight for the second week running trips F6. Loss under 1.0 lb for the second deficit week running, with 0 flags in both weeks, starts the plateau rule. Skip this step in a diet-break week and in the first week after one.
+4. **Rate.** Loss above 1.0% of body weight for the second week running trips F6. Loss under 1.0 lb for the second deficit week running, with 0 flags in both weeks, starts the plateau rule. Skip this step in a diet-break week and in the first week after one. Section 1.5 lists the other weeks that do not count toward the plateau rule.
 5. **Status.** Apply the highest status that fits: MEDICAL STOP, then RED, then ORANGE, then YELLOW, then GREEN. TENDON runs alongside any of them whenever F3 is tripped.
 6. **Write it down.** Tick the decision, write next week's calories, macros and incline prescription at the bottom of the sheet, and update the Master Log row.
 7. **Look ahead.** Read next week's row in Section 2.3 and Section 2.4 (Section 7.3 from Week 26) so Monday starts with no open questions.
@@ -2435,7 +2423,7 @@ The finish is declared at the Sunday check-in (Section 6.4). You complete that w
 | Waist 35.5 in or less on the last 2 Mondays, and the photo satisfies you | Finish at any weight. The reverse starts Monday |
 | Waist 35.5 in or less twice, but the photo does not satisfy you | Keep cutting and re-check each Sunday. 200.0 lb still ends it |
 | 200.0 lb reached, waist still above 35.5 in | Finish anyway. The fix from here is more muscle, not less food |
-| Finish confirmed at the end of a diet-break week | Stay at the break intake: it is your R4 number. Use the R3 and R4 incline rows for the next two weeks, then run the flat test (Section 7.6) |
+| Finish confirmed at the end of a diet-break week | Stay at the break intake: it is your R4 number. Skip R1 and R2. Run the R3 and R4 rows of Section 7.5 for the next two weeks, lifting and incline, from your last pre-deload loads. Then run the flat test (Section 7.6) |
 | Neither met by Sun Oct 10 (end of Week 47) | Time cap. Finish anyway. The reverse starts Mon Oct 11 |
 
 | Record at the finish | Date | Your number |
@@ -2456,9 +2444,9 @@ The finish is declared at the Sunday check-in (Section 6.4). You complete that w
 
 > **Rule:** The table is the default track. Your own numbers override it: tiers trigger by the 7-day average and the finish by Section 7.2, not by date.
 
-Incline is 15% at 3.0 mph, hands-free, on Mon/Tue/Thu/Fri. The target is the projected 7-day average at the end of that week.
+Incline is 15% at 3.0 mph, hands-free, or your Incline Ladder level (Section 1.4), on Mon/Tue/Thu/Fri. The target is the projected 7-day average at the end of that week.
 
-| Wk | Dates (Mon–Sun, 2027) | Mode | kcal | P / C / F (g) | Incline 15%/3.0 | Target 7-day avg (lb) |
+| Wk | Dates (Mon–Sun, 2027) | Mode | kcal | P / C / F (g) | Incline (your ladder level) | Target 7-day avg (lb) |
 |---|---|---|---|---|---|---|
 | **26** | **May 10 – May 16** | **Diet Break 4 + Deload** | **2,700** | **200 / 295 / 80** | **none; flat 30 min Mon–Fri** | **224.5 (hold)** |
 | 27 | May 17 – May 23 | Deficit · Tier 4 | 2,000 | 210 / 164 / 56 | 4 × 35 min (re-entry) | 222.5 |
@@ -2516,7 +2504,7 @@ Honest note: the slow reverse is mainly a behavioral tool. It helps prevent a re
 | R1 | Aug 30 – Sep 5 | 2,250 | 200 / 214 / 66 | None. Flat 30 min Mon–Fri | Down 0–1 lb |
 | R2 | Sep 6 – Sep 12 | 2,400 | 200 / 238 / 72 | 4 × 25 min | Down 0.5–1 lb |
 | R3 | Sep 13 – Sep 19 | 2,550 | 200 / 262 / 78 | 3 × 25 min | Leveling off |
-| R4 | Sep 20 – Sep 26 | 2,700 | 200 / 295 / 80 | 3 × 20–25 min | Flat, within about 1 lb |
+| R4 | Sep 20 – Sep 26 | 2,700 | 200 / 295 / 80 | 3 × 20 min | Flat, within about 1 lb |
 
 A cut that ended on Tier 3 (an early stop) uses the same calories and macros.
 
@@ -2556,20 +2544,20 @@ On the default track your last deload was Week 33 and the Week 40 break was skip
 | R1 | Deload prescription (Section 4.5), same loads | 2 | 4–5 | None. Flat 30 min Mon–Fri |
 | R2 | Full sets as written, at the last cut-week loads | 4 | 2 | 4 × 25 min |
 | R3 | Double progression | 4 | 1–2 | 3 × 25 min |
-| R4 | Double progression | 4 | 1–2 | 3 × 20–25 min |
+| R4 | Double progression | 4 | 1–2 | 3 × 20 min |
 
 - The 4th set goes on the first exercise of each session: that day's indicator lift (Section 4.3).
 - Everything else keeps its sets and reps from Section 4.3; isolations keep their RIR.
 - Double progression is unchanged (Section 4.4). With 4 sets, the load goes up only when all 4 sets hit the top of the range. Expect the 4th set to land short at first.
-- If your last deload week ended 3 or fewer weeks before the finish, skip the R1 deload: run R1 as a normal week (3 sets, your last loads, incline 4 × 25 min) and start the 4th set in R2.
+- If your last deload week ended 3 or fewer weeks before the finish, skip the R1 deload: run R1 as a normal week (3 sets, your last loads, incline 4 × 25 min) and start the 4th set in R2. A finish confirmed at the end of a diet-break week follows the Section 7.2 table instead.
 
 **Cardio taper.** Incline was a deficit tool. As the deficit closes, its Achilles and recovery cost buys less.
 
 - R1: no incline above 5%. Flat walk 30 min Mon–Fri, as in every deload week (Section 4.5).
 - R2: Mon/Tue/Thu/Fri. R3 and R4: Mon/Tue/Thu. From R3, Friday has no incline; a flat walk is optional.
-- Weekly incline minutes on the default track: 140 in the last cut week, then 0, 100, 75 and 60–75.
+- Weekly incline minutes on the default track: 140 in the last cut week, then 0, 100, 75 and 60.
 - The taper is the same whichever tier you finished on.
-- Flat walks after Legs A and Legs B stay at 15–20 min.
+- Flat walks after Legs A and Legs B stay at 20 min.
 
 > **Rule:** The step floor stays at 8,000 steps/day. Fewer treadmill minutes means more of those steps must come from the rest of your day.
 
@@ -2583,18 +2571,19 @@ Estimated true maintenance with the tapered cardio is about 2,700–2,900 kcal a
 2. **Floor guard.** If the 7-day average on the R1, R2 or R3 Sunday is more than 1.0 lb below the previous Sunday's, take a double step the next Monday: +300 kcal instead of +150, all of it carbs (75 g). Example: after R1 at 2,250 kcal, R2 becomes 2,550 kcal at 200 / 289 / 66 instead of 2,400. Then return to +150 kcal steps by the Section 7.4 method. The reverse still ends after R4. Reason: the early weeks are still well under maintenance, and the plan does not want you drifting far below 200 lb.
 3. **Hold rule.** Your end-of-cut low is the 7-day average on the finish Sunday. Your hold line is that low + 4 lb. Above the hold line on 2 consecutive Sundays: hold calories for one week. Do not cut. Then continue.
 4. **Track everything until maintenance is confirmed.** Same tolerances: calories within ±50 kcal, protein within ±10 g. If hunger spikes, run the F4 fix (Section 1.5). If a flag raises your target, raise it on paper and hit it. Never eat past it untracked. Repeated binges or dread of eating more: Section 1.8.
-5. **Flat test.** After R4, hold your intake and watch the next two Sundays. If both 7-day averages sit within 1 lb of the R4 Sunday average, that intake is maintenance. If one falls more than 1 lb below it, add 100–150 kcal on Monday (25 g carbs per 100 kcal), take that Sunday as the new reference and start the two-Sunday count again. If the average rises more than 1 lb per week for 2 weeks, go back one step.
+5. **Flat test.** After R4, hold your intake and watch the next two Sundays. If both 7-day averages sit within 1 lb of the R4 Sunday average, that intake is maintenance. If one falls more than 1 lb below it, add 100–150 kcal on Monday (25 g carbs per 100 kcal), take that Sunday as the new reference and start the two-Sunday count again. If one sits more than 1 lb above it, hold the intake, take that Sunday as the new reference and start the two-Sunday count again. If the average rises more than 1 lb per week for 2 weeks, go back one step.
 
 | What the Sunday 7-day average does | What you do |
 |---|---|
 | R1–R2: down 0.5–1 lb from last Sunday | Expected. Take the scheduled +150 kcal on Monday |
-| R1–R2: 1–2 lb under the end-of-cut low | Expected. It usually levels in R3–R4 |
+| R1–R2: 1–2 lb under the end-of-cut low, with no single week down more than 1.0 lb | Expected. It usually levels in R3–R4 |
 | R1–R3: more than 1.0 lb below last Sunday | Floor guard: +300 kcal on Monday instead of that Monday's usual step |
 | Above the end-of-cut low but under the hold line | Mostly water, glycogen and food volume. Stay on schedule |
 | Above the hold line on 1 Sunday | Stay on schedule. Check tracking accuracy. Re-check next Sunday |
 | Above the hold line on 2 consecutive Sundays | Hold calories for 1 week. Do not cut. Then continue |
 | After R4: more than 1 lb below the reference Sunday | Add 100–150 kcal on Monday. Restart the two-Sunday count |
 | After R4: two Sundays in a row within 1 lb of the reference Sunday | Stop adding. That intake is maintenance |
+| After R4: more than 1 lb above the reference Sunday, once | Hold the intake. Restart the two-Sunday count from that Sunday |
 | After R4: rising more than 1 lb per week for 2 weeks | Go back one step. That intake is maintenance |
 
 ### 7.7 After the Reverse: Maintenance and Building
@@ -2613,7 +2602,7 @@ With a beginner's muscle mass at 200 lb, you improve your look far more by addin
 
 | Habit | Standard |
 |---|---|
-| Incline cardio | 2–3 sessions of 20–30 min at 15%, 3.0 mph, hands-free |
+| Incline cardio | 2–3 sessions of 20–30 min at your ladder level, hands-free (Level 5 is 15% at 3.0 mph) |
 | Steps | 8,000–10,000/day |
 | Protein | 200 g/day |
 | Intake | Measured maintenance, or +150–250 kcal while building |
@@ -2631,7 +2620,7 @@ One page to keep in the gym bag. Every number here is defined in the section sho
 
 ### Calorie Tiers (Section 3)
 
-| Tier | 7-day average | kcal | P / C / F (g) | Incline (15%, 3.0 mph) | Diet-break kcal |
+| Tier | 7-day average | kcal | P / C / F (g) | Incline (your ladder level) | Diet-break kcal |
 |---|---|---|---|---|---|
 | 1 | Above 255 lb | 2,300 | 210 / 212 / 68 | Build 3 × 20 to 4 × 30 min | 2,900 |
 | 2 | 255.0–240.1 lb | 2,200 | 210 / 196 / 64 | 4 × 35 min | 2,800 |
@@ -2662,7 +2651,7 @@ Diet-break weeks (6, 13, 20; 26 and 33 in Phase 2): 2 sets per exercise, no incl
 | 3 | 12% | 3.0 mph | Calf, Achilles or lower back is the limit |
 | 2 | 10% | 3.0 mph | Still limited at Level 3; first step back from the Tendon Protocol |
 | 1 | 8% | 3.0 mph | Still limited at Level 2 |
-| 0 | 6% | 3.0 mph | Still limited at Level 1. Week 1 starts with the level test (Section 1.4) |
+| 0 | 6% | 3.0 mph | Still limited at Level 1 (below it: 4%). Week 1 starts with the level test (Section 1.4) |
 
 Step down when heart rate stays above 160 bpm for 2 minutes, you cannot speak a full sentence, or you reach for the rails. Step up after 2 clean sessions in a row, with at least 7 days between step-ups to a new level.
 
@@ -2672,14 +2661,14 @@ Step down when heart rate stays above 160 bpm for 2 minutes, you cannot speak a 
 |---|---|---|
 | GREEN | 0 flags | Run the schedule |
 | YELLOW | 1 flag, first week | Targeted fix for 7 days, no calorie change |
-| TENDON | F3, from the day it trips | 7 days at 5% grade or less, isometric calf holds, staged return |
+| TENDON | F3, from the day it trips | 7 days at 5% grade or less (flat if you were at Level 1 or below), isometric calf holds, staged return |
 | ORANGE | 2 flags, or the same flag twice, or losing over 1.0% per week for 2 weeks, or any binge | Add 200 kcal (+50 g carbs) for 14 days |
 | RED | 3+ flags, or ORANGE not cleared, or strength down on 3+ indicator lifts | 7-day maintenance break and deload from tomorrow |
 | PLATEAU | Under 1.0 lb per week for 2 deficit weeks with 0 flags | Tracking audit, then one tier down (never below 2,000 kcal) |
 | MILESTONE | 7-day average at or below 255 / 240 / 225 / 210 lb | New tier from Monday |
 | FINISH | 7-day average at or below 200.0 lb, or waist at 35.5 in or less on 2 Mondays in a row and you are satisfied with the side-on photo (Section 7.2) | Reverse diet from Monday (Section 7.4) |
 
-**Stop now, any day (Section 1.8):** chest pain or pressure, fainting, palpitations at rest, breathlessness out of proportion, a pop or sharp pain in a tendon, pain 6/10 or more, limping, pain or numbness travelling down a leg, dark cola-colored urine. End the session and get medical care. Fever: no training.
+**Stop now, any day (full list: Section 1.8):** chest pain or pressure, fainting, palpitations at rest, breathlessness out of proportion, a pop or sharp pain in a tendon, pain 6/10 or more, limping, pain or numbness travelling down a leg, numbness between the legs or loss of bladder or bowel control, one calf swollen or red, dark cola-colored urine. End the session and get medical care. Fever: no training.
 
 ### Double Progression in Four Lines (Section 4.4)
 
