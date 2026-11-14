@@ -361,7 +361,7 @@ Run this from the day the Flag F3 row applies. Do not wait for Sunday.
 2. If the pain is in the calf, Achilles, heel, foot or shin, replace calf raises with isometric holds: 5 × 30–45 seconds, mid-range, daily. That includes the calf work on Legs A and Legs B. For knee or lower-back pain, calf work stays as written and the lift that hurts takes a lighter load or its substitute (Section 4.7).
 3. Keep lifting everything that is pain-free.
 4. Make no calorie change. This is a loading problem, not a fuel problem. F3 still counts toward your Sunday flag total (Section 1.5).
-5. Return in steps: Level 2 (10%), then Level 3 (12%), then Level 4 or 5 (15%), whichever you worked at before, with 2 pain-free sessions (Green row) at each step. Never go past the level you worked at before the protocol; if that was Level 0 or 1, go straight back to it. Calf raises come back by step 6.
+5. Return in steps: Level 2 (10%), then Level 3 (12%), then Level 4 or 5 (15%), whichever you worked at before, with 2 pain-free sessions (Green row) at each step. Never go past the level you worked at before the protocol; if that was Level 1 or below, go straight back to it. Calf raises come back by step 6.
 6. Calf raises return in three leg-day steps after the 7 days, each one only while your pain log is Green. First leg day: 2 sets at about half your last load, heel no lower than the forefoot, no pause. Second: full sets at about three-quarters load, same range. Third: full load, full stretch and the 2-s pause. Keep the daily holds until then.
 7. If it is not clearly better after 7–10 days, treat it as the Stop row and get it evaluated.
 
@@ -429,9 +429,9 @@ Start the next morning. Eat tier kcal + 600 with protein at 200 g, fat at 80 g a
 How an emergency break fits around the scheduled ones (Weeks 6, 13 and 20, then 26 and 33 in Phase 2):
 
 1. After the 7 days, resume the deficit at the same tier, unless that Sunday's flag check gives a status of its own. Score F1, F3, F4 and F5 as usual (F2 and F6 cannot be scored in a deload week). If RED applies again, take a second maintenance week and book a doctor's visit (Section 1.8).
-2. If the emergency break lands within 3 weeks before a scheduled break, it replaces that scheduled break. Run that week as a deficit week: tier calories, Progression-week lifting (Section 4.5) and the incline minutes of the week before. If it is also your first week back, rule 4 sets the lifting and the incline.
+2. If the emergency break lands within 3 weeks before a scheduled break, it replaces that scheduled break. Run that week and the Re-entry week printed after it as deficit weeks: tier calories, Progression-week lifting (Section 4.5) and the incline minutes of the week before. If either is your first week back, rule 4 sets its lifting and incline.
 3. A RED break is never delayed, shortened or skipped, however recent the last break was. Only scheduled breaks move, by rule 2.
-4. Your first week back is a Re-entry week (Section 4.5), with incline 5 min shorter than your last peak, as after any deload.
+4. Your first week back is a Re-entry week (Section 4.5), with incline 5 min shorter than your last peak, as after any deload. After it, add at most 5 min per session a week until you are back on the table.
 5. A second RED within 8 weeks means the deficit is too large for you right now. After that break, eat your ORANGE number (tier + 200 kcal, table below) until the next scheduled break, and book a doctor's visit (Section 1.8).
 
 #### ORANGE and RED numbers by tier
@@ -517,7 +517,7 @@ You already drink the water. Sodium needs checking in both directions. Six sweat
 | Magnesium | About 400–420 mg total | If food falls short: 200–350 mg of elemental magnesium (as glycinate) in the evening. 350 mg/day is the upper limit from all supplements combined, so count the multivitamin and the electrolyte mix |
 | Calcium | About 1,000–1,300 mg | 2–3 servings of dairy |
 
-> **Rule:** If you have high blood pressure or have been told to limit salt, stay at or under 2,300 mg sodium and follow your doctor.
+> **Rule:** If you have high blood pressure or have been told to limit salt, stay at or under 2,300 mg sodium, electrolyte servings included, and follow your doctor.
 
 **Daily timing.** Built for late-afternoon or evening training.
 
@@ -557,7 +557,7 @@ Two items outrank the whole table and cost nothing. Fiber: 30–40 g/day from fo
 
 ### 1.8 Medical and Safety Note
 
-This manual is education, not medical care. At 18, with a starting BMI near 38 and a deficit that runs for most of a year, get a baseline physical before Week 1 if you can and within the first 2–3 weeks if you cannot, and tell the doctor what the plan is. Until then, get your blood pressure read on two different days, before any caffeine or training. Use an upper-arm cuff that fits: measure around the middle of your upper arm and check it against the range printed on the cuff. A cuff that is too small reads falsely high, by 5–20 points on a large arm, and many pharmacy kiosks have one size. If your arm is over the range, ask the pharmacist for a large or extra-large cuff. Sit for 5 minutes first, back supported, feet flat, arm resting at heart height, no talking. Take 2 readings a minute apart each day and average all 4.
+This manual is education, not medical care. At 18, with a starting BMI near 38 and a deficit that runs for most of a year, get a baseline physical before Week 1 if you can and within the first 2–3 weeks if you cannot. Until then, get your blood pressure read on two different days, before any caffeine or training. Use an upper-arm cuff that fits: measure around the middle of your upper arm and check it against the range printed on the cuff. A cuff that is too small reads falsely high, by 5–20 points on a large arm, and many pharmacy kiosks have one size. If your arm is over the range, ask the pharmacist for a large or extra-large cuff. Sit for 5 minutes first, back supported, feet flat, arm resting at heart height, no talking. Take 2 readings a minute apart each day and average all 4. If more than one row fits, follow the one furthest down.
 
 | Average reading | What you do until a doctor has seen you |
 |---|---|
@@ -759,7 +759,7 @@ What never changes at any milestone:
 
 You start in Tier 1: 2,300 kcal, 210 / 212 / 68, incline building to 4 × 30 min.
 
-| Milestone | Tier | kcal | P / C / F (g) | Incline (15%, 3.0 mph) | Loss-rate target | Also |
+| Milestone | Tier | kcal | P / C / F (g) | Incline (your ladder level) | Loss-rate target | Also |
 |---|---|---|---|---|---|---|
 | 255 lb | 2 | 2,200 | 210 / 196 / 64 | 4 × 35 min | 1.75–2.25 lb/wk | Flat walks stay 20 min |
 | 240 lb | 3 | 2,100 | 210 / 180 / 60 | 4 × 40 min (cap) | 1.75–2.25 lb/wk | Split squat unlocked |
@@ -982,7 +982,7 @@ Cardio by block on the default track (exact minutes for every week: Section 2.4)
 | 14–19 | Mon, Tue, Thu, Fri | 30 rising to 40 | Wed, Sat 20 min |
 | 21–25 | Mon, Tue, Thu, Fri | 35 rising to 40 | Wed, Sat 20 min |
 
-- Week 1 only: find every load with feeler sets before your working sets (Section 4.4), and start Monday's incline walk with the level test (Section 1.4). Read the set-up notes and the Smith machine safety-stop rule (Section 4.8) before your first set.
+- Week 1: find every load with feeler sets before your working sets (Section 4.4), and start Monday's incline walk with the level test (Section 1.4). Read the set-up notes and the Smith machine safety-stop rule (Section 4.8) before your first set.
 - Minutes follow the tier you are actually on (Section 3), not the calendar. 40 min is the cap.
 - Phase 2 (Week 26 onward) keeps this layout. Section 7.3 lists every week.
 - Gym closed on a training day: that day becomes your rest day. Move that session and each later session of the week one day later, ending Sunday. The order never changes and each session keeps its own walk, so incline still never lands on a leg day or runs 3 days in a row. Check your club's holiday hours the week before.
@@ -2193,7 +2193,7 @@ The plan runs on data. Log daily, decide once a week, on Sunday. Print Section 6
 | Weekly change | This week's average minus last week's average. Percent = change ÷ last week's average × 100. | Sunday |
 | Waist | Tape around the navel, before food, standing, relaxed after a normal exhale. Same tape every time, level and snug without denting the skin. Measure twice, record the mean. | Monday morning |
 | Photos | Front, side, back, standing relaxed. Same room, same light, same shorts, phone at chest height. | Weeks 1, 5, 9, 13, 17, 21, 25, then every 4 weeks. Also any Monday the waist reads 35.5 in or less |
-| Strength check | First working set of each of the 6 indicator lifts: load × reps at the prescribed RIR. Deload and re-entry weeks: write deload or re-entry, leave Trend blank and do not score F2 from them. Score F2 again from the second week after a deload. The Best column is your highest set-1 reps in the previous 3 scored sessions at this load, from the logbook. | On that lift's day |
+| Strength check | First working set of each of the 6 indicator lifts: load × reps at the prescribed RIR. Deload and re-entry weeks: write deload or re-entry, leave Trend blank and do not score F2 from them. Score F2 again from the second week after a deload. The Best column is your highest set-1 reps in the previous 3 scored sessions at this load, from the logbook. Take 1 rep off a best that was set at 1 RIR in a Peak week (Section 1.5). | On that lift's day |
 | Cardio completed | Minutes done versus prescribed, ladder level used, peak heart rate, pain 0–10. | Each session |
 | Energy, hunger, soreness | One score each, 1–10, every evening. Energy 10 = excellent. Hunger 10 = ravenous all day. Soreness 10 = cannot train. | Daily |
 | Sleep | Hours asleep. Note nights with more than 30 minutes awake or waking hungry. | Daily |
@@ -2278,7 +2278,7 @@ Flags tripped this week: ____  Same flag as last Sunday? ☐ Yes  ☐ No
 |---|---|---|
 | ☐ | GREEN: run next week as written | 0 flags and no plateau trigger |
 | ☐ | YELLOW: targeted fix for 7 days, no calorie change | Exactly 1 flag (F1, F2, F4 or F5), first week |
-| ☐ | TENDON: Tendon Protocol for 7 days | F3 tripped. With F3 alone, tick this row only |
+| ☐ | TENDON: Tendon Protocol for 7 days | F3 tripped. F3 alone, first week: tick this row and no status |
 | ☐ | ORANGE: add 200 kcal (+50 g carbs) for 14 days | 2 flags, or the same flag 2 Sundays running, or F6, or any binge |
 | ☐ | RED: 7-day diet break + deload from tomorrow | 3+ flags, or still ORANGE after 14 days, or F2 on 3+ indicator lifts |
 | ☐ | MILESTONE: new tier from Monday | 7-day average at or below 255 / 240 / 225 / 210 lb, and status is not ORANGE or RED |
@@ -2557,7 +2557,7 @@ On the default track your last deload was Week 33 and the Week 40 break was skip
 - R2: Mon/Tue/Thu/Fri. R3 and R4: Mon/Tue/Thu. From R3, Friday has no incline; a flat walk is optional.
 - Weekly incline minutes on the default track: 140 in the last cut week, then 0, 100, 75 and 60.
 - The taper is the same whichever tier you finished on.
-- Flat walks after Legs A and Legs B stay at 20 min.
+- From R2, the flat walks after Legs A and Legs B are 20 min.
 
 > **Rule:** The step floor stays at 8,000 steps/day. Fewer treadmill minutes means more of those steps must come from the rest of your day.
 
@@ -2649,7 +2649,7 @@ Diet-break weeks (6, 13, 20; 26 and 33 in Phase 2): 2 sets per exercise, no incl
 | 5 | 15% | 3.0 mph | Target: hands-free, heart rate under 160, full sentences |
 | 4 | 15% | 2.7 mph | Breathing or heart rate is the limit |
 | 3 | 12% | 3.0 mph | Calf, Achilles or lower back is the limit |
-| 2 | 10% | 3.0 mph | Still limited at Level 3; first step back from the Tendon Protocol |
+| 2 | 10% | 3.0 mph | Still limited at Level 3; first step back from the Tendon Protocol, or your old level if lower |
 | 1 | 8% | 3.0 mph | Still limited at Level 2 |
 | 0 | 6% | 3.0 mph | Still limited at Level 1 (below it: 4%). Week 1 starts with the level test (Section 1.4) |
 
