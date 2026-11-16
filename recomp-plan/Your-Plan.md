@@ -58,6 +58,7 @@ Weigh every morning. Use the average of the week, never one day.
 
 | Add-on | Calories | Protein |
 |---|---|---|
+| Vital wheat gluten: swap it for 1/4 cup of the flour in each calzone (both calzones) | 20 | 40 g |
 | Whey protein, 1 scoop in water | 120 | 24 g |
 | Nonfat Greek yogurt, 1 cup | 130 | 23 g |
 | 2 oz more chicken in each calzone (4 oz a day, raw weight) | 135 | 26 g |
@@ -67,6 +68,7 @@ Weigh every morning. Use the average of the week, never one day.
 
 - If your calzones are 1,900 and 165 g: add 2 scoops of whey, a banana and 2 cups of vegetables. That lands near 2,325 and 219 g.
 - If they are closer to 2,060 and 184 g: add 1 scoop of whey and 2 cups of vegetables. That lands near 2,260 and 213 g. An apple on top is fine.
+- Cheapest fix with no extra meat: the vital wheat gluten swap. It is the protein part of flour, sold in the baking aisle. The dough gets chewier, so add a spoon more yogurt.
 - Eat the vegetables every day and a fruit most days. Two calzones have almost no fiber and no vitamin C.
 - When calories drop to 2,200: cut the fruit. At 2,100, also leave the pepper jack out of one calzone. At 2,000, leave it out of both. Never cut the chicken or the vegetables.
 - Salt: two calzones are roughly 4,000 to 8,000 mg of sodium a day. Even with all your sweating, 3,000 to 4,000 is plenty. Halve the garlic salt and the ranch seasoning now.
