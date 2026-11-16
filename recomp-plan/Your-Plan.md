@@ -58,21 +58,21 @@ Weigh every morning. Use the average of the week, never one day.
 | Part of your day | Calories | Protein |
 |---|---|---|
 | 2 calzones (your count) | 1,900 | 165 g |
-| 3 eggs, 1 slice of Kraft Singles, 2 slices of bacon | 350 | 28 g |
+| 3 eggs, 1 slice of Kraft Singles, 2 slices of bacon (no butter or oil in the pan) | 350 | 28 g |
 | Frozen broccoli or stir-fry vegetables, 2 cups | 80 | 5 g |
 
-| When your calories are | Change the eggs to | Day lands near |
+| When your calories are | Change the eggs to | Day lands near, vegetables included |
 |---|---|---|
-| 2,300 (now) | 3 eggs, cheese, bacon | 2,250 and 193 g |
-| 2,200 | 3 eggs and bacon, no cheese | 2,200 and 190 g |
-| 2,100 | 3 eggs only | 2,115 and 184 g |
-| 2,000 | 2 eggs only | 2,045 and 178 g |
+| 2,300 (now) | 3 eggs, cheese, bacon | 2,330 and 198 g |
+| 2,200 | 3 eggs only | 2,195 and 189 g |
+| 2,100 | 2 eggs only | 2,125 and 183 g |
+| 2,000 | 1/2 cup of carton egg whites | 2,045 and 183 g |
 
-- If your calzones turn out closer to 2,060 and 184 g, protein is already covered. Make it 2 eggs with the cheese and no bacon. Sick of eggs: one Core Power (26 g) is the same protein for 170 calories.
-- **Eating out:** have the meal and one calzone, and skip the eggs. Never make the restaurant meal your only food that day. One day a few hundred over costs about a tenth of a pound. Do not eat less the next day.
-- Eat the vegetables every day and a fruit most days. Two calzones have almost no fiber and no vitamin C.
+- If your calzones turn out closer to 2,060 and 184 g, protein is already covered. Have 2 fewer eggs than the table says. Sick of eggs: one Core Power (26 g) is the same protein for 170 calories.
+- **Eating out:** have the meal and one calzone, and skip the eggs. Never just the meal: it is under 2,000 and about 100 g short on protein. One day a few hundred over costs about a tenth of a pound. Do not eat less the next day.
+- Eat the vegetables every day. A fruit fits on days you skip the bacon. Two calzones have almost no fiber and no vitamin C.
 - Salt: two calzones are roughly 4,000 to 8,000 mg of sodium a day. Even with all your sweating, 3,000 to 4,000 is plenty. Halve the garlic salt and the ranch seasoning now.
-- Get your blood pressure checked this week. If it reads 130 over 80 or higher, tell a doctor and cut the salt further.
+- Get your blood pressure checked this week, and ask a doctor for a cholesterol test. If the pressure reads 130 over 80 or higher, tell a doctor and cut the salt further.
 - Water: 1 gallon a day is right. Keep it.
 
 ## 5. Walking
@@ -84,8 +84,8 @@ Keep the 10,000 steps a day. That is about 100 minutes at speed 3.0, and it is a
 - The incline is the number on the treadmill. It starts at 5 and goes up by 1 at most each week, to 12. You never need 15.
 - The table is the most you do, not a must. Move to the next line only if last week was pain-free and you could talk in full sentences the whole time (heart rate under 150 if you can see it). If not, repeat your line. Repeating is normal. Many people your size stay between 7 and 10 for months. You do not need 12 to hit your weight goal.
 - Cannot talk, need the rails, or heart rate over 160: drop the incline by 2 for the rest of that week.
-- Why add it: incline 8 burns about twice as much per minute as flat, and 12 about 2.5 times as much. Thirty minutes at incline 8 adds roughly 150 to 200 calories on those days.
-- Short on time: each minute of your incline block at 8 or higher counts as 2 flat minutes, so you can skip one flat minute for each. Never make the block longer to save time.
+- Why add it: incline 8 burns about twice as much per minute as flat. Thirty minutes of it adds roughly 150 to 200 calories.
+- Short on time: each incline-block minute at 8 or higher counts as 2 flat minutes. Never make the block longer.
 
 
 <div style="page-break-after: always;"></div>
@@ -156,6 +156,6 @@ Goal weight is where your weekly average should be at the end of that week. It d
 
 ## 8. The finish
 
-You are done when your weekly average is 200 lb. Do not go straight back to eating freely. Raise calories 150 a week for 4 weeks: 2,250, then 2,400, then 2,550, then 2,700, with protein at 200 g. Then hold there.
+You are done when your weekly average is 200 lb. Do not go straight back to eating freely. Raise calories 150 a week for 4 weeks: 2,250, then 2,400, then 2,550, then 2,700, with protein still at 190 g. Then hold there.
 
 This plan replaces the earlier simple version and the long manual wherever they differ.

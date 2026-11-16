@@ -321,6 +321,7 @@ function queue(id) {                       // send once the store has answered; 
 }
 function touch(id) {                       // call after changing S
   saveLocal();
+  if (id !== 'settings') ui.usualSaved = null;   // the day changed after "Save this day as my usual day": stop showing it as saved
   if (!remote) { showSaved(); return; }
   queue(id);
 }
@@ -435,6 +436,7 @@ function renderFood() {
   const chips = S.foods.length ? S.foods.map(x => `<button class="chip" type="button" id="add-${x.id}" data-act="addSaved" data-id="${x.id}">${esc(x.name)} <small>${num(x.kcal)} cal · ${num(x.p)} g</small></button>`).join('')
     : `<span class="muted">Nothing saved yet. Add a food below with "Save to My foods" ticked, or open the Foods tab for your calzone.</span>`;
   const usual = S.settings && Array.isArray(S.settings.usual) ? S.settings.usual : [];
+  usual.forEach(u => { const cur = u.fid && S.foods.find(x => x.id === u.fid); if (cur) Object.assign(u, { name: cur.name, kcal: cur.kcal, p: cur.p, c: cur.c || 0, f: cur.f || 0 }); });   // a usual-day item that is one of My foods always carries that food's current numbers
   const ut = usual.reduce((a, x) => { a.kcal += x.kcal * (x.qty || 1); a.p += x.p * (x.qty || 1); return a; }, { kcal: 0, p: 0 });
   const usualBtn = usual.length && !(d.foods || []).length ? `<div class="btnrow"><button class="btn primary" type="button" id="logUsual" data-act="logUsual">Log my usual day</button><span class="sub">${num(ut.kcal)} cal · ${num(ut.p)} g protein</span></div>` : '';
   const saveUsual = (d.foods || []).length ? `<div class="btnrow"><button class="btn small" type="button" id="saveUsual" data-act="saveUsual">${ui.usualSaved === ui.date ? '✓ Saved as my usual day' : 'Save this day as my usual day'}</button></div>` : '';
@@ -447,7 +449,7 @@ function renderFood() {
     <div><h3 style="margin-bottom:8px">My foods · tap to add one serving</h3><div class="chips">${chips}</div></div>
     <details id="newFood" ${f.name || f.kcal ? 'open' : ''}><summary>Add a new food</summary>
       <form class="form" data-form="food" autocomplete="off">
-        <label class="field"><span>Name</span><input type="text" id="fName" data-draft="food.name" value="${esc(f.name)}" maxlength="60" placeholder="Protein shake"></label>
+        <label class="field"><span>Name</span><input type="text" id="fName" data-draft="food.name" value="${esc(f.name)}" maxlength="60" placeholder="Banana"></label>
         <div class="grid5">
           <label class="field"><span>Calories</span><input type="number" id="fKcal" inputmode="decimal" min="0" step="1" data-draft="food.kcal" value="${esc(f.kcal)}"></label>
           <label class="field"><span>Protein (g)</span><input type="number" id="fP" inputmode="decimal" min="0" step="0.1" data-draft="food.p" value="${esc(f.p)}"></label>
