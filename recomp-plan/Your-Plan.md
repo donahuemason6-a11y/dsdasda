@@ -54,23 +54,22 @@ Weigh every morning. Use the average of the week, never one day.
 
 **Check your calzone's numbers once.** You have two a day at about 1,900 calories and 165 g protein. That fits the package labels. Reference numbers run a little higher, about 2,060 calories and 184 g a day, and more again if the 6 oz of chicken is weighed after cooking or the flour is packed into the cup. Build one calzone in the tracker from your own packages, then trust that number.
 
-**Then fill the gap up to your target, protein first:**
+**Then fill the gap up to your target. Your daily add-on: one Core Power Elite, a banana and 2 cups of vegetables.**
 
 | Add-on | Calories | Protein |
 |---|---|---|
+| Core Power Elite (42 g), 1 bottle | 230 | 42 g |
+| Core Power (26 g), 1 bottle | 170 | 26 g |
 | Vital wheat gluten: swap it for 1/4 cup of the flour in each calzone (both calzones) | 20 | 40 g |
-| Whey protein, 1 scoop in water | 120 | 24 g |
 | Nonfat Greek yogurt, 1 cup | 130 | 23 g |
-| 2 oz more chicken in each calzone (4 oz a day, raw weight) | 135 | 26 g |
 | Banana | 105 | 1 g |
-| Apple | 95 | 0 g |
 | Frozen broccoli or stir-fry vegetables, 2 cups | 80 | 5 g |
 
-- If your calzones are 1,900 and 165 g: add 2 scoops of whey, a banana and 2 cups of vegetables. That lands near 2,325 and 219 g.
-- If they are closer to 2,060 and 184 g: add 1 scoop of whey and 2 cups of vegetables. That lands near 2,260 and 213 g. An apple on top is fine.
-- Cheapest fix with no extra meat: the vital wheat gluten swap. It is the protein part of flour, sold in the baking aisle. The dough gets chewier, so add a spoon more yogurt.
+- With two calzones at 1,900 and 165 g, the Elite, the banana and the vegetables land near 2,315 calories and 213 g protein.
+- If your calzones turn out closer to 2,060 and 184 g: use the 26 g Core Power instead of the Elite and skip the banana. That lands near 2,310 and 215 g.
+- Cheaper than a bottle a day: the vital wheat gluten swap. It is the protein part of flour, sold in the baking aisle. The dough gets chewier, so add a spoon more yogurt.
 - Eat the vegetables every day and a fruit most days. Two calzones have almost no fiber and no vitamin C.
-- When calories drop to 2,200: cut the fruit. At 2,100, also leave the pepper jack out of one calzone. At 2,000, leave it out of both. Never cut the chicken or the vegetables.
+- When calories drop to 2,200: cut the banana. At 2,100, also leave the pepper jack out of one calzone. At 2,000, leave it out of both. Never cut the chicken or the vegetables.
 - Salt: two calzones are roughly 4,000 to 8,000 mg of sodium a day. Even with all your sweating, 3,000 to 4,000 is plenty. Halve the garlic salt and the ranch seasoning now.
 - Get your blood pressure checked this week. If it reads 130 over 80 or higher, tell a doctor and cut the salt further.
 - Water: 1 gallon a day is right. Keep it.
