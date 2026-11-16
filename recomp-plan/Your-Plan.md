@@ -69,11 +69,10 @@ Weigh every morning. Use the average of the week, never one day.
 | 2,000 | 1/2 cup of carton egg whites | 2,045 and 183 g |
 
 - If your calzones turn out closer to 2,060 and 184 g, protein is already covered. Have 2 fewer eggs than the table says. Sick of eggs: one Core Power (26 g) is the same protein for 170 calories.
-- **Eating out:** have the meal and one calzone, and skip the eggs. Never just the meal: it is under 2,000 and about 100 g short on protein. One day a few hundred over costs about a tenth of a pound. Do not eat less the next day.
+- **Eating out:** a normal meal (about 1,500): have it with one calzone and skip the eggs. A big meal you cannot count: have your eggs, then the meal, and skip the calzones. Order something with a lot of protein. Do not eat less the next day.
 - Eat the vegetables every day. A fruit fits on days you skip the bacon. Two calzones have almost no fiber and no vitamin C.
-- Salt: two calzones are roughly 4,000 to 8,000 mg of sodium a day. Even with all your sweating, 3,000 to 4,000 is plenty. Halve the garlic salt and the ranch seasoning now.
+- Salt: two calzones are roughly 4,000 to 8,000 mg of sodium a day. Even with all your sweating, 3,000 to 4,000 is plenty. Halve the garlic salt and the ranch seasoning now. Keep drinking the gallon of water.
 - Get your blood pressure checked this week, and ask a doctor for a cholesterol test. If the pressure reads 130 over 80 or higher, tell a doctor and cut the salt further.
-- Water: 1 gallon a day is right. Keep it.
 
 ## 5. Walking
 
