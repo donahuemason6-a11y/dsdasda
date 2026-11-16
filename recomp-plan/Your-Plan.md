@@ -54,11 +54,11 @@ Weigh every morning. Use the average of the week, never one day.
 
 **Check your calzone's numbers once.** You have two a day at about 1,900 calories and 165 g protein. That fits the package labels. Reference numbers run a little higher, about 2,060 calories and 184 g a day, and more again if the 6 oz of chicken is weighed after cooking or the flour is packed into the cup. Build one calzone in the tracker from your own packages, then trust that number.
 
-**Then fill the gap up to your target.** By your count that is about 400 calories and 25 g of protein. Pick one protein item a day, then add the vegetables, a banana and food you like.
+**Then fill the gap up to your target.** By your count that is about 400 calories and 25 g of protein. Your daily add-on: 3 eggs with a slice of Kraft Singles and 2 slices of bacon, plus the vegetables.
 
 | Add-on | Calories | Protein |
 |---|---|---|
-| 4 eggs, any style | 290 | 25 g |
+| 3 eggs, 1 slice of Kraft Singles, 2 slices of bacon | 350 | 28 g |
 | 2 eggs plus 1/2 cup of carton egg whites, scrambled | 205 | 26 g |
 | Fairlife fat-free milk, 2 cups | 160 | 26 g |
 | Core Power (26 g), 1 bottle | 170 | 26 g |
@@ -66,8 +66,8 @@ Weigh every morning. Use the average of the week, never one day.
 | Banana | 105 | 1 g |
 | Frozen broccoli or stir-fry vegetables, 2 cups | 80 | 5 g |
 
-- Example: two calzones at 1,900 and 165 g, the egg scramble, a banana and the vegetables land near 2,290 calories and 197 g protein.
-- If your calzones turn out closer to 2,060 and 184 g, protein is already covered. Add only the vegetables and a banana.
+- With two calzones at 1,900 and 165 g, the eggs plate and the vegetables land near 2,330 calories and 198 g protein. A banana fits on days you skip the bacon.
+- If your calzones turn out closer to 2,060 and 184 g, protein is already covered. Make it 2 eggs with the cheese, no bacon, plus the vegetables.
 - Eat the vegetables every day and a fruit most days. Two calzones have almost no fiber and no vitamin C.
 - When calories drop: cut the banana first, then make the protein item smaller. The tracker shows what is left. Never cut the chicken or the vegetables.
 - Salt: two calzones are roughly 4,000 to 8,000 mg of sodium a day. Even with all your sweating, 3,000 to 4,000 is plenty. Halve the garlic salt and the ranch seasoning now.
