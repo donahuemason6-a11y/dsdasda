@@ -269,10 +269,11 @@ const tierFor = a => a > 255 ? [2300, 190] : a > 240 ? [2200, 190] : a > 225 ? [
 
 // ---- state
 const S = { days: {}, foods: [], settings: {} };
-const EMPTY = Object.freeze({ w: null, water: [], steps: null, lift: false, incline: false, foods: [] });
+const EMPTY = Object.freeze({ w: null, waist: null, water: [], steps: null, lift: false, incline: false, foods: [] });
 const ui = { date: todayIso(), tab: 'today', range: '8w', confirm: null, editFood: null, usualSaved: null };
 const draft = { food: { name: '', kcal: '', p: '', c: '', f: '', qty: '1', save: true }, water: '', recipe: null };
-const day = (s, create) => { let d = S.days[s]; if (!d && create) d = S.days[s] = { w: null, water: [], steps: null, lift: false, incline: false, foods: [] }; return d || EMPTY; };
+const day = (s, create) => { let d = S.days[s]; if (!d && create) d = S.days[s] = { w: null, waist: null, water: [], steps: null, lift: false, incline: false, foods: [] }; return d || EMPTY; };
+const waists = () => Object.keys(S.days).filter(k => typeof S.days[k].waist === 'number').sort().map(k => [k, S.days[k].waist]);
 const waterOf = d => (d.water || []).reduce((a, b) => a + b, 0);
 const totals = d => (d.foods || []).reduce((t, f) => { const q = f.qty || 1; t.kcal += f.kcal * q; t.p += f.p * q; t.c += (f.c || 0) * q; t.f += (f.f || 0) * q; return t; }, { kcal: 0, p: 0, c: 0, f: 0 });
 function avg7(s) { let t = 0, n = 0; for (let k = 0; k < 7; k++) { const w = day(addDays(s, -k)).w; if (typeof w === 'number') { t += w; n++; } } return n ? t / n : null; }
@@ -303,12 +304,12 @@ function tidy(id, raw) {                   // stored bodies arrive frozen and un
   const d = raw && typeof raw === 'object' ? raw : {}, list = v => (Array.isArray(v) ? v : []).map(fixFood).filter(Boolean);
   if (id === 'foods') return { items: list(d.items) };
   if (id === 'settings') { const o = JSON.parse(JSON.stringify(d)); [['kcal', 2000, 20000], ['protein', 1, 1000], ['water', 1, 1000]].forEach(([k, lo, hi]) => { if (numOr(o[k], 0) > 0) o[k] = Math.round(clamp(o[k], lo, hi)); else delete o[k]; }); if ('usual' in o) o.usual = list(o.usual).map(x => { delete x.id; return x; }); return o; }
-  return { w: numOr(d.w, null), water: (Array.isArray(d.water) ? d.water : []).filter(v => numOr(v, 0) > 0), steps: numOr(d.steps, null), lift: !!d.lift, incline: !!d.incline, foods: list(d.foods) };
+  return { w: numOr(d.w, null), waist: numOr(d.waist, null), water: (Array.isArray(d.water) ? d.water : []).filter(v => numOr(v, 0) > 0), steps: numOr(d.steps, null), lift: !!d.lift, incline: !!d.incline, foods: list(d.foods) };
 }
 function applyDoc(id, raw) { const data = tidy(id, raw);
   if (id === 'foods') S.foods = Array.isArray(data.items) ? data.items : [];
   else if (id === 'settings') S.settings = data || {};
-  else if (id.startsWith('d-')) { const k = id.slice(2); S.days[k] = { w: typeof data.w === 'number' ? data.w : null, water: Array.isArray(data.water) ? data.water : [], steps: typeof data.steps === 'number' ? data.steps : null, lift: !!data.lift, incline: !!data.incline, foods: Array.isArray(data.foods) ? data.foods : [] }; }
+  else if (id.startsWith('d-')) { const k = id.slice(2); S.days[k] = { w: typeof data.w === 'number' ? data.w : null, waist: typeof data.waist === 'number' ? data.waist : null, water: Array.isArray(data.water) ? data.water : [], steps: typeof data.steps === 'number' ? data.steps : null, lift: !!data.lift, incline: !!data.incline, foods: Array.isArray(data.foods) ? data.foods : [] }; }
 }
 function setSave(t) { const el = $('#saveState'); if (el) el.textContent = t; }
 function showSaved() { setSave(mode === 'local' ? 'Saved on this device' : dirty.size ? 'Saving…' : mode === 'db' ? 'Saved' : ''); }
@@ -360,7 +361,7 @@ async function connect() {
     if (!snap.metadata.fromCache) {
       if (!settled) {                     // first full answer: send up anything that only exists on this device
         settled = true; clearTimeout(slow); note(''); mode = 'db';
-        const local = Object.keys(S.days).filter(k => { const d = S.days[k]; return d.w != null || d.water.length || d.foods.length || d.steps != null || d.lift || d.incline; }).map(docId);
+        const local = Object.keys(S.days).filter(k => { const d = S.days[k]; return d.w != null || d.waist != null || d.water.length || d.foods.length || d.steps != null || d.lift || d.incline; }).map(docId);
         if (S.foods.length) local.push('foods'); if (Object.keys(S.settings || {}).length) local.push('settings');
         local.filter(id => !seen.has(id)).forEach(id => { dirty.add(id); flush(id, 0); });
       }
@@ -409,10 +410,18 @@ function renderDay() {
 function renderWeight() {
   const s = ui.date, d = day(s), a = avg7(s), wk = planWeek(s);
   const goal = wk ? `Goal for the week ending ${shortDate(wk.sun)}: <b>${one(wk.goal)} lb</b>` : '';
+  const ws = waists(), w0 = ws[0], w1 = ws[ws.length - 1];
+  const wtxt = !ws.length ? 'Tape around the belly button, standing relaxed after a normal breath out. Same morning each week.'
+    : ws.length === 1 ? `First measure: <b>${one(w0[1])} in</b> on ${shortDate(w0[0])}`
+    : `Latest: <b>${one(w1[1])} in</b> on ${shortDate(w1[0])}, ${w1[1] <= w0[1] ? 'down ' + one(w0[1] - w1[1]) : 'up ' + one(w1[1] - w0[1])} in since ${shortDate(w0[0])}`;
   paint('c-weight', `<header><h2>Weight</h2><span class="sub">Every morning, before food</span></header>
     <div class="wrow">
       <label class="field"><span>Today's weigh-in (lb)</span><input class="big" type="number" id="weight" inputmode="decimal" step="0.1" min="100" max="500" data-act="weight" value="${d.w == null ? '' : d.w}" placeholder="lb"></label>
       <div class="kv"><span>7-day average: <b>${a == null ? '–' : one(a) + ' lb'}</b></span><span>${goal}</span><span>Lost so far: <b>${a == null ? '–' : one(START_W - a) + ' lb'}</b></span></div>
+    </div>
+    <div class="wrow">
+      <label class="field"><span>Waist (in), once a week</span><input type="number" id="waist" inputmode="decimal" step="0.1" min="20" max="80" data-act="waist" value="${d.waist == null ? '' : d.waist}" placeholder="in"></label>
+      <div class="kv"><span>${wtxt}</span></div>
     </div>`);
 }
 
@@ -489,7 +498,7 @@ function renderStats() {
       <div class="stat"><span class="v">${a == null ? '–' : one(START_W - a)}</span><span class="l">lb lost since ${START_W}</span></div>
       <div class="stat"><span class="v">${one(p)}</span><span class="l">plan says today (lb)</span></div>
     </div>${notes}
-    <p class="muted">${logged} weigh-in${logged === 1 ? '' : 's'} logged. A few pounds either side of the plan is fine.</p>`);
+    <p class="muted">${logged} weigh-in${logged === 1 ? '' : 's'} logged. A few pounds either side of the plan is fine.${(() => { const ws = waists(); if (!ws.length) return ''; const a0 = ws[0], a1 = ws[ws.length - 1]; return ' Waist: ' + one(a1[1]) + ' in' + (ws.length > 1 ? ', ' + (a1[1] <= a0[1] ? 'down ' + one(a0[1] - a1[1]) : 'up ' + one(a1[1] - a0[1])) + ' in since ' + shortDate(a0[0]) : '') + '.'; })()}</p>`);
 }
 
 let tipEl = null;
@@ -693,6 +702,7 @@ document.addEventListener('focusout', () => setTimeout(() => { if (document.quer
 document.addEventListener('change', e => {
   const el = e.target, act = el.dataset && el.dataset.act; if (!act) return;
   if (act === 'weight') { const v = val(el.value); const d = day(ui.date, true); d.w = v != null && v >= 100 && v <= 500 ? Math.round(v * 10) / 10 : null; if (v != null && d.w == null) el.value = ''; touch(docId(ui.date)); }
+  else if (act === 'waist') { const v = val(el.value); const d = day(ui.date, true); d.waist = v != null && v >= 20 && v <= 80 ? Math.round(v * 10) / 10 : null; if (v != null && d.waist == null) el.value = ''; touch(docId(ui.date)); }
   else if (act === 'steps') { const v = val(el.value); day(ui.date, true).steps = v != null && v >= 0 ? Math.round(v) : null; touch(docId(ui.date)); }
   else if (act === 'flag') { day(ui.date, true)[el.dataset.k] = el.checked; touch(docId(ui.date)); }
   else if (act === 'setting') { const v = val(el.value); S.settings = S.settings || {}; const k = el.dataset.k; let n = v != null && v > 0 ? Math.round(v) : null; if (k === 'kcal' && n != null && n < 2000) n = 2000; if (n == null) delete S.settings[k]; else S.settings[k] = n; el.value = n == null ? '' : n; touch('settings'); }
