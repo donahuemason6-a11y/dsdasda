@@ -4,7 +4,7 @@ Source format: "Key: value" header lines, then "## Summary" and "## Opinion"
 sections of plain paragraphs separated by blank lines. The word count is
 computed from the section bodies only and inserted into the header.
 
-Usage: python3 build_pdfs.py
+Usage: python3 build_pdfs.py [file.txt ...]   (no args = rebuild all)
 """
 import re
 from pathlib import Path
@@ -104,5 +104,7 @@ def build(path: Path):
 
 
 if __name__ == "__main__":
-    for src in sorted(HERE.glob("*.txt")):
+    import sys
+    targets = [Path(a) for a in sys.argv[1:]] or sorted(HERE.glob("*.txt"))
+    for src in targets:
         build(src)
