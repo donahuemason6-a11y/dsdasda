@@ -36,16 +36,16 @@ Weigh every morning. Use the average of the week, never one day.
 
 | Your weekly average | Calories a day | Protein a day |
 |---|---|---|
-| Above 255 lb (you start here) | **2,300** | **210 g** |
-| 255 down to 240 lb | **2,200** | **210 g** |
-| 240 down to 225 lb | **2,100** | **210 g** |
-| 225 down to 210 lb | **2,000** | **210 g** |
-| 210 down to 200 lb | **2,100** | **215 g** |
+| Above 255 lb (you start here) | **2,300** | **190 g** |
+| 255 down to 240 lb | **2,200** | **190 g** |
+| 240 down to 225 lb | **2,100** | **190 g** |
+| 225 down to 210 lb | **2,000** | **190 g** |
+| 210 down to 200 lb | **2,100** | **190 g** |
 
 - Switch lines the Monday after your weekly average reaches the next weight. The scale decides, not the date.
 - Never eat under 2,000. "Do not go over 2,000" fits later, between 225 and 210 lb. It is too low for 271 lb, 10,000 steps and 6 lifting days.
 - The last line goes back up 100 on purpose: the final 10 lb come off slower.
-- Protein within 10 g of the number counts as hit.
+- Protein: 180 g or more counts as hit.
 
 
 <div style="page-break-after: always;"></div>
@@ -54,22 +54,22 @@ Weigh every morning. Use the average of the week, never one day.
 
 **Check your calzone's numbers once.** You have two a day at about 1,900 calories and 165 g protein. That fits the package labels. Reference numbers run a little higher, about 2,060 calories and 184 g a day, and more again if the 6 oz of chicken is weighed after cooking or the flour is packed into the cup. Build one calzone in the tracker from your own packages, then trust that number.
 
-**Then fill the gap up to your target. Your daily add-on: one Core Power Elite, a banana and 2 cups of vegetables.**
+**Then fill the gap up to your target.** By your count that is about 400 calories and 25 g of protein. Pick one protein item a day, then add the vegetables, a banana and food you like.
 
 | Add-on | Calories | Protein |
 |---|---|---|
-| Core Power Elite (42 g), 1 bottle | 230 | 42 g |
+| 4 eggs, any style | 290 | 25 g |
+| 2 eggs plus 1/2 cup of carton egg whites, scrambled | 205 | 26 g |
+| Fairlife fat-free milk, 2 cups | 160 | 26 g |
 | Core Power (26 g), 1 bottle | 170 | 26 g |
-| Vital wheat gluten: swap it for 1/4 cup of the flour in each calzone (both calzones) | 20 | 40 g |
-| Nonfat Greek yogurt, 1 cup | 130 | 23 g |
+| Core Power Elite (42 g), 1 bottle | 230 | 42 g |
 | Banana | 105 | 1 g |
 | Frozen broccoli or stir-fry vegetables, 2 cups | 80 | 5 g |
 
-- With two calzones at 1,900 and 165 g, the Elite, the banana and the vegetables land near 2,315 calories and 213 g protein.
-- If your calzones turn out closer to 2,060 and 184 g: use the 26 g Core Power instead of the Elite and skip the banana. That lands near 2,310 and 215 g.
-- Cheaper than a bottle a day: the vital wheat gluten swap. It is the protein part of flour, sold in the baking aisle. The dough gets chewier, so add a spoon more yogurt.
+- Example: two calzones at 1,900 and 165 g, the egg scramble, a banana and the vegetables land near 2,290 calories and 197 g protein.
+- If your calzones turn out closer to 2,060 and 184 g, protein is already covered. Add only the vegetables and a banana.
 - Eat the vegetables every day and a fruit most days. Two calzones have almost no fiber and no vitamin C.
-- When calories drop to 2,200: cut the banana. At 2,100, also leave the pepper jack out of one calzone. At 2,000, leave it out of both. Never cut the chicken or the vegetables.
+- When calories drop: cut the banana first, then make the protein item smaller. The tracker shows what is left. Never cut the chicken or the vegetables.
 - Salt: two calzones are roughly 4,000 to 8,000 mg of sodium a day. Even with all your sweating, 3,000 to 4,000 is plenty. Halve the garlic salt and the ranch seasoning now.
 - Get your blood pressure checked this week. If it reads 130 over 80 or higher, tell a doctor and cut the salt further.
 - Water: 1 gallon a day is right. Keep it.
@@ -95,31 +95,31 @@ Goal weight is where your weekly average should be at the end of that week. It d
 
 | Week | Dates | Goal weight | Calories | Protein | Incline block |
 |---|---|---|---|---|---|
-| 1 | Nov 16 – Nov 22 | 269 | 2,300 | 210 g | 5 for 20 min |
-| 2 | Nov 23 – Nov 29 | 267 | 2,300 | 210 g | 6 for 20 min |
-| 3 | Nov 30 – Dec 6 | 265 | 2,300 | 210 g | 6 for 25 min |
-| 4 | Dec 7 – Dec 13 | 263 | 2,300 | 210 g | 7 for 25 min |
-| 5 | Dec 14 – Dec 20 | 261 | 2,300 | 210 g | 8 for 25 min |
-| 6 | Dec 21 – Dec 27 | 259 | 2,300 | 210 g | 8 for 30 min |
-| 7 | Dec 28 – Jan 3 | 257 | 2,300 | 210 g | 9 for 30 min |
-| 8 | Jan 4 – Jan 10 | 255 | 2,300 | 210 g | 10 for 30 min |
-| 9 | Jan 11 – Jan 17 | 253 | 2,200 | 210 g | 10 for 35 min |
-| 10 | Jan 18 – Jan 24 | 251 | 2,200 | 210 g | 11 for 35 min |
-| 11 | Jan 25 – Jan 31 | 249 | 2,200 | 210 g | 12 for 35 min |
-| 12 | Feb 1 – Feb 7 | 247 | 2,200 | 210 g | 12 for 40 min |
-| 13 | Feb 8 – Feb 14 | 245 | 2,200 | 210 g | 12 for 40 min |
-| 14 | Feb 15 – Feb 21 | 243 | 2,200 | 210 g | 12 for 40 min |
-| 15 | Feb 22 – Feb 28 | 241 | 2,200 | 210 g | 12 for 40 min |
-| 16 | Mar 1 – Mar 7 | 239 | 2,200 | 210 g | 12 for 40 min |
-| 17 | Mar 8 – Mar 14 | 237 | 2,100 | 210 g | 12 for 40 min |
-| 18 | Mar 15 – Mar 21 | 235 | 2,100 | 210 g | 12 for 40 min |
-| 19 | Mar 22 – Mar 28 | 233 | 2,100 | 210 g | 12 for 40 min |
-| 20 | Mar 29 – Apr 4 | 231 | 2,100 | 210 g | 12 for 40 min |
-| 21 | Apr 5 – Apr 11 | 229 | 2,100 | 210 g | 12 for 40 min |
-| 22 | Apr 12 – Apr 18 | 227 | 2,100 | 210 g | 12 for 40 min |
-| 23 | Apr 19 – Apr 25 | 225 | 2,100 | 210 g | 12 for 40 min |
-| 24 | Apr 26 – May 2 | 223 | 2,000 | 210 g | 12 for 40 min |
-| **25** | **May 3 – May 9 (concert)** | **221** | **2,000** | **210 g** | **12 for 40 min** |
+| 1 | Nov 16 – Nov 22 | 269 | 2,300 | 190 g | 5 for 20 min |
+| 2 | Nov 23 – Nov 29 | 267 | 2,300 | 190 g | 6 for 20 min |
+| 3 | Nov 30 – Dec 6 | 265 | 2,300 | 190 g | 6 for 25 min |
+| 4 | Dec 7 – Dec 13 | 263 | 2,300 | 190 g | 7 for 25 min |
+| 5 | Dec 14 – Dec 20 | 261 | 2,300 | 190 g | 8 for 25 min |
+| 6 | Dec 21 – Dec 27 | 259 | 2,300 | 190 g | 8 for 30 min |
+| 7 | Dec 28 – Jan 3 | 257 | 2,300 | 190 g | 9 for 30 min |
+| 8 | Jan 4 – Jan 10 | 255 | 2,300 | 190 g | 10 for 30 min |
+| 9 | Jan 11 – Jan 17 | 253 | 2,200 | 190 g | 10 for 35 min |
+| 10 | Jan 18 – Jan 24 | 251 | 2,200 | 190 g | 11 for 35 min |
+| 11 | Jan 25 – Jan 31 | 249 | 2,200 | 190 g | 12 for 35 min |
+| 12 | Feb 1 – Feb 7 | 247 | 2,200 | 190 g | 12 for 40 min |
+| 13 | Feb 8 – Feb 14 | 245 | 2,200 | 190 g | 12 for 40 min |
+| 14 | Feb 15 – Feb 21 | 243 | 2,200 | 190 g | 12 for 40 min |
+| 15 | Feb 22 – Feb 28 | 241 | 2,200 | 190 g | 12 for 40 min |
+| 16 | Mar 1 – Mar 7 | 239 | 2,200 | 190 g | 12 for 40 min |
+| 17 | Mar 8 – Mar 14 | 237 | 2,100 | 190 g | 12 for 40 min |
+| 18 | Mar 15 – Mar 21 | 235 | 2,100 | 190 g | 12 for 40 min |
+| 19 | Mar 22 – Mar 28 | 233 | 2,100 | 190 g | 12 for 40 min |
+| 20 | Mar 29 – Apr 4 | 231 | 2,100 | 190 g | 12 for 40 min |
+| 21 | Apr 5 – Apr 11 | 229 | 2,100 | 190 g | 12 for 40 min |
+| 22 | Apr 12 – Apr 18 | 227 | 2,100 | 190 g | 12 for 40 min |
+| 23 | Apr 19 – Apr 25 | 225 | 2,100 | 190 g | 12 for 40 min |
+| 24 | Apr 26 – May 2 | 223 | 2,000 | 190 g | 12 for 40 min |
+| **25** | **May 3 – May 9 (concert)** | **221** | **2,000** | **190 g** | **12 for 40 min** |
 
 
 <div style="page-break-after: always;"></div>
@@ -128,18 +128,18 @@ Goal weight is where your weekly average should be at the end of that week. It d
 
 | Week | Dates | Goal weight | Calories | Protein | Incline block |
 |---|---|---|---|---|---|
-| 26 | May 10 – May 16 | 219 | 2,000 | 210 g | 12 for 40 min |
-| 27 | May 17 – May 23 | 217 | 2,000 | 210 g | 12 for 40 min |
-| 28 | May 24 – May 30 | 215 | 2,000 | 210 g | 12 for 40 min |
-| 29 | May 31 – Jun 6 | 213 | 2,000 | 210 g | 12 for 40 min |
-| 30 | Jun 7 – Jun 13 | 211 | 2,000 | 210 g | 12 for 40 min |
-| 31 | Jun 14 – Jun 20 | 209 | 2,000 | 210 g | 12 for 40 min |
-| 32 | Jun 21 – Jun 27 | 207.5 | 2,100 | 215 g | 12 for 40 min |
-| 33 | Jun 28 – Jul 4 | 206 | 2,100 | 215 g | 12 for 40 min |
-| 34 | Jul 5 – Jul 11 | 204.5 | 2,100 | 215 g | 12 for 40 min |
-| 35 | Jul 12 – Jul 18 | 203 | 2,100 | 215 g | 12 for 40 min |
-| 36 | Jul 19 – Jul 25 | 201.5 | 2,100 | 215 g | 12 for 40 min |
-| 37 | Jul 26 – Aug 1 | 200 | 2,100 | 215 g | 12 for 40 min |
+| 26 | May 10 – May 16 | 219 | 2,000 | 190 g | 12 for 40 min |
+| 27 | May 17 – May 23 | 217 | 2,000 | 190 g | 12 for 40 min |
+| 28 | May 24 – May 30 | 215 | 2,000 | 190 g | 12 for 40 min |
+| 29 | May 31 – Jun 6 | 213 | 2,000 | 190 g | 12 for 40 min |
+| 30 | Jun 7 – Jun 13 | 211 | 2,000 | 190 g | 12 for 40 min |
+| 31 | Jun 14 – Jun 20 | 209 | 2,000 | 190 g | 12 for 40 min |
+| 32 | Jun 21 – Jun 27 | 207.5 | 2,100 | 190 g | 12 for 40 min |
+| 33 | Jun 28 – Jul 4 | 206 | 2,100 | 190 g | 12 for 40 min |
+| 34 | Jul 5 – Jul 11 | 204.5 | 2,100 | 190 g | 12 for 40 min |
+| 35 | Jul 12 – Jul 18 | 203 | 2,100 | 190 g | 12 for 40 min |
+| 36 | Jul 19 – Jul 25 | 201.5 | 2,100 | 190 g | 12 for 40 min |
+| 37 | Jul 26 – Aug 1 | 200 | 2,100 | 190 g | 12 for 40 min |
 
 ## 7. When to change something
 
