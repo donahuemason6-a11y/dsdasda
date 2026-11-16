@@ -4,7 +4,7 @@
 <style>
 /* Layout: one phone-width column of cards under a sticky tab row. The week strip (P P L P P L R) is the spine of the Today view. */
 :root {
-  --page: #f2f4f7; --surface: #fdfdfe; --sunken: #e8ecf2; --ink: #0e1420; --ink-2: #465163; --ink-3: #6f7989;
+  --page: #f2f4f7; --surface: #fdfdfe; --sunken: #e8ecf2; --ink: #0e1420; --ink-2: #465163; --ink-3: #636d7d;
   --line: #dfe3ea; --axis: #c2c8d2; --accent: #2a78d6; --on-accent: #ffffff; --track: #d3e3f8; --plan: #8a93a3;
   --good: #0ca30c; --good-ink: #006300; --warn: #fab219; --warn-ink: #7a5200; --crit: #d03b3b;
   --font: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; --display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
@@ -12,11 +12,11 @@
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
   --page: #0b0d11; --surface: #161a21; --sunken: #202632; --ink: #eef1f6; --ink-2: #bcc4d1; --ink-3: #8f98a8;
-  --line: #2a303b; --axis: #3a4250; --accent: #3987e5; --on-accent: #ffffff; --track: #173152; --plan: #8f98a8;
+  --line: #2a303b; --axis: #3a4250; --accent: #3987e5; --on-accent: #0b0d11; --track: #173152; --plan: #8f98a8;
   --good: #0ca30c; --good-ink: #5fd35f; --warn: #fab219; --warn-ink: #fab219; --crit: #e66767; color-scheme: dark } }
 :root[data-theme="dark"] {
   --page: #0b0d11; --surface: #161a21; --sunken: #202632; --ink: #eef1f6; --ink-2: #bcc4d1; --ink-3: #8f98a8;
-  --line: #2a303b; --axis: #3a4250; --accent: #3987e5; --on-accent: #ffffff; --track: #173152; --plan: #8f98a8;
+  --line: #2a303b; --axis: #3a4250; --accent: #3987e5; --on-accent: #0b0d11; --track: #173152; --plan: #8f98a8;
   --good: #0ca30c; --good-ink: #5fd35f; --warn: #fab219; --warn-ink: #fab219; --crit: #e66767; color-scheme: dark }
 
 * { box-sizing: border-box; }
@@ -41,6 +41,7 @@ button, input, select { font: inherit; color: inherit; }
 main { display: grid; gap: 12px; }
 .view { display: grid; gap: 12px; }
 .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 14px; display: grid; gap: 12px; min-width: 0; }
+.card { scroll-margin-top: calc(118px + env(safe-area-inset-top, 0px)); }
 .card > header { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
 .sub { color: var(--ink-2); font-size: 13px; }
 .muted { color: var(--ink-3); font-size: 12.5px; }
@@ -105,15 +106,18 @@ input.big { font-size: 26px; font-weight: 700; padding: 8px 12px; font-family: v
 .item .act { display: flex; gap: 6px; align-items: center; }
 .step { display: inline-flex; align-items: center; border: 1px solid var(--axis); border-radius: 9px; overflow: hidden; }
 .step button { width: 32px; height: 32px; border: 0; background: var(--surface); cursor: pointer; font-size: 17px; }
+.step button:focus-visible { outline-offset: -2px; }
 .step span { min-width: 34px; text-align: center; font-variant-numeric: tabular-nums; font-size: 13.5px; font-weight: 600; }
 .chips { display: flex; flex-wrap: wrap; gap: 7px; }
 .chip { padding: 7px 11px; border-radius: 999px; border: 1px solid var(--axis); background: var(--surface); cursor: pointer; font-size: 13.5px; font-weight: 500; text-align: left; max-width: 100%; overflow-wrap: anywhere; }
 .chip small { color: var(--ink-3); font-weight: 400; }
+details { min-width: 0; }
 details > summary { cursor: pointer; font-weight: 600; font-size: 14px; padding: 4px 0; }
 details[open] > summary { margin-bottom: 10px; }
 .form { display: grid; gap: 10px; }
 .ing { display: grid; grid-template-columns: minmax(0, 2.2fr) repeat(4, minmax(0, 1fr)) 30px; gap: 5px; align-items: end; }
 .ing input { padding: 7px 6px; font-size: 14px; }
+@media (pointer: coarse) { input[type="number"]:not(.big), input[type="text"] { font-size: 16px !important; } }
 .ing .x { height: 34px; border: 0; background: none; cursor: pointer; color: var(--ink-3); font-size: 16px; }
 .inghead { font-size: 11px; color: var(--ink-3); }
 
@@ -133,7 +137,7 @@ details[open] > summary { margin-bottom: 10px; }
 .chart { position: relative; min-width: 0; }
 .chart svg { display: block; width: 100%; height: auto; overflow: visible; }
 .chart text { font-family: var(--font); font-size: 11px; fill: var(--ink-3); font-variant-numeric: tabular-nums; }
-.chart .lab { fill: var(--ink); font-weight: 600; }
+.chart .lab { fill: var(--ink); font-weight: 600; paint-order: stroke; stroke: var(--surface); stroke-width: 3px; stroke-linejoin: round; }
 .tip { position: absolute; z-index: 3; pointer-events: none; background: var(--surface); border: 1px solid var(--axis); border-radius: 8px; padding: 7px 9px; font-size: 12.5px; box-shadow: 0 4px 14px rgba(0,0,0,0.16); min-width: 130px; }
 .tip .t { color: var(--ink-2); margin-bottom: 3px; }
 .tip .r { display: flex; align-items: center; gap: 7px; justify-content: space-between; }
@@ -292,30 +296,49 @@ function docData(id) {
   if (id === 'settings') return JSON.parse(JSON.stringify(S.settings || {}));
   const d = S.days[id.slice(2)]; return d ? JSON.parse(JSON.stringify(Object.assign({ date: id.slice(2) }, d))) : null;
 }
-function applyDoc(id, data) {
+const numOr = (v, d) => typeof v === 'number' && isFinite(v) ? v : d;
+const fixFood = f => !f || typeof f !== 'object' || Array.isArray(f) ? null : Object.assign({}, f, { id: typeof f.id === 'string' && /^[\w-]+$/.test(f.id) ? f.id : uid(), name: String(f.name == null ? '' : f.name), kcal: numOr(f.kcal, 0), p: numOr(f.p, 0), c: numOr(f.c, 0), f: numOr(f.f, 0), qty: 'qty' in f ? (numOr(f.qty, 0) > 0 ? f.qty : 1) : undefined,
+  recipe: Array.isArray(f.recipe) && f.recipe.length ? f.recipe.filter(r => r && typeof r === 'object').map(r => ({ name: String(r.name == null ? '' : r.name), kcal: numOr(r.kcal, 0), p: numOr(r.p, 0), c: numOr(r.c, 0), f: numOr(r.f, 0) })) : undefined });
+function tidy(id, raw) {                   // stored bodies arrive frozen and unchecked: hand back a fresh, well-formed copy
+  const d = raw && typeof raw === 'object' ? raw : {}, list = v => (Array.isArray(v) ? v : []).map(fixFood).filter(Boolean);
+  if (id === 'foods') return { items: list(d.items) };
+  if (id === 'settings') { const o = JSON.parse(JSON.stringify(d)); [['kcal', 2000, 20000], ['protein', 1, 1000], ['water', 1, 1000]].forEach(([k, lo, hi]) => { if (numOr(o[k], 0) > 0) o[k] = Math.round(clamp(o[k], lo, hi)); else delete o[k]; }); if ('usual' in o) o.usual = list(o.usual).map(x => { delete x.id; return x; }); return o; }
+  return { w: numOr(d.w, null), water: (Array.isArray(d.water) ? d.water : []).filter(v => numOr(v, 0) > 0), steps: numOr(d.steps, null), lift: !!d.lift, incline: !!d.incline, foods: list(d.foods) };
+}
+function applyDoc(id, raw) { const data = tidy(id, raw);
   if (id === 'foods') S.foods = Array.isArray(data.items) ? data.items : [];
   else if (id === 'settings') S.settings = data || {};
   else if (id.startsWith('d-')) { const k = id.slice(2); S.days[k] = { w: typeof data.w === 'number' ? data.w : null, water: Array.isArray(data.water) ? data.water : [], steps: typeof data.steps === 'number' ? data.steps : null, lift: !!data.lift, incline: !!data.incline, foods: Array.isArray(data.foods) ? data.foods : [] }; }
 }
 function setSave(t) { const el = $('#saveState'); if (el) el.textContent = t; }
-function showSaved() { setSave(dirty.size ? 'Saving…' : mode === 'db' ? 'Saved' : mode === 'local' ? 'Saved on this device' : ''); }
+function showSaved() { setSave(mode === 'local' ? 'Saved on this device' : dirty.size ? 'Saving…' : mode === 'db' ? 'Saved' : ''); }
+// Unsent documents are remembered across visits, so a snapshot never overwrites an entry the store has not received yet.
+const UNSENT = LS + ':unsent', remote = !!(window.claude && typeof window.claude.use === 'function');
+function keepUnsent() { try { localStorage.setItem(UNSENT, JSON.stringify([...dirty])); } catch (e) {} }
+function queue(id) {                       // send once the store has answered; until then the document stays marked as unsent
+  dirty.add(id); keepUnsent(); showSaved(); clearTimeout(timers[id]);
+  timers[id] = setTimeout(function send() { if (mode === 'db' && col) { if (dirty.has(id)) flush(id, 0); } else if (mode === 'starting') timers[id] = setTimeout(send, 600); }, 600);
+}
 function touch(id) {                       // call after changing S
   saveLocal();
-  if (mode !== 'db' || !col) { showSaved(); return; }
-  dirty.add(id); showSaved(); clearTimeout(timers[id]); timers[id] = setTimeout(() => flush(id, 0), 600);
+  if (!remote) { showSaved(); return; }
+  queue(id);
 }
+if (remote) try { JSON.parse(localStorage.getItem(UNSENT) || '[]').forEach(queue); } catch (e) {}
+document.addEventListener('visibilitychange', () => { if (document.hidden && mode === 'db') dirty.forEach(id => { clearTimeout(timers[id]); flush(id, 0); }); });
 function flush(id, tries) {
   chains[id] = (chains[id] || Promise.resolve()).then(async () => {
-    const data = docData(id); if (!data || !col) { dirty.delete(id); showSaved(); return; }
+    if (!dirty.has(id)) return;              // already sent by an earlier call
+    const data = docData(id); if (!data || !col) { dirty.delete(id); keepUnsent(); showSaved(); return; }
     const sent = JSON.stringify(data);
     try {
       await col.doc(id).set(data);
-      if (JSON.stringify(docData(id)) === sent) dirty.delete(id); else { clearTimeout(timers[id]); timers[id] = setTimeout(() => flush(id, 0), 300); }
+      if (JSON.stringify(docData(id)) === sent) { dirty.delete(id); keepUnsent(); } else { clearTimeout(timers[id]); timers[id] = setTimeout(() => flush(id, 0), 300); }
       showSaved();
     } catch (e) {
       const code = e && e.code;
       if (code === 'unavailable' && tries < 1) { setTimeout(() => flush(id, tries + 1), 1500 + Math.random() * 1500); return; }
-      dirty.delete(id); mode = 'local'; showSaved();
+      mode = 'local'; showSaved();           // the entry stays marked as unsent: no snapshot overwrites it and the next visit sends it
       note(code === 'quota_exceeded' ? 'Your saved log is full, so new entries stay on this device only.' : 'Could not reach your saved log. New entries are kept on this device.');
     }
   });
@@ -332,7 +355,7 @@ async function connect() {
   const slow = setTimeout(() => { if (!settled) note('Still loading your saved log. Showing what is on this device for now.'); }, 10000);
   col.onSnapshot(snap => {
     const seen = new Set();
-    snap.docs.forEach(d => { seen.add(d.id); if (!dirty.has(d.id)) applyDoc(d.id, d.data() || {}); });
+    snap.docs.forEach(d => { seen.add(d.id); if (!dirty.has(d.id)) applyDoc(d.id, JSON.parse(JSON.stringify(d.data() || {}))); });
     if (!snap.metadata.fromCache) {
       if (!settled) {                     // first full answer: send up anything that only exists on this device
         settled = true; clearTimeout(slow); note(''); mode = 'db';
@@ -351,7 +374,9 @@ function paint(id, html) {
   const a = document.activeElement;
   if (a && el.contains(a) && /INPUT|SELECT|TEXTAREA/.test(a.tagName) && a.type !== 'checkbox') { el.dataset.stale = '1'; return; }
   const keep = a && el.contains(a) ? a.id : null;
+  const open = Array.from(el.querySelectorAll('details[id]')).filter(d => d.open).map(d => d.id);
   el.innerHTML = html; delete el.dataset.stale;
+  open.forEach(id => { const d = document.getElementById(id); if (d) d.open = true; });
   if (keep) { const n = document.getElementById(keep); if (n) n.focus({ preventScroll: true }); }
 }
 const meter = (v, max, cls) => `<div class="meter ${cls || ''}" role="img" aria-label="${num(v)} of ${num(max)}"><i style="width:${clamp(max ? v / max * 100 : 0, 0, 100)}%"></i></div>`;
@@ -405,7 +430,7 @@ function renderFood() {
   const d = day(ui.date), T = targetsFor(ui.date), t = totals(d), f = draft.food;
   const left = T.kcal - t.kcal, pleft = T.protein - t.p;
   const rows = (d.foods || []).map(x => `<div class="item"><div><div class="nm">${esc(x.name)}</div><div class="mac">${num(x.kcal * (x.qty || 1))} cal · ${num(x.p * (x.qty || 1))} g protein</div></div>
-    <div class="act"><span class="step"><button type="button" id="q-${x.id}-m" data-act="qty" data-id="${x.id}" data-n="-0.5" aria-label="Half a serving less of ${esc(x.name)}">−</button><span>${num(x.qty || 1, (x.qty || 1) % 1 ? 1 : 0)}×</span><button type="button" id="q-${x.id}-p" data-act="qty" data-id="${x.id}" data-n="0.5" aria-label="Half a serving more of ${esc(x.name)}">+</button></span>
+    <div class="act"><span class="step"><button type="button" id="q-${x.id}-m" data-act="qty" data-id="${x.id}" data-n="-0.5" aria-label="Half a serving less of ${esc(x.name)}">−</button><span>${+(x.qty || 1).toFixed(2)}×</span><button type="button" id="q-${x.id}-p" data-act="qty" data-id="${x.id}" data-n="0.5" aria-label="Half a serving more of ${esc(x.name)}">+</button></span>
     <button class="btn small" type="button" id="rm-${x.id}" data-act="rmEntry" data-id="${x.id}" aria-label="Remove ${esc(x.name)}">✕</button></div></div>`).join('');
   const chips = S.foods.length ? S.foods.map(x => `<button class="chip" type="button" id="add-${x.id}" data-act="addSaved" data-id="${x.id}">${esc(x.name)} <small>${num(x.kcal)} cal · ${num(x.p)} g</small></button>`).join('')
     : `<span class="muted">Nothing saved yet. Add a food below with "Save to My foods" ticked, or open the Foods tab for your calzone.</span>`;
@@ -446,7 +471,7 @@ function coach() {
     if (b.i === a.i + 1 && c.i === b.i + 1) {
       const l1 = a.avg - b.avg, l2 = b.avg - c.avg;
       if (l1 > a.avg * 0.01 && l2 > b.avg * 0.01) out.push(['warn', 'Losing fast', `Down ${one(l1)} and ${one(l2)} lb in the last two weeks, more than 1% of your weight each week. Add 200 calories a day and keep them while you still lose 1.5 lb a week or more.`]);
-      else if (l1 < 1 && l2 < 1) out.push(['warn', 'Slow two weeks', `Down ${one(l1)} and ${one(l2)} lb in the last two weeks. Weigh all your food for a week. Still slow after that: drop 100 calories, never under 2,000.`]);
+      else if (l1 < 1 && l2 < 1) out.push(['warn', 'Slow two weeks', `${l1 < 0 ? 'Up ' + one(-l1) : 'Down ' + one(l1)} and ${l2 < 0 ? 'up ' + one(-l2) : (l1 < 0 ? 'down ' : '') + one(l2)} lb in the last two weeks. Weigh all your food for a week. Still slow after that: drop 100 calories, never under 2,000.`]);
     }
   }
   return out;
@@ -529,7 +554,7 @@ function drawWeight() {
   const hit = $('#hit', host);
   hit.addEventListener('pointermove', e => { const b = hit.getBoundingClientRect(); show(Math.round((e.clientX - b.left) / b.width * (n - 1))); });
   hit.addEventListener('pointerdown', e => { const b = hit.getBoundingClientRect(); show(Math.round((e.clientX - b.left) / b.width * (n - 1))); });
-  hit.addEventListener('pointerleave', hide);
+  hit.addEventListener('pointerleave', e => { if (e.pointerType === 'mouse') hide(); });   // a touch "leaves" as the finger lifts: keep the reading up until he taps elsewhere (blur)
   host.onkeydown = e => { if (e.key === 'ArrowLeft') { show(cur - 1); e.preventDefault(); } else if (e.key === 'ArrowRight') { show(cur + 1); e.preventDefault(); } else if (e.key === 'Escape') hide(); };
   host.onfocus = () => { if (host.matches(':focus-visible')) show(cur); }; host.onblur = hide;
 }
@@ -644,7 +669,12 @@ function renderPlan() {
     <div class="btnrow"><button class="btn small" type="button" id="copyData" data-act="copy">Copy my log as text</button><span class="muted" id="copyMsg" role="status"></span></div>`);
 }
 
+let held = false, owed = false;           // never repaint between mousedown and mouseup: the button under the pointer would be replaced and its click lost
+const release = () => { held = false; if (owed) { owed = false; setTimeout(renderAll, 0); } };
+document.addEventListener('pointerdown', e => { if (e.button === 0) held = true; }, true);
+['pointerup', 'pointercancel'].forEach(t => document.addEventListener(t, release, true)); window.addEventListener('blur', release);
 function renderAll() {
+  if (held) { owed = true; return; }
   document.querySelectorAll('.tabs a').forEach(a => { if (a.dataset.tab === ui.tab) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
   ['today', 'trends', 'foods', 'plan'].forEach(t => { $('#view-' + t).hidden = t !== ui.tab; });
   if (ui.tab === 'today') { renderDay(); renderWeight(); renderWater(); renderFood(); }
@@ -667,7 +697,7 @@ document.addEventListener('change', e => {
   else return;
   setTimeout(renderAll, 0);
 });
-function addEntry(f, qty) { const d = day(ui.date, true); const same = f.fid && d.foods.find(x => x.fid === f.fid); if (same) same.qty = Math.round(((same.qty || 1) + qty) * 100) / 100; else d.foods.push({ id: uid(), fid: f.fid || null, name: f.name, kcal: f.kcal, p: f.p, c: f.c || 0, f: f.f || 0, qty }); touch(docId(ui.date)); }
+function addEntry(f, qty) { const d = day(ui.date, true); const same = f.fid && d.foods.find(x => x.fid === f.fid && x.kcal === f.kcal && x.p === f.p && (x.c || 0) === (f.c || 0) && (x.f || 0) === (f.f || 0)); if (same) same.qty = Math.round(((same.qty || 1) + qty) * 100) / 100; else d.foods.push({ id: uid(), fid: f.fid || null, name: f.name, kcal: f.kcal, p: f.p, c: f.c || 0, f: f.f || 0, qty }); touch(docId(ui.date)); }
 document.addEventListener('click', e => {
   const el = e.target.closest('[data-act]'); if (!el || el.tagName === 'INPUT') return; const act = el.dataset.act;
   if (act !== 'delFood') ui.confirm = null;
@@ -707,7 +737,9 @@ document.addEventListener('submit', e => {
     if (!name || !rows.length || rows.every(x => val(x.kcal) == null)) { if (err) err.textContent = 'Give it a name and at least one ingredient with calories.'; return; }
     const t = recipeTotals({ rows, makes: r.makes }), rnd = v => Math.round(v * 10) / 10;
     const food = { name, kcal: Math.round(t.kcal), p: rnd(t.p), c: rnd(t.c), f: rnd(t.f), makes: val(r.makes) || 1, recipe: rows.map(x => ({ name: x.name.trim(), kcal: val(x.kcal) || 0, p: val(x.p) || 0, c: val(x.c) || 0, f: val(x.f) || 0 })) };
-    const cur = r.id && S.foods.find(x => x.id === r.id); if (cur) Object.assign(cur, food); else S.foods.push(Object.assign({ id: uid() }, food));
+    const cur = r.id && S.foods.find(x => x.id === r.id); if (cur) { Object.assign(cur, food); const us = S.settings && S.settings.usual;   // keep the usual day in step with the edited food
+      if (Array.isArray(us) && us.some(x => x.fid === cur.id)) { us.forEach(x => { if (x.fid === cur.id) Object.assign(x, { name: food.name, kcal: food.kcal, p: food.p, c: food.c, f: food.f }); }); touch('settings'); } }
+    else S.foods.push(Object.assign({ id: uid() }, food));
     touch('foods'); draft.recipe = blankRecipe();
   }
   if (document.activeElement && document.activeElement.blur) document.activeElement.blur();
@@ -716,8 +748,15 @@ document.addEventListener('submit', e => {
 
 // ---- tabs, resize, start
 function route() { const h = (location.hash || '').slice(1); ui.tab = ['today', 'trends', 'foods', 'plan'].includes(h) ? h : 'today'; hideTip(); renderAll(); }
-window.addEventListener('hashchange', route);
+window.addEventListener('hashchange', () => { route(); window.scrollTo(0, 0); });
+let seenToday = todayIso();                 // a tab left open overnight: move on to the new day instead of writing into yesterday
+function newDay() { const t = todayIso(); if (t === seenToday) return; if (ui.date === seenToday) ui.date = t; seenToday = t; renderAll(); }
+document.addEventListener('visibilitychange', () => { if (!document.hidden) newDay(); }); window.addEventListener('focus', newDay); window.addEventListener('pageshow', newDay); setInterval(newDay, 60000);
 let rz = null; window.addEventListener('resize', () => { clearTimeout(rz); rz = setTimeout(() => { if (ui.tab === 'trends') { drawWeight(); renderBars(); } }, 150); });
 loadLocal(); route(); connect();
+if (mode === 'starting') {                 // a saved log is on its way: hold input until it has answered (10 s at most), so no tap lands on an out-of-date copy
+  const m = $('main'), t0 = Date.now(); m.inert = true; m.style.opacity = 0.6; setSave('Loading…');
+  const iv = setInterval(() => { if (mode !== 'starting' || Date.now() - t0 > 10000) { clearInterval(iv); m.inert = false; m.style.opacity = ''; } }, 50);
+}
 })();
 </script>
