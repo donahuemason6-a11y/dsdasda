@@ -1,6 +1,6 @@
 # Your Plan
 
-Starts Mon Nov 16, 2026 at 271 lb. On plan you are about 223 lb going into the concert week (first week of May) and 200 lb around Aug 1, 2027.
+Starts Mon Nov 16, 2026 at 271 lb. On plan you are about 223 lb going into the concert week (first week of May), most likely between 219 and 226, and 200 lb around Aug 1, 2027. These are estimates, not guarantees.
 
 ## 1. Your week
 
@@ -45,7 +45,7 @@ Weigh every morning. Use the average of the week, never one day.
 - Switch lines the Monday after your weekly average reaches the next weight. The scale decides, not the date.
 - Never eat under 2,000. "Do not go over 2,000" fits later, between 225 and 210 lb. It is too low for 271 lb, 10,000 steps and 6 lifting days.
 - The last line goes back up 100 on purpose: the final 10 lb come off slower.
-- Protein: 180 g or more counts as hit.
+- Within 50 calories of your number counts as hit. So does 180 g of protein or more.
 
 
 <div style="page-break-after: always;"></div>
@@ -54,22 +54,24 @@ Weigh every morning. Use the average of the week, never one day.
 
 **Check your calzone's numbers once.** You have two a day at about 1,900 calories and 165 g protein. That fits the package labels. Reference numbers run a little higher, about 2,060 calories and 184 g a day, and more again if the 6 oz of chicken is weighed after cooking or the flour is packed into the cup. Build one calzone in the tracker from your own packages, then trust that number.
 
-**Then fill the gap up to your target.** By your count that is about 400 calories and 25 g of protein. Your daily add-on: 3 eggs with a slice of Kraft Singles and 2 slices of bacon, plus the vegetables.
+**Your day: two calzones, plus 3 eggs with 1 slice of Kraft Singles and 2 slices of bacon.** By your count that is about 2,250 calories and 193 g protein. With the vegetables it is about 2,330 and 198 g. Both count as hitting 2,300.
 
-| Add-on | Calories | Protein |
+| Part of your day | Calories | Protein |
 |---|---|---|
+| 2 calzones (your count) | 1,900 | 165 g |
 | 3 eggs, 1 slice of Kraft Singles, 2 slices of bacon | 350 | 28 g |
-| 2 eggs plus 1/2 cup of carton egg whites, scrambled | 205 | 26 g |
-| Fairlife fat-free milk, 2 cups | 160 | 26 g |
-| Core Power (26 g), 1 bottle | 170 | 26 g |
-| Core Power Elite (42 g), 1 bottle | 230 | 42 g |
-| Banana | 105 | 1 g |
 | Frozen broccoli or stir-fry vegetables, 2 cups | 80 | 5 g |
 
-- With two calzones at 1,900 and 165 g, the eggs plate and the vegetables land near 2,330 calories and 198 g protein. A banana fits on days you skip the bacon.
-- If your calzones turn out closer to 2,060 and 184 g, protein is already covered. Make it 2 eggs with the cheese, no bacon, plus the vegetables.
+| When your calories are | Change the eggs to | Day lands near |
+|---|---|---|
+| 2,300 (now) | 3 eggs, cheese, bacon | 2,250 and 193 g |
+| 2,200 | 3 eggs and bacon, no cheese | 2,200 and 190 g |
+| 2,100 | 3 eggs only | 2,115 and 184 g |
+| 2,000 | 2 eggs only | 2,045 and 178 g |
+
+- If your calzones turn out closer to 2,060 and 184 g, protein is already covered. Make it 2 eggs with the cheese and no bacon. Sick of eggs: one Core Power (26 g) is the same protein for 170 calories.
+- **Eating out:** have the meal and one calzone, and skip the eggs. Never make the restaurant meal your only food that day. One day a few hundred over costs about a tenth of a pound. Do not eat less the next day.
 - Eat the vegetables every day and a fruit most days. Two calzones have almost no fiber and no vitamin C.
-- When calories drop: cut the banana first, then make the protein item smaller. The tracker shows what is left. Never cut the chicken or the vegetables.
 - Salt: two calzones are roughly 4,000 to 8,000 mg of sodium a day. Even with all your sweating, 3,000 to 4,000 is plenty. Halve the garlic salt and the ranch seasoning now.
 - Get your blood pressure checked this week. If it reads 130 over 80 or higher, tell a doctor and cut the salt further.
 - Water: 1 gallon a day is right. Keep it.

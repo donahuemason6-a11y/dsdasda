@@ -266,7 +266,7 @@ const tierFor = a => a > 255 ? [2300, 190] : a > 240 ? [2200, 190] : a > 225 ? [
 // ---- state
 const S = { days: {}, foods: [], settings: {} };
 const EMPTY = Object.freeze({ w: null, water: [], steps: null, lift: false, incline: false, foods: [] });
-const ui = { date: todayIso(), tab: 'today', range: '8w', confirm: null, editFood: null };
+const ui = { date: todayIso(), tab: 'today', range: '8w', confirm: null, editFood: null, usualSaved: null };
 const draft = { food: { name: '', kcal: '', p: '', c: '', f: '', qty: '1', save: true }, water: '', recipe: null };
 const day = (s, create) => { let d = S.days[s]; if (!d && create) d = S.days[s] = { w: null, water: [], steps: null, lift: false, incline: false, foods: [] }; return d || EMPTY; };
 const waterOf = d => (d.water || []).reduce((a, b) => a + b, 0);
@@ -409,12 +409,16 @@ function renderFood() {
     <button class="btn small" type="button" id="rm-${x.id}" data-act="rmEntry" data-id="${x.id}" aria-label="Remove ${esc(x.name)}">✕</button></div></div>`).join('');
   const chips = S.foods.length ? S.foods.map(x => `<button class="chip" type="button" id="add-${x.id}" data-act="addSaved" data-id="${x.id}">${esc(x.name)} <small>${num(x.kcal)} cal · ${num(x.p)} g</small></button>`).join('')
     : `<span class="muted">Nothing saved yet. Add a food below with "Save to My foods" ticked, or open the Foods tab for your calzone.</span>`;
+  const usual = S.settings && Array.isArray(S.settings.usual) ? S.settings.usual : [];
+  const ut = usual.reduce((a, x) => { a.kcal += x.kcal * (x.qty || 1); a.p += x.p * (x.qty || 1); return a; }, { kcal: 0, p: 0 });
+  const usualBtn = usual.length && !(d.foods || []).length ? `<div class="btnrow"><button class="btn primary" type="button" id="logUsual" data-act="logUsual">Log my usual day</button><span class="sub">${num(ut.kcal)} cal · ${num(ut.p)} g protein</span></div>` : '';
+  const saveUsual = (d.foods || []).length ? `<div class="btnrow"><button class="btn small" type="button" id="saveUsual" data-act="saveUsual">${ui.usualSaved === ui.date ? '✓ Saved as my usual day' : 'Save this day as my usual day'}</button></div>` : '';
   paint('c-food', `<header><h2>Food</h2><span class="sub">${t.c || t.f ? `${num(t.c)} g carbs · ${num(t.f)} g fat` : ''}</span></header>
     <div class="two">
-      <div><div class="big-num">${num(t.kcal)} <small>of ${num(T.kcal)} cal</small></div>${meter(t.kcal, T.kcal, left < -50 ? 'warn' : '')}<div class="muted" style="margin-top:4px">${left >= 0 ? num(left) + ' left' : '⚠ ' + num(-left) + ' over'}</div></div>
+      <div><div class="big-num">${num(t.kcal)} <small>of ${num(T.kcal)} cal</small></div>${meter(t.kcal, T.kcal, left < -50 ? 'warn' : '')}<div class="muted" style="margin-top:4px">${Math.abs(left) <= 50 ? '✓ On target' : left > 0 ? num(left) + ' left' : '⚠ ' + num(-left) + ' over'}</div></div>
       <div><div class="big-num">${num(t.p)} <small>of ${T.protein} g protein</small></div>${meter(t.p, T.protein, pleft <= 10 && t.p > 0 ? 'good' : '')}<div class="muted" style="margin-top:4px">${pleft > 10 ? num(pleft) + ' g to go' : t.p > 0 ? '✓ Protein hit' : num(pleft) + ' g to go'}</div></div>
     </div>
-    ${rows ? `<div class="list">${rows}</div>` : `<div class="note">Nothing logged for this day yet. Tap one of your saved foods, or add a new one.</div>`}
+    ${rows ? `<div class="list">${rows}</div>${saveUsual}` : `${usualBtn}<div class="note">Nothing logged for this day yet. ${usual.length ? 'Log your usual day in one tap, tap' : 'Tap'} one of your saved foods, or add a new one.</div>`}
     <div><h3 style="margin-bottom:8px">My foods · tap to add one serving</h3><div class="chips">${chips}</div></div>
     <details id="newFood" ${f.name || f.kcal ? 'open' : ''}><summary>Add a new food</summary>
       <form class="form" data-form="food" autocomplete="off">
@@ -627,6 +631,7 @@ function renderPlan() {
     <div><b>Losing less than 1 lb a week, 2 weeks in a row</b><span>Weigh all your food for a week. Still slow: drop 100 calories. Never under 2,000.</span></div>
     <div><b>Bad sleep, no energy, dizzy when you stand up, starving or lifts dropping for 2 weeks</b><span>Add 200 calories a day for 2 weeks. Still wrecked: take a break week (your current calories plus 600, flat walking only).</span></div>
     <div><b>Calf, Achilles, shin, foot, knee or lower-back pain 4 out of 10 or worse on a walk</b><span>All flat for 7 days. Pain gone: restart the incline 2 lower. If it hurts on flat walks too, or is still there after 7 days: halve your steps and get it checked.</span></div>
+    <div><b>Eating out</b><span>Have the meal and one calzone, and skip the eggs. Never make the restaurant meal your only food. Do not eat less the next day.</span></div>
     <div><b>Chest pain, fainting, or a pop or sharp pain in a tendon</b><span>Stop. Get it checked.</span></div></div>`);
   const st = S.settings || {};
   paint('c-settings', `<header><h2>Targets</h2><span class="sub">Leave blank to follow the plan</span></header>
@@ -672,6 +677,8 @@ document.addEventListener('click', e => {
   else if (act === 'waterCustom') { const v = val(draft.water); if (v != null && v > 0 && v <= 300) { day(ui.date, true).water.push(Math.round(v * 10) / 10); draft.water = ''; const inp = $('#waterCustom'); if (inp) inp.value = ''; touch(docId(ui.date)); } }
   else if (act === 'waterUndo') { const d = day(ui.date, true); d.water.pop(); touch(docId(ui.date)); }
   else if (act === 'addSaved') { const f = S.foods.find(x => x.id === el.dataset.id); if (f) addEntry({ fid: f.id, name: f.name, kcal: f.kcal, p: f.p, c: f.c, f: f.f }, 1); }
+  else if (act === 'logUsual') { ((S.settings && S.settings.usual) || []).forEach(x => addEntry({ fid: x.fid, name: x.name, kcal: x.kcal, p: x.p, c: x.c, f: x.f }, x.qty || 1)); }
+  else if (act === 'saveUsual') { const d = day(ui.date); S.settings = S.settings || {}; S.settings.usual = (d.foods || []).map(x => ({ fid: x.fid || null, name: x.name, kcal: x.kcal, p: x.p, c: x.c || 0, f: x.f || 0, qty: x.qty || 1 })); ui.usualSaved = ui.date; touch('settings'); }
   else if (act === 'qty') { const d = day(ui.date, true), x = d.foods.find(y => y.id === el.dataset.id); if (x) { x.qty = Math.round(((x.qty || 1) + +el.dataset.n) * 100) / 100; if (x.qty <= 0) d.foods = d.foods.filter(y => y !== x); touch(docId(ui.date)); } }
   else if (act === 'rmEntry') { const d = day(ui.date, true); d.foods = d.foods.filter(y => y.id !== el.dataset.id); touch(docId(ui.date)); }
   else if (act === 'range') ui.range = el.dataset.v;
