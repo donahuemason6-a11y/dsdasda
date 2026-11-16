@@ -360,7 +360,7 @@ function renderDay() {
   const s = ui.date, d = day(s), i = dow(s), wk = planWeek(s), T = targetsFor(s), mon = addDays(s, -i), t = todayIso();
   const strip = DAYS.map((nm, k) => { const ds = addDays(mon, k), dd = day(ds); const done = nm === 'Rest' ? (dd.steps || 0) >= 10000 : dd.lift;
     return `<button type="button" id="st-${k}" data-act="goto" data-date="${ds}" class="${ds === s ? 'sel' : ''} ${ds === t ? 'today' : ''} ${done ? 'done' : ''}" aria-label="${longDate(ds)}, ${nm}${done ? ', done' : ''}" aria-pressed="${ds === s}"><span class="l">${nm[0]}</span><span class="n">${parse(ds).getDate()}</span><span class="k"></span></button>`; }).join('');
-  const walk = !wk ? '10,000 steps' : INCLINE_DAY[i] ? `10,000 steps. Incline block: <strong>up to ${wk.incline} for ${wk.minutes} min</strong> at speed 3.0, hands off the rails` : '10,000 steps, all flat';
+  const walk = !wk ? '10,000 steps' : INCLINE_DAY[i] ? `10,000 steps in all: 5 min flat, then <strong>incline up to ${wk.incline} for ${wk.minutes} min</strong> (speed 3.0, hands off the rails), then flat for the rest` : '10,000 steps, all flat';
   const head = wk ? `Week ${wk.n} of ${WEEKS.length}` : (s < START ? 'Before the start' : 'After the plan');
   paint('c-day', `
     <div class="datenav"><button class="icon" type="button" id="prevDay" data-act="shift" data-n="-1" aria-label="Previous day">‹</button>

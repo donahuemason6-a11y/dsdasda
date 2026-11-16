@@ -4,19 +4,19 @@ Starts Mon Nov 16, 2026 at 271 lb. On plan you are about 223 lb going into the c
 
 ## 1. Your week
 
-| Day | Lift | Walk |
+| Day | Lift (about 35 min) | Walk after (about 100 min; steps outside the gym count) |
 |---|---|---|
-| Mon | **Push** | 10,000 steps, with the incline block |
-| Tue | **Pull** | 10,000 steps, with the incline block |
+| Mon | **Push** | 5 min flat, the incline block, then flat until you reach 10,000 steps |
+| Tue | **Pull** | 5 min flat, the incline block, then flat until you reach 10,000 steps |
 | Wed | **Legs** | 10,000 steps, all flat |
-| Thu | **Push** | 10,000 steps, with the incline block |
-| Fri | **Pull** | 10,000 steps, with the incline block |
+| Thu | **Push** | 5 min flat, the incline block, then flat until you reach 10,000 steps |
+| Fri | **Pull** | 5 min flat, the incline block, then flat until you reach 10,000 steps |
 | Sat | **Legs** | 10,000 steps, all flat |
 | Sun | **Rest** | 10,000 steps, all flat |
 
 ## 2. Your lifts
 
-3 sets of each. Stop 1 or 2 reps before you would fail. When all 3 sets reach the top number, go up one weight step next time.
+3 sets of each. Write down weight and reps. Stop 1 or 2 reps before you would fail. When all 3 sets reach the top number, go up one weight step.
 
 | Push (Mon, Thu) | Reps | Pull (Tue, Fri) | Reps | Legs (Wed, Sat) | Reps |
 |---|---|---|---|---|---|
@@ -27,8 +27,8 @@ Starts Mon Nov 16, 2026 at 271 lb. On plan you are about 223 lb going into the c
 
 - Rest about 2 minutes between sets on the presses, pulldown, row and leg press. About 1 minute on the others.
 - Calf raises: slow, with a 2-second pause at the bottom. They get your Achilles ready for the incline.
-- Write down the weight and reps every session. Beating last week by one rep is progress.
 - Easy week, any time your joints ache or every lift feels heavy: same weights, 2 sets, for one week.
+- Want more: add a 4th set on the first two machines each day. Do not add walking or incline.
 
 ## 3. Calories and protein
 
@@ -43,9 +43,8 @@ Weigh every morning. Use the average of the week, never one day.
 | 210 down to 200 lb | **2,100** | **190 g** |
 
 - Switch lines the Monday after your weekly average reaches the next weight. The scale decides, not the date.
-- Never eat under 2,000. "Do not go over 2,000" fits later, between 225 and 210 lb. It is too low for 271 lb, 10,000 steps and 6 lifting days.
-- The last line goes back up 100 on purpose: the final 10 lb come off slower.
-- Within 50 calories of your number counts as hit. So does 180 g of protein or more.
+- Never eat under 2,000. A 2,000 cap fits later, between 225 and 210 lb. It is too low at 271.
+- The last line goes back up 100 on purpose. Within 50 calories of your number counts as hit, and so does 180 g of protein.
 
 
 <div style="page-break-after: always;"></div>
