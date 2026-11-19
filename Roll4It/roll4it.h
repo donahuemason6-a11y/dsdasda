@@ -44,13 +44,10 @@
 #define RULES 2
 #define LEAD 3
 #define EXIT 4
-// max length of one line in the data file
+// data file values
 #define LINE 100
-// fields per line in the data file
 #define FIELDS 3
-// total data elements in the data file
 #define DATA 30
-// zero value
 #define ZERO 0
 
 // function prototypes

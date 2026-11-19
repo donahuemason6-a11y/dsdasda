@@ -812,92 +812,73 @@ void printRules() {
     printf("| - Dice placement and strategy are important to winning!      |\n");
     printf("'--------------------------------------------------------------'\n");
 }
-// read the leaderboard file and display the contents
+// read the leaderboard file and display it
 void readLeaderboardFile() {
-    // stores one line at a time from the data file
+    // one line of the file at a time
     char line[LINE];
-
-    // tracks which element of array data to store in
     int fieldIdx = ZERO;
 
-    // array of strings holding every data element from the file
+    // holds every data element from the file
     char *data[DATA];
 
-    // open the data file for reading
     FILE *fp = fopen("leaderboard.txt", "r");
 
-    // file could not be found
+    // file not found
     if (fp == NULL) {
         perror("Error opening file");
         return;
     }
 
-    // read the file one line at a time
+    // read each line and split it at the commas
     while (fgets(line, LINE, fp) != NULL) {
-        // split the line at the commas
         char *field = strtok(line, ",");
-
-        // remove leading and trailing white space
         field = trim(field);
 
-        // walk through each field on the line
         while (field != NULL) {
-            // allocate memory for the field plus the null terminator
-            data[fieldIdx] = malloc(strlen(field) + 1);
-
             // copy the field into the data array
+            data[fieldIdx] = malloc(strlen(field) + 1);
             strcpy(data[fieldIdx], field);
 
-            // next field on the same line
             field = strtok(NULL, ",");
             field = trim(field);
-
             fieldIdx++;
         }
     }
 
-    // close the file
     fclose(fp);
 
-    // leaderboard header
     printf("\n.---------------- ROLL 4 IT - Leaderboard ----------------.\n");
     printf("|                                                         |\n");
     printf("|     %-16s%-16s%-20s|\n", "Position", "Player", "Wins");
     printf("|                                                         |\n");
 
-    // each line of the file is position, player, wins
+    // every line is position, player, wins
     for (int i = ZERO; i < fieldIdx; i += FIELDS) {
         printf("|     %-16s%-16s%-20s|\n", data[i], data[i + 1], data[i + 2]);
     }
 
-    // leaderboard footer
     printf("|                                                         |\n");
     printf("'_________________________________________________________'\n");
 }
 
-// trim the leading and trailing white space from a string
+// trim leading and trailing white space
 char *trim(char *str) {
-    // nothing to trim
     if (str == NULL || *str == '\0') {
         return str;
     }
 
-    // move past any leading white space
+    // skip past leading spaces
     char *start = str;
-
     while (isspace((unsigned char)*start)) {
         start++;
     }
 
-    // find the end of the string
+    // walk back past trailing spaces
     char *end = str + strlen(str) - 1;
-
-    // move back past any trailing white space
     while (end > start && isspace((unsigned char)*end)) {
         end--;
     }
 
-    // close off the string after the last real character
     end[1] = '\0';
 
     return start;
