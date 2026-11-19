@@ -2,52 +2,14 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
+#include <ctype.h>
 
-// constants
-// size of player's name array
-#define NAME 20
-// total number of player dice
-#define DICE 6
-// array column with the value
-#define DIE_VALUE 0
-// array column to track if die is used
-#define DIE_STATUS 1
-// committed states
-#define NO_COMMIT -1
-#define CARD1_COMMIT 1
-#define CARD2_COMMIT 2
-#define CARD3_COMMIT 3
-// play options
-#define PLAY 1
-#define QUIT 0
-// number of cards displayed
-#define CARDS 3
-// number of dice on a card
-#define CARD_DICE 4
-// points for card
-#define CARD_POINTS 10
-// card requirements options
-#define REQ_NOT_MET 0
-#define REQ_MET 1
-// die used flag
-#define DIE_USED 1
-// success flag
-#define SUCCESS 1
-// true and false values
-#define TRUE 1
-#define FALSE 0
-// player numbers
-#define PLAYER1 1
-#define PLAYER2 2
-// score that ends the game
-#define WIN 40
-// menu options
-#define RULES 2
-#define LEAD 3
-#define EXIT 4
+// user defined header file with the constants and new prototypes
+#include "roll4it.h"
 
-// holds everything about one player
-typedef struct {
+// define the Player struct 
+typedef struct
+{
     char player[NAME];
     int num;
     int score;
@@ -95,25 +57,31 @@ int main() {
     // call sample card function
     // sampleCard();
 
-    // show the menu and get the player's selection
     int select = printMenu();
 
-    // keep showing the menu until the player exits
-    while (select != EXIT) {
-        if (select == PLAY) {
-            play();
-        }
-        else if (select == RULES) {
-            printRules();
-        }
-        else if (select == LEAD) {
-            // printLeaderboard comes in Assignment 6
-            break;
-        }
-        else if (select == EXIT) {
-            break;
+    while(select != EXIT)
+    {
+        switch (select) {
+            case PLAY:
+                // call play function
+                play();
+                break;
+            case RULES:
+                // call printRules function
+                printRules();
+                break;
+            case LEAD:
+                // read and display the leaderboard file
+                readLeaderboardFile();
+                break;
+            case EXIT:
+                // break out of the loop
+                break;
+            default:
+                break;
         }
 
+        // redisplay the menu for options 1, 2, and 3
         select = printMenu();
     }
 
@@ -157,17 +125,33 @@ void sampleCard() {
 }
 
 void play() {
-    // player related variables now live in the Player struct
+    // player related variables
+    Player playerOne;
+    playerOne.num = PLAYER1;
+    playerOne.score = 0;
+
+    // store the player's name
+    printf("Player one, enter the player's name\n");
+    scanf("%s", playerOne.player);
+    
+    Player playerTwo;
+    playerTwo.num = PLAYER2;
+    playerTwo.score = 0;
+
+    // store the player's name
+    printf("Player two, enter the player's name\n");
+    scanf("%s", playerTwo.player);   
+
     // char player[NAME];
     // int score = 0;
     
     // loop control variables
-    // int roll = PLAY;
+    int roll = PLAY;
     int turn = PLAY;
 
-    // each player's dice now live in the Player struct
+    // array of six dice, second column tracks if the die is committed to a card
     // int dice[DICE][2];
-    
+
     // array of values on a card
     int cardOne[CARD_DICE];
     int cardTwo[CARD_DICE];
@@ -182,43 +166,27 @@ void play() {
     // used to track result of displayCardStatus
     int cardResult = REQ_NOT_MET;
 
-    // set up player one
-    Player playerOne;
-    playerOne.num = PLAYER1;
-    playerOne.score = 0;
-    printf("Player one, enter the player's name\n");
-    scanf("%s", playerOne.player);
-
-    // set up player two
-    Player playerTwo;
-    playerTwo.num = PLAYER2;
-    playerTwo.score = 0;
-    printf("Player two, enter the player's name\n");
-    scanf("%s", playerTwo.player);
-
     // initialize the arrays to all -1 
     memset(playerOne.dice, NO_COMMIT, sizeof(playerOne.dice));
     memset(playerTwo.dice, NO_COMMIT, sizeof(playerTwo.dice));
     memset(cardOne, NO_COMMIT, sizeof(cardOne));
     memset(cardTwo, NO_COMMIT, sizeof(cardTwo));
     memset(cardThree, NO_COMMIT, sizeof(cardThree));
-    
+
     // generate three random cards
     populateCard(cardOne);
     populateCard(cardTwo);
     populateCard(cardThree);
 
-    // player one goes first
+    // initialize currentPlayer with playerOne
     Player currentPlayer = playerOne;
 
-    // keep taking turns until a player reaches the winning score
-    while(!isGameOver(playerOne, playerTwo)) {
-        // let the current player know it is their turn
-        printf("\n==============================\n");
+    // for each roll, need to roll the dice, print the card, print the status, print the dice
+    while(!isGameOver(playerOne, playerTwo)){
+        printf("\n===============================\n"); 
         printf("%s, it is your turn to roll\n", currentPlayer.player);
         printf("%s, your score is: %d\n", currentPlayer.player, currentPlayer.score);
-        printf("==============================\n");
-
+        printf("===============================\n"); 
         // Roll the dice
         rollDice(currentPlayer.dice);
 
@@ -236,8 +204,7 @@ void play() {
                 printf("No dice left to select, pick up all dice\n");
                 pickUpDice(currentPlayer.dice);
                 break;
-            }
-            else {
+            } else {
                 // prompt player to select die and store
                 dieNumber = selectDie();
             
@@ -250,7 +217,7 @@ void play() {
 
                 // commit the die to the selected card
                 commitDie(dieNumber, cardNumber, currentPlayer.dice);
-         
+        
                 // print cards and status 
                 printCards(cardOne, cardTwo, cardThree);
                 printCardStatus(cardOne, cardTwo, cardThree, currentPlayer.dice);
@@ -268,8 +235,9 @@ void play() {
                 } 
 
                 // player completed a card 
-                // give the dice back from the completed card for both players
+                // give the dice back from the completed card 
                 // generate a new card
+                // both players have to pick up their dice
                 if (cardResult == CARD1_COMMIT) {
                     populateCard(cardOne);
                     reclaimDice(currentPlayer.dice, CARD1_COMMIT);
@@ -292,18 +260,23 @@ void play() {
             }
         }
 
-        // save this turn's changes and switch to the other player
-        if (currentPlayer.num == PLAYER1) {
+        // at the end of the turn, switch players
+        if(currentPlayer.num == PLAYER1) {
+            // copy the changes back to playerOne
             playerOne = currentPlayer;
+
+            // update currentPlayer
             currentPlayer = playerTwo;
-        }
-        else if (currentPlayer.num == PLAYER2) {
+        } else if (currentPlayer.num == PLAYER2) {
+            // copy the changes back to playerTwo
             playerTwo = currentPlayer;
+
+            // update currentPlayer
             currentPlayer = playerOne;
         }
     }
 
-    // game over, show the results
+    // call printGameResults to display the stats
     printGameResults(playerOne, playerTwo);
 }
 
@@ -747,37 +720,38 @@ int getDieStatus(int dieNum, int playerDice[DICE][2]) {
     return NO_COMMIT;
 }
 
-// check if either player has reached the winning score
+// check if the game is over
 int isGameOver(Player playerOne, Player playerTwo) {
     int gameOver = FALSE;
 
-    if (playerOne.score >= WIN || playerTwo.score >= WIN) {
+    if(playerOne.score >= WIN || playerTwo.score >= WIN) {
         gameOver = TRUE;
     }
-
+    
     return gameOver;
 }
 
-// show who won the game and both final scores
+// display the results after the game is over
 void printGameResults(Player playerOne, Player playerTwo) {
-    printf("\n=========================\n");
-
-    if (playerOne.score >= WIN) {
-        printf("%s WON THE GAME!\n", playerOne.player);
+    printf("\n==========================\n"); 
+    
+    if(playerOne.score >= WIN) {
+        printf("%s", playerOne.player );
+    } else {
+        printf("%s", playerTwo.player );
     }
-    else if (playerTwo.score >= WIN) {
-        printf("%s WON THE GAME!\n", playerTwo.player);
-    }
 
-    printf("\n%s's score: %d\n", playerOne.player, playerOne.score);
+    printf(" WON THE GAME!\n\n");
+    printf("%s's score: %d\n", playerOne.player, playerOne.score);
     printf("%s's score: %d\n", playerTwo.player, playerTwo.score);
-    printf("=========================\n");
+    printf("==========================\n"); 
 }
 
-// show the menu and return the player's choice
+// function displayMenu provides players with their options
 int printMenu() {
     int choice = 0;
 
+    // continue looping until player selects a valid option
     do {
         printf("\nSelect a menu option:\n");
         printf("1. Play Roll 4 It\n");
@@ -796,47 +770,135 @@ int printMenu() {
         if (choice < PLAY || choice > EXIT) {
             printf("Invalid choice, try again\n");
         }
-
     } while (choice < PLAY || choice > EXIT);
 
     return choice;
 }
 
-// display the game rules
 void printRules() {
-    printf("\n.-------------------- ROLL 4 IT - GAME RULES --------------------.\n");
-    printf("| OBJECTIVE:                                                     |\n");
-    printf("| Be the first player to reach 40 points.                        |\n");
-    printf("|                                                                |\n");
-    printf("| GAME SETUP:                                                    |\n");
-    printf("| - Each player receives six dice.                               |\n");
-    printf("| - Three scoring cards are placed face up.                      |\n");
-    printf("| - Each scoring card has a combination of four dice that        |\n");
-    printf("|   must be rolled to claim it.                                  |\n");
-    printf("| - Each scoring card is worth 10 points                         |\n");
-    printf("|                                                                |\n");
-    printf("| PLAYER TURN:                                                   |\n");
-    printf("| - Roll all of the available dice.                              |\n");
-    printf("| - Place dice on the scoring cards where they match the         |\n");
-    printf("|   numbers shown on the cards.                                  |\n");
-    printf("| - May place multiple dice on the same card or use dice         |\n");
-    printf("|   on different cards.                                          |\n");
-    printf("| - If the required combination on a card is completed,          |\n");
-    printf("|   claim that card and receive 10 points.                       |\n");
-    printf("|                                                                |\n");
-    printf("| UNCLAIMED CARDS:                                               |\n");
-    printf("| - Dice placed on an incomplete card remain there for the       |\n");
-    printf("|   next roll.                                                   |\n");
-    printf("| - May NOT move the dice between cards unless all dice          |\n");
-    printf("|   are picked up.                                               |\n");
-    printf("|                                                                |\n");
-    printf("| WINNING THE GAME:                                              |\n");
-    printf("| - Continue taking turns until a player reaches 40 points.      |\n");
-    printf("| - The first player to reach 40 points wins the game.           |\n");
-    printf("|                                                                |\n");
-    printf("| IMPORTANT:                                                     |\n");
-    printf("| - Each die can only be used on one scoring card at a time.     |\n");
-    printf("| - Players must decide how to use their dice after each roll.   |\n");
-    printf("| - Dice placement and strategy are important to winning!        |\n");
-    printf("'----------------------------------------------------------------'\n");
+    printf(".------------------ ROLL 4 IT - GAME RULES --------------------.\n");
+    printf("| OBJECTIVE:                                                   |\n");
+    printf("| Be the first player to reach 40 points.                      |\n");
+    printf("|                                                              |\n");
+    printf("| GAME SETUP:                                                  |\n");
+    printf("| - Each player receives six dice.                             |\n");
+    printf("| - Three scoring cards are placed face up.                    |\n");
+    printf("| - Each scoring card has a combination of four dice that      |\n");
+    printf("|   must be rolled to claim it.                                |\n");
+    printf("| - Each scoring card is worth 10 points                       |\n");
+    printf("|                                                              |\n");
+    printf("| PLAYER TURN:                                                 |\n");
+    printf("| - Roll all of the available dice.                            |\n");
+    printf("| - Place dice on the scoring cards where they match the       |\n");
+    printf("|    numbers shown on the cards.                               |\n");
+    printf("| - May place multiple dice on the same card or use dice       |\n");
+    printf("|    on different cards.                                       |\n");
+    printf("| - If the required combination on a card is completed,        |\n");
+    printf("|    claim that card and receive 10 points.                    |\n");
+    printf("|                                                              |\n");
+    printf("| UNCLAIMED CARDS:                                             |\n");
+    printf("| - Dice placed on an incomplete card remain there for the     |\n");
+    printf("|   next roll.                                                 |\n");
+    printf("| - May NOT move the dice between cards unless all dice        |\n");
+    printf("|   are picked up.                                             |\n");
+    printf("|                                                              |\n");
+    printf("| WINNING THE GAME:                                            |\n");
+    printf("| - Continue taking turns until a player reaches 40 points.    |\n");
+    printf("| - The first player to reach 40 points wins the game.         |\n");
+    printf("|                                                              |\n");
+    printf("| IMPORTANT:                                                   |\n");
+    printf("| - Each die can only be used on one scoring card at a time.   |\n");
+    printf("| - Players must decide how to use their dice after each roll. |\n");
+    printf("| - Dice placement and strategy are important to winning!      |\n");
+    printf("'--------------------------------------------------------------'\n");
+}
+// read the leaderboard file and display the contents
+void readLeaderboardFile() {
+    // stores one line at a time from the data file
+    char line[LINE];
+
+    // tracks which element of array data to store in
+    int fieldIdx = ZERO;
+
+    // array of strings holding every data element from the file
+    char *data[DATA];
+
+    // open the data file for reading
+    FILE *fp = fopen("leaderboard.txt", "r");
+
+    // file could not be found
+    if (fp == NULL) {
+        perror("Error opening file");
+        return;
+    }
+
+    // read the file one line at a time
+    while (fgets(line, LINE, fp) != NULL) {
+        // split the line at the commas
+        char *field = strtok(line, ",");
+
+        // remove leading and trailing white space
+        field = trim(field);
+
+        // walk through each field on the line
+        while (field != NULL) {
+            // allocate memory for the field plus the null terminator
+            data[fieldIdx] = malloc(strlen(field) + 1);
+
+            // copy the field into the data array
+            strcpy(data[fieldIdx], field);
+
+            // next field on the same line
+            field = strtok(NULL, ",");
+            field = trim(field);
+
+            fieldIdx++;
+        }
+    }
+
+    // close the file
+    fclose(fp);
+
+    // leaderboard header
+    printf("\n.---------------- ROLL 4 IT - Leaderboard ----------------.\n");
+    printf("|                                                         |\n");
+    printf("|     %-16s%-16s%-20s|\n", "Position", "Player", "Wins");
+    printf("|                                                         |\n");
+
+    // each line of the file is position, player, wins
+    for (int i = ZERO; i < fieldIdx; i += FIELDS) {
+        printf("|     %-16s%-16s%-20s|\n", data[i], data[i + 1], data[i + 2]);
+    }
+
+    // leaderboard footer
+    printf("|                                                         |\n");
+    printf("'_________________________________________________________'\n");
+}
+
+// trim the leading and trailing white space from a string
+char *trim(char *str) {
+    // nothing to trim
+    if (str == NULL || *str == '\0') {
+        return str;
+    }
+
+    // move past any leading white space
+    char *start = str;
+
+    while (isspace((unsigned char)*start)) {
+        start++;
+    }
+
+    // find the end of the string
+    char *end = str + strlen(str) - 1;
+
+    // move back past any trailing white space
+    while (end > start && isspace((unsigned char)*end)) {
+        end--;
+    }
+
+    // close off the string after the last real character
+    end[1] = '\0';
+
+    return start;
 }
